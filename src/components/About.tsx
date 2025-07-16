@@ -1,32 +1,38 @@
 
 const About = () => {
   return (
-    <section id="about" className="bg-white py-20">
+    <section id="about" className="bg-secondary py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-              alt="Entspanntes Team - mehr Zeit für das Wesentliche"
-              className="w-full h-auto rounded-2xl shadow-xl"
-            />
-          </div>
-          <div>
-            <h2 className="text-4xl font-bold text-text-primary mb-6 font-raleway">
-              Für Entscheider:innen, die mehr wollen als Technik
-            </h2>
-            <div className="space-y-6 text-lg text-text-primary font-raleway font-light">
-              <p>
-                <strong className="font-semibold">Klarheit</strong> statt Chaos. Unsere Lösungen wirken im Hintergrund – leise, effizient, zuverlässig.
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
+            So gehen wir <span className="text-primary">vor</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-primary font-bold text-xl">01</span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Analyse</h3>
+              <p className="text-muted-foreground font-raleway font-light">
+                Wir analysieren deine bestehenden Prozesse und identifizieren Optimierungspotentiale.
               </p>
-              <p>
-                <strong className="font-semibold">Zeitgewinn</strong> für das Wesentliche. Digitalisierung mit Klartext, nicht Technik-Jargon.
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-primary font-bold text-xl">02</span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Konzept</h3>
+              <p className="text-muted-foreground font-raleway font-light">
+                Entwicklung einer maßgeschneiderten Automatisierungsstrategie für dein Unternehmen.
               </p>
-              <p>
-                <strong className="font-semibold">Neue Leichtigkeit</strong> in der Führung. Persönlich, nah und mit wirklichem Interesse für dich und dein Unternehmen.
-              </p>
-              <p className="text-btn-primary font-semibold text-xl">
-                botti ist dein digitaler Assistent für das Wesentliche.
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-primary font-bold text-xl">03</span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Umsetzung</h3>
+              <p className="text-muted-foreground font-raleway font-light">
+                Implementierung und Integration der Automatisierungslösungen in deine Arbeitsabläufe.
               </p>
             </div>
           </div>
