@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="text-center">
           <div className="animate-fade-in max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 font-raleway leading-tight">
-              Mit uns bleibt's <span className="text-primary">automatisch</span>
+              Mit uns läuft's <span className="text-primary">automatisch</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 font-raleway font-light leading-relaxed max-w-3xl mx-auto">
               Wir automatisieren die Prozesse in deinem Unternehmen, damit du dich auf das Wesentliche konzentrieren kannst. Schluss mit manueller Arbeit – mehr Zeit für echte Wertschöpfung.
