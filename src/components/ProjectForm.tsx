@@ -18,6 +18,7 @@ interface FormData {
 
 const ProjectForm = () => {
   const [budget, setBudget] = useState([25000]);
+  const [savings, setSavings] = useState([50000]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const { toast } = useToast();
 
@@ -29,6 +30,7 @@ const ProjectForm = () => {
     });
     reset();
     setBudget([25000]);
+    setSavings([50000]);
   };
 
   const formatBudget = (value: number) => {
@@ -107,6 +109,31 @@ const ProjectForm = () => {
                   placeholder="+49 123 456789"
                   type="tel"
                 />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
+                <span className="text-primary">💰</span> Gewünschte Einsparungen pro Jahr: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
+              </label>
+              <div className="px-4 py-6 bg-primary/5 rounded-lg border border-primary/10">
+                <Slider
+                  value={savings}
+                  onValueChange={setSavings}
+                  max={500000}
+                  min={10000}
+                  step={10000}
+                  className="w-full"
+                />
+                <div className="flex justify-between text-sm text-muted-foreground mt-2 font-raleway">
+                  <span>10k€</span>
+                  <span>100k€</span>
+                  <span>250k€</span>
+                  <span>500k€+</span>
+                </div>
+                <p className="text-xs text-primary mt-3 font-raleway text-center">
+                  Wir zeigen dir, wie du diese Ziele durch Automatisierung erreichst
+                </p>
               </div>
             </div>
 
