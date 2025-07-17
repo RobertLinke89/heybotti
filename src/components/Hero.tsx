@@ -14,9 +14,9 @@ const Hero = () => {
               Wir automatisieren die Prozesse in deinem Unternehmen, damit du dich auf das Wesentliche konzentrieren kannst. Schluss mit manueller Arbeit – mehr Zeit für echte Wertschöpfung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+              <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center gap-2 animate-fade-in">
                 <Phone size={20} />
-                Ruf mich an
+                Projekt anfragen
               </button>
               <button className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary hover:text-primary-foreground transition-colors">
                 Mehr erfahren
