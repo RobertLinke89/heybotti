@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import ProjectForm from "@/components/ProjectForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <ProjectForm />
       <CTA />
       <Footer />
+      <Chatbot />
     </div>
   );
 };
