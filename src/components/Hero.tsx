@@ -18,9 +18,6 @@ const Hero = () => {
                 <Phone size={20} />
                 Projekt anfragen
               </button>
-              <button className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary hover:text-primary-foreground transition-colors">
-                Mehr erfahren
-              </button>
             </div>
           </div>
         </div>
