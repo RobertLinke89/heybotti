@@ -2,24 +2,78 @@
 const Services = () => {
   const services = [
     {
-      title: "E-Mail Automatisierung",
-      description: "Intelligente Sortierung und Bearbeitung deiner E-Mails. Wichtiges wird priorisiert, Routine automatisiert.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80"
+      id: "sales-marketing",
+      title: "Vertriebs- & Marketingautomatisierung",
+      subtitle: "Mehr Leads. Weniger Aufwand. Volle Skalierung.",
+      description: "Automatisieren Sie Funnels, Follow-ups und Kampagnen, um aus Interessenten systematisch Kunden zu machen – 24/7, datenbasiert und persönlich.",
+      features: [
+        "E-Mail-Automatisierung",
+        "Lead-Nurturing-Funnels",
+        "CRM-Automatisierungen",
+        "Chatbots / WhatsApp-Automatisierung",
+        "Retargeting-Kampagnen"
+      ]
     },
     {
-      title: "Terminorganisation",
-      description: "Nahtlose Koordination von Meetings und Terminen. Mehr Zeit für echte Gespräche, weniger Organisationsaufwand.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+      id: "finance",
+      title: "Finanzen & Buchhaltung",
+      subtitle: "Weniger Fehler. Mehr Übersicht. Automatisch compliant.",
+      description: "Belege, Zahlungen, Rechnungen und Reports fließen automatisiert durch Ihre Systeme – für ein aufgeräumtes Backoffice ohne Kopfzerbrechen.",
+      features: [
+        "Belegerkennung & -verbuchung",
+        "Rechnungsstellung & Mahnwesen",
+        "Automatisierte Bankabgleiche",
+        "Steuer-Vorbereitung durch Automatisierung von Reports"
+      ]
     },
     {
-      title: "Rechnungsmanagement",
-      description: "Automatisierte Erstellung und Versendung von Rechnungen. Liquidität im Blick, Papierkram im Griff.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
+      id: "hr",
+      title: "HR & Recruiting",
+      subtitle: "Die besten Talente. Die besten Abläufe.",
+      description: "Von der Bewerbung bis zum Onboarding: Automatisierungen bringen Tempo, Struktur und Wertschätzung in Ihre Personalprozesse.",
+      features: [
+        "Automatisierte Bewerbervorauswahl",
+        "Terminvereinbarung für Interviews",
+        "Onboarding-Automatisierung",
+        "Mitarbeiter-Kommunikation"
+      ]
     },
     {
-      title: "Kommunikationshub",
-      description: "Alle Kanäle an einem Ort. Teams bleiben verbunden, Informationen fließen strukturiert und transparent.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80"
+      id: "ecommerce",
+      title: "E-Commerce & Fulfillment",
+      subtitle: "Dein stilles E-Commerce-Backoffice. Rund um die Uhr.",
+      description: "Verkauf läuft, Lager stimmt, Retouren sind im Griff – jede Bewegung im Shop löst automatisch Aktionen aus, die Ihre Kund:innen begeistern und Ihr Lager entlasten.",
+      features: [
+        "Bestandsabgleich & Lagerverwaltung",
+        "Versandabwicklung / Etikettenerstellung",
+        "Zahlungsabgleich & Retouren-Handling",
+        "Produktfeed-Automatisierung für Marktplätze & Ads"
+      ]
+    },
+    {
+      id: "business-intelligence",
+      title: "Business Intelligence & Reporting",
+      subtitle: "Alle Zahlen. Alle Antworten. In Echtzeit.",
+      description: "Deine wichtigsten KPIs auf einem Blick – aufbereitet, visualisiert und mit Warnsystemen versehen, bevor Risiken zum Problem werden.",
+      features: [
+        "Dashboards & KPI-Automatisierung",
+        "Automatisierte Datenaggregation aus mehreren Tools",
+        "Frühwarnsysteme via Triggern und Alerts"
+      ]
+    },
+    {
+      id: "workflows",
+      title: "Workflows",
+      subtitle: "Effizienz beginnt intern.",
+      description: "Standardisierte Abläufe wie Genehmigungen, Dokumentenmanagement oder Übergaben laufen im Hintergrund – sauber, nachvollziehbar, skalierbar.",
+      features: [
+        "Genehmigungsprozesse",
+        "Ticketing- und Support-Workflows",
+        "Kunden-Onboarding",
+        "Vertragsmanagement",
+        "Dokumentenmanagement",
+        "Interne Kommunikation"
+      ]
     }
   ];
 
@@ -28,23 +82,53 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            Unsere <span className="text-primary">Services</span>
+            Top-Bereiche für maximale <span className="text-primary">Hebelwirkung</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-raleway font-light max-w-3xl mx-auto">
-            Wir schaffen Strukturen, die deinen Alltag entlasten, Kommunikation vereinfachen und Prozesse intelligent miteinander verbinden.
+          <p className="text-xl text-muted-foreground font-raleway font-light max-w-4xl mx-auto">
+            Automatisierung ist kein Luxus mehr – sie ist der Schlüssel zu Wachstum, Effizienz und Klarheit in einer komplexen Arbeitswelt.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-card rounded-xl p-6 border border-secondary hover:border-primary/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-6 h-6 bg-primary rounded"></div>
+            <div key={service.id} className="bg-card rounded-xl p-8 border border-secondary hover:border-primary/30 transition-all duration-300 group">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-raleway group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-primary font-semibold font-raleway mb-4">
+                  {service.subtitle}
+                </p>
+                <p className="text-muted-foreground font-raleway font-light leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">{service.title}</h3>
-              <p className="text-muted-foreground font-raleway font-light">{service.description}</p>
+              
+              <div className="mb-8">
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-foreground font-raleway">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <button className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                Jetzt automatisieren
+              </button>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-16">
+          <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors">
+            Kostenlose Beratung anfragen
+          </button>
+          <p className="text-muted-foreground mt-4 font-raleway font-light">
+            Welcher Bereich bietet in Ihrem Unternehmen das größte Potenzial?
+          </p>
         </div>
       </div>
     </section>
