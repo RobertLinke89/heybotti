@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ArrowLeft, CheckCircle, TrendingUp, Users, DollarSign, Clock, Zap } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,6 +7,11 @@ import Footer from '@/components/Footer';
 const ServicesDetail = () => {
   const { serviceId } = useParams();
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts or serviceId changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [serviceId]);
 
   const servicesData = {
     "sales-marketing": {
