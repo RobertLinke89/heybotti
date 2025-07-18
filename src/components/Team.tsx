@@ -38,35 +38,20 @@ const Team = () => {
     <section className="bg-background py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-            {t('team.title')} <span className="text-primary">{t('team.title.highlight')}</span>
+          <h2 className="text-3xl font-bold text-foreground mb-8 font-raleway">
+            ABOUT
           </h2>
-          <p className="text-lg text-muted-foreground font-raleway font-light max-w-2xl mx-auto">
-            {t('team.subtitle')}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-4">
-                <img
-                  src={member.avatar}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/10 group-hover:border-primary/30 transition-all duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-1 font-raleway">
-                {member.name}
-              </h3>
-              <p className="text-primary font-medium mb-2 font-raleway text-sm">
-                {member.role}
-              </p>
-              <p className="text-muted-foreground text-sm font-raleway font-light leading-relaxed">
-                {member.description}
-              </p>
-            </div>
-          ))}
+          <div className="max-w-4xl mx-auto space-y-6 text-left">
+            <p className="text-lg text-muted-foreground font-raleway font-light leading-relaxed">
+              Wir sind Team botti und haben ein klares Ziel: Effizienz neu denken – durch smarte Automatisierung, die nicht nur beschleunigt, sondern nachhaltig entlastet. Dabei geht es uns nicht um Technik um der Technik willen, sondern um echten Mehrwert, der im Alltag spürbar ist. Unsere Lösungen sind flexibel, innovativ und immer auf Ihr Unternehmen zugeschnitten – mit einer holistischen Sichtweise, die Prozesse, Menschen und Potenziale gleichermaßen berücksichtigt.
+            </p>
+            <p className="text-lg text-muted-foreground font-raleway font-light leading-relaxed">
+              Wir glauben an Transparenz und Zusammenarbeit auf Augenhöhe. Deshalb sprechen wir Klartext, teilen unser Wissen und schaffen Vertrauen – vom ersten Workshop bis zur fertigen Implementierung. Unsere Stärke liegt darin, schnell greifbare Ergebnisse zu liefern und dabei gleichzeitig langfristige Strukturen aufzubauen, die mit Ihrem Unternehmen mitwachsen.
+            </p>
+            <p className="text-lg text-muted-foreground font-raleway font-light leading-relaxed">
+              Mit einem agilen Mindset, smarten Tools und dem Gespür für das Wesentliche gestalten wir digitale Lösungen, die wirklich funktionieren. So bleibt mehr Raum für das, was zählt: kreative Ideen, produktive Teams und eine Arbeitswelt, die wieder Freude macht. Automatisierung mit Verstand, Herz und Weitblick – das ist unser Antrieb.
+            </p>
+          </div>
         </div>
       </div>
     </section>
