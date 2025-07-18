@@ -11,7 +11,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-foreground font-raleway">botti.co</h1>
+            <img src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" alt="hey" className="h-8" />
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#services" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.services')}</a>
