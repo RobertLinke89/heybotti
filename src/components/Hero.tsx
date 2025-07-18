@@ -6,8 +6,33 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-background py-20 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-background py-20 lg:py-32 overflow-hidden">
+      {/* Animated Wave Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <svg 
+          className="absolute w-full h-full" 
+          viewBox="0 0 1200 600" 
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <path
+            d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"
+            fill="hsl(var(--primary) / 0.05)"
+            className="animate-[wave_8s_ease-in-out_infinite]"
+          />
+          <path
+            d="M0,350 Q200,250 400,350 T800,350 T1200,350 L1200,600 L0,600 Z"
+            fill="hsl(var(--primary) / 0.03)"
+            className="animate-[wave_12s_ease-in-out_infinite_reverse]"
+          />
+          <path
+            d="M0,400 Q150,300 300,400 T600,400 T900,400 T1200,400 L1200,600 L0,600 Z"
+            fill="hsl(var(--primary) / 0.02)"
+            className="animate-[wave_15s_ease-in-out_infinite]"
+          />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="animate-fade-in max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 font-raleway leading-tight">
