@@ -29,7 +29,7 @@ const translations = {
     'cta.title': 'Bereit für mehr',
     'cta.title.highlight': 'Effizienz',
     'cta.subtitle': 'Lass uns in einem unverbindlichen Gespräch herausfinden, wie botti dein Unternehmen entlasten kann.',
-    'cta.button': 'Jetzt kostenlos beraten lassen',
+    'cta.button': 'Projekt anfragen',
     'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an deiner Situation.',
   },
   en: {
@@ -50,7 +50,7 @@ const translations = {
     'cta.title': 'Ready for more',
     'cta.title.highlight': 'Efficiency',
     'cta.subtitle': 'Let\'s find out in a non-binding conversation how botti can relieve your company.',
-    'cta.button': 'Get Free Consultation Now',
+    'cta.button': 'Request Project',
     'cta.note': 'No sales pitch – just genuine interest in your situation.',
   }
 };
