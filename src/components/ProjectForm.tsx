@@ -114,7 +114,7 @@ const ProjectForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                <span className="text-primary">💰</span> Gewünschte Einsparungen pro Jahr: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
+                <span className="text-primary">💰</span> Wieviel Umsatz mehr pro Jahr?: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
               </label>
               <div className="px-4 py-6 bg-primary/5 rounded-lg border border-primary/10">
                 <Slider
