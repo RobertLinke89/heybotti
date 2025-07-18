@@ -39,8 +39,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div className="md:hidden flex items-center gap-3">
-            <LanguageSwitcher />
+          <div className="md:hidden flex items-center">
             <button
               onClick={toggleMobileMenu}
               className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
@@ -54,7 +53,7 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         <div className={`md:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen 
-            ? 'max-h-80 opacity-100 pb-4' 
+            ? 'max-h-96 opacity-100 pb-4' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <nav className="flex flex-col space-y-4 pt-4 border-t border-secondary">
@@ -86,8 +85,12 @@ const Header = () => {
             >
               {t('nav.contact')}
             </a>
+            <div className="flex items-center justify-between py-2 px-2 border-t border-secondary mt-4 pt-4">
+              <span className="text-foreground font-raleway font-medium">Sprache / Language</span>
+              <LanguageSwitcher />
+            </div>
             <button 
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 mt-4"
+              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Phone size={18} />
