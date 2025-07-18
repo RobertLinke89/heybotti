@@ -1,26 +1,22 @@
 
-import { useLanguage } from '@/contexts/LanguageContext';
-
 const Testimonials = () => {
-  const { t } = useLanguage();
-  
   const testimonials = [
     {
-      text: t('testimonials.sarah.text'),
-      name: t('testimonials.sarah.name'),
-      position: t('testimonials.sarah.position'),
+      text: "Endlich habe ich wieder Zeit für mein Team. Die Automatisierung läuft so reibungslos, dass ich mich voll auf die strategischen Entscheidungen konzentrieren kann.",
+      name: "Sarah Weber",
+      position: "Geschäftsführerin, Weber Marketing GmbH",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b95c?auto=format&fit=crop&w=150&q=80"
     },
     {
-      text: t('testimonials.michael.text'),
-      name: t('testimonials.michael.name'),
-      position: t('testimonials.michael.position'),
+      text: "Die Lösung von botti hat unseren Arbeitsalltag revolutioniert. Keine verlorenen E-Mails mehr, keine vergessenen Termine. Einfach genial!",
+      name: "Michael Hoffmann",
+      position: "Inhaber, Hoffmann Consulting",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
     },
     {
-      text: t('testimonials.lisa.text'),
-      name: t('testimonials.lisa.name'),
-      position: t('testimonials.lisa.position'),
+      text: "Was mich begeistert: Es funktioniert einfach. Kein kompliziertes Setup, keine endlosen Schulungen. Binnen weniger Tage war alles eingerichtet.",
+      name: "Lisa Schneider",
+      position: "Prokuristin, Schneider & Partner",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
     }
   ];
@@ -30,10 +26,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            {t('testimonials.title')} <span className="text-primary">{t('testimonials.title.highlight')}</span>
+            Was unsere Kunden <span className="text-primary">sagen</span>
           </h2>
           <p className="text-xl text-muted-foreground font-raleway font-light">
-            {t('testimonials.subtitle')}
+            Echte Erfahrungen von Unternehmer:innen, die mehr Zeit für das Wesentliche gewonnen haben.
           </p>
         </div>
         

@@ -1,82 +1,78 @@
 
-import { useLanguage } from '@/contexts/LanguageContext';
-
 const Services = () => {
-  const { t } = useLanguage();
-  
   const services = [
     {
       id: "sales-marketing",
-      title: t('services.salesMarketing.title'),
-      subtitle: t('services.salesMarketing.subtitle'),
-      description: t('services.salesMarketing.description'),
+      title: "Vertriebs- & Marketingautomatisierung",
+      subtitle: "Mehr Leads. Weniger Aufwand. Volle Skalierung.",
+      description: "Automatisieren Sie Funnels, Follow-ups und Kampagnen, um aus Interessenten systematisch Kunden zu machen – 24/7, datenbasiert und persönlich.",
       features: [
-        t('services.salesMarketing.features.email'),
-        t('services.salesMarketing.features.leadNurturing'),
-        t('services.salesMarketing.features.crm'),
-        t('services.salesMarketing.features.chatbots'),
-        t('services.salesMarketing.features.retargeting')
+        "E-Mail-Automatisierung",
+        "Lead-Nurturing-Funnels",
+        "CRM-Automatisierungen",
+        "Chatbots / WhatsApp-Automatisierung",
+        "Retargeting-Kampagnen"
       ]
     },
     {
       id: "finance",
-      title: t('services.finance.title'),
-      subtitle: t('services.finance.subtitle'),
-      description: t('services.finance.description'),
+      title: "Finanzen & Buchhaltung",
+      subtitle: "Weniger Fehler. Mehr Übersicht. Automatisch compliant.",
+      description: "Belege, Zahlungen, Rechnungen und Reports fließen automatisiert durch Ihre Systeme – für ein aufgeräumtes Backoffice ohne Kopfzerbrechen.",
       features: [
-        t('services.finance.features.receipt'),
-        t('services.finance.features.invoicing'),
-        t('services.finance.features.banking'),
-        t('services.finance.features.tax')
+        "Belegerkennung & -verbuchung",
+        "Rechnungsstellung & Mahnwesen",
+        "Automatisierte Bankabgleiche",
+        "Steuer-Vorbereitung durch Automatisierung von Reports"
       ]
     },
     {
       id: "hr",
-      title: t('services.hr.title'),
-      subtitle: t('services.hr.subtitle'),
-      description: t('services.hr.description'),
+      title: "HR & Recruiting",
+      subtitle: "Die besten Talente. Die besten Abläufe.",
+      description: "Von der Bewerbung bis zum Onboarding: Automatisierungen bringen Tempo, Struktur und Wertschätzung in Ihre Personalprozesse.",
       features: [
-        t('services.hr.features.applicantScreening'),
-        t('services.hr.features.scheduling'),
-        t('services.hr.features.onboarding'),
-        t('services.hr.features.communication')
+        "Automatisierte Bewerbervorauswahl",
+        "Terminvereinbarung für Interviews",
+        "Onboarding-Automatisierung",
+        "Mitarbeiter-Kommunikation"
       ]
     },
     {
       id: "ecommerce",
-      title: t('services.ecommerce.title'),
-      subtitle: t('services.ecommerce.subtitle'),
-      description: t('services.ecommerce.description'),
+      title: "E-Commerce & Fulfillment",
+      subtitle: "Dein stilles E-Commerce-Backoffice. Rund um die Uhr.",
+      description: "Verkauf läuft, Lager stimmt, Retouren sind im Griff – jede Bewegung im Shop löst automatisch Aktionen aus, die Ihre Kund:innen begeistern und Ihr Lager entlasten.",
       features: [
-        t('services.ecommerce.features.inventory'),
-        t('services.ecommerce.features.shipping'),
-        t('services.ecommerce.features.payment'),
-        t('services.ecommerce.features.productFeed')
+        "Bestandsabgleich & Lagerverwaltung",
+        "Versandabwicklung / Etikettenerstellung",
+        "Zahlungsabgleich & Retouren-Handling",
+        "Produktfeed-Automatisierung für Marktplätze & Ads"
       ]
     },
     {
       id: "business-intelligence",
-      title: t('services.businessIntelligence.title'),
-      subtitle: t('services.businessIntelligence.subtitle'),
-      description: t('services.businessIntelligence.description'),
+      title: "Business Intelligence & Reporting",
+      subtitle: "Alle Zahlen. Alle Antworten. In Echtzeit.",
+      description: "Deine wichtigsten KPIs auf einem Blick – aufbereitet, visualisiert und mit Warnsystemen versehen, bevor Risiken zum Problem werden.",
       features: [
-        t('services.businessIntelligence.features.dashboards'),
-        t('services.businessIntelligence.features.dataAggregation'),
-        t('services.businessIntelligence.features.earlyWarning')
+        "Dashboards & KPI-Automatisierung",
+        "Automatisierte Datenaggregation aus mehreren Tools",
+        "Frühwarnsysteme via Triggern und Alerts"
       ]
     },
     {
       id: "workflows",
-      title: t('services.workflows.title'),
-      subtitle: t('services.workflows.subtitle'),
-      description: t('services.workflows.description'),
+      title: "Workflows",
+      subtitle: "Effizienz beginnt intern.",
+      description: "Standardisierte Abläufe wie Genehmigungen, Dokumentenmanagement oder Übergaben laufen im Hintergrund – sauber, nachvollziehbar, skalierbar.",
       features: [
-        t('services.workflows.features.approval'),
-        t('services.workflows.features.ticketing'),
-        t('services.workflows.features.customerOnboarding'),
-        t('services.workflows.features.contracts'),
-        t('services.workflows.features.documents'),
-        t('services.workflows.features.communication')
+        "Genehmigungsprozesse",
+        "Ticketing- und Support-Workflows",
+        "Kunden-Onboarding",
+        "Vertragsmanagement",
+        "Dokumentenmanagement",
+        "Interne Kommunikation"
       ]
     }
   ];
@@ -86,10 +82,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            {t('services.title')} <span className="text-primary">{t('services.title.highlight')}</span>
+            Top-Bereiche für maximale <span className="text-primary">Hebelwirkung</span>
           </h2>
           <p className="text-xl text-muted-foreground font-raleway font-light max-w-4xl mx-auto">
-            {t('services.subtitle')}
+            Automatisierung ist kein Luxus mehr – sie ist der Schlüssel zu Wachstum, Effizienz und Klarheit in einer komplexen Arbeitswelt.
           </p>
         </div>
         
@@ -120,7 +116,7 @@ const Services = () => {
               </div>
               
               <button className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                {t('services.automateNow')}
+                Jetzt automatisieren
               </button>
             </div>
           ))}
@@ -128,10 +124,10 @@ const Services = () => {
         
         <div className="text-center mt-16">
           <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors">
-            {t('services.freeConsultation')}
+            Kostenlose Beratung anfragen
           </button>
           <p className="text-muted-foreground mt-4 font-raleway font-light">
-            {t('services.potentialQuestion')}
+            Welcher Bereich bietet in Ihrem Unternehmen das größte Potenzial?
           </p>
         </div>
       </div>
