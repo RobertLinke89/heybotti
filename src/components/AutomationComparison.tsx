@@ -46,7 +46,7 @@ const AutomationComparison = () => {
           </div>
 
           {/* Animated Comparison View */}
-          <div className="relative min-h-[600px] overflow-hidden">
+          <div className="relative min-h-[800px] overflow-hidden">
             <div className={`absolute inset-0 transition-all duration-1000 ${showAutomated ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Automation OFF */}
