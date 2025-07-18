@@ -1,21 +1,8 @@
-import { X, Check, ArrowRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { X, Check } from 'lucide-react';
+import { useState } from 'react';
 
 const AutomationComparison = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
   const [showAutomated, setShowAutomated] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setShowAutomated(prev => !prev);
-        setIsAnimating(false);
-      }, 500);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="py-20 bg-background">
@@ -30,18 +17,29 @@ const AutomationComparison = () => {
         </div>
         
         <div className="relative">
-          {/* Animation Container */}
+          {/* Toggle Switch */}
           <div className="flex items-center justify-center mb-8">
-            <div className="flex items-center gap-4 bg-card rounded-full px-6 py-3 border border-border">
-              <span className={`text-sm font-medium transition-colors duration-300 ${!showAutomated ? 'text-destructive' : 'text-muted-foreground'}`}>
-                Ohne Automatisierung
-              </span>
-              <div className="flex items-center gap-2">
-                <ArrowRight className={`w-5 h-5 transition-all duration-500 ${isAnimating ? 'text-primary animate-pulse' : 'text-muted-foreground'}`} />
-              </div>
-              <span className={`text-sm font-medium transition-colors duration-300 ${showAutomated ? 'text-primary' : 'text-muted-foreground'}`}>
-                Mit botti Automatisierung
-              </span>
+            <div className="flex items-center gap-4 bg-card rounded-full p-2 border border-border">
+              <button 
+                onClick={() => setShowAutomated(false)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  !showAutomated 
+                    ? 'bg-destructive text-destructive-foreground shadow-md' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                botti OFF
+              </button>
+              <button 
+                onClick={() => setShowAutomated(true)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  showAutomated 
+                    ? 'bg-primary text-primary-foreground shadow-md' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                botti ON
+              </button>
             </div>
           </div>
 
