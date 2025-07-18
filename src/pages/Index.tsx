@@ -5,7 +5,7 @@ import AutomationComparison from "@/components/AutomationComparison";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
+
 import ProjectForm from "@/components/ProjectForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ const Index = () => {
       <Services />
       <About />
       <Team />
-      <Testimonials />
+      
       <ProjectForm />
       <CTA />
       <Footer />
