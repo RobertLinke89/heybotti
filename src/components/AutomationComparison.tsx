@@ -43,11 +43,11 @@ const AutomationComparison = () => {
             </div>
           </div>
 
-          {/* Animated Comparison View */}
-          <div className="relative min-h-[1000px] overflow-hidden">
-            <div className={`absolute inset-0 transition-all duration-1000 ${showAutomated ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Automation OFF */}
+          {/* Content Display */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {!showAutomated ? (
+              // Automation OFF
+              <>
                 <div className="space-y-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center">
@@ -85,8 +85,6 @@ const AutomationComparison = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Placeholder for second column in OFF state */}
                 <div className="space-y-6 opacity-30">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
@@ -101,12 +99,10 @@ const AutomationComparison = () => {
                     <div className="w-full h-48 bg-muted/30 rounded-lg animate-pulse"></div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className={`absolute inset-0 transition-all duration-1000 ${showAutomated ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-95'}`}>
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Previous state ghost */}
+              </>
+            ) : (
+              // Automation ON
+              <>
                 <div className="space-y-6 opacity-30">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
@@ -121,8 +117,6 @@ const AutomationComparison = () => {
                     <div className="w-full h-48 bg-muted/30 rounded-lg"></div>
                   </div>
                 </div>
-
-                {/* Automation ON */}
                 <div className="space-y-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
@@ -184,8 +178,8 @@ const AutomationComparison = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </div>
 
