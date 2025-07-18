@@ -42,10 +42,13 @@ const Hero = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center gap-2 animate-fade-in">
+              <a 
+                href="#contact"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center gap-2 animate-fade-in"
+              >
                 <Phone size={20} />
                 {t('hero.cta')}
-              </button>
+              </a>
             </div>
           </div>
         </div>
