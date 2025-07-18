@@ -184,9 +184,18 @@ const AutomationComparison = () => {
         </div>
 
         {/* Customer Testimonial */}
-        <div className="mt-16 bg-primary/10 rounded-2xl p-8 lg:p-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed mb-6">
+        <div className="mt-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl p-8 lg:p-12 border border-primary/20 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/5 rounded-full translate-y-12 -translate-x-12"></div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <div className="mb-8">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">Erfolgsgeschichte</h3>
+              <p className="text-primary font-medium">Real Customer Experience</p>
+            </div>
+            <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
               "Ich frag mich heute, wie wir das vorher überhaupt gemacht haben. Seit wir 
               unsere Prozesse automatisiert haben, läuft vieles einfach im Hintergrund, 
               ganz ohne Nachhaken oder Kontrollchaos. Das Beste: Mein Team ist viel 
@@ -194,9 +203,17 @@ const AutomationComparison = () => {
               Themen. Ich kann's nur jedem empfehlen, der weniger Stress und mehr 
               Klarheit im Alltag will."
             </blockquote>
-            <cite className="text-foreground font-semibold">
-              Vera, BLACK FLASH ARCHERY GmbH
-            </cite>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">V</span>
+              </div>
+              <div className="text-left">
+                <cite className="text-foreground font-bold text-lg block">
+                  Vera
+                </cite>
+                <span className="text-muted-foreground">BLACK FLASH ARCHERY GmbH</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
