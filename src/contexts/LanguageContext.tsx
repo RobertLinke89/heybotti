@@ -25,6 +25,19 @@ const translations = {
     'hero.subtitle': 'Wir automatisieren die Prozesse in deinem Unternehmen, damit du dich auf das Wesentliche konzentrieren kannst. Schluss mit manueller Arbeit – mehr Zeit für echte Wertschöpfung.',
     'hero.cta': 'Projekt anfragen',
     
+    // Team
+    'team.title': 'Unser',
+    'team.title.highlight': 'Team',
+    'team.subtitle': 'Lerne die Experten kennen, die dein Unternehmen automatisieren und digitalisieren.',
+    'team.alex.role': 'CEO & Strategie',
+    'team.alex.description': 'Entwickelt maßgeschneiderte Automatisierungsstrategien für Unternehmen.',
+    'team.robert.role': 'CTO & Entwicklung',
+    'team.robert.description': 'Technischer Leiter mit Fokus auf innovative Lösungsarchitekturen.',
+    'team.chris.role': 'Automation Engineer',
+    'team.chris.description': 'Spezialist für Prozessoptimierung und intelligente Workflows.',
+    'team.sebastian.role': 'Business Analyst',
+    'team.sebastian.description': 'Analysiert Geschäftsprozesse und identifiziert Verbesserungspotentiale.',
+    
     // CTA
     'cta.title': 'Bereit für mehr',
     'cta.title.highlight': 'Effizienz',
@@ -45,6 +58,19 @@ const translations = {
     'hero.title.highlight': 'automatically',
     'hero.subtitle': 'We automate the processes in your company so you can focus on what really matters. No more manual work – more time for real value creation.',
     'hero.cta': 'Request Project',
+    
+    // Team
+    'team.title': 'Our',
+    'team.title.highlight': 'Team',
+    'team.subtitle': 'Meet the experts who will automate and digitize your company.',
+    'team.alex.role': 'CEO & Strategy',
+    'team.alex.description': 'Develops customized automation strategies for companies.',
+    'team.robert.role': 'CTO & Development',
+    'team.robert.description': 'Technical leader focused on innovative solution architectures.',
+    'team.chris.role': 'Automation Engineer',
+    'team.chris.description': 'Specialist in process optimization and intelligent workflows.',
+    'team.sebastian.role': 'Business Analyst',
+    'team.sebastian.description': 'Analyzes business processes and identifies improvement potential.',
     
     // CTA
     'cta.title': 'Ready for more',
