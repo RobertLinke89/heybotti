@@ -17,7 +17,7 @@ interface FormData {
 }
 
 const ProjectForm = () => {
-  const [budget, setBudget] = useState([25000]);
+  const [budget, setBudget] = useState([10000]);
   const [savings, setSavings] = useState([50000]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const { toast } = useToast();
@@ -29,7 +29,7 @@ const ProjectForm = () => {
       description: "Wir melden uns innerhalb von 24 Stunden bei dir.",
     });
     reset();
-    setBudget([25000]);
+    setBudget([10000]);
     setSavings([50000]);
   };
 
@@ -145,16 +145,16 @@ const ProjectForm = () => {
                 <Slider
                   value={budget}
                   onValueChange={setBudget}
-                  max={100000}
-                  min={5000}
-                  step={2500}
+                  max={50000}
+                  min={1000}
+                  step={5000}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-muted-foreground mt-2 font-raleway">
-                  <span>5k€</span>
-                  <span>25k€</span>
+                  <span>1k€</span>
+                  <span>15k€</span>
+                  <span>30k€</span>
                   <span>50k€</span>
-                  <span>100k€+</span>
                 </div>
               </div>
             </div>
