@@ -1,5 +1,6 @@
 
 import { Phone, Menu, X, CalendarIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useState } from 'react';
@@ -27,6 +28,7 @@ const timeSlots = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCallbackDialogOpen, setIsCallbackDialogOpen] = useState(false);
@@ -66,7 +68,12 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <img src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" alt="hey" className="h-7 sm:h-8" />
+            <button 
+              onClick={() => navigate('/')}
+              className="focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
+            >
+              <img src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" alt="hey" className="h-7 sm:h-8 hover:opacity-80 transition-opacity cursor-pointer" />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
