@@ -159,6 +159,30 @@ const AutomationComparison = () => {
                         <Check className="w-5 h-5 text-primary" />
                         <span className="text-foreground">Mehr Zeit für das Wesentliche</span>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">Reduzierte Fehlerquote</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">Kosteneinsparungen</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">Bessere Skalierbarkeit</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">Erhöhte Produktivität</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">24/7 Verfügbarkeit</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-primary" />
+                        <span className="text-foreground">Verbesserte Datenqualität</span>
+                      </div>
                     </div>
                   </div>
                 </div>
