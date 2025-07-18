@@ -67,7 +67,7 @@ const AutomationComparison = () => {
             
             <div className="bg-card rounded-xl p-6 border border-border">
               <img 
-                src="/lovable-uploads/51e3230c-fe8a-48fc-9469-fb78e8ce0d4e.png" 
+                src="/lovable-uploads/6adf596e-2d5c-4bf8-b8a3-472cbdb6b045.png" 
                 alt="Automation ON - Streamlined processes"
                 className="w-full h-auto rounded-lg"
               />
