@@ -1,5 +1,5 @@
 
-import { Phone } from 'lucide-react';
+
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
@@ -44,9 +44,8 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#contact"
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center gap-2 animate-fade-in"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center animate-fade-in"
               >
-                <Phone size={20} />
                 {t('hero.cta')}
               </a>
             </div>

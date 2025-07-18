@@ -1,5 +1,5 @@
 
-import { Phone } from 'lucide-react';
+
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const CTA = () => {
@@ -14,8 +14,7 @@ const CTA = () => {
         <p className="text-xl text-muted-foreground mb-8 font-raleway font-light">
           {t('cta.subtitle')}
         </p>
-        <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors flex items-center justify-center gap-3 mx-auto">
-          <Phone size={24} />
+        <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors flex items-center justify-center mx-auto">
           {t('cta.button')}
         </button>
         <p className="text-muted-foreground mt-4 font-raleway font-light">
