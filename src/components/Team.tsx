@@ -41,7 +41,7 @@ const Team = () => {
           <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
             About <span className="text-primary">uns</span>
           </h2>
-          <div className="max-w-4xl mx-auto text-left space-y-3">
+          <div className="max-w-2xl mx-auto text-center space-y-3">
             <p className="text-base text-muted-foreground font-raleway font-light">
               Wir sind Team botti – und wir denken Effizienz neu. Mit smarten Automatisierungslösungen entlasten wir nachhaltig, statt nur zu beschleunigen. Unser Fokus: echter Mehrwert im Alltag, individuell angepasst und ganzheitlich gedacht – mit Blick auf Prozesse, Menschen und Potenziale.
             </p>
