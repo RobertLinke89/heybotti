@@ -14,7 +14,6 @@ const ServicesDetail = () => {
       hero: "Transformieren Sie Ihr Marketing von reaktiv zu proaktiv",
       description: "Automatisieren Sie Funnels, Follow-ups und Kampagnen, um aus Interessenten systematisch Kunden zu machen – 24/7, datenbasiert und persönlich.",
       icon: TrendingUp,
-      color: "from-blue-500 to-purple-600",
       features: [
         "E-Mail-Automatisierung",
         "Lead-Nurturing-Funnels",
@@ -61,7 +60,6 @@ const ServicesDetail = () => {
       hero: "Ihre Finanzen im Autopilot - präzise und rechtskonform",
       description: "Belege, Zahlungen, Rechnungen und Reports fließen automatisiert durch Ihre Systeme – für ein aufgeräumtes Backoffice ohne Kopfzerbrechen.",
       icon: DollarSign,
-      color: "from-green-500 to-emerald-600",
       features: [
         "Belegerkennung & -verbuchung",
         "Rechnungsstellung & Mahnwesen",
@@ -107,7 +105,6 @@ const ServicesDetail = () => {
       hero: "Von der ersten Bewerbung bis zum erfolgreichen Onboarding",
       description: "Von der Bewerbung bis zum Onboarding: Automatisierungen bringen Tempo, Struktur und Wertschätzung in Ihre Personalprozesse.",
       icon: Users,
-      color: "from-purple-500 to-pink-600",
       features: [
         "Automatisierte Bewerbervorauswahl",
         "Terminvereinbarung für Interviews",
@@ -153,7 +150,6 @@ const ServicesDetail = () => {
       hero: "Ihr E-Commerce läuft wie geschmiert - ohne Ihr Zutun",
       description: "Verkauf läuft, Lager stimmt, Retouren sind im Griff – jede Bewegung im Shop löst automatisch Aktionen aus, die Ihre Kund:innen begeistern und Ihr Lager entlasten.",
       icon: Zap,
-      color: "from-orange-500 to-red-600",
       features: [
         "Bestandsabgleich & Lagerverwaltung",
         "Versandabwicklung / Etikettenerstellung",
@@ -199,7 +195,6 @@ const ServicesDetail = () => {
       hero: "Datengetriebene Entscheidungen - automatisch aufbereitet",
       description: "Deine wichtigsten KPIs auf einem Blick – aufbereitet, visualisiert und mit Warnsystemen versehen, bevor Risiken zum Problem werden.",
       icon: TrendingUp,
-      color: "from-indigo-500 to-blue-600",
       features: [
         "Dashboards & KPI-Automatisierung",
         "Automatisierte Datenaggregation aus mehreren Tools",
@@ -244,7 +239,6 @@ const ServicesDetail = () => {
       hero: "Interne Prozesse, die sich selbst organisieren",
       description: "Standardisierte Abläufe wie Genehmigungen, Dokumentenmanagement oder Übergaben laufen im Hintergrund – sauber, nachvollziehbar, skalierbar.",
       icon: CheckCircle,
-      color: "from-teal-500 to-green-600",
       features: [
         "Genehmigungsprozesse",
         "Ticketing- und Support-Workflows",
@@ -317,31 +311,31 @@ const ServicesDetail = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className={`bg-gradient-to-r ${service.color} py-20 text-white relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="bg-primary py-20 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/10"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <button 
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Zurück zur Übersicht
           </button>
           
           <div className="flex items-center gap-6 mb-8 animate-fade-in">
-            <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <IconComponent className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-primary-foreground/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+              <IconComponent className="w-10 h-10 text-primary-foreground" />
             </div>
             <div>
               <h1 className="text-5xl font-bold mb-4 font-raleway">{service.title}</h1>
-              <p className="text-xl text-white/90 font-raleway font-light">{service.hero}</p>
+              <p className="text-xl text-primary-foreground/90 font-raleway font-light">{service.hero}</p>
             </div>
           </div>
         </div>
         
         {/* Animated background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
