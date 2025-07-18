@@ -167,14 +167,21 @@ const AutomationComparison = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">
-            Bereit für den Wandel? Lassen Sie uns Ihre Prozesse optimieren.
-          </p>
-          <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors">
-            Ruf mich an
-          </button>
+        {/* Customer Testimonial */}
+        <div className="mt-16 bg-primary/10 rounded-2xl p-8 lg:p-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed mb-6">
+              "Ich frag mich heute, wie wir das vorher überhaupt gemacht haben. Seit wir 
+              unsere Prozesse automatisiert haben, läuft vieles einfach im Hintergrund, 
+              ganz ohne Nachhaken oder Kontrollchaos. Das Beste: Mein Team ist viel 
+              entspannter und hat endlich den Kopf frei für die wirklich wichtigen 
+              Themen. Ich kann's nur jedem empfehlen, der weniger Stress und mehr 
+              Klarheit im Alltag will."
+            </blockquote>
+            <cite className="text-foreground font-semibold">
+              Vera, BLACK FLASH ARCHERY GmbH
+            </cite>
+          </div>
         </div>
       </div>
     </section>
