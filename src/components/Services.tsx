@@ -1,5 +1,8 @@
 
+import { useNavigate } from 'react-router-dom';
+
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       id: "sales-marketing",
@@ -115,7 +118,10 @@ const Services = () => {
                 </ul>
               </div>
               
-              <button className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              <button 
+                onClick={() => navigate(`/services/${service.id}`)}
+                className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              >
                 Jetzt automatisieren
               </button>
             </div>
