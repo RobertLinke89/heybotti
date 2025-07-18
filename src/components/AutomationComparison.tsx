@@ -28,7 +28,7 @@ const AutomationComparison = () => {
             
             <div className="bg-card rounded-xl p-6 border border-border">
               <img 
-                src="/lovable-uploads/cbafba6f-1894-4ca3-99c0-807b8dd83bd2.png" 
+                src="/lovable-uploads/b7db09fb-6bc3-4de7-9976-ea9b53855bf5.png" 
                 alt="Automation OFF - Chaotic processes"
                 className="w-full h-auto rounded-lg"
               />
