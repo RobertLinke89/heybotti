@@ -122,7 +122,7 @@ const Services = () => {
                 onClick={() => navigate(`/services/${service.id}`)}
                 className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                Jetzt automatisieren
+                Mehr Info
               </button>
             </div>
           ))}
