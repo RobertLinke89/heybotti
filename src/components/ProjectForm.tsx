@@ -147,7 +147,7 @@ const ProjectForm = () => {
                   onValueChange={setBudget}
                   max={50000}
                   min={1000}
-                  step={5000}
+                  step={1000}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-muted-foreground mt-2 font-raleway">
