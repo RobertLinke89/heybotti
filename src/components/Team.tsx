@@ -54,28 +54,6 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-4">
-                <img
-                  src={member.avatar}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/10 group-hover:border-primary/30 transition-all duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-1 font-raleway">
-                {member.name}
-              </h3>
-              <p className="text-primary font-medium mb-2 font-raleway text-sm">
-                {member.role}
-              </p>
-              <p className="text-muted-foreground text-sm font-raleway font-light leading-relaxed">
-                {member.description}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
