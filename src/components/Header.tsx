@@ -63,33 +63,33 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-background border-b border-secondary sticky top-0 z-50">
+    <header className="bg-background/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <button 
               onClick={() => navigate('/')}
-              className="focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
+              className="focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg p-1 hover:bg-muted/50 transition-colors"
             >
-              <img src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" alt="hey" className="h-7 sm:h-8 hover:opacity-80 transition-opacity cursor-pointer" />
+              <img src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" alt="Botti" className="h-6 sm:h-7" />
             </button>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.services')}</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.about')}</a>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.testimonials')}</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.contact')}</a>
+          <nav className="hidden md:flex items-center space-x-1">
+            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.services')}</a>
+            <a href="#about" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.about')}</a>
+            <a href="#team" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.team')}</a>
+            <a href="#contact" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.contact')}</a>
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center">
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
-                <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
-                  <Phone size={18} />
+                <button className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm">
+                  <Phone size={16} />
                   {t('header.cta')}
                 </button>
               </DialogTrigger>
@@ -208,7 +208,7 @@ const Header = () => {
               className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -235,11 +235,11 @@ const Header = () => {
               {t('nav.about')}
             </a>
             <a 
-              href="#testimonials" 
+              href="#team" 
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {t('nav.testimonials')}
+              {t('nav.team')}
             </a>
             <a 
               href="#contact" 

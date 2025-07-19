@@ -11,12 +11,13 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const translations = {
-  // Header
+  // Navigation
+  'nav.home': 'Home',
   'nav.services': 'Services',
   'nav.about': 'Über uns',
-  'nav.testimonials': 'Referenzen',
+  'nav.team': 'Team',
   'nav.contact': 'Kontakt',
-  'header.cta': 'Ruf mich an',
+  'header.cta': 'Beratung',
   
   // Hero
   'hero.title': 'Mit uns läuft\'s',
