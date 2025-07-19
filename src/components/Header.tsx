@@ -2,7 +2,7 @@
 import { Phone, Menu, X, CalendarIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { format } from 'date-fns';
@@ -84,9 +84,8 @@ const Header = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-raleway font-medium">{t('nav.contact')}</a>
           </nav>
 
-          {/* Desktop CTA and Language Switcher */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <LanguageSwitcher />
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
                 <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center gap-2">
@@ -249,10 +248,6 @@ const Header = () => {
             >
               {t('nav.contact')}
             </a>
-            <div className="flex items-center justify-between py-2 px-2 border-t border-secondary mt-4 pt-4">
-              <span className="text-foreground font-raleway font-medium">Sprache / Language</span>
-              <LanguageSwitcher />
-            </div>
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
                 <button 
