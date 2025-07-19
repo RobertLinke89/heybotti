@@ -1,80 +1,91 @@
 
 const About = () => {
   return (
-    <section id="about" className="bg-secondary py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
+    <section id="about" className="bg-background py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
             So gehen wir <span className="text-primary">vor</span>
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Unser strukturierter Ansatz für nachhaltige Automatisierungslösungen
+          </p>
         </div>
         
-        <div className="space-y-16">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Step 01 */}
-          <div className="flex flex-col lg:flex-row items-start gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <span className="text-primary font-bold text-3xl font-raleway">01</span>
+          <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                  <span className="text-primary font-semibold text-lg">01</span>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-                Analyse & Zieldefinition
-              </h3>
-              <p className="text-muted-foreground font-raleway font-light leading-relaxed text-lg">
-                Am Anfang eines Automatisierungsprojekts steht die gründliche Analyse der bestehenden Prozesse. Es gilt herauszufinden, welche Aufgaben regelmäßig, zeitaufwendig und fehleranfällig sind – typische Kandidaten für eine Automatisierung. Gleichzeitig sollen klare Ziele definiert werden: Möchte man Zeit sparen, Fehler reduzieren oder die Skalierbarkeit erhöhen? Diese Zieldefinition bildet die Grundlage für alle weiteren Schritte.
-              </p>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                  Analyse & Zieldefinition
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Gründliche Analyse bestehender Prozesse und Definition klarer Ziele. Wir identifizieren zeitaufwendige, fehleranfällige Aufgaben und legen fest, ob Zeit gespart, Fehler reduziert oder Skalierbarkeit erhöht werden soll.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Step 02 */}
-          <div className="flex flex-col lg:flex-row items-start gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <span className="text-primary font-bold text-3xl font-raleway">02</span>
+          <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                  <span className="text-primary font-semibold text-lg">02</span>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-                Auswahl der passenden Tools & Technologien
-              </h3>
-              <p className="text-muted-foreground font-raleway font-light leading-relaxed text-lg">
-                Im nächsten Schritt wird geprüft, welche Tools und Technologien sich für die geplanten Automatisierungen eignen. Dabei ist wichtig, dass die Lösungen zu den bestehenden Systemen passen und die gewünschten Schnittstellen vorhanden sind. Ob Robotic Process Automation (RPA), Low-Code-Plattformen oder klassische API-Verknüpfungen – entscheidend ist, dass die Technologie benutzerfreundlich, sicher und langfristig skalierbar ist.
-              </p>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                  Tool-Auswahl & Technologie
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Auswahl passender Tools und Technologien für bestehende Systeme. Ob RPA, Low-Code-Plattformen oder API-Verknüpfungen – wir setzen auf benutzerfreundliche, sichere und skalierbare Lösungen.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Step 03 */}
-          <div className="flex flex-col lg:flex-row items-start gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <span className="text-primary font-bold text-3xl font-raleway">03</span>
+          <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                  <span className="text-primary font-semibold text-lg">03</span>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-                Umsetzung & Testphase
-              </h3>
-              <p className="text-muted-foreground font-raleway font-light leading-relaxed text-lg">
-                Mit einem klaren Ziel und den richtigen Tools startet die technische Umsetzung. Zunächst empfiehlt es sich, mit einem kleinen Pilotprozess zu beginnen. Dieser wird automatisiert, getestet und mit realen Daten durchgespielt. Das Feedback der betroffenen Mitarbeitenden ist dabei besonders wertvoll, um mögliche Stolpersteine frühzeitig zu erkennen und zu beheben.
-              </p>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                  Umsetzung & Testphase
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Technische Umsetzung mit kleinem Pilotprozess. Automatisierung, Tests mit realen Daten und wertvolles Feedback der Mitarbeitenden zur frühzeitigen Optimierung.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Step 04 */}
-          <div className="flex flex-col lg:flex-row items-start gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <span className="text-primary font-bold text-3xl font-raleway">04</span>
+          <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                  <span className="text-primary font-semibold text-lg">04</span>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-                Rollout & kontinuierliche Verbesserung
-              </h3>
-              <p className="text-muted-foreground font-raleway font-light leading-relaxed text-lg">
-                Sobald die Tests erfolgreich sind, wird der automatisierte Prozess live geschaltet. Wichtig ist es, das Team mitzunehmen, Schulungen anzubieten und den Nutzen transparent zu kommunizieren. Automatisierung ist kein einmaliger Akt, sondern ein kontinuierlicher Prozess – regelmäßige Überprüfungen, Optimierungen und die Erweiterung auf weitere Prozesse sorgen für langfristigen Erfolg.
-              </p>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                  Rollout & Optimierung
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Live-Schaltung mit Teamschulung und transparenter Kommunikation. Kontinuierliche Überprüfungen und Erweiterungen sorgen für langfristigen Erfolg.
+                </p>
+              </div>
             </div>
           </div>
         </div>
