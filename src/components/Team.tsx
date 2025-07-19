@@ -39,7 +39,7 @@ const Team = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-            About <span className="text-primary">uns</span>
+            About
           </h2>
           <div className="max-w-2xl mx-auto text-center space-y-3">
             <p className="text-base text-muted-foreground font-raleway font-light">
