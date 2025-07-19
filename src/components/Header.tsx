@@ -78,10 +78,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.services')}</a>
-            <a href="#about" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.about')}</a>
-            <a href="#team" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.team')}</a>
-            <a href="#contact" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.contact')}</a>
+            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Services</a>
+            <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Prozess</a>
+            <a href="#about" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">About</a>
           </nav>
 
           {/* Desktop CTA */}
@@ -225,28 +224,21 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {t('nav.services')}
+              Services
+            </a>
+            <a 
+              href="#prozess" 
+              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Prozess
             </a>
             <a 
               href="#about" 
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {t('nav.about')}
-            </a>
-            <a 
-              href="#team" 
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t('nav.team')}
-            </a>
-            <a 
-              href="#contact" 
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t('nav.contact')}
+              About
             </a>
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
