@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-secondary mt-6 pt-6 text-center">
           <p className="text-xs text-muted-foreground font-raleway font-light">
-            &copy; 2024 heybotti, a brand of oryve LLC, registered in the state of Miami, USA. All rights reserved.
+            &copy; 2024 HeyBotti, a brand of oryve LLC, registered in the state of Miami, USA. All rights reserved.
           </p>
         </div>
       </div>
