@@ -173,30 +173,14 @@ const ProjectForm = () => {
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex justify-center pt-4">
               <Button
                 type="submit"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 flex-1"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 <Send className="w-4 h-4 mr-2" />
                 Send Request
               </Button>
-              
-              <Button
-                type="button"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Call Directly
-              </Button>
-            </div>
-
-            <div className="text-center pt-4">
-              <p className="text-sm text-muted-foreground font-raleway">
-                <Mail className="w-4 h-4 inline mr-1" />
-                Or write to us directly: <span className="text-primary">hello@botti.co</span>
-              </p>
             </div>
           </form>
         </Card>
