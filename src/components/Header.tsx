@@ -81,7 +81,10 @@ const Header = () => {
             <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Services</a>
             <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Process</a>
             <button 
-              onClick={() => navigate('/about')} 
+              onClick={() => {
+                navigate('/about');
+                window.scrollTo(0, 0);
+              }} 
               className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
             >
               About
@@ -241,6 +244,7 @@ const Header = () => {
             <button 
               onClick={() => {
                 navigate('/about');
+                window.scrollTo(0, 0);
                 setIsMobileMenuOpen(false);
               }}
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
