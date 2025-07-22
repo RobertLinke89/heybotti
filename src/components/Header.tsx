@@ -80,7 +80,12 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-1">
             <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Services</a>
             <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Process</a>
-            <a href="#about" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">About</a>
+            <button 
+              onClick={() => navigate('/about')} 
+              className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
+            >
+              About
+            </button>
           </nav>
 
           {/* Desktop CTA */}
@@ -233,13 +238,15 @@ const Header = () => {
             >
               Prozess
             </a>
-            <a 
-              href="#about" 
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button 
+              onClick={() => {
+                navigate('/about');
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
             >
               About
-            </a>
+            </button>
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
                 <button 
