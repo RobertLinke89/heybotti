@@ -29,8 +29,8 @@ const CookieBanner = () => {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex-1">
           <p className="text-sm text-foreground font-raleway">
-            Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
-            Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies zu.
+            We use cookies to improve your experience on our website. 
+            By using our website, you agree to the use of cookies.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -40,14 +40,14 @@ const CookieBanner = () => {
             onClick={handleDecline}
             className="font-raleway"
           >
-            Ablehnen
+            Decline
           </Button>
           <Button 
             size="sm" 
             onClick={handleAccept}
             className="font-raleway"
           >
-            Akzeptieren
+            Accept
           </Button>
           <Button
             variant="ghost"

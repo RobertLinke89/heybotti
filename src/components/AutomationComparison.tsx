@@ -9,10 +9,10 @@ const AutomationComparison = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Der Unterschied ist deutlich
+            The difference is clear
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Sehen Sie selbst, wie Automatisierung Ihre Prozesse transformiert
+            See for yourself how automation transforms your processes
           </p>
         </div>
         
@@ -53,8 +53,8 @@ const AutomationComparison = () => {
                     <X className="w-6 h-6 text-destructive" />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold text-foreground">Ohne Automatisierung</h3>
-                    <p className="text-muted-foreground">Chaos und Ineffizienz</p>
+                    <h3 className="text-xl font-semibold text-foreground">Without Automation</h3>
+                    <p className="text-muted-foreground">Chaos and inefficiency</p>
                   </div>
                 </div>
                 
@@ -67,19 +67,19 @@ const AutomationComparison = () => {
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center gap-3">
                       <X className="w-5 h-5 text-destructive" />
-                      <span className="text-foreground">Verwirrende Kommunikationswege</span>
+                      <span className="text-foreground">Confusing communication channels</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <X className="w-5 h-5 text-destructive" />
-                      <span className="text-foreground">Zeitverlust durch manuelle Prozesse</span>
+                      <span className="text-foreground">Time loss through manual processes</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <X className="w-5 h-5 text-destructive" />
-                      <span className="text-foreground">Fehleranfällige Arbeitsabläufe</span>
+                      <span className="text-foreground">Error-prone workflows</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <X className="w-5 h-5 text-destructive" />
-                      <span className="text-foreground">Unstrukturierte Zusammenarbeit</span>
+                      <span className="text-foreground">Unstructured collaboration</span>
                     </div>
                   </div>
                 </div>
@@ -92,8 +92,8 @@ const AutomationComparison = () => {
                     <Check className="w-6 h-6 text-primary" />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold text-foreground">Mit botti Automatisierung</h3>
-                    <p className="text-muted-foreground">Klarheit und Effizienz</p>
+                    <h3 className="text-xl font-semibold text-foreground">With botti Automation</h3>
+                    <p className="text-muted-foreground">Clarity and efficiency</p>
                   </div>
                 </div>
                 
@@ -106,43 +106,43 @@ const AutomationComparison = () => {
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Klare, strukturierte Prozesse</span>
+                      <span className="text-foreground">Clear, structured processes</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Automatisierte Arbeitsabläufe</span>
+                      <span className="text-foreground">Automated workflows</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Nahtlose Teamkommunikation</span>
+                      <span className="text-foreground">Seamless team communication</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Mehr Zeit für das Wesentliche</span>
+                      <span className="text-foreground">More time for what matters</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Reduzierte Fehlerquote</span>
+                      <span className="text-foreground">Reduced error rate</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Kosteneinsparungen</span>
+                      <span className="text-foreground">Cost savings</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Bessere Skalierbarkeit</span>
+                      <span className="text-foreground">Better scalability</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Erhöhte Produktivität</span>
+                      <span className="text-foreground">Increased productivity</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">24/7 Verfügbarkeit</span>
+                      <span className="text-foreground">24/7 availability</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
-                      <span className="text-foreground">Verbesserte Datenqualität</span>
+                      <span className="text-foreground">Improved data quality</span>
                     </div>
                   </div>
                 </div>
@@ -160,16 +160,16 @@ const AutomationComparison = () => {
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Check className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">Erfolgsgeschichte</h3>
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">Success Story</h3>
               <p className="text-primary font-medium">Real Customer Experience</p>
             </div>
             <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
-              "Ich frag mich heute, wie wir das vorher überhaupt gemacht haben. Seit wir 
-              unsere Prozesse automatisiert haben, läuft vieles einfach im Hintergrund, 
-              ganz ohne Nachhaken oder Kontrollchaos. Das Beste: Mein Team ist viel 
-              entspannter und hat endlich den Kopf frei für die wirklich wichtigen 
-              Themen. Ich kann's nur jedem empfehlen, der weniger Stress und mehr 
-              Klarheit im Alltag will."
+              "I wonder today how we ever managed before. Since we 
+              automated our processes, many things just run in the background, 
+              without any follow-up or control chaos. The best part: My team is much 
+              more relaxed and finally has a clear head for the really important 
+              topics. I can only recommend it to anyone who wants less stress and more 
+              clarity in everyday life."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">

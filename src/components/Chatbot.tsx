@@ -18,7 +18,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hallo! Ich bin Ihr intelligenter Automatisierungs-Agent von botti.co. Wie kann ich Ihnen heute bei der Optimierung Ihrer Geschäftsprozesse helfen?',
+      text: 'Hello! I am your intelligent automation agent from botti.co. How can I help you today with optimizing your business processes?',
       isBot: true,
       timestamp: new Date()
     }
@@ -68,48 +68,48 @@ const Chatbot = () => {
   const generateBotResponse = (userInput: string): string => {
     const input = userInput.toLowerCase();
     
-    if (input.includes('automatisierung') || input.includes('automatisieren')) {
-      return 'Automatisierung ist unsere Spezialität! Wir können Ihnen in verschiedenen Bereichen helfen: Vertrieb & Marketing, Finanzen & Buchhaltung, HR & Recruiting, E-Commerce und Business Intelligence. In welchem Bereich sehen Sie das größte Potenzial?';
+    if (input.includes('automation') || input.includes('automate')) {
+      return 'Automation is our specialty! We can help you in various areas: Sales & Marketing, Finance & Accounting, HR & Recruiting, E-Commerce and Business Intelligence. In which area do you see the greatest potential?';
     }
     
-    if (input.includes('kosten') || input.includes('preis') || input.includes('budget')) {
-      return 'Die Kosten für Automatisierungslösungen variieren je nach Komplexität und Umfang. Gerne erstellen wir Ihnen ein individuelles Angebot. Können Sie mir mehr über Ihr Unternehmen und Ihre spezifischen Anforderungen erzählen?';
+    if (input.includes('cost') || input.includes('price') || input.includes('budget')) {
+      return 'The costs for automation solutions vary depending on complexity and scope. We would be happy to create an individual offer for you. Can you tell me more about your company and your specific requirements?';
     }
     
-    if (input.includes('crm') || input.includes('vertrieb') || input.includes('marketing')) {
-      return 'Perfekt! Unsere Vertriebs- & Marketingautomatisierung umfasst E-Mail-Automatisierung, Lead-Nurturing-Funnels, CRM-Automatisierungen und Chatbots. Damit können Sie aus Interessenten systematisch Kunden machen - 24/7 und datenbasiert. Welcher Aspekt interessiert Sie am meisten?';
+    if (input.includes('crm') || input.includes('sales') || input.includes('marketing')) {
+      return 'Perfect! Our sales & marketing automation includes email automation, lead nurturing funnels, CRM automation and chatbots. This allows you to systematically turn prospects into customers - 24/7 and data-driven. Which aspect interests you most?';
     }
     
-    if (input.includes('finanzen') || input.includes('buchhaltung') || input.includes('rechnung')) {
-      return 'Unsere Finanz- & Buchhaltungsautomatisierung sorgt für weniger Fehler und mehr Übersicht. Wir automatisieren Belegerkennung, Rechnungsstellung, Bankabgleiche und Steuer-Vorbereitung. Möchten Sie mehr über einen spezifischen Bereich erfahren?';
+    if (input.includes('finance') || input.includes('accounting') || input.includes('invoice')) {
+      return 'Our finance & accounting automation ensures fewer errors and more overview. We automate document recognition, invoicing, bank reconciliation and tax preparation. Would you like to learn more about a specific area?';
     }
     
-    if (input.includes('hr') || input.includes('personal') || input.includes('recruiting')) {
-      return 'HR-Automatisierung bringt Tempo und Struktur in Ihre Personalprozesse. Von automatisierter Bewerbervorauswahl über Terminvereinbarungen bis hin zum Onboarding - wir digitalisieren Ihren gesamten HR-Prozess. Wo sehen Sie den größten Handlungsbedarf?';
+    if (input.includes('hr') || input.includes('recruiting') || input.includes('personnel')) {
+      return 'HR automation brings speed and structure to your personnel processes. From automated candidate pre-selection to appointment scheduling to onboarding - we digitize your entire HR process. Where do you see the greatest need for action?';
     }
     
     if (input.includes('ecommerce') || input.includes('shop') || input.includes('online')) {
-      return 'E-Commerce-Automatisierung ist unser stilles Backoffice für Sie! Bestandsabgleich, Versandabwicklung, Zahlungsabgleich und Produktfeed-Automatisierung laufen rund um die Uhr. Welchen Teil Ihres E-Commerce-Prozesses möchten Sie optimieren?';
+      return 'E-commerce automation is our silent back office for you! Inventory synchronization, shipping processing, payment reconciliation and product feed automation run around the clock. Which part of your e-commerce process would you like to optimize?';
     }
     
     if (input.includes('reporting') || input.includes('dashboard') || input.includes('kpi')) {
-      return 'Mit Business Intelligence & Reporting haben Sie alle wichtigen KPIs auf einem Blick. Wir erstellen automatisierte Dashboards, aggregieren Daten aus mehreren Tools und richten Frühwarnsysteme ein. Welche Kennzahlen sind für Sie besonders wichtig?';
+      return 'With Business Intelligence & Reporting you have all important KPIs at a glance. We create automated dashboards, aggregate data from multiple tools and set up early warning systems. Which metrics are particularly important to you?';
     }
     
-    if (input.includes('workflow') || input.includes('prozess') || input.includes('genehmigung')) {
-      return 'Workflow-Automatisierung macht Ihre internen Prozesse effizienter. Genehmigungsprozesse, Ticketing, Dokumentenmanagement und interne Kommunikation laufen standardisiert und nachvollziehbar ab. Welche Prozesse bereiten Ihnen aktuell Kopfzerbrechen?';
+    if (input.includes('workflow') || input.includes('process') || input.includes('approval')) {
+      return 'Workflow automation makes your internal processes more efficient. Approval processes, ticketing, document management and internal communication run standardized and traceable. Which processes are currently giving you headaches?';
     }
     
-    if (input.includes('hallo') || input.includes('hi') || input.includes('guten tag')) {
-      return 'Hallo! Schön, dass Sie da sind. Ich helfe Ihnen gerne dabei, die passenden Automatisierungslösungen für Ihr Unternehmen zu finden. Was beschäftigt Sie aktuell am meisten in Ihren Geschäftsprozessen?';
+    if (input.includes('hello') || input.includes('hi') || input.includes('good day')) {
+      return 'Hello! Nice to have you here. I would be happy to help you find the right automation solutions for your company. What is currently occupying you most in your business processes?';
     }
     
-    if (input.includes('danke') || input.includes('dankeschön')) {
-      return 'Sehr gerne! Falls Sie weitere Fragen haben oder ein unverbindliches Beratungsgespräch wünschen, bin ich jederzeit für Sie da. Gemeinsam finden wir die perfekte Automatisierungslösung für Ihr Unternehmen.';
+    if (input.includes('thank') || input.includes('thanks')) {
+      return 'You are very welcome! If you have any further questions or would like a non-binding consultation, I am here for you at any time. Together we will find the perfect automation solution for your company.';
     }
     
     // Default response
-    return 'Das ist eine interessante Frage! Automatisierung kann in vielen Bereichen helfen - von Vertrieb über Finanzen bis hin zu HR-Prozessen. Können Sie mir mehr Details zu Ihrem konkreten Anliegen geben? So kann ich Ihnen gezielter weiterhelfen.';
+    return 'That is an interesting question! Automation can help in many areas - from sales to finance to HR processes. Can you give me more details about your specific concern? This way I can help you more specifically.';
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -157,7 +157,7 @@ const Chatbot = () => {
                       botti.co Assistant
                     </CardTitle>
                     <p className="text-xs text-muted-foreground">
-                      Ihr smarter Automatisierungs-Agent
+                      Your smart automation agent
                     </p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Chatbot = () => {
                         <div className={`text-xs text-muted-foreground mt-1 ${
                           message.isBot ? 'text-left' : 'text-right'
                         }`}>
-                          {message.timestamp.toLocaleTimeString('de-DE', { 
+                          {message.timestamp.toLocaleTimeString('en-US', { 
                             hour: '2-digit', 
                             minute: '2-digit' 
                           })}
@@ -239,7 +239,7 @@ const Chatbot = () => {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Schreiben Sie Ihre Nachricht..."
+                    placeholder="Write your message..."
                     className="flex-1 font-raleway"
                     disabled={isTyping}
                   />

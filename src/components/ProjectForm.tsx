@@ -25,8 +25,8 @@ const ProjectForm = () => {
   const onSubmit = (data: FormData) => {
     // Simulate form submission
     toast({
-      title: "Anfrage gesendet!",
-      description: "Wir melden uns innerhalb von 24 Stunden bei dir.",
+      title: "Request sent!",
+      description: "We will get back to you within 24 hours.",
     });
     reset();
     setBudget([10000]);
@@ -43,10 +43,10 @@ const ProjectForm = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            Projekt <span className="text-primary">anfragen</span>
+            Request <span className="text-primary">Project</span>
           </h2>
           <p className="text-xl text-muted-foreground font-raleway font-light">
-            Erzähl uns von deinem Projekt und wir finden gemeinsam die passende Lösung.
+            Tell us about your project and we'll find the right solution together.
           </p>
         </div>
 
@@ -58,9 +58,9 @@ const ProjectForm = () => {
                   Name *
                 </label>
                 <Input
-                  {...register("name", { required: "Name ist erforderlich" })}
+                  {...register("name", { required: "Name is required" })}
                   className="bg-background border-secondary text-foreground"
-                  placeholder="Dein Name"
+                  placeholder="Your name"
                 />
                 {errors.name && (
                   <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
@@ -69,18 +69,18 @@ const ProjectForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                  E-Mail *
+                  Email *
                 </label>
                 <Input
                   {...register("email", { 
-                    required: "E-Mail ist erforderlich",
+                    required: "Email is required",
                     pattern: {
                       value: /^\S+@\S+$/i,
-                      message: "Ungültige E-Mail-Adresse"
+                      message: "Invalid email address"
                     }
                   })}
                   className="bg-background border-secondary text-foreground"
-                  placeholder="deine@email.de"
+                  placeholder="your@email.com"
                   type="email"
                 />
                 {errors.email && (
@@ -90,23 +90,23 @@ const ProjectForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                  Unternehmen
+                  Company
                 </label>
                 <Input
                   {...register("company")}
                   className="bg-background border-secondary text-foreground"
-                  placeholder="Dein Unternehmen"
+                  placeholder="Your company"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                  Telefon
+                  Phone
                 </label>
                 <Input
                   {...register("phone")}
                   className="bg-background border-secondary text-foreground"
-                  placeholder="+49 123 456789"
+                  placeholder="+1 123 456789"
                   type="tel"
                 />
               </div>
@@ -114,7 +114,7 @@ const ProjectForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                <span className="text-primary">💰</span> Wieviel Umsatz mehr pro Jahr?: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
+                <span className="text-primary">💰</span> How much more revenue per year?: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
               </label>
               <div className="px-4 py-6 bg-primary/5 rounded-lg border border-primary/10">
                 <Slider
@@ -132,7 +132,7 @@ const ProjectForm = () => {
                   <span>500k€+</span>
                 </div>
                 <p className="text-xs text-primary mt-3 font-raleway text-center">
-                  Wir zeigen dir, wie du diese Ziele durch Automatisierung erreichst
+                  We'll show you how to achieve these goals through automation
                 </p>
               </div>
             </div>
@@ -161,12 +161,12 @@ const ProjectForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                Projekt-Details *
+                Project Details *
               </label>
               <Textarea
-                {...register("message", { required: "Bitte beschreibe dein Projekt" })}
+                {...register("message", { required: "Please describe your project" })}
                 className="bg-background border-secondary text-foreground min-h-[120px]"
-                placeholder="Beschreibe dein Projekt, deine Ziele und Herausforderungen..."
+                placeholder="Describe your project, goals and challenges..."
               />
               {errors.message && (
                 <p className="text-destructive text-sm mt-1">{errors.message.message}</p>
@@ -179,7 +179,7 @@ const ProjectForm = () => {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 flex-1"
               >
                 <Send className="w-4 h-4 mr-2" />
-                Anfrage senden
+                Send Request
               </Button>
               
               <Button
@@ -188,14 +188,14 @@ const ProjectForm = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                Direkt anrufen
+                Call Directly
               </Button>
             </div>
 
             <div className="text-center pt-4">
               <p className="text-sm text-muted-foreground font-raleway">
                 <Mail className="w-4 h-4 inline mr-1" />
-                Oder schreib uns direkt: <span className="text-primary">hello@botti.co</span>
+                Or write to us directly: <span className="text-primary">hello@botti.co</span>
               </p>
             </div>
           </form>

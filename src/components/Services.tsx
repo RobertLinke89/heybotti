@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
@@ -6,76 +5,76 @@ const Services = () => {
   const services = [
     {
       id: "sales-marketing",
-      title: "Vertriebs- & Marketingautomatisierung",
-      subtitle: "Mehr Leads. Weniger Aufwand. Volle Skalierung.",
-      description: "Automatisieren Sie Funnels, Follow-ups und Kampagnen, um aus Interessenten systematisch Kunden zu machen – 24/7, datenbasiert und persönlich.",
+      title: "Sales & Marketing Automation",
+      subtitle: "More leads. Less effort. Full scaling.",
+      description: "Automate funnels, follow-ups and campaigns to systematically turn prospects into customers – 24/7, data-driven and personal.",
       features: [
-        "E-Mail-Automatisierung",
-        "Lead-Nurturing-Funnels",
-        "CRM-Automatisierungen",
-        "Chatbots / WhatsApp-Automatisierung",
-        "Retargeting-Kampagnen"
+        "Email automation",
+        "Lead nurturing funnels",
+        "CRM automation",
+        "Chatbots / WhatsApp automation",
+        "Retargeting campaigns"
       ]
     },
     {
       id: "finance",
-      title: "Finanzen & Buchhaltung",
-      subtitle: "Weniger Fehler. Mehr Übersicht. Automatisch compliant.",
-      description: "Belege, Zahlungen, Rechnungen und Reports fließen automatisiert durch Ihre Systeme – für ein aufgeräumtes Backoffice ohne Kopfzerbrechen.",
+      title: "Finance & Accounting",
+      subtitle: "Fewer errors. More overview. Automatically compliant.",
+      description: "Documents, payments, invoices and reports flow automatically through your systems – for a tidy back office without headaches.",
       features: [
-        "Belegerkennung & -verbuchung",
-        "Rechnungsstellung & Mahnwesen",
-        "Automatisierte Bankabgleiche",
-        "Steuer-Vorbereitung durch Automatisierung von Reports"
+        "Document recognition & booking",
+        "Invoicing & dunning",
+        "Automated bank reconciliation",
+        "Tax preparation through report automation"
       ]
     },
     {
       id: "hr",
       title: "HR & Recruiting",
-      subtitle: "Die besten Talente. Die besten Abläufe.",
-      description: "Von der Bewerbung bis zum Onboarding: Automatisierungen bringen Tempo, Struktur und Wertschätzung in Ihre Personalprozesse.",
+      subtitle: "The best talents. The best processes.",
+      description: "From application to onboarding: Automation brings speed, structure and appreciation to your HR processes.",
       features: [
-        "Automatisierte Bewerbervorauswahl",
-        "Terminvereinbarung für Interviews",
-        "Onboarding-Automatisierung",
-        "Mitarbeiter-Kommunikation"
+        "Automated candidate pre-selection",
+        "Interview scheduling",
+        "Onboarding automation",
+        "Employee communication"
       ]
     },
     {
       id: "ecommerce",
       title: "E-Commerce & Fulfillment",
-      subtitle: "Dein stilles E-Commerce-Backoffice. Rund um die Uhr.",
-      description: "Verkauf läuft, Lager stimmt, Retouren sind im Griff – jede Bewegung im Shop löst automatisch Aktionen aus, die Ihre Kund:innen begeistern und Ihr Lager entlasten.",
+      subtitle: "Your silent e-commerce back office. Around the clock.",
+      description: "Sales run, inventory is correct, returns are under control – every movement in the shop automatically triggers actions that delight your customers and relieve your warehouse.",
       features: [
-        "Bestandsabgleich & Lagerverwaltung",
-        "Versandabwicklung / Etikettenerstellung",
-        "Zahlungsabgleich & Retouren-Handling",
-        "Produktfeed-Automatisierung für Marktplätze & Ads"
+        "Inventory synchronization & warehouse management",
+        "Shipping processing / label creation",
+        "Payment reconciliation & return handling",
+        "Product feed automation for marketplaces & ads"
       ]
     },
     {
       id: "business-intelligence",
       title: "Business Intelligence & Reporting",
-      subtitle: "Alle Zahlen. Alle Antworten. In Echtzeit.",
-      description: "Deine wichtigsten KPIs auf einem Blick – aufbereitet, visualisiert und mit Warnsystemen versehen, bevor Risiken zum Problem werden.",
+      subtitle: "All numbers. All answers. In real time.",
+      description: "Your most important KPIs at a glance – prepared, visualized and equipped with warning systems before risks become problems.",
       features: [
-        "Dashboards & KPI-Automatisierung",
-        "Automatisierte Datenaggregation aus mehreren Tools",
-        "Frühwarnsysteme via Triggern und Alerts"
+        "Dashboards & KPI automation",
+        "Automated data aggregation from multiple tools",
+        "Early warning systems via triggers and alerts"
       ]
     },
     {
       id: "workflows",
       title: "Workflows",
-      subtitle: "Effizienz beginnt intern.",
-      description: "Standardisierte Abläufe wie Genehmigungen, Dokumentenmanagement oder Übergaben laufen im Hintergrund – sauber, nachvollziehbar, skalierbar.",
+      subtitle: "Efficiency starts internally.",
+      description: "Standardized processes like approvals, document management or handovers run in the background – clean, traceable, scalable.",
       features: [
-        "Genehmigungsprozesse",
-        "Ticketing- und Support-Workflows",
-        "Kunden-Onboarding",
-        "Vertragsmanagement",
-        "Dokumentenmanagement",
-        "Interne Kommunikation"
+        "Approval processes",
+        "Ticketing and support workflows",
+        "Customer onboarding",
+        "Contract management",
+        "Document management",
+        "Internal communication"
       ]
     }
   ];
@@ -85,10 +84,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            Top-Bereiche für maximale <span className="text-primary">Hebelwirkung</span>
+            Top areas for maximum <span className="text-primary">leverage</span>
           </h2>
           <p className="text-xl text-muted-foreground font-raleway font-light max-w-4xl mx-auto">
-            Automatisierung ist kein Luxus mehr – sie ist der Schlüssel zu Wachstum, Effizienz und Klarheit in einer komplexen Arbeitswelt.
+            Automation is no longer a luxury – it's the key to growth, efficiency and clarity in a complex working world.
           </p>
         </div>
         
@@ -122,7 +121,7 @@ const Services = () => {
                 onClick={() => navigate(`/services/${service.id}`)}
                 className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                Mehr Info
+                More Info
               </button>
             </div>
           ))}
@@ -130,10 +129,10 @@ const Services = () => {
         
         <div className="text-center mt-16">
           <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors">
-            Kostenlose Beratung anfragen
+            Request Free Consultation
           </button>
           <p className="text-muted-foreground mt-4 font-raleway font-light">
-            Welcher Bereich bietet in Ihrem Unternehmen das größte Potenzial?
+            Which area offers the greatest potential in your company?
           </p>
         </div>
       </div>

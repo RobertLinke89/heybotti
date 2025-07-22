@@ -79,7 +79,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Services</a>
-            <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Prozess</a>
+            <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Process</a>
             <a href="#about" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">About</a>
           </nav>
 
@@ -94,14 +94,14 @@ const Header = () => {
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle>Rückruf vereinbaren</DialogTitle>
+                  <DialogTitle>Schedule Callback</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium mb-2">Name *</label>
                     <Input
                       {...register("name", { required: "Name ist erforderlich" })}
-                      placeholder="Ihr Name"
+                      placeholder="Your Name"
                     />
                     {errors.name && (
                       <p className="text-destructive text-sm mt-1">{errors.name.message}</p>

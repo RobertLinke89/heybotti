@@ -13,54 +13,54 @@ const Jobs = () => {
       title: 'No-Code/Low-Code Developer',
       type: 'Freelance',
       location: 'Remote',
-      start: 'ab sofort',
-      mission: 'Du entwickelst bei botti maßgeschneiderte Automatisierungen mit Tools wie Make, n8n, Airtable oder Zapier – von der Idee bis zur Umsetzung. Du denkst in Workflows, liebst einfache Lösungen für komplexe Prozesse und setzt technische Anforderungen in funktionierende Systeme um.',
+      start: 'Immediately',
+      mission: 'At botti, you develop customized automation solutions using tools like Make, n8n, Airtable or Zapier – from idea to implementation. You think in workflows, love simple solutions for complex processes and translate technical requirements into functioning systems.',
       requirements: [
-        'Erfahrung mit No-Code- oder Low-Code-Plattformen',
-        'Vertrauter Umgang mit APIs, Webhooks & Datenmodellen',
-        'Strukturiertes Arbeiten, technisches Verständnis und eine lösungsorientierte Denkweise',
-        'Freude an effizienter Umsetzung und sauberem Prozessdesign'
+        'Experience with no-code or low-code platforms',
+        'Familiar handling of APIs, webhooks & data models',
+        'Structured work approach, technical understanding and solution-oriented mindset',
+        'Enthusiasm for efficient implementation and clean process design'
       ],
       benefits: [
-        'Abwechslungsreiche Kundenprojekte mit echtem Impact',
-        'Volle Flexibilität: arbeite wann und wo du willst',
-        'Ein wertschätzendes, agiles Team, das Klartext spricht und Ideen Raum gibt'
+        'Diverse customer projects with real impact',
+        'Full flexibility: work when and where you want',
+        'An appreciative, agile team that speaks plainly and gives ideas space'
       ]
     },
     {
       title: 'Automation Consultant',
       type: 'Freelance',
       location: 'Remote',
-      start: 'ab sofort',
-      mission: 'Du analysierst Geschäftsprozesse, identifizierst Automatisierungspotenziale und begleitest Unternehmen bei der digitalen Transformation. Als Sparringspartner:in auf Augenhöhe denkst du ganzheitlich und entwickelst gemeinsam mit unserem Team Lösungen, die Menschen und Prozesse wirklich entlasten.',
+      start: 'Immediately',
+      mission: 'You analyze business processes, identify automation potential and accompany companies in their digital transformation. As a sparring partner at eye level, you think holistically and develop solutions together with our team that really relieve people and processes.',
       requirements: [
-        'Erfahrung in der Beratung rund um Digitalisierung und Prozessoptimierung',
-        'Klarer Blick für Abläufe, Nutzerfreundlichkeit und Effizienz',
-        'Technisches Grundverständnis (z. B. API-Logik, Automatisierungstools)',
-        'Kommunikationsstärke, Empathie und Begeisterung für Transformation'
+        'Experience in consulting around digitization and process optimization',
+        'Clear view for workflows, user-friendliness and efficiency',
+        'Basic technical understanding (e.g. API logic, automation tools)',
+        'Communication skills, empathy and enthusiasm for transformation'
       ],
       benefits: [
-        'Kund:innen, die bereit sind, neu zu denken',
-        'Freiheit und Verantwortung in der Umsetzung',
-        'Zusammenarbeit in einem Team, das Haltung zeigt – mit Verstand, Herz und Weitblick'
+        'Customers who are ready to think differently',
+        'Freedom and responsibility in implementation',
+        'Collaboration in a team that shows attitude – with mind, heart and foresight'
       ]
     },
     {
       title: 'AI Workflow Architect',
       type: 'Freelance',
       location: 'Remote',
-      start: 'ab sofort',
-      mission: 'Du konzipierst intelligente Workflows mit GPT, LangChain, Zapier & Co. und bringst so echte KI-Power in die tägliche Arbeit unserer Kund:innen. Dabei verbindest du technische Raffinesse mit strategischem Denken – und schaffst Lösungen, die intuitiv funktionieren und nachhaltig wirken.',
+      start: 'Immediately',
+      mission: 'You design intelligent workflows with GPT, LangChain, Zapier & Co. and bring real AI power into the daily work of our customers. You combine technical sophistication with strategic thinking – and create solutions that work intuitively and have a lasting impact.',
       requirements: [
-        'Erfahrung im Umgang mit KI-Modellen (LLMs), Prompt-Engineering und Tools wie LangChain',
-        'Gespür für sinnvolle Automatisierung und Datenflüsse',
-        'Selbstständige, strukturierte Arbeitsweise und Freude an Innovation',
-        'Interesse daran, Dinge wirklich besser zu machen – nicht nur smarter'
+        'Experience working with AI models (LLMs), prompt engineering and tools like LangChain',
+        'Sense for meaningful automation and data flows',
+        'Independent, structured work approach and enthusiasm for innovation',
+        'Interest in making things really better – not just smarter'
       ],
       benefits: [
-        'Projekte am Puls der Zeit – mit echtem Gestaltungsspielraum',
-        'Austausch mit einem Team, das Technologie menschlich denkt',
-        'Maximale Flexibilität, offene Kommunikation, faire Zusammenarbeit'
+        'Projects at the cutting edge – with real creative freedom',
+        'Exchange with a team that thinks technology humanly',
+        'Maximum flexibility, open communication, fair cooperation'
       ]
     }
   ];
@@ -79,16 +79,16 @@ const Jobs = () => {
               className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Zurück zur Startseite
+              Back to Homepage
             </Button>
             
             <div className="text-center">
               <h1 className="text-4xl font-bold text-foreground mb-4 font-raleway">
-                Offene <span className="text-primary">Stellen</span>
+                Open <span className="text-primary">Positions</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Werde Teil unseres Teams und gestalte die Zukunft der Automatisierung mit. 
-                Wir suchen talentierte Menschen, die Leidenschaft für Innovation und Effizienz mitbringen.
+                Become part of our team and shape the future of automation. 
+                We are looking for talented people who bring passion for innovation and efficiency.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ const Jobs = () => {
                     {/* Mission */}
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                        Deine Mission
+                        Your Mission
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
                         {job.mission}
@@ -133,7 +133,7 @@ const Jobs = () => {
                     {/* Requirements */}
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                        Was du mitbringst
+                        What you bring
                       </h3>
                       <ul className="space-y-2">
                         {job.requirements.map((req, reqIndex) => (
@@ -148,7 +148,7 @@ const Jobs = () => {
                     {/* Benefits */}
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                        Was dich erwartet
+                        What awaits you
                       </h3>
                       <ul className="space-y-2">
                         {job.benefits.map((benefit, benefitIndex) => (
@@ -163,7 +163,7 @@ const Jobs = () => {
                     {/* CTA */}
                     <div className="pt-4 border-t border-border/30">
                       <Button className="w-full sm:w-auto">
-                        Jetzt bewerben
+                        Apply Now
                       </Button>
                     </div>
                   </div>
@@ -176,14 +176,14 @@ const Jobs = () => {
           <div className="mt-16 text-center">
             <div className="bg-muted/30 rounded-lg p-8">
               <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">
-                Keine passende Stelle gefunden?
+                Didn't find the right position?
               </h3>
               <p className="text-muted-foreground mb-4">
-                Wir sind immer auf der Suche nach talentierten Menschen. 
-                Sende uns eine Initiativbewerbung!
+                We are always looking for talented people. 
+                Send us an unsolicited application!
               </p>
               <Button variant="outline">
-                Initiativbewerbung senden
+                Send Unsolicited Application
               </Button>
             </div>
           </div>

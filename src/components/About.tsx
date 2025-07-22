@@ -5,10 +5,10 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-            So gehen wir <span className="text-primary">vor</span>
+            How we <span className="text-primary">approach</span> it
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Unser strukturierter Ansatz für nachhaltige Automatisierungslösungen
+            Our structured approach for sustainable automation solutions
           </p>
         </div>
         
@@ -23,10 +23,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Analyse & Zieldefinition
+                  Analysis & Goal Definition
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Gründliche Analyse bestehender Prozesse und Definition klarer Ziele. Wir identifizieren zeitaufwendige, fehleranfällige Aufgaben und legen fest, ob Zeit gespart, Fehler reduziert oder Skalierbarkeit erhöht werden soll.
+                  Thorough analysis of existing processes and definition of clear goals. We identify time-consuming, error-prone tasks and determine whether time should be saved, errors reduced, or scalability increased.
                 </p>
               </div>
             </div>
@@ -42,10 +42,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Tool-Auswahl & Technologie
+                  Tool Selection & Technology
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Auswahl passender Tools und Technologien für bestehende Systeme. Ob RPA, Low-Code-Plattformen oder API-Verknüpfungen – wir setzen auf benutzerfreundliche, sichere und skalierbare Lösungen.
+                  Selection of suitable tools and technologies for existing systems. Whether RPA, low-code platforms or API integrations – we focus on user-friendly, secure and scalable solutions.
                 </p>
               </div>
             </div>
@@ -61,10 +61,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Umsetzung & Testphase
+                  Implementation & Testing Phase
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Technische Umsetzung mit kleinem Pilotprozess. Automatisierung, Tests mit realen Daten und wertvolles Feedback der Mitarbeitenden zur frühzeitigen Optimierung.
+                  Technical implementation with small pilot process. Automation, testing with real data and valuable employee feedback for early optimization.
                 </p>
               </div>
             </div>
@@ -80,10 +80,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Rollout & Optimierung
+                  Rollout & Optimization
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Live-Schaltung mit Teamschulung und transparenter Kommunikation. Kontinuierliche Überprüfungen und Erweiterungen sorgen für langfristigen Erfolg.
+                  Go-live with team training and transparent communication. Continuous reviews and extensions ensure long-term success.
                 </p>
               </div>
             </div>
