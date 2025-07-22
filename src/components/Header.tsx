@@ -44,16 +44,16 @@ const Header = () => {
   const handleCallbackSubmit = (data: CallbackFormData) => {
     if (!selectedDate || !selectedTime) {
       toast({
-        title: "Fehler",
-        description: "Bitte wählen Sie Datum und Uhrzeit aus.",
+        title: "Error",
+        description: "Please select date and time.",
         variant: "destructive"
       });
       return;
     }
 
     toast({
-      title: "Rückruf vereinbart!",
-      description: `Wir rufen Sie am ${format(selectedDate, 'dd.MM.yyyy')} um ${selectedTime} zurück.`,
+      title: "Callback scheduled!",
+      description: `We will call you back on ${format(selectedDate, 'dd.MM.yyyy')} at ${selectedTime}.`,
     });
     
     reset();
@@ -105,7 +105,7 @@ const Header = () => {
                   <div>
                     <label className="block text-sm font-medium mb-2">Name *</label>
                     <Input
-                      {...register("name", { required: "Name ist erforderlich" })}
+                      {...register("name", { required: "Name is required" })}
                       placeholder="Your Name"
                     />
                     {errors.name && (
@@ -114,17 +114,17 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">E-Mail *</label>
+                    <label className="block text-sm font-medium mb-2">Email *</label>
                     <Input
                       {...register("email", { 
-                        required: "E-Mail ist erforderlich",
+                        required: "Email is required",
                         pattern: {
                           value: /^\S+@\S+$/i,
-                          message: "Ungültige E-Mail-Adresse"
+                          message: "Invalid email address"
                         }
                       })}
                       type="email"
-                      placeholder="ihre@email.de"
+                      placeholder="your@email.com"
                     />
                     {errors.email && (
                       <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
@@ -132,11 +132,11 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Telefon *</label>
+                    <label className="block text-sm font-medium mb-2">Phone *</label>
                     <Input
-                      {...register("phone", { required: "Telefonnummer ist erforderlich" })}
+                      {...register("phone", { required: "Phone number is required" })}
                       type="tel"
-                      placeholder="+49 123 456789"
+                      placeholder="+1 123 456789"
                     />
                     {errors.phone && (
                       <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
@@ -144,7 +144,7 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Datum *</label>
+                    <label className="block text-sm font-medium mb-2">Date *</label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <Button
@@ -155,7 +155,7 @@ const Header = () => {
                           )}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Datum wählen</span>}
+                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Select date</span>}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
@@ -172,10 +172,10 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Uhrzeit *</label>
+                    <label className="block text-sm font-medium mb-2">Time *</label>
                     <Select value={selectedTime} onValueChange={setSelectedTime}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Uhrzeit wählen" />
+                        <SelectValue placeholder="Select time" />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((time) => (
@@ -194,10 +194,10 @@ const Header = () => {
                       className="flex-1"
                       onClick={() => setIsCallbackDialogOpen(false)}
                     >
-                      Abbrechen
+                      Cancel
                     </Button>
                     <Button type="submit" className="flex-1">
-                      Rückruf vereinbaren
+                      Schedule Callback
                     </Button>
                   </div>
                 </form>
@@ -259,14 +259,14 @@ const Header = () => {
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle>Rückruf vereinbaren</DialogTitle>
+                  <DialogTitle>Schedule Callback</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium mb-2">Name *</label>
                     <Input
-                      {...register("name", { required: "Name ist erforderlich" })}
-                      placeholder="Ihr Name"
+                      {...register("name", { required: "Name is required" })}
+                      placeholder="Your Name"
                     />
                     {errors.name && (
                       <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
@@ -274,17 +274,17 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">E-Mail *</label>
+                    <label className="block text-sm font-medium mb-2">Email *</label>
                     <Input
                       {...register("email", { 
-                        required: "E-Mail ist erforderlich",
+                        required: "Email is required",
                         pattern: {
                           value: /^\S+@\S+$/i,
-                          message: "Ungültige E-Mail-Adresse"
+                          message: "Invalid email address"
                         }
                       })}
                       type="email"
-                      placeholder="ihre@email.de"
+                      placeholder="your@email.com"
                     />
                     {errors.email && (
                       <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
@@ -292,11 +292,11 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Telefon *</label>
+                    <label className="block text-sm font-medium mb-2">Phone *</label>
                     <Input
-                      {...register("phone", { required: "Telefonnummer ist erforderlich" })}
+                      {...register("phone", { required: "Phone number is required" })}
                       type="tel"
-                      placeholder="+49 123 456789"
+                      placeholder="+1 123 456789"
                     />
                     {errors.phone && (
                       <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
@@ -304,7 +304,7 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Datum *</label>
+                    <label className="block text-sm font-medium mb-2">Date *</label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <Button
@@ -315,7 +315,7 @@ const Header = () => {
                           )}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Datum wählen</span>}
+                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Select date</span>}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
@@ -332,10 +332,10 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Uhrzeit *</label>
+                    <label className="block text-sm font-medium mb-2">Time *</label>
                     <Select value={selectedTime} onValueChange={setSelectedTime}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Uhrzeit wählen" />
+                        <SelectValue placeholder="Select time" />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((time) => (
@@ -354,10 +354,10 @@ const Header = () => {
                       className="flex-1"
                       onClick={() => setIsCallbackDialogOpen(false)}
                     >
-                      Abbrechen
+                      Cancel
                     </Button>
                     <Button type="submit" className="flex-1">
-                      Rückruf vereinbaren
+                      Schedule Callback
                     </Button>
                   </div>
                 </form>
