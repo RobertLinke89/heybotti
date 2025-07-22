@@ -10,6 +10,7 @@ import ProjectForm from "@/components/ProjectForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       <CTA />
       <Footer />
       <Chatbot />
+      <CookieBanner />
     </div>
   );
 };
