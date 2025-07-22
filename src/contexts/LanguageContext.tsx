@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export type Language = 'de';
@@ -10,7 +11,39 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const translations = {
+type TranslationKey = 
+  // Navigation
+  | 'nav.home'
+  | 'nav.services' 
+  | 'nav.about'
+  | 'nav.team'
+  | 'nav.contact'
+  | 'header.cta'
+  // Hero
+  | 'hero.title'
+  | 'hero.title.highlight'
+  | 'hero.subtitle'
+  | 'hero.cta'
+  // Team
+  | 'team.title'
+  | 'team.title.highlight'
+  | 'team.subtitle'
+  | 'team.alex.role'
+  | 'team.alex.description'
+  | 'team.robert.role'
+  | 'team.robert.description'
+  | 'team.chris.role'
+  | 'team.chris.description'
+  | 'team.sebastian.role'
+  | 'team.sebastian.description'
+  // CTA
+  | 'cta.title'
+  | 'cta.title.highlight'
+  | 'cta.subtitle'
+  | 'cta.button'
+  | 'cta.note';
+
+const translations: Record<TranslationKey, string> = {
   // Navigation
   'nav.home': 'Home',
   'nav.services': 'Services',
@@ -46,7 +79,6 @@ const translations = {
   'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an deiner Situation.',
 };
 
-
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language] = useState<Language>('de');
 
@@ -55,7 +87,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const t = (key: string): string => {
-    return translations[key] || key;
+    return translations[key as TranslationKey] || key;
   };
 
   return (
