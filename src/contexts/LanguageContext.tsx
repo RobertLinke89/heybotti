@@ -36,6 +36,8 @@ type TranslationKey =
   | 'team.chris.description'
   | 'team.sebastian.role'
   | 'team.sebastian.description'
+  | 'team.karim.role'
+  | 'team.karim.description'
   // CTA
   | 'cta.title'
   | 'cta.title.highlight'
@@ -62,14 +64,16 @@ const translations: Record<TranslationKey, string> = {
   'team.title': 'Our',
   'team.title.highlight': 'Team',
   'team.subtitle': 'Meet the experts who automate and digitize your business.',
-  'team.alex.role': 'CEO & Strategy',
-  'team.alex.description': 'Develops customized automation strategies for companies.',
-  'team.robert.role': 'CTO & Development',
-  'team.robert.description': 'Technical leader with focus on innovative solution architectures.',
+  'team.alex.role': 'Solution Architect',
+  'team.alex.description': 'Designs comprehensive automation solutions that integrate seamlessly with existing business processes and drive digital transformation.',
+  'team.robert.role': 'Automation Consultant',
+  'team.robert.description': 'Provides strategic guidance on automation opportunities and helps organizations optimize their operational efficiency through intelligent process design.',
   'team.chris.role': 'Automation Engineer',
-  'team.chris.description': 'Specialist for process optimization and intelligent workflows.',
+  'team.chris.description': 'Implements and maintains automated systems, ensuring robust performance and seamless integration across all technical platforms.',
   'team.sebastian.role': 'Business Analyst',
-  'team.sebastian.description': 'Analyzes business processes and identifies improvement potential.',
+  'team.sebastian.description': 'Analyzes business workflows to identify automation opportunities and translates complex requirements into actionable technical specifications.',
+  'team.karim.role': 'Developer',
+  'team.karim.description': 'Builds and codes custom automation solutions, developing the technical infrastructure that powers our innovative business process improvements.',
   
   // CTA
   'cta.title': 'Ready for more',

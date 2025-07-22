@@ -3,6 +3,7 @@ import avatarAlex from '@/assets/avatar-alex.png';
 import avatarRobert from '@/assets/avatar-robert.png';
 import avatarChris from '@/assets/avatar-chris.png';
 import avatarSebastian from '@/assets/avatar-sebastian.png';
+import avatarKarim from '@/assets/avatar-karim.png';
 
 const Team = () => {
   const { t } = useLanguage();
@@ -31,6 +32,12 @@ const Team = () => {
       role: t('team.sebastian.role'),
       avatar: avatarSebastian,
       description: t('team.sebastian.description')
+    },
+    {
+      name: 'Karim',
+      role: t('team.karim.role'),
+      avatar: avatarKarim,
+      description: t('team.karim.description')
     }
   ];
 
@@ -46,7 +53,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center">
               <div className="relative mb-4">
