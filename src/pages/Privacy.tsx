@@ -69,9 +69,10 @@ const Privacy = () => {
           Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
         </p>
         <div className="bg-muted p-4 rounded-lg mb-4">
-          <p className="text-foreground font-medium">oryve LLC</p>
-          <p className="text-muted-foreground">Registered in Miami, Florida, USA</p>
-          <p className="text-muted-foreground">E-Mail: hello@botti.co</p>
+          <p className="text-foreground font-medium">PLUSPULS uGmbH</p>
+          <p className="text-muted-foreground">Schwarzburger Chaussee 78</p>
+          <p className="text-muted-foreground">07407 Rudolstadt, Deutschland</p>
+          <p className="text-muted-foreground">E-Mail: info@pluspuls.de</p>
         </div>
 
         <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Speicherdauer</h3>
@@ -214,9 +215,10 @@ const Privacy = () => {
           The responsible party for data processing on this website is:
         </p>
         <div className="bg-muted p-4 rounded-lg mb-4">
-          <p className="text-foreground font-medium">oryve LLC</p>
-          <p className="text-muted-foreground">Registered in Miami, Florida, USA</p>
-          <p className="text-muted-foreground">E-Mail: hello@botti.co</p>
+          <p className="text-foreground font-medium">PLUSPULS uGmbH</p>
+          <p className="text-muted-foreground">Schwarzburger Chaussee 78</p>
+          <p className="text-muted-foreground">07407 Rudolstadt, Germany</p>
+          <p className="text-muted-foreground">E-Mail: info@pluspuls.de</p>
         </div>
 
         <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Storage Duration</h3>

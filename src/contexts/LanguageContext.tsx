@@ -376,7 +376,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
 
     // Footer
     'footer.description': 'Smart automation with a human perspective for small and medium-sized businesses.',
-    'footer.copyright': '© 2024 HeyBotti, a brand of oryve LLC, registered in the state of Miami, USA. All rights reserved.',
+    'footer.copyright': '© 2024 HeyBotti, a brand of PLUSPULS uGmbH. All rights reserved.',
 
     // Jobs CTA
     'jobs.cta.title': 'Become part of our',
@@ -649,7 +649,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
 
     // Footer
     'footer.description': 'Intelligente Automatisierung mit menschlicher Perspektive für kleine und mittlere Unternehmen.',
-    'footer.copyright': '© 2024 HeyBotti, eine Marke der oryve LLC, registriert im Bundesstaat Miami, USA. Alle Rechte vorbehalten.',
+    'footer.copyright': '© 2024 HeyBotti, eine Marke der PLUSPULS uGmbH. Alle Rechte vorbehalten.',
 
     // Jobs CTA
     'jobs.cta.title': 'Komm ins',
