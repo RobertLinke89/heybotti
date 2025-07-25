@@ -1,13 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Services = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const services = [
     {
       id: "sales-marketing",
-      title: "Sales & Marketing Automation",
-      subtitle: "More leads. Less effort. Full scaling.",
-      description: "Automate funnels, follow-ups and campaigns to systematically turn prospects into customers – 24/7, data-driven and personal.",
+      title: t('services.sales.title'),
+      subtitle: t('services.sales.subtitle'),
+      description: t('services.sales.description'),
       features: [
         "Email automation",
         "Lead nurturing funnels",
@@ -18,9 +20,9 @@ const Services = () => {
     },
     {
       id: "finance",
-      title: "Finance & Accounting",
-      subtitle: "Fewer errors. More overview. Automatically compliant.",
-      description: "Documents, payments, invoices and reports flow automatically through your systems – for a tidy back office without headaches.",
+      title: t('services.finance.title'),
+      subtitle: t('services.finance.subtitle'),
+      description: t('services.finance.description'),
       features: [
         "Document recognition & booking",
         "Invoicing & dunning",
@@ -30,9 +32,9 @@ const Services = () => {
     },
     {
       id: "hr",
-      title: "HR & Recruiting",
-      subtitle: "The best talents. The best processes.",
-      description: "From application to onboarding: Automation brings speed, structure and appreciation to your HR processes.",
+      title: t('services.hr.title'),
+      subtitle: t('services.hr.subtitle'),
+      description: t('services.hr.description'),
       features: [
         "Automated candidate pre-selection",
         "Interview scheduling",
@@ -42,9 +44,9 @@ const Services = () => {
     },
     {
       id: "ecommerce",
-      title: "E-Commerce & Fulfillment",
-      subtitle: "Your silent e-commerce back office. Around the clock.",
-      description: "Sales run, inventory is correct, returns are under control – every movement in the shop automatically triggers actions that delight your customers and relieve your warehouse.",
+      title: t('services.ecommerce.title'),
+      subtitle: t('services.ecommerce.subtitle'),
+      description: t('services.ecommerce.description'),
       features: [
         "Inventory synchronization & warehouse management",
         "Shipping processing / label creation",
@@ -54,9 +56,9 @@ const Services = () => {
     },
     {
       id: "business-intelligence",
-      title: "Business Intelligence & Reporting",
-      subtitle: "All numbers. All answers. In real time.",
-      description: "Your most important KPIs at a glance – prepared, visualized and equipped with warning systems before risks become problems.",
+      title: t('services.bi.title'),
+      subtitle: t('services.bi.subtitle'),
+      description: t('services.bi.description'),
       features: [
         "Dashboards & KPI automation",
         "Automated data aggregation from multiple tools",
@@ -65,9 +67,9 @@ const Services = () => {
     },
     {
       id: "workflows",
-      title: "Workflows",
-      subtitle: "Efficiency starts internally.",
-      description: "Standardized processes like approvals, document management or handovers run in the background – clean, traceable, scalable.",
+      title: t('services.workflows.title'),
+      subtitle: t('services.workflows.subtitle'),
+      description: t('services.workflows.description'),
       features: [
         "Approval processes",
         "Ticketing and support workflows",
@@ -84,10 +86,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            Top areas for maximum <span className="text-primary">leverage</span>
+            {t('services.title')} <span className="text-primary">{t('services.title.highlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground font-raleway font-light max-w-4xl mx-auto">
-            Automation is no longer a luxury – it's the key to growth, efficiency and clarity in a complex working world.
+            {t('services.subtitle')}
           </p>
         </div>
         
@@ -121,7 +123,7 @@ const Services = () => {
                 onClick={() => navigate(`/services/${service.id}`)}
                 className="w-full bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                More Info
+                {t('services.more.info')}
               </button>
             </div>
           ))}
@@ -129,10 +131,10 @@ const Services = () => {
         
         <div className="text-center mt-16">
           <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors">
-            Request Free Consultation
+            {t('services.consultation.button')}
           </button>
           <p className="text-muted-foreground mt-4 font-raleway font-light">
-            Which area offers the greatest potential in your company?
+            {t('services.consultation.subtitle')}
           </p>
         </div>
       </div>

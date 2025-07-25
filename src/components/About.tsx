@@ -1,14 +1,17 @@
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const About = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="bg-background py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-            How we <span className="text-primary">approach</span> it
+            {t('about.title')} <span className="text-primary">{t('about.title.highlight')}</span> it
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our structured approach for sustainable automation solutions
+            {t('about.subtitle')}
           </p>
         </div>
         
@@ -23,10 +26,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Analysis & Goal Definition
+                  {t('about.step1.title')}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Thorough analysis of existing processes and definition of clear goals. We identify time-consuming, error-prone tasks and determine whether time should be saved, errors reduced, or scalability increased.
+                  {t('about.step1.description')}
                 </p>
               </div>
             </div>
@@ -42,10 +45,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Tool Selection & Technology
+                  {t('about.step2.title')}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Selection of suitable tools and technologies for existing systems. Whether RPA, low-code platforms or API integrations – we focus on user-friendly, secure and scalable solutions.
+                  {t('about.step2.description')}
                 </p>
               </div>
             </div>
@@ -61,10 +64,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Implementation & Testing Phase
+                  {t('about.step3.title')}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Technical implementation with small pilot process. Automation, testing with real data and valuable employee feedback for early optimization.
+                  {t('about.step3.description')}
                 </p>
               </div>
             </div>
@@ -80,10 +83,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-foreground mb-2 font-raleway">
-                  Rollout & Optimization
+                  {t('about.step4.title')}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Go-live with team training and transparent communication. Continuous reviews and extensions ensure long-term success.
+                  {t('about.step4.description')}
                 </p>
               </div>
             </div>
