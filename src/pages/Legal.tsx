@@ -23,7 +23,7 @@ const Legal = () => {
           <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Kontakt</h3>
-          <p className="text-muted-foreground mb-1">Telefon: +49 176-32549166</p>
+          <p className="text-muted-foreground mb-1">Telefon: 03672 4838961</p>
           <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
           <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
@@ -45,7 +45,7 @@ const Legal = () => {
           <strong>Registergericht:</strong> Amtsgericht Jena
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Handelsregisternummer:</strong> HRB [wird nachgetragen]
+          <strong>Handelsregisternummer:</strong> HRB 520181
         </p>
         <p className="text-muted-foreground mb-4">
           <strong>Rechtsform:</strong> Unternehmergesellschaft (haftungsbeschränkt)
@@ -55,7 +55,7 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Umsatzsteuer-ID</h2>
         <p className="text-muted-foreground mb-4">
-          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE [wird nachgetragen]
+          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE356587580
         </p>
       </section>
 
@@ -167,7 +167,7 @@ const Legal = () => {
           <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Contact</h3>
-          <p className="text-muted-foreground mb-1">Phone: +49 176-32549166</p>
+          <p className="text-muted-foreground mb-1">Phone: 03672 4838961</p>
           <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
           <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
@@ -189,7 +189,7 @@ const Legal = () => {
           <strong>Registry Court:</strong> District Court Jena
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Commercial Register Number:</strong> HRB [to be added]
+          <strong>Commercial Register Number:</strong> HRB 520181
         </p>
         <p className="text-muted-foreground mb-4">
           <strong>Legal Form:</strong> Unternehmergesellschaft (haftungsbeschränkt)
@@ -199,7 +199,7 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">VAT Information</h2>
         <p className="text-muted-foreground mb-4">
-          VAT identification number according to Section 27a of the VAT Act: DE [to be added]
+          VAT identification number according to Section 27a of the VAT Act: DE356587580
         </p>
       </section>
 
