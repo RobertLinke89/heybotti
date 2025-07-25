@@ -1,8 +1,4 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import avatarAlex from '@/assets/avatar-alex.png';
-import avatarRobert from '@/assets/avatar-robert.png';
-import avatarChris from '@/assets/avatar-chris.png';
-import avatarSebastian from '@/assets/avatar-sebastian.png';
 import avatarKarim from '@/assets/avatar-karim.png';
 
 const Team = () => {
@@ -12,25 +8,25 @@ const Team = () => {
     {
       name: 'Alex',
       role: t('team.alex.role'),
-      avatar: avatarAlex,
+      avatar: '/lovable-uploads/2de9c32d-c883-4b16-9c47-d240c3dfb42f.png',
       description: t('team.alex.description')
     },
     {
       name: 'Robert',
       role: t('team.robert.role'),
-      avatar: avatarRobert,
+      avatar: '/lovable-uploads/268cba2a-1016-4101-b25b-0c82bafb3ce1.png',
       description: t('team.robert.description')
     },
     {
       name: 'Chris',
       role: t('team.chris.role'),
-      avatar: avatarChris,
+      avatar: '/lovable-uploads/98692b47-095f-4ded-b823-892c9b0ff8fb.png',
       description: t('team.chris.description')
     },
     {
       name: 'Sebastian',
       role: t('team.sebastian.role'),
-      avatar: avatarSebastian,
+      avatar: '/lovable-uploads/6e48f8e7-ab5d-4dca-bac8-b9f74cf527e4.png',
       description: t('team.sebastian.description')
     },
     {
