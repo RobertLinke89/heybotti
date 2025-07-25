@@ -45,16 +45,16 @@ const Header = () => {
   const handleCallbackSubmit = (data: CallbackFormData) => {
     if (!selectedDate || !selectedTime) {
       toast({
-        title: "Error",
-        description: "Please select date and time.",
+        title: t('callback.error.title'),
+        description: t('callback.error.description'),
         variant: "destructive"
       });
       return;
     }
 
     toast({
-      title: "Callback scheduled!",
-      description: `We will call you back on ${format(selectedDate, 'dd.MM.yyyy')} at ${selectedTime}.`,
+      title: t('callback.success.title'),
+      description: t('callback.success.description').replace('{date}', format(selectedDate, 'dd.MM.yyyy')).replace('{time}', selectedTime),
     });
     
     reset();
@@ -104,14 +104,14 @@ const Header = () => {
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle>Schedule Callback</DialogTitle>
+                  <DialogTitle>{t('callback.title')}</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.name')} *</label>
                     <Input
-                      {...register("name", { required: "Name is required" })}
-                      placeholder="Your Name"
+                      {...register("name", { required: t('callback.name.required') })}
+                      placeholder={t('callback.name.placeholder')}
                     />
                     {errors.name && (
                       <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
@@ -119,17 +119,17 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.email')} *</label>
                     <Input
                       {...register("email", { 
-                        required: "Email is required",
+                        required: t('callback.email.required'),
                         pattern: {
                           value: /^\S+@\S+$/i,
-                          message: "Invalid email address"
+                          message: t('callback.email.invalid')
                         }
                       })}
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder={t('callback.email.placeholder')}
                     />
                     {errors.email && (
                       <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
@@ -137,11 +137,11 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.phone')} *</label>
                     <Input
-                      {...register("phone", { required: "Phone number is required" })}
+                      {...register("phone", { required: t('callback.phone.required') })}
                       type="tel"
-                      placeholder="+1 123 456789"
+                      placeholder={t('callback.phone.placeholder')}
                     />
                     {errors.phone && (
                       <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
@@ -149,7 +149,7 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Date *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.date')} *</label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <Button
@@ -160,7 +160,7 @@ const Header = () => {
                           )}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Select date</span>}
+                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>{t('callback.date.placeholder')}</span>}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
@@ -177,10 +177,10 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Time *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.time')} *</label>
                     <Select value={selectedTime} onValueChange={setSelectedTime}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select time" />
+                        <SelectValue placeholder={t('callback.time.placeholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((time) => (
@@ -199,10 +199,10 @@ const Header = () => {
                       className="flex-1"
                       onClick={() => setIsCallbackDialogOpen(false)}
                     >
-                      Cancel
+                      {t('callback.cancel')}
                     </Button>
                     <Button type="submit" className="flex-1">
-                      Schedule Callback
+                      {t('callback.schedule')}
                     </Button>
                   </div>
                 </form>
@@ -268,14 +268,14 @@ const Header = () => {
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle>Schedule Callback</DialogTitle>
+                  <DialogTitle>{t('callback.title')}</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.name')} *</label>
                     <Input
-                      {...register("name", { required: "Name is required" })}
-                      placeholder="Your Name"
+                      {...register("name", { required: t('callback.name.required') })}
+                      placeholder={t('callback.name.placeholder')}
                     />
                     {errors.name && (
                       <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
@@ -283,17 +283,17 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.email')} *</label>
                     <Input
                       {...register("email", { 
-                        required: "Email is required",
+                        required: t('callback.email.required'),
                         pattern: {
                           value: /^\S+@\S+$/i,
-                          message: "Invalid email address"
+                          message: t('callback.email.invalid')
                         }
                       })}
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder={t('callback.email.placeholder')}
                     />
                     {errors.email && (
                       <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
@@ -301,11 +301,11 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.phone')} *</label>
                     <Input
-                      {...register("phone", { required: "Phone number is required" })}
+                      {...register("phone", { required: t('callback.phone.required') })}
                       type="tel"
-                      placeholder="+1 123 456789"
+                      placeholder={t('callback.phone.placeholder')}
                     />
                     {errors.phone && (
                       <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
@@ -313,7 +313,7 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Date *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.date')} *</label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <Button
@@ -324,7 +324,7 @@ const Header = () => {
                           )}
                         >
                           <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>Select date</span>}
+                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>{t('callback.date.placeholder')}</span>}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
@@ -341,10 +341,10 @@ const Header = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Time *</label>
+                    <label className="block text-sm font-medium mb-2">{t('callback.time')} *</label>
                     <Select value={selectedTime} onValueChange={setSelectedTime}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select time" />
+                        <SelectValue placeholder={t('callback.time.placeholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((time) => (
@@ -363,10 +363,10 @@ const Header = () => {
                       className="flex-1"
                       onClick={() => setIsCallbackDialogOpen(false)}
                     >
-                      Cancel
+                      {t('callback.cancel')}
                     </Button>
                     <Button type="submit" className="flex-1">
-                      Schedule Callback
+                      {t('callback.schedule')}
                     </Button>
                   </div>
                 </form>

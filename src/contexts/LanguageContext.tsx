@@ -208,6 +208,28 @@ type TranslationKey =
   | 'chatbot.greeting'
   | 'chatbot.thanks'
   | 'chatbot.default'
+  // Callback form
+  | 'callback.title'
+  | 'callback.name'
+  | 'callback.name.required'
+  | 'callback.name.placeholder'
+  | 'callback.email'
+  | 'callback.email.required'
+  | 'callback.email.invalid'
+  | 'callback.email.placeholder'
+  | 'callback.phone'
+  | 'callback.phone.required'
+  | 'callback.phone.placeholder'
+  | 'callback.date'
+  | 'callback.date.placeholder'
+  | 'callback.time'
+  | 'callback.time.placeholder'
+  | 'callback.cancel'
+  | 'callback.schedule'
+  | 'callback.error.title'
+  | 'callback.error.description'
+  | 'callback.success.title'
+  | 'callback.success.description'
   // Job postings
   | 'jobs.nocode.title'
   | 'jobs.nocode.type'
@@ -459,6 +481,29 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'chatbot.thanks': 'You are very welcome! If you have any further questions or would like a non-binding consultation, I am here for you at any time. Together we will find the perfect automation solution for your company.',
     'chatbot.default': 'That is an interesting question! Automation can help in many areas - from sales to finance to HR processes. Can you give me more details about your specific concern? This way I can help you more specifically.',
     
+    // Callback form
+    'callback.title': 'Schedule Callback',
+    'callback.name': 'Name',
+    'callback.name.required': 'Name is required',
+    'callback.name.placeholder': 'Your Name',
+    'callback.email': 'Email',
+    'callback.email.required': 'Email is required',
+    'callback.email.invalid': 'Invalid email address',
+    'callback.email.placeholder': 'your@email.com',
+    'callback.phone': 'Phone',
+    'callback.phone.required': 'Phone number is required',
+    'callback.phone.placeholder': '+1 123 456789',
+    'callback.date': 'Date',
+    'callback.date.placeholder': 'Select date',
+    'callback.time': 'Time',
+    'callback.time.placeholder': 'Select time',
+    'callback.cancel': 'Cancel',
+    'callback.schedule': 'Schedule Callback',
+    'callback.error.title': 'Error',
+    'callback.error.description': 'Please select date and time.',
+    'callback.success.title': 'Callback scheduled!',
+    'callback.success.description': 'We will call you back on {date} at {time}.',
+    
     // Job postings
     'jobs.nocode.title': 'No-Code/Low-Code Developer',
     'jobs.nocode.type': 'Freelance',
@@ -708,6 +753,29 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'chatbot.greeting': 'Hallo! Schön, dass Sie da sind. Gerne helfe ich Ihnen dabei, die richtigen Automatisierungslösungen für Ihr Unternehmen zu finden. Was beschäftigt Sie derzeit am meisten in Ihren Geschäftsprozessen?',
     'chatbot.thanks': 'Sehr gerne! Falls Sie weitere Fragen haben oder eine unverbindliche Beratung wünschen, bin ich jederzeit für Sie da. Gemeinsam finden wir die perfekte Automatisierungslösung für Ihr Unternehmen.',
     'chatbot.default': 'Das ist eine interessante Frage! Automatisierung kann in vielen Bereichen helfen - vom Vertrieb über Finanzen bis hin zu HR-Prozessen. Können Sie mir mehr Details zu Ihrem spezifischen Anliegen geben? So kann ich Ihnen gezielter helfen.',
+    
+    // Callback form
+    'callback.title': 'Rückruf vereinbaren',
+    'callback.name': 'Name',
+    'callback.name.required': 'Name ist erforderlich',
+    'callback.name.placeholder': 'Ihr Name',
+    'callback.email': 'E-Mail',
+    'callback.email.required': 'E-Mail ist erforderlich',
+    'callback.email.invalid': 'Ungültige E-Mail-Adresse',
+    'callback.email.placeholder': 'ihre@email.de',
+    'callback.phone': 'Telefon',
+    'callback.phone.required': 'Telefonnummer ist erforderlich',
+    'callback.phone.placeholder': '+49 123 456789',
+    'callback.date': 'Datum',
+    'callback.date.placeholder': 'Datum auswählen',
+    'callback.time': 'Uhrzeit',
+    'callback.time.placeholder': 'Uhrzeit auswählen',
+    'callback.cancel': 'Abbrechen',
+    'callback.schedule': 'Rückruf vereinbaren',
+    'callback.error.title': 'Fehler',
+    'callback.error.description': 'Bitte Datum und Uhrzeit auswählen.',
+    'callback.success.title': 'Rückruf vereinbart!',
+    'callback.success.description': 'Wir rufen Sie am {date} um {time} zurück.',
     
     // Job postings
     'jobs.nocode.title': 'No-Code/Low-Code Entwickler',
