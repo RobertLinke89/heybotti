@@ -20,8 +20,7 @@ const Legal = () => {
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Deutschland</p>
           <p className="text-muted-foreground mb-1">Marke: HeyBotti</p>
-          <p className="text-muted-foreground mb-1">Website: heybotti.de</p>
-          <p className="text-muted-foreground mb-4">Unternehmenswebsite: botti.co</p>
+          <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Kontakt</h3>
           <p className="text-muted-foreground mb-1">Telefon: +49 176-32549166</p>
@@ -165,8 +164,7 @@ const Legal = () => {
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Germany</p>
           <p className="text-muted-foreground mb-1">Brand: HeyBotti</p>
-          <p className="text-muted-foreground mb-1">Website: heybotti.de</p>
-          <p className="text-muted-foreground mb-4">Company Website: botti.co</p>
+          <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Contact</h3>
           <p className="text-muted-foreground mb-1">Phone: +49 176-32549166</p>
