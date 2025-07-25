@@ -8,7 +8,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-            {t('about.title')} <span className="text-primary">{t('about.title.highlight')}</span> it
+            {t('about.title')} <span className="text-primary">{t('about.title.highlight')}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t('about.subtitle')}
