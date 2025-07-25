@@ -14,33 +14,36 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Angaben gemäß § 5 TMG</h2>
         <div className="bg-muted p-6 rounded-lg">
-          <p className="text-foreground font-medium mb-2">oryve LLC</p>
-          <p className="text-muted-foreground mb-1">Registered in Miami, Florida, USA</p>
-          <p className="text-muted-foreground mb-1">Marke: HeyBotti</p>
+          <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
+          <p className="text-muted-foreground mb-1">Software & IT Lösungen</p>
+          <p className="text-muted-foreground mb-1">Geschäftsführer: Alexander Herre</p>
+          <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
+          <p className="text-muted-foreground mb-1">07407 Rudolstadt, Deutschland</p>
           <p className="text-muted-foreground mb-4">Website: botti.co</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Kontakt</h3>
-          <p className="text-muted-foreground mb-1">E-Mail: hello@botti.co</p>
+          <p className="text-muted-foreground mb-1">Telefon: 0176-32549166</p>
+          <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
         </div>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Vertreten durch</h2>
         <p className="text-muted-foreground mb-4">
-          oryve LLC wird vertreten durch ihre bevollmächtigten Geschäftsführer.
+          PLUSPULS uGmbH wird vertreten durch ihren Geschäftsführer Alexander Herre.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Registereintrag</h2>
         <p className="text-muted-foreground mb-2">
-          <strong>Eintragung im Handelsregister:</strong> oryve LLC
+          <strong>Eintragung im Handelsregister:</strong> PLUSPULS uGmbH
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Registergericht:</strong> Miami, Florida, USA
+          <strong>Registergericht:</strong> Deutschland
         </p>
         <p className="text-muted-foreground mb-4">
-          <strong>Rechtsform:</strong> Limited Liability Company (LLC)
+          <strong>Rechtsform:</strong> Unternehmergesellschaft (haftungsbeschränkt)
         </p>
       </section>
 
@@ -104,7 +107,7 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Anwendbares Recht</h2>
         <p className="text-muted-foreground mb-4">
-          Für alle Rechtsbeziehungen zwischen uns und unseren Kunden gilt das Recht der Vereinigten Staaten von Amerika. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird.
+          Für alle Rechtsbeziehungen zwischen uns und unseren Kunden gilt das Recht der Bundesrepublik Deutschland. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird.
         </p>
       </section>
     </div>
@@ -115,33 +118,36 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Legal Information</h2>
         <div className="bg-muted p-6 rounded-lg">
-          <p className="text-foreground font-medium mb-2">oryve LLC</p>
-          <p className="text-muted-foreground mb-1">Registered in Miami, Florida, USA</p>
-          <p className="text-muted-foreground mb-1">Brand: HeyBotti</p>
+          <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
+          <p className="text-muted-foreground mb-1">Software & IT Solutions</p>
+          <p className="text-muted-foreground mb-1">Managing Director: Alexander Herre</p>
+          <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
+          <p className="text-muted-foreground mb-1">07407 Rudolstadt, Germany</p>
           <p className="text-muted-foreground mb-4">Website: botti.co</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Contact</h3>
-          <p className="text-muted-foreground mb-1">E-Mail: hello@botti.co</p>
+          <p className="text-muted-foreground mb-1">Phone: +49 176-32549166</p>
+          <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
         </div>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Represented by</h2>
         <p className="text-muted-foreground mb-4">
-          oryve LLC is represented by its authorized managing directors.
+          PLUSPULS uGmbH is represented by its managing director Alexander Herre.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Company Registration</h2>
         <p className="text-muted-foreground mb-2">
-          <strong>Registration:</strong> oryve LLC
+          <strong>Registration:</strong> PLUSPULS uGmbH
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Registry Court:</strong> Miami, Florida, USA
+          <strong>Registry Court:</strong> Germany
         </p>
         <p className="text-muted-foreground mb-4">
-          <strong>Legal Form:</strong> Limited Liability Company (LLC)
+          <strong>Legal Form:</strong> Unternehmergesellschaft (haftungsbeschränkt)
         </p>
       </section>
 
@@ -205,7 +211,7 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Applicable Law</h2>
         <p className="text-muted-foreground mb-4">
-          The law of the United States of America applies to all legal relationships between us and our customers. For consumers, this choice of law only applies insofar as the protection granted by mandatory provisions of the law of the country of the consumer's habitual residence is not thereby withdrawn.
+          German law applies to all legal relationships between us and our customers. For consumers, this choice of law only applies insofar as the protection granted by mandatory provisions of the law of the country of the consumer's habitual residence is not thereby withdrawn.
         </p>
       </section>
     </div>
