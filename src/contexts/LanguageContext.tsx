@@ -18,6 +18,7 @@ type TranslationKey =
   | 'nav.about'
   | 'nav.team'
   | 'nav.contact'
+  | 'nav.process'
   | 'header.cta'
   // Hero
   | 'hero.title'
@@ -226,6 +227,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.about': 'About Us',
     'nav.team': 'Team',
     'nav.contact': 'Contact',
+    'nav.process': 'Process',
     'header.cta': 'Consultation',
     
     // Hero
@@ -447,6 +449,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.about': 'Über uns',
     'nav.team': 'Team',
     'nav.contact': 'Kontakt',
+    'nav.process': 'Prozess',
     'header.cta': 'Beratung',
     
     // Hero
