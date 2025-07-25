@@ -2,6 +2,7 @@
 import { Phone, Menu, X, CalendarIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitch from '@/components/LanguageSwitch';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -78,7 +79,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Services</a>
+            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.services')}</a>
             <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">Process</a>
             <button 
               onClick={() => {
@@ -87,12 +88,13 @@ const Header = () => {
               }} 
               className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
             >
-              About
+              {t('nav.about')}
             </button>
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitch />
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
                 <button className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm">
@@ -232,14 +234,14 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Services
+              {t('nav.services')}
             </a>
             <a 
               href="#prozess" 
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Prozess
+              Process
             </a>
             <button 
               onClick={() => {
@@ -249,8 +251,11 @@ const Header = () => {
               }}
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
             >
-              About
+              {t('nav.about')}
             </button>
+            <div className="py-2 px-2">
+              <LanguageSwitch />
+            </div>
             <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
               <DialogTrigger asChild>
                 <button 

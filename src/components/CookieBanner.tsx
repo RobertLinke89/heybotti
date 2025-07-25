@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent');
@@ -29,8 +31,7 @@ const CookieBanner = () => {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex-1">
           <p className="text-sm text-foreground font-raleway">
-            We use cookies to improve your experience on our website. 
-            By using our website, you agree to the use of cookies.
+            {t('cookies.message')}
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -40,14 +41,14 @@ const CookieBanner = () => {
             onClick={handleDecline}
             className="font-raleway"
           >
-            Decline
+            {t('cookies.decline')}
           </Button>
           <Button 
             size="sm" 
             onClick={handleAccept}
             className="font-raleway"
           >
-            Accept
+            {t('cookies.accept')}
           </Button>
           <Button
             variant="ghost"
