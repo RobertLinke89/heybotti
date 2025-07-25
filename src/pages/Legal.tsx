@@ -16,7 +16,7 @@ const Legal = () => {
         <div className="bg-muted p-6 rounded-lg">
           <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
           <p className="text-muted-foreground mb-1">Software & IT Lösungen</p>
-          <p className="text-muted-foreground mb-1">Geschäftsführer: Alexander Herre</p>
+          <p className="text-muted-foreground mb-1">Geschäftsführer: Herr Alexander Herre</p>
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Deutschland</p>
           <p className="text-muted-foreground mb-1">Marke: HeyBotti</p>
@@ -121,7 +121,7 @@ const Legal = () => {
         <div className="bg-muted p-6 rounded-lg">
           <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
           <p className="text-muted-foreground mb-1">Software & IT Solutions</p>
-          <p className="text-muted-foreground mb-1">Managing Director: Alexander Herre</p>
+          <p className="text-muted-foreground mb-1">Managing Director: Mr. Alexander Herre</p>
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Germany</p>
           <p className="text-muted-foreground mb-1">Brand: HeyBotti</p>
