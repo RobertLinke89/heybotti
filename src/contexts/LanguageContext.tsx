@@ -140,7 +140,46 @@ type TranslationKey =
   // Cookie Banner
   | 'cookies.message'
   | 'cookies.accept'
-  | 'cookies.decline';
+  | 'cookies.decline'
+  // Project Form
+  | 'form.title'
+  | 'form.title.highlight'
+  | 'form.subtitle'
+  | 'form.name'
+  | 'form.name.required'
+  | 'form.name.placeholder'
+  | 'form.email'
+  | 'form.email.required'
+  | 'form.email.invalid'
+  | 'form.email.placeholder'
+  | 'form.company'
+  | 'form.company.placeholder'
+  | 'form.phone'
+  | 'form.phone.placeholder'
+  | 'form.revenue'
+  | 'form.revenue.note'
+  | 'form.budget'
+  | 'form.details'
+  | 'form.details.required'
+  | 'form.details.placeholder'
+  | 'form.submit'
+  | 'form.success.title'
+  | 'form.success.description'
+  // Chatbot
+  | 'chatbot.welcome'
+  | 'chatbot.subtitle'
+  | 'chatbot.placeholder'
+  | 'chatbot.automation'
+  | 'chatbot.cost'
+  | 'chatbot.sales'
+  | 'chatbot.finance'
+  | 'chatbot.hr'
+  | 'chatbot.ecommerce'
+  | 'chatbot.reporting'
+  | 'chatbot.workflow'
+  | 'chatbot.greeting'
+  | 'chatbot.thanks'
+  | 'chatbot.default';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -284,6 +323,47 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cookies.message': 'We use cookies to improve your experience on our website. By using our website, you agree to the use of cookies.',
     'cookies.accept': 'Accept',
     'cookies.decline': 'Decline',
+
+    // Project Form
+    'form.title': 'Request',
+    'form.title.highlight': 'Project',
+    'form.subtitle': 'Tell us about your project and we\'ll find the right solution together.',
+    'form.name': 'Name',
+    'form.name.required': 'Name is required',
+    'form.name.placeholder': 'Your name',
+    'form.email': 'Email',
+    'form.email.required': 'Email is required',
+    'form.email.invalid': 'Invalid email address',
+    'form.email.placeholder': 'your@email.com',
+    'form.company': 'Company',
+    'form.company.placeholder': 'Your company',
+    'form.phone': 'Phone',
+    'form.phone.placeholder': '+1 123 456789',
+    'form.revenue': 'How much more revenue per year?',
+    'form.revenue.note': 'We\'ll show you how to achieve these goals through automation',
+    'form.budget': 'Budget',
+    'form.details': 'Project Details',
+    'form.details.required': 'Please describe your project',
+    'form.details.placeholder': 'Describe your project, goals and challenges...',
+    'form.submit': 'Send Request',
+    'form.success.title': 'Request sent!',
+    'form.success.description': 'We will get back to you within 24 hours.',
+
+    // Chatbot
+    'chatbot.welcome': 'Hello! I am your intelligent automation agent from botti.co. How can I help you today with optimizing your business processes?',
+    'chatbot.subtitle': 'Your smart automation agent',
+    'chatbot.placeholder': 'Write your message...',
+    'chatbot.automation': 'Automation is our specialty! We can help you in various areas: Sales & Marketing, Finance & Accounting, HR & Recruiting, E-Commerce and Business Intelligence. In which area do you see the greatest potential?',
+    'chatbot.cost': 'The costs for automation solutions vary depending on complexity and scope. We would be happy to create an individual offer for you. Can you tell me more about your company and your specific requirements?',
+    'chatbot.sales': 'Perfect! Our sales & marketing automation includes email automation, lead nurturing funnels, CRM automation and chatbots. This allows you to systematically turn prospects into customers - 24/7 and data-driven. Which aspect interests you most?',
+    'chatbot.finance': 'Our finance & accounting automation ensures fewer errors and more overview. We automate document recognition, invoicing, bank reconciliation and tax preparation. Would you like to learn more about a specific area?',
+    'chatbot.hr': 'HR automation brings speed and structure to your personnel processes. From automated candidate pre-selection to appointment scheduling to onboarding - we digitize your entire HR process. Where do you see the greatest need for action?',
+    'chatbot.ecommerce': 'E-commerce automation is our silent back office for you! Inventory synchronization, shipping processing, payment reconciliation and product feed automation run around the clock. Which part of your e-commerce process would you like to optimize?',
+    'chatbot.reporting': 'With Business Intelligence & Reporting you have all important KPIs at a glance. We create automated dashboards, aggregate data from multiple tools and set up early warning systems. Which metrics are particularly important to you?',
+    'chatbot.workflow': 'Workflow automation makes your internal processes more efficient. Approval processes, ticketing, document management and internal communication run standardized and traceable. Which processes are currently giving you headaches?',
+    'chatbot.greeting': 'Hello! Nice to have you here. I would be happy to help you find the right automation solutions for your company. What is currently occupying you most in your business processes?',
+    'chatbot.thanks': 'You are very welcome! If you have any further questions or would like a non-binding consultation, I am here for you at any time. Together we will find the perfect automation solution for your company.',
+    'chatbot.default': 'That is an interesting question! Automation can help in many areas - from sales to finance to HR processes. Can you give me more details about your specific concern? This way I can help you more specifically.',
   },
   de: {
     // Navigation
@@ -334,7 +414,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'about.step1.description': 'Gründliche Analyse bestehender Prozesse und Definition klarer Ziele. Wir identifizieren zeitaufwändige, fehleranfällige Aufgaben und bestimmen, ob Zeit gespart, Fehler reduziert oder Skalierbarkeit erhöht werden soll.',
     'about.step2.title': 'Tool-Auswahl & Technologie',
     'about.step2.description': 'Auswahl geeigneter Tools und Technologien für bestehende Systeme. Ob RPA, Low-Code-Plattformen oder API-Integrationen – wir setzen auf benutzerfreundliche, sichere und skalierbare Lösungen.',
-    'about.step3.title': 'Implementierung & Testphase',
+    'about.step3.title': 'Prozess & Testphase',
     'about.step3.description': 'Technische Umsetzung mit kleinem Pilotprozess. Automatisierung, Test mit echten Daten und wertvolles Mitarbeiterfeedback für frühzeitige Optimierung.',
     'about.step4.title': 'Rollout & Optimierung',
     'about.step4.description': 'Go-live mit Team-Schulung und transparenter Kommunikation. Kontinuierliche Reviews und Erweiterungen sorgen für langfristigen Erfolg.',
@@ -366,8 +446,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'footer.copyright': '© 2024 HeyBotti, eine Marke der oryve LLC, registriert im Bundesstaat Miami, USA. Alle Rechte vorbehalten.',
 
     // Jobs CTA
-    'jobs.cta.title': 'Werden Sie Teil unseres',
-    'jobs.cta.title.highlight': 'Teams',
+    'jobs.cta.title': 'Komm ins',
+    'jobs.cta.title.highlight': 'Team',
     'jobs.cta.subtitle': 'Sie denken Automatisierung anders und wollen echten Impact schaffen? Dann sind Sie hier richtig. Entdecken Sie unsere offenen Stellen.',
     'jobs.cta.button': 'Offene Stellen ansehen',
 
@@ -426,6 +506,47 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cookies.message': 'Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies zu.',
     'cookies.accept': 'Akzeptieren',
     'cookies.decline': 'Ablehnen',
+
+    // Project Form
+    'form.title': 'Projekt',
+    'form.title.highlight': 'anfragen',
+    'form.subtitle': 'Erzählen Sie uns von Ihrem Projekt und wir finden gemeinsam die richtige Lösung.',
+    'form.name': 'Name',
+    'form.name.required': 'Name ist erforderlich',
+    'form.name.placeholder': 'Ihr Name',
+    'form.email': 'E-Mail',
+    'form.email.required': 'E-Mail ist erforderlich',
+    'form.email.invalid': 'Ungültige E-Mail-Adresse',
+    'form.email.placeholder': 'ihre@email.de',
+    'form.company': 'Unternehmen',
+    'form.company.placeholder': 'Ihr Unternehmen',
+    'form.phone': 'Telefon',
+    'form.phone.placeholder': '+49 123 456789',
+    'form.revenue': 'Wie viel mehr Umsatz pro Jahr?',
+    'form.revenue.note': 'Wir zeigen Ihnen, wie Sie diese Ziele durch Automatisierung erreichen',
+    'form.budget': 'Budget',
+    'form.details': 'Projektdetails',
+    'form.details.required': 'Bitte beschreiben Sie Ihr Projekt',
+    'form.details.placeholder': 'Beschreiben Sie Ihr Projekt, Ziele und Herausforderungen...',
+    'form.submit': 'Anfrage senden',
+    'form.success.title': 'Anfrage gesendet!',
+    'form.success.description': 'Wir melden uns innerhalb von 24 Stunden bei Ihnen.',
+
+    // Chatbot
+    'chatbot.welcome': 'Hallo! Ich bin Ihr intelligenter Automatisierungs-Agent von botti.co. Wie kann ich Ihnen heute bei der Optimierung Ihrer Geschäftsprozesse helfen?',
+    'chatbot.subtitle': 'Ihr intelligenter Automatisierungs-Agent',
+    'chatbot.placeholder': 'Schreiben Sie Ihre Nachricht...',
+    'chatbot.automation': 'Automatisierung ist unsere Spezialität! Wir können Ihnen in verschiedenen Bereichen helfen: Sales & Marketing, Finance & Buchhaltung, HR & Recruiting, E-Commerce und Business Intelligence. In welchem Bereich sehen Sie das größte Potenzial?',
+    'chatbot.cost': 'Die Kosten für Automatisierungslösungen variieren je nach Komplexität und Umfang. Gerne erstellen wir Ihnen ein individuelles Angebot. Können Sie mir mehr über Ihr Unternehmen und Ihre spezifischen Anforderungen erzählen?',
+    'chatbot.sales': 'Perfekt! Unsere Sales & Marketing Automatisierung umfasst E-Mail-Automatisierung, Lead-Nurturing-Funnels, CRM-Automatisierung und Chatbots. So können Sie systematisch Interessenten zu Kunden machen - 24/7 und datengetrieben. Welcher Aspekt interessiert Sie am meisten?',
+    'chatbot.finance': 'Unsere Finance & Buchhaltungs-Automatisierung sorgt für weniger Fehler und mehr Überblick. Wir automatisieren Belegerfassung, Rechnungsstellung, Bankabgleich und Steuervorbereitung. Möchten Sie mehr über einen bestimmten Bereich erfahren?',
+    'chatbot.hr': 'HR-Automatisierung bringt Geschwindigkeit und Struktur in Ihre Personalprozesse. Von der automatisierten Kandidatenvorauswahl über Terminvereinbarungen bis zum Onboarding - wir digitalisieren Ihren gesamten HR-Prozess. Wo sehen Sie den größten Handlungsbedarf?',
+    'chatbot.ecommerce': 'E-Commerce-Automatisierung ist unser lautloses Back-Office für Sie! Lagerabgleich, Versandabwicklung, Zahlungsabgleich und Produktfeed-Automatisierung laufen rund um die Uhr. Welchen Teil Ihres E-Commerce-Prozesses möchten Sie optimieren?',
+    'chatbot.reporting': 'Mit Business Intelligence & Reporting haben Sie alle wichtigen KPIs auf einen Blick. Wir erstellen automatisierte Dashboards, aggregieren Daten aus mehreren Tools und richten Frühwarnsysteme ein. Welche Kennzahlen sind für Sie besonders wichtig?',
+    'chatbot.workflow': 'Workflow-Automatisierung macht Ihre internen Prozesse effizienter. Freigabeprozesse, Ticketing, Dokumentenverwaltung und interne Kommunikation laufen standardisiert und nachvollziehbar ab. Welche Prozesse bereiten Ihnen derzeit Kopfschmerzen?',
+    'chatbot.greeting': 'Hallo! Schön, dass Sie da sind. Gerne helfe ich Ihnen dabei, die richtigen Automatisierungslösungen für Ihr Unternehmen zu finden. Was beschäftigt Sie derzeit am meisten in Ihren Geschäftsprozessen?',
+    'chatbot.thanks': 'Sehr gerne! Falls Sie weitere Fragen haben oder eine unverbindliche Beratung wünschen, bin ich jederzeit für Sie da. Gemeinsam finden wir die perfekte Automatisierungslösung für Ihr Unternehmen.',
+    'chatbot.default': 'Das ist eine interessante Frage! Automatisierung kann in vielen Bereichen helfen - vom Vertrieb über Finanzen bis hin zu HR-Prozessen. Können Sie mir mehr Details zu Ihrem spezifischen Anliegen geben? So kann ich Ihnen gezielter helfen.',
   }
 };
 
