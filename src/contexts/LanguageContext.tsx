@@ -179,7 +179,44 @@ type TranslationKey =
   | 'chatbot.workflow'
   | 'chatbot.greeting'
   | 'chatbot.thanks'
-  | 'chatbot.default';
+  | 'chatbot.default'
+  // Job postings
+  | 'jobs.nocode.title'
+  | 'jobs.nocode.type'
+  | 'jobs.nocode.location'
+  | 'jobs.nocode.start'
+  | 'jobs.nocode.mission'
+  | 'jobs.nocode.req1'
+  | 'jobs.nocode.req2'
+  | 'jobs.nocode.req3'
+  | 'jobs.nocode.req4'
+  | 'jobs.nocode.benefit1'
+  | 'jobs.nocode.benefit2'
+  | 'jobs.nocode.benefit3'
+  | 'jobs.consultant.title'
+  | 'jobs.consultant.type'
+  | 'jobs.consultant.location'
+  | 'jobs.consultant.start'
+  | 'jobs.consultant.mission'
+  | 'jobs.consultant.req1'
+  | 'jobs.consultant.req2'
+  | 'jobs.consultant.req3'
+  | 'jobs.consultant.req4'
+  | 'jobs.consultant.benefit1'
+  | 'jobs.consultant.benefit2'
+  | 'jobs.consultant.benefit3'
+  | 'jobs.architect.title'
+  | 'jobs.architect.type'
+  | 'jobs.architect.location'
+  | 'jobs.architect.start'
+  | 'jobs.architect.mission'
+  | 'jobs.architect.req1'
+  | 'jobs.architect.req2'
+  | 'jobs.architect.req3'
+  | 'jobs.architect.req4'
+  | 'jobs.architect.benefit1'
+  | 'jobs.architect.benefit2'
+  | 'jobs.architect.benefit3';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -364,6 +401,44 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'chatbot.greeting': 'Hello! Nice to have you here. I would be happy to help you find the right automation solutions for your company. What is currently occupying you most in your business processes?',
     'chatbot.thanks': 'You are very welcome! If you have any further questions or would like a non-binding consultation, I am here for you at any time. Together we will find the perfect automation solution for your company.',
     'chatbot.default': 'That is an interesting question! Automation can help in many areas - from sales to finance to HR processes. Can you give me more details about your specific concern? This way I can help you more specifically.',
+    
+    // Job postings
+    'jobs.nocode.title': 'No-Code/Low-Code Developer',
+    'jobs.nocode.type': 'Freelance',
+    'jobs.nocode.location': 'Remote',
+    'jobs.nocode.start': 'Immediately',
+    'jobs.nocode.mission': 'At botti, you develop customized automation solutions using tools like Make, n8n, Airtable or Zapier – from idea to implementation. You think in workflows, love simple solutions for complex processes and translate technical requirements into functioning systems.',
+    'jobs.nocode.req1': 'Experience with no-code or low-code platforms',
+    'jobs.nocode.req2': 'Familiar handling of APIs, webhooks & data models',
+    'jobs.nocode.req3': 'Structured work approach, technical understanding and solution-oriented mindset',
+    'jobs.nocode.req4': 'Enthusiasm for efficient implementation and clean process design',
+    'jobs.nocode.benefit1': 'Diverse customer projects with real impact',
+    'jobs.nocode.benefit2': 'Full flexibility: work when and where you want',
+    'jobs.nocode.benefit3': 'An appreciative, agile team that speaks plainly and gives ideas space',
+    'jobs.consultant.title': 'Automation Consultant',
+    'jobs.consultant.type': 'Freelance',
+    'jobs.consultant.location': 'Remote',
+    'jobs.consultant.start': 'Immediately',
+    'jobs.consultant.mission': 'You analyze business processes, identify automation potential and accompany companies in their digital transformation. As a sparring partner at eye level, you think holistically and develop solutions together with our team that really relieve people and processes.',
+    'jobs.consultant.req1': 'Experience in consulting around digitization and process optimization',
+    'jobs.consultant.req2': 'Clear view for workflows, user-friendliness and efficiency',
+    'jobs.consultant.req3': 'Basic technical understanding (e.g. API logic, automation tools)',
+    'jobs.consultant.req4': 'Communication skills, empathy and enthusiasm for transformation',
+    'jobs.consultant.benefit1': 'Customers who are ready to think differently',
+    'jobs.consultant.benefit2': 'Freedom and responsibility in implementation',
+    'jobs.consultant.benefit3': 'Collaboration in a team that shows attitude – with mind, heart and foresight',
+    'jobs.architect.title': 'AI Workflow Architect',
+    'jobs.architect.type': 'Freelance',
+    'jobs.architect.location': 'Remote',
+    'jobs.architect.start': 'Immediately',
+    'jobs.architect.mission': 'You design intelligent workflows with GPT, LangChain, Zapier & Co. and bring real AI power into the daily work of our customers. You combine technical sophistication with strategic thinking – and create solutions that work intuitively and have a lasting impact.',
+    'jobs.architect.req1': 'Experience working with AI models (LLMs), prompt engineering and tools like LangChain',
+    'jobs.architect.req2': 'Sense for meaningful automation and data flows',
+    'jobs.architect.req3': 'Independent, structured work approach and enthusiasm for innovation',
+    'jobs.architect.req4': 'Interest in making things really better – not just smarter',
+    'jobs.architect.benefit1': 'Projects at the cutting edge – with real creative freedom',
+    'jobs.architect.benefit2': 'Exchange with a team that thinks technology humanly',
+    'jobs.architect.benefit3': 'Maximum flexibility, open communication, fair cooperation',
   },
   de: {
     // Navigation
@@ -547,6 +622,44 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'chatbot.greeting': 'Hallo! Schön, dass Sie da sind. Gerne helfe ich Ihnen dabei, die richtigen Automatisierungslösungen für Ihr Unternehmen zu finden. Was beschäftigt Sie derzeit am meisten in Ihren Geschäftsprozessen?',
     'chatbot.thanks': 'Sehr gerne! Falls Sie weitere Fragen haben oder eine unverbindliche Beratung wünschen, bin ich jederzeit für Sie da. Gemeinsam finden wir die perfekte Automatisierungslösung für Ihr Unternehmen.',
     'chatbot.default': 'Das ist eine interessante Frage! Automatisierung kann in vielen Bereichen helfen - vom Vertrieb über Finanzen bis hin zu HR-Prozessen. Können Sie mir mehr Details zu Ihrem spezifischen Anliegen geben? So kann ich Ihnen gezielter helfen.',
+    
+    // Job postings
+    'jobs.nocode.title': 'No-Code/Low-Code Entwickler',
+    'jobs.nocode.type': 'Freiberuflich',
+    'jobs.nocode.location': 'Remote',
+    'jobs.nocode.start': 'Sofort',
+    'jobs.nocode.mission': 'Bei botti entwickeln Sie maßgeschneiderte Automatisierungslösungen mit Tools wie Make, n8n, Airtable oder Zapier – von der Idee bis zur Umsetzung. Sie denken in Workflows, lieben einfache Lösungen für komplexe Prozesse und übersetzen technische Anforderungen in funktionierende Systeme.',
+    'jobs.nocode.req1': 'Erfahrung mit No-Code oder Low-Code-Plattformen',
+    'jobs.nocode.req2': 'Sicherer Umgang mit APIs, Webhooks & Datenmodellen',
+    'jobs.nocode.req3': 'Strukturierte Arbeitsweise, technisches Verständnis und lösungsorientierte Denkweise',
+    'jobs.nocode.req4': 'Begeisterung für effiziente Umsetzung und sauberes Prozessdesign',
+    'jobs.nocode.benefit1': 'Vielfältige Kundenprojekte mit echtem Impact',
+    'jobs.nocode.benefit2': 'Volle Flexibilität: arbeiten Sie wann und wo Sie wollen',
+    'jobs.nocode.benefit3': 'Ein wertschätzendes, agiles Team, das Klartext spricht und Ideen Raum gibt',
+    'jobs.consultant.title': 'Automatisierungsberater',
+    'jobs.consultant.type': 'Freiberuflich',
+    'jobs.consultant.location': 'Remote',
+    'jobs.consultant.start': 'Sofort',
+    'jobs.consultant.mission': 'Sie analysieren Geschäftsprozesse, identifizieren Automatisierungspotentiale und begleiten Unternehmen in ihrer digitalen Transformation. Als Sparringspartner auf Augenhöhe denken Sie ganzheitlich und entwickeln gemeinsam mit unserem Team Lösungen, die Menschen und Prozesse wirklich entlasten.',
+    'jobs.consultant.req1': 'Erfahrung in der Beratung rund um Digitalisierung und Prozessoptimierung',
+    'jobs.consultant.req2': 'Klarer Blick für Workflows, Benutzerfreundlichkeit und Effizienz',
+    'jobs.consultant.req3': 'Grundlegendes technisches Verständnis (z.B. API-Logik, Automatisierungstools)',
+    'jobs.consultant.req4': 'Kommunikationsstärke, Empathie und Begeisterung für Transformation',
+    'jobs.consultant.benefit1': 'Kunden, die bereit sind, anders zu denken',
+    'jobs.consultant.benefit2': 'Freiheit und Verantwortung in der Umsetzung',
+    'jobs.consultant.benefit3': 'Zusammenarbeit in einem Team, das Haltung zeigt – mit Verstand, Herz und Weitblick',
+    'jobs.architect.title': 'KI-Workflow Architekt',
+    'jobs.architect.type': 'Freiberuflich',
+    'jobs.architect.location': 'Remote',
+    'jobs.architect.start': 'Sofort',
+    'jobs.architect.mission': 'Sie entwerfen intelligente Workflows mit GPT, LangChain, Zapier & Co. und bringen echte KI-Power in den Arbeitsalltag unserer Kunden. Sie verbinden technische Raffinesse mit strategischem Denken – und schaffen Lösungen, die intuitiv funktionieren und nachhaltig wirken.',
+    'jobs.architect.req1': 'Erfahrung im Umgang mit KI-Modellen (LLMs), Prompt Engineering und Tools wie LangChain',
+    'jobs.architect.req2': 'Gespür für sinnvolle Automatisierung und Datenflüsse',
+    'jobs.architect.req3': 'Selbstständige, strukturierte Arbeitsweise und Begeisterung für Innovation',
+    'jobs.architect.req4': 'Interesse daran, Dinge wirklich besser zu machen – nicht nur smarter',
+    'jobs.architect.benefit1': 'Projekte am Puls der Zeit – mit echter Gestaltungsfreiheit',
+    'jobs.architect.benefit2': 'Austausch mit einem Team, das Technologie menschlich denkt',
+    'jobs.architect.benefit3': 'Maximale Flexibilität, offene Kommunikation, faire Zusammenarbeit',
   }
 };
 
