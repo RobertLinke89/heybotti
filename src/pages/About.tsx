@@ -4,92 +4,94 @@ import { ArrowLeft, MapPin, Calendar, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   // Team members data (from existing Team component)
   const teamMembers = [
     {
       name: "Alex",
-      role: "CEO & Strategy",
+      role: t('aboutPage.team.alex.role'),
       avatar: "/src/assets/avatar-alex.png",
-      description: "Develops customized automation strategies for companies."
+      description: t('aboutPage.team.alex.description')
     },
     {
       name: "Robert",
-      role: "CTO & Development", 
+      role: t('aboutPage.team.robert.role'),
       avatar: "/src/assets/avatar-robert.png",
-      description: "Technical leader with focus on innovative solution architectures."
+      description: t('aboutPage.team.robert.description')
     },
     {
       name: "Chris",
-      role: "Automation Engineer",
+      role: t('aboutPage.team.chris.role'),
       avatar: "/src/assets/avatar-chris.png", 
-      description: "Specialist for process optimization and intelligent workflows."
+      description: t('aboutPage.team.chris.description')
     },
     {
       name: "Sebastian",
-      role: "Business Analyst",
+      role: t('aboutPage.team.sebastian.role'),
       avatar: "/src/assets/avatar-sebastian.png",
-      description: "Analyzes business processes and identifies improvement potential."
+      description: t('aboutPage.team.sebastian.description')
     }
   ];
 
   // Jobs data (from existing Jobs page)
   const jobs = [
     {
-      title: 'No-Code/Low-Code Developer',
-      type: 'Freelance',
-      location: 'Remote',
-      start: 'Immediately',
-      mission: 'At botti, you develop customized automation solutions using tools like Make, n8n, Airtable or Zapier – from idea to implementation. You think in workflows, love simple solutions for complex processes and translate technical requirements into functioning systems.',
+      title: t('aboutPage.jobs.job1.title'),
+      type: t('aboutPage.jobs.job1.type'),
+      location: t('aboutPage.jobs.job1.location'),
+      start: t('aboutPage.jobs.job1.start'),
+      mission: t('aboutPage.jobs.job1.mission'),
       requirements: [
-        'Experience with no-code or low-code platforms',
-        'Familiar handling of APIs, webhooks & data models',
-        'Structured work approach, technical understanding and solution-oriented mindset',
-        'Enthusiasm for efficient implementation and clean process design'
+        t('aboutPage.jobs.job1.requirements.0'),
+        t('aboutPage.jobs.job1.requirements.1'),
+        t('aboutPage.jobs.job1.requirements.2'),
+        t('aboutPage.jobs.job1.requirements.3')
       ],
       benefits: [
-        'Diverse customer projects with real impact',
-        'Full flexibility: work when and where you want',
-        'An appreciative, agile team that speaks plainly and gives ideas space'
+        t('aboutPage.jobs.job1.benefits.0'),
+        t('aboutPage.jobs.job1.benefits.1'),
+        t('aboutPage.jobs.job1.benefits.2')
       ]
     },
     {
-      title: 'Automation Consultant',
-      type: 'Freelance',
-      location: 'Remote',
-      start: 'Immediately',
-      mission: 'You analyze business processes, identify automation potential and accompany companies in their digital transformation. As a sparring partner at eye level, you think holistically and develop solutions together with our team that really relieve people and processes.',
+      title: t('aboutPage.jobs.job2.title'),
+      type: t('aboutPage.jobs.job2.type'),
+      location: t('aboutPage.jobs.job2.location'),
+      start: t('aboutPage.jobs.job2.start'),
+      mission: t('aboutPage.jobs.job2.mission'),
       requirements: [
-        'Experience in consulting around digitization and process optimization',
-        'Clear view for workflows, user-friendliness and efficiency',
-        'Basic technical understanding (e.g. API logic, automation tools)',
-        'Communication skills, empathy and enthusiasm for transformation'
+        t('aboutPage.jobs.job2.requirements.0'),
+        t('aboutPage.jobs.job2.requirements.1'),
+        t('aboutPage.jobs.job2.requirements.2'),
+        t('aboutPage.jobs.job2.requirements.3')
       ],
       benefits: [
-        'Customers who are ready to think differently',
-        'Freedom and responsibility in implementation',
-        'Collaboration in a team that shows attitude – with mind, heart and foresight'
+        t('aboutPage.jobs.job2.benefits.0'),
+        t('aboutPage.jobs.job2.benefits.1'),
+        t('aboutPage.jobs.job2.benefits.2')
       ]
     },
     {
-      title: 'AI Workflow Architect',
-      type: 'Freelance',
-      location: 'Remote',
-      start: 'Immediately',
-      mission: 'You design intelligent workflows with GPT, LangChain, Zapier & Co. and bring real AI power into the daily work of our customers. You combine technical sophistication with strategic thinking – and create solutions that work intuitively and have a lasting impact.',
+      title: t('aboutPage.jobs.job3.title'),
+      type: t('aboutPage.jobs.job3.type'),
+      location: t('aboutPage.jobs.job3.location'),
+      start: t('aboutPage.jobs.job3.start'),
+      mission: t('aboutPage.jobs.job3.mission'),
       requirements: [
-        'Experience working with AI models (LLMs), prompt engineering and tools like LangChain',
-        'Sense for meaningful automation and data flows',
-        'Independent, structured work approach and enthusiasm for innovation',
-        'Interest in making things really better – not just smarter'
+        t('aboutPage.jobs.job3.requirements.0'),
+        t('aboutPage.jobs.job3.requirements.1'),
+        t('aboutPage.jobs.job3.requirements.2'),
+        t('aboutPage.jobs.job3.requirements.3')
       ],
       benefits: [
-        'Projects at the cutting edge – with real creative freedom',
-        'Exchange with a team that thinks technology humanly',
-        'Maximum flexibility, open communication, fair cooperation'
+        t('aboutPage.jobs.job3.benefits.0'),
+        t('aboutPage.jobs.job3.benefits.1'),
+        t('aboutPage.jobs.job3.benefits.2')
       ]
     }
   ];
@@ -108,12 +110,12 @@ const About = () => {
               className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Homepage
+              {t('aboutPage.backToHomepage')}
             </Button>
             
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-                About <span className="text-primary">Us</span>
+                {t('aboutPage.title.main')} <span className="text-primary">{t('aboutPage.title.highlight')}</span>
               </h1>
             </div>
           </div>
@@ -122,15 +124,15 @@ const About = () => {
           <div className="mb-20">
             <div className="bg-card rounded-xl p-8 border border-secondary">
               <p className="text-lg text-foreground leading-relaxed font-raleway mb-6">
-                We are Team botti – and we rethink efficiency. With smart automation solutions, we provide sustainable relief instead of just accelerating. Our focus: real added value in everyday life, individually adapted and holistically conceived – with a view to processes, people and potential.
+                {t('aboutPage.content.paragraph1')}
               </p>
               
               <p className="text-lg text-foreground leading-relaxed font-raleway mb-6">
-                We rely on transparency, plain language and partnership-based cooperation. From the first workshop to implementation, we deliver quickly tangible results and build future-proof structures that grow with you.
+                {t('aboutPage.content.paragraph2')}
               </p>
               
               <p className="text-lg text-foreground leading-relaxed font-raleway">
-                With an agile mindset, smart tools and a focus on what matters, we create digital solutions that work – for more creative freedom, productive teams and real joy at work.
+                {t('aboutPage.content.paragraph3')}
               </p>
             </div>
           </div>
@@ -139,10 +141,10 @@ const About = () => {
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-                Our <span className="text-primary">Team</span>
+                {t('aboutPage.teamSection.title.main')} <span className="text-primary">{t('aboutPage.teamSection.title.highlight')}</span>
               </h2>
               <p className="text-lg text-muted-foreground font-raleway font-light max-w-2xl mx-auto">
-                Meet the experts who automate and digitize your business.
+                {t('aboutPage.teamSection.subtitle')}
               </p>
             </div>
 
@@ -174,10 +176,10 @@ const About = () => {
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4 font-raleway">
-                Open <span className="text-primary">Positions</span>
+                {t('aboutPage.jobsSection.title.main')} <span className="text-primary">{t('aboutPage.jobsSection.title.highlight')}</span>
               </h2>
               <p className="text-lg text-muted-foreground font-raleway font-light max-w-2xl mx-auto">
-                Join our team and shape the future of automation. We are looking for talented people who bring passion for innovation and efficiency.
+                {t('aboutPage.jobsSection.subtitle')}
               </p>
             </div>
 
@@ -210,7 +212,7 @@ const About = () => {
                       {/* Mission */}
                       <div>
                         <h4 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                          Your Mission
+                          {t('aboutPage.jobDetails.mission')}
                         </h4>
                         <p className="text-muted-foreground leading-relaxed">
                           {job.mission}
@@ -220,7 +222,7 @@ const About = () => {
                       {/* Requirements */}
                       <div>
                         <h4 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                          What you bring
+                          {t('aboutPage.jobDetails.requirements')}
                         </h4>
                         <ul className="space-y-2">
                           {job.requirements.map((req, reqIndex) => (
@@ -235,7 +237,7 @@ const About = () => {
                       {/* Benefits */}
                       <div>
                         <h4 className="text-lg font-semibold text-foreground mb-3 font-raleway">
-                          What awaits you
+                          {t('aboutPage.jobDetails.benefits')}
                         </h4>
                         <ul className="space-y-2">
                           {job.benefits.map((benefit, benefitIndex) => (
@@ -250,7 +252,7 @@ const About = () => {
                       {/* CTA */}
                       <div className="pt-4 border-t border-border/30">
                         <Button className="w-full sm:w-auto">
-                          Apply Now
+                          {t('aboutPage.jobDetails.applyNow')}
                         </Button>
                       </div>
                     </div>
@@ -263,16 +265,16 @@ const About = () => {
           {/* Final CTA Section */}
           <div className="text-center bg-primary/5 rounded-xl p-8 border border-primary/20">
             <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-              Ready to Transform Your Business?
+              {t('aboutPage.finalCTA.title')}
             </h2>
             <p className="text-muted-foreground mb-6 font-raleway">
-              Let's discuss how we can automate your processes and boost your efficiency.
+              {t('aboutPage.finalCTA.subtitle')}
             </p>
             <Button 
               onClick={() => navigate('/')}
               className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              Get Started
+              {t('aboutPage.finalCTA.button')}
             </Button>
           </div>
         </div>
