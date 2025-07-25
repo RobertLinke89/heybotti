@@ -20,11 +20,13 @@ const Legal = () => {
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Deutschland</p>
           <p className="text-muted-foreground mb-1">Marke: HeyBotti</p>
-          <p className="text-muted-foreground mb-4">Website: botti.co</p>
+          <p className="text-muted-foreground mb-1">Website: heybotti.de</p>
+          <p className="text-muted-foreground mb-4">Unternehmenswebsite: botti.co</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Kontakt</h3>
-          <p className="text-muted-foreground mb-1">Telefon: 0176-32549166</p>
+          <p className="text-muted-foreground mb-1">Telefon: +49 176-32549166</p>
           <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
+          <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
       </section>
 
@@ -41,11 +43,28 @@ const Legal = () => {
           <strong>Eintragung im Handelsregister:</strong> PLUSPULS uGmbH
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Registergericht:</strong> Deutschland
+          <strong>Registergericht:</strong> Amtsgericht Jena
+        </p>
+        <p className="text-muted-foreground mb-2">
+          <strong>Handelsregisternummer:</strong> HRB [wird nachgetragen]
         </p>
         <p className="text-muted-foreground mb-4">
           <strong>Rechtsform:</strong> Unternehmergesellschaft (haftungsbeschränkt)
         </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Umsatzsteuer-ID</h2>
+        <p className="text-muted-foreground mb-4">
+          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE [wird nachgetragen]
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p className="text-muted-foreground mb-1">Herr Alexander Herre</p>
+        <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
+        <p className="text-muted-foreground mb-4">07407 Rudolstadt, Deutschland</p>
       </section>
 
       <section>
@@ -101,14 +120,35 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Berufshaftpflichtversicherung</h2>
         <p className="text-muted-foreground mb-4">
-          Als Beratungsunternehmen verfügen wir über eine entsprechende Berufshaftpflichtversicherung. Details hierzu teilen wir auf Anfrage gerne mit.
+          Als IT-Beratungsunternehmen verfügen wir über eine entsprechende Berufshaftpflichtversicherung. Details hierzu teilen wir auf Anfrage gerne mit.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Technische Umsetzung</h2>
+        <p className="text-muted-foreground mb-4">
+          Diese Website wurde mit modernen Webtechnologien entwickelt und wird kontinuierlich gepflegt von PLUSPULS uGmbH.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Gerichtsstände</h2>
+        <p className="text-muted-foreground mb-4">
+          Sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist, ist Erfurt der Gerichtsstand für alle Streitigkeiten aus dem Vertragsverhältnis. Dasselbe gilt, wenn der Kunde keinen allgemeinen Gerichtsstand in Deutschland hat oder der Wohnsitz oder gewöhnliche Aufenthalt im Zeitpunkt der Klageerhebung nicht bekannt ist.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Anwendbares Recht</h2>
         <p className="text-muted-foreground mb-4">
-          Für alle Rechtsbeziehungen zwischen uns und unseren Kunden gilt das Recht der Bundesrepublik Deutschland. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird.
+          Für alle Rechtsbeziehungen zwischen uns und unseren Kunden gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Salvatorische Klausel</h2>
+        <p className="text-muted-foreground mb-4">
+          Sollten einzelne Bestimmungen dieser rechtlichen Hinweise unwirksam oder undurchführbar sein oder werden, so wird dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt.
         </p>
       </section>
     </div>
@@ -125,11 +165,13 @@ const Legal = () => {
           <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
           <p className="text-muted-foreground mb-1">07407 Rudolstadt, Germany</p>
           <p className="text-muted-foreground mb-1">Brand: HeyBotti</p>
-          <p className="text-muted-foreground mb-4">Website: botti.co</p>
+          <p className="text-muted-foreground mb-1">Website: heybotti.de</p>
+          <p className="text-muted-foreground mb-4">Company Website: botti.co</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Contact</h3>
           <p className="text-muted-foreground mb-1">Phone: +49 176-32549166</p>
           <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
+          <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
       </section>
 
@@ -146,11 +188,28 @@ const Legal = () => {
           <strong>Registration:</strong> PLUSPULS uGmbH
         </p>
         <p className="text-muted-foreground mb-2">
-          <strong>Registry Court:</strong> Germany
+          <strong>Registry Court:</strong> District Court Jena
+        </p>
+        <p className="text-muted-foreground mb-2">
+          <strong>Commercial Register Number:</strong> HRB [to be added]
         </p>
         <p className="text-muted-foreground mb-4">
           <strong>Legal Form:</strong> Unternehmergesellschaft (haftungsbeschränkt)
         </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">VAT Information</h2>
+        <p className="text-muted-foreground mb-4">
+          VAT identification number according to Section 27a of the VAT Act: DE [to be added]
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Editorial Responsibility</h2>
+        <p className="text-muted-foreground mb-1">Mr. Alexander Herre</p>
+        <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
+        <p className="text-muted-foreground mb-4">07407 Rudolstadt, Germany</p>
       </section>
 
       <section>
@@ -206,14 +265,35 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Professional Liability Insurance</h2>
         <p className="text-muted-foreground mb-4">
-          As a consulting company, we have appropriate professional liability insurance. We are happy to share details upon request.
+          As an IT consulting company, we have appropriate professional liability insurance. We are happy to share details upon request.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Technical Implementation</h2>
+        <p className="text-muted-foreground mb-4">
+          This website was developed using modern web technologies and is continuously maintained by PLUSPULS uGmbH.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Jurisdiction</h2>
+        <p className="text-muted-foreground mb-4">
+          If the customer is a merchant, legal entity under public law or special fund under public law, Erfurt is the place of jurisdiction for all disputes arising from the contractual relationship. The same applies if the customer has no general place of jurisdiction in Germany or if the residence or usual place of residence is not known at the time the action is filed.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Applicable Law</h2>
         <p className="text-muted-foreground mb-4">
-          German law applies to all legal relationships between us and our customers. For consumers, this choice of law only applies insofar as the protection granted by mandatory provisions of the law of the country of the consumer's habitual residence is not thereby withdrawn.
+          German law applies to all legal relationships between us and our customers, excluding the UN Convention on Contracts for the International Sale of Goods. For consumers, this choice of law only applies insofar as the protection granted by mandatory provisions of the law of the country of the consumer's habitual residence is not thereby withdrawn.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Severability Clause</h2>
+        <p className="text-muted-foreground mb-4">
+          Should individual provisions of these legal notices be invalid or unenforceable, this shall not affect the validity of the remaining provisions.
         </p>
       </section>
     </div>
