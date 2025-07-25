@@ -11,11 +11,11 @@ const Services = () => {
       subtitle: t('services.sales.subtitle'),
       description: t('services.sales.description'),
       features: [
-        "Email automation",
-        "Lead nurturing funnels",
-        "CRM automation",
-        "Chatbots / WhatsApp automation",
-        "Retargeting campaigns"
+        t('services.sales.feature1'),
+        t('services.sales.feature2'),
+        t('services.sales.feature3'),
+        t('services.sales.feature4'),
+        t('services.sales.feature5')
       ]
     },
     {
@@ -24,10 +24,10 @@ const Services = () => {
       subtitle: t('services.finance.subtitle'),
       description: t('services.finance.description'),
       features: [
-        "Document recognition & booking",
-        "Invoicing & dunning",
-        "Automated bank reconciliation",
-        "Tax preparation through report automation"
+        t('services.finance.feature1'),
+        t('services.finance.feature2'),
+        t('services.finance.feature3'),
+        t('services.finance.feature4')
       ]
     },
     {
@@ -36,10 +36,10 @@ const Services = () => {
       subtitle: t('services.hr.subtitle'),
       description: t('services.hr.description'),
       features: [
-        "Automated candidate pre-selection",
-        "Interview scheduling",
-        "Onboarding automation",
-        "Employee communication"
+        t('services.hr.feature1'),
+        t('services.hr.feature2'),
+        t('services.hr.feature3'),
+        t('services.hr.feature4')
       ]
     },
     {
@@ -48,10 +48,10 @@ const Services = () => {
       subtitle: t('services.ecommerce.subtitle'),
       description: t('services.ecommerce.description'),
       features: [
-        "Inventory synchronization & warehouse management",
-        "Shipping processing / label creation",
-        "Payment reconciliation & return handling",
-        "Product feed automation for marketplaces & ads"
+        t('services.ecommerce.feature1'),
+        t('services.ecommerce.feature2'),
+        t('services.ecommerce.feature3'),
+        t('services.ecommerce.feature4')
       ]
     },
     {
@@ -60,9 +60,9 @@ const Services = () => {
       subtitle: t('services.bi.subtitle'),
       description: t('services.bi.description'),
       features: [
-        "Dashboards & KPI automation",
-        "Automated data aggregation from multiple tools",
-        "Early warning systems via triggers and alerts"
+        t('services.bi.feature1'),
+        t('services.bi.feature2'),
+        t('services.bi.feature3')
       ]
     },
     {
@@ -71,12 +71,12 @@ const Services = () => {
       subtitle: t('services.workflows.subtitle'),
       description: t('services.workflows.description'),
       features: [
-        "Approval processes",
-        "Ticketing and support workflows",
-        "Customer onboarding",
-        "Contract management",
-        "Document management",
-        "Internal communication"
+        t('services.workflows.feature1'),
+        t('services.workflows.feature2'),
+        t('services.workflows.feature3'),
+        t('services.workflows.feature4'),
+        t('services.workflows.feature5'),
+        t('services.workflows.feature6')
       ]
     }
   ];

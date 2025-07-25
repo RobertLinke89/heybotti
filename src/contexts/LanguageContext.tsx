@@ -50,6 +50,33 @@ type TranslationKey =
   | 'services.workflows.title'
   | 'services.workflows.subtitle'
   | 'services.workflows.description'
+  // Service features
+  | 'services.sales.feature1'
+  | 'services.sales.feature2'
+  | 'services.sales.feature3'
+  | 'services.sales.feature4'
+  | 'services.sales.feature5'
+  | 'services.finance.feature1'
+  | 'services.finance.feature2'
+  | 'services.finance.feature3'
+  | 'services.finance.feature4'
+  | 'services.hr.feature1'
+  | 'services.hr.feature2'
+  | 'services.hr.feature3'
+  | 'services.hr.feature4'
+  | 'services.ecommerce.feature1'
+  | 'services.ecommerce.feature2'
+  | 'services.ecommerce.feature3'
+  | 'services.ecommerce.feature4'
+  | 'services.bi.feature1'
+  | 'services.bi.feature2'
+  | 'services.bi.feature3'
+  | 'services.workflows.feature1'
+  | 'services.workflows.feature2'
+  | 'services.workflows.feature3'
+  | 'services.workflows.feature4'
+  | 'services.workflows.feature5'
+  | 'services.workflows.feature6'
   // About
   | 'about.title'
   | 'about.title.highlight'
@@ -261,6 +288,34 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'services.workflows.title': 'Workflows',
     'services.workflows.subtitle': 'Efficiency starts internally.',
     'services.workflows.description': 'Standardized processes like approvals, document management or handovers run in the background – clean, traceable, scalable.',
+    
+    // Service features
+    'services.sales.feature1': 'Email automation',
+    'services.sales.feature2': 'Lead nurturing funnels',
+    'services.sales.feature3': 'CRM automation',
+    'services.sales.feature4': 'Chatbots / WhatsApp automation',
+    'services.sales.feature5': 'Retargeting campaigns',
+    'services.finance.feature1': 'Document recognition & booking',
+    'services.finance.feature2': 'Invoicing & dunning',
+    'services.finance.feature3': 'Automated bank reconciliation',
+    'services.finance.feature4': 'Tax preparation through report automation',
+    'services.hr.feature1': 'Automated candidate pre-selection',
+    'services.hr.feature2': 'Interview scheduling',
+    'services.hr.feature3': 'Onboarding automation',
+    'services.hr.feature4': 'Employee communication',
+    'services.ecommerce.feature1': 'Inventory synchronization & warehouse management',
+    'services.ecommerce.feature2': 'Shipping processing / label creation',
+    'services.ecommerce.feature3': 'Payment reconciliation & return handling',
+    'services.ecommerce.feature4': 'Product feed automation for marketplaces & ads',
+    'services.bi.feature1': 'Dashboards & KPI automation',
+    'services.bi.feature2': 'Automated data aggregation from multiple tools',
+    'services.bi.feature3': 'Early warning systems via triggers and alerts',
+    'services.workflows.feature1': 'Approval processes',
+    'services.workflows.feature2': 'Ticketing and support workflows',
+    'services.workflows.feature3': 'Customer onboarding',
+    'services.workflows.feature4': 'Contract management',
+    'services.workflows.feature5': 'Document management',
+    'services.workflows.feature6': 'Internal communication',
     
     // About
     'about.title': 'How we',
@@ -483,6 +538,34 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'services.workflows.title': 'Workflows',
     'services.workflows.subtitle': 'Effizienz fängt intern an.',
     'services.workflows.description': 'Standardisierte Prozesse wie Freigaben, Dokumentenverwaltung oder Übergaben laufen im Hintergrund ab – sauber, nachvollziehbar, skalierbar.',
+    
+    // Service features
+    'services.sales.feature1': 'E-Mail-Automatisierung',
+    'services.sales.feature2': 'Lead-Nurturing-Funnels',
+    'services.sales.feature3': 'CRM-Automatisierung',
+    'services.sales.feature4': 'Chatbots / WhatsApp-Automatisierung',
+    'services.sales.feature5': 'Retargeting-Kampagnen',
+    'services.finance.feature1': 'Belegerfassung & Buchung',
+    'services.finance.feature2': 'Rechnungsstellung & Mahnung',
+    'services.finance.feature3': 'Automatisierter Bankabgleich',
+    'services.finance.feature4': 'Steuervorbereitung durch Report-Automatisierung',
+    'services.hr.feature1': 'Automatisierte Kandidatenvorauswahl',
+    'services.hr.feature2': 'Interview-Terminplanung',
+    'services.hr.feature3': 'Onboarding-Automatisierung',
+    'services.hr.feature4': 'Mitarbeiterkommunikation',
+    'services.ecommerce.feature1': 'Lagerabgleich & Lagerverwaltung',
+    'services.ecommerce.feature2': 'Versandabwicklung / Etikettenerstellung',
+    'services.ecommerce.feature3': 'Zahlungsabgleich & Retouren-Handling',
+    'services.ecommerce.feature4': 'Produktfeed-Automatisierung für Marktplätze & Ads',
+    'services.bi.feature1': 'Dashboards & KPI-Automatisierung',
+    'services.bi.feature2': 'Automatisierte Datenaggregation aus mehreren Tools',
+    'services.bi.feature3': 'Frühwarnsysteme über Trigger und Alerts',
+    'services.workflows.feature1': 'Freigabeprozesse',
+    'services.workflows.feature2': 'Ticketing und Support-Workflows',
+    'services.workflows.feature3': 'Kunden-Onboarding',
+    'services.workflows.feature4': 'Vertragsmanagement',
+    'services.workflows.feature5': 'Dokumentenverwaltung',
+    'services.workflows.feature6': 'Interne Kommunikation',
     
     // About
     'about.title': 'Wie wir es',
