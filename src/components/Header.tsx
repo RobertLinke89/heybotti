@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X, CalendarIcon } from 'lucide-react';
+import { Phone, Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Calendar } from '@/components/ui/calendar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
@@ -33,10 +34,20 @@ const Header = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCallbackDialogOpen, setIsCallbackDialogOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState<string>();
   const { register, handleSubmit, formState: { errors }, reset } = useForm<CallbackFormData>();
   const { toast } = useToast();
+
+  const services = [
+    { id: 'sales-marketing', key: 'sales' },
+    { id: 'finance', key: 'finance' },
+    { id: 'hr', key: 'hr' },
+    { id: 'ecommerce', key: 'ecommerce' },
+    { id: 'business-intelligence', key: 'bi' },
+    { id: 'workflows', key: 'workflows' }
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -105,7 +116,40 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#services" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.services')}</a>
+            {/* Services Dropdown */}
+            <DropdownMenu open={isServicesDropdownOpen} onOpenChange={setIsServicesDropdownOpen}>
+              <DropdownMenuTrigger asChild>
+                <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
+                  {t('nav.services')}
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="start" 
+                className="w-64 bg-background border border-border shadow-lg z-50"
+                sideOffset={4}
+              >
+                {services.map((service) => (
+                  <DropdownMenuItem 
+                    key={service.id}
+                    onClick={() => {
+                      navigate(`/services/${service.id}`);
+                      setIsServicesDropdownOpen(false);
+                    }}
+                    className="cursor-pointer hover:bg-muted focus:bg-muted px-4 py-3"
+                  >
+                    <div>
+                      <div className="font-medium text-foreground text-sm">
+                        {t(`services.${service.key}.title`)}
+                      </div>
+                      <div className="text-muted-foreground text-xs mt-1">
+                        {t(`services.${service.key}.subtitle`)}
+                      </div>
+                    </div>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.process')}</a>
             <button 
               onClick={() => {
@@ -264,13 +308,26 @@ const Header = () => {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <nav className="flex flex-col space-y-4 pt-4 border-t border-secondary">
-            <a 
-              href="#services" 
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t('nav.services')}
-            </a>
+            {/* Mobile Services Section */}
+            <div className="space-y-2">
+              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
+                {t('nav.services')}
+              </div>
+              <div className="pl-4 space-y-1">
+                {services.map((service) => (
+                  <button
+                    key={service.id}
+                    onClick={() => {
+                      navigate(`/services/${service.id}`);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
+                  >
+                    {t(`services.${service.key}.title`)}
+                  </button>
+                ))}
+              </div>
+            </div>
             <a 
               href="#prozess" 
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
