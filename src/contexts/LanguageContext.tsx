@@ -266,7 +266,148 @@ type TranslationKey =
   | 'jobs.architect.req4'
   | 'jobs.architect.benefit1'
   | 'jobs.architect.benefit2'
-  | 'jobs.architect.benefit3';
+  | 'jobs.architect.benefit3'
+  // Service Details
+  | 'service.back'
+  | 'service.not.found'
+  | 'service.benefits.title'
+  | 'service.process.title'
+  | 'service.example.title'
+  | 'service.example.scenario'
+  | 'service.example.solution'
+  | 'service.example.results'
+  | 'service.sales.title'
+  | 'service.sales.subtitle'
+  | 'service.sales.hero'
+  | 'service.sales.description'
+  | 'service.sales.benefit1.title'
+  | 'service.sales.benefit1.desc'
+  | 'service.sales.benefit2.title'
+  | 'service.sales.benefit2.desc'
+  | 'service.sales.benefit3.title'
+  | 'service.sales.benefit3.desc'
+  | 'service.sales.process1.title'
+  | 'service.sales.process1.desc'
+  | 'service.sales.process2.title'
+  | 'service.sales.process2.desc'
+  | 'service.sales.process3.title'
+  | 'service.sales.process3.desc'
+  | 'service.sales.example.title'
+  | 'service.sales.example.scenario'
+  | 'service.sales.example.solution'
+  | 'service.sales.example.result1'
+  | 'service.sales.example.result2'
+  | 'service.sales.example.result3'
+  | 'service.finance.title'
+  | 'service.finance.subtitle'
+  | 'service.finance.hero'
+  | 'service.finance.description'
+  | 'service.finance.benefit1.title'
+  | 'service.finance.benefit1.desc'
+  | 'service.finance.benefit2.title'
+  | 'service.finance.benefit2.desc'
+  | 'service.finance.benefit3.title'
+  | 'service.finance.benefit3.desc'
+  | 'service.finance.process1.title'
+  | 'service.finance.process1.desc'
+  | 'service.finance.process2.title'
+  | 'service.finance.process2.desc'
+  | 'service.finance.process3.title'
+  | 'service.finance.process3.desc'
+  | 'service.finance.example.title'
+  | 'service.finance.example.scenario'
+  | 'service.finance.example.solution'
+  | 'service.finance.example.result1'
+  | 'service.finance.example.result2'
+  | 'service.finance.example.result3'
+  | 'service.hr.title'
+  | 'service.hr.subtitle'
+  | 'service.hr.hero'
+  | 'service.hr.description'
+  | 'service.hr.benefit1.title'
+  | 'service.hr.benefit1.desc'
+  | 'service.hr.benefit2.title'
+  | 'service.hr.benefit2.desc'
+  | 'service.hr.benefit3.title'
+  | 'service.hr.benefit3.desc'
+  | 'service.hr.process1.title'
+  | 'service.hr.process1.desc'
+  | 'service.hr.process2.title'
+  | 'service.hr.process2.desc'
+  | 'service.hr.process3.title'
+  | 'service.hr.process3.desc'
+  | 'service.hr.example.title'
+  | 'service.hr.example.scenario'
+  | 'service.hr.example.solution'
+  | 'service.hr.example.result1'
+  | 'service.hr.example.result2'
+  | 'service.hr.example.result3'
+  | 'service.ecommerce.title'
+  | 'service.ecommerce.subtitle'
+  | 'service.ecommerce.hero'
+  | 'service.ecommerce.description'
+  | 'service.ecommerce.benefit1.title'
+  | 'service.ecommerce.benefit1.desc'
+  | 'service.ecommerce.benefit2.title'
+  | 'service.ecommerce.benefit2.desc'
+  | 'service.ecommerce.benefit3.title'
+  | 'service.ecommerce.benefit3.desc'
+  | 'service.ecommerce.process1.title'
+  | 'service.ecommerce.process1.desc'
+  | 'service.ecommerce.process2.title'
+  | 'service.ecommerce.process2.desc'
+  | 'service.ecommerce.process3.title'
+  | 'service.ecommerce.process3.desc'
+  | 'service.ecommerce.example.title'
+  | 'service.ecommerce.example.scenario'
+  | 'service.ecommerce.example.solution'
+  | 'service.ecommerce.example.result1'
+  | 'service.ecommerce.example.result2'
+  | 'service.ecommerce.example.result3'
+  | 'service.bi.title'
+  | 'service.bi.subtitle'
+  | 'service.bi.hero'
+  | 'service.bi.description'
+  | 'service.bi.benefit1.title'
+  | 'service.bi.benefit1.desc'
+  | 'service.bi.benefit2.title'
+  | 'service.bi.benefit2.desc'
+  | 'service.bi.benefit3.title'
+  | 'service.bi.benefit3.desc'
+  | 'service.bi.process1.title'
+  | 'service.bi.process1.desc'
+  | 'service.bi.process2.title'
+  | 'service.bi.process2.desc'
+  | 'service.bi.process3.title'
+  | 'service.bi.process3.desc'
+  | 'service.bi.example.title'
+  | 'service.bi.example.scenario'
+  | 'service.bi.example.solution'
+  | 'service.bi.example.result1'
+  | 'service.bi.example.result2'
+  | 'service.bi.example.result3'
+  | 'service.workflows.title'
+  | 'service.workflows.subtitle'
+  | 'service.workflows.hero'
+  | 'service.workflows.description'
+  | 'service.workflows.benefit1.title'
+  | 'service.workflows.benefit1.desc'
+  | 'service.workflows.benefit2.title'
+  | 'service.workflows.benefit2.desc'
+  | 'service.workflows.benefit3.title'
+  | 'service.workflows.benefit3.desc'
+  | 'service.workflows.process1.title'
+  | 'service.workflows.process1.desc'
+  | 'service.workflows.process2.title'
+  | 'service.workflows.process2.desc'
+  | 'service.workflows.process3.title'
+  | 'service.workflows.process3.desc'
+  | 'service.workflows.example.title'
+  | 'service.workflows.example.scenario'
+  | 'service.workflows.example.solution'
+  | 'service.workflows.example.result1'
+  | 'service.workflows.example.result2'
+  | 'service.workflows.example.result3';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -541,6 +682,160 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.architect.benefit1': 'Projects at the cutting edge – with real creative freedom',
     'jobs.architect.benefit2': 'Exchange with a team that thinks technology humanly',
     'jobs.architect.benefit3': 'Maximum flexibility, open communication, fair cooperation',
+    
+    // Service Details
+    'service.back': 'Back to Services',
+    'service.not.found': 'Service not found',
+    'service.benefits.title': 'What you get',
+    'service.process.title': 'How we work',
+    'service.example.title': 'Case Study',
+    'service.example.scenario': 'Challenge',
+    'service.example.solution': 'Solution',
+    'service.example.results': 'Results',
+    
+    // Sales & Marketing
+    'service.sales.title': 'Sales & Marketing Automation',
+    'service.sales.subtitle': 'More leads. Less effort. Full scaling.',
+    'service.sales.hero': 'Transform your marketing from reactive to proactive',
+    'service.sales.description': 'Automate funnels, follow-ups and campaigns to systematically turn prospects into customers – 24/7, data-driven and personal.',
+    'service.sales.benefit1.title': '300% more qualified leads',
+    'service.sales.benefit1.desc': 'Through intelligent lead nurturing sequences',
+    'service.sales.benefit2.title': '80% time savings',
+    'service.sales.benefit2.desc': 'In customer communication',
+    'service.sales.benefit3.title': '250% ROI increase',
+    'service.sales.benefit3.desc': 'Through optimized conversion funnels',
+    'service.sales.process1.title': 'Optimize lead capturing',
+    'service.sales.process1.desc': 'We analyze your existing touchpoints and implement intelligent lead magnets with automated follow-up sequences.',
+    'service.sales.process2.title': 'Build nurturing funnels',
+    'service.sales.process2.desc': 'Development of personalized email sequences based on customer behavior and interests for maximum conversion.',
+    'service.sales.process3.title': 'Realize CRM integration',
+    'service.sales.process3.desc': 'Seamless connection of all systems for automatic lead qualification and sales pipeline management.',
+    'service.sales.example.title': 'Case Study: Online Sportswear Shop',
+    'service.sales.example.scenario': 'A medium-sized online shop struggled with low conversion rates and high manual effort in customer service.',
+    'service.sales.example.solution': 'We implemented a fully automated marketing funnel with personalized email sequences, cart abandonment campaigns and WhatsApp bot for customer inquiries.',
+    'service.sales.example.result1': 'Conversion rate increased from 2.3% to 7.1%',
+    'service.sales.example.result2': 'Customer service inquiries reduced by 65%',
+    'service.sales.example.result3': 'Average cart value increased by €180',
+    
+    // Finance
+    'service.finance.title': 'Finance & Accounting',
+    'service.finance.subtitle': 'Fewer errors. More overview. Automatically compliant.',
+    'service.finance.hero': 'Your finances on autopilot - precise and legally compliant',
+    'service.finance.description': 'Documents, payments, invoices and reports flow automatically through your systems – for a tidy back office without headaches.',
+    'service.finance.benefit1.title': '95% fewer manual bookings',
+    'service.finance.benefit1.desc': 'Through AI-supported document recognition',
+    'service.finance.benefit2.title': '100% compliance security',
+    'service.finance.benefit2.desc': 'Automatic verification of all processes',
+    'service.finance.benefit3.title': 'Up to 40% cost savings',
+    'service.finance.benefit3.desc': 'Reduction of bookkeeping effort',
+    'service.finance.process1.title': 'System analysis & integration',
+    'service.finance.process1.desc': 'Assessment of your existing financial systems and development of a seamless integration strategy.',
+    'service.finance.process2.title': 'Implement automation',
+    'service.finance.process2.desc': 'Setup of OCR document recognition, automatic booking rules and AI-supported categorization.',
+    'service.finance.process3.title': 'Monitoring & optimization',
+    'service.finance.process3.desc': 'Continuous monitoring of processes with automatic error checking and performance optimization.',
+    'service.finance.example.title': 'Case Study: Consulting Company',
+    'service.finance.example.scenario': 'A 50-employee consulting company lost 15 hours weekly through manual invoicing and document processing.',
+    'service.finance.example.solution': 'Fully automated invoicing based on time tracking, OCR document recognition with automatic booking and digital dunning.',
+    'service.finance.example.result1': 'Administrative effort reduced by 90%',
+    'service.finance.example.result2': 'Error rate in bookkeeping dropped to under 0.5%',
+    'service.finance.example.result3': 'Cash flow improved by 40% through faster processing',
+    
+    // HR & Recruiting
+    'service.hr.title': 'HR & Recruiting',
+    'service.hr.subtitle': 'The best talents. The best processes.',
+    'service.hr.hero': 'Find and onboard the right people - systematically and efficiently',
+    'service.hr.description': 'From application to onboarding: Automation brings speed, structure and appreciation to your HR processes.',
+    'service.hr.benefit1.title': '70% faster hiring process',
+    'service.hr.benefit1.desc': 'Through automated pre-selection and scheduling',
+    'service.hr.benefit2.title': '50% higher candidate satisfaction',
+    'service.hr.benefit2.desc': 'Structured and transparent communication',
+    'service.hr.benefit3.title': '90% time savings in onboarding',
+    'service.hr.benefit3.desc': 'Automated document processing and workflows',
+    'service.hr.process1.title': 'Recruiting optimization',
+    'service.hr.process1.desc': 'Automated candidate screening, intelligent matching and scheduling of interviews with seamless ATS integration.',
+    'service.hr.process2.title': 'Onboarding automation',
+    'service.hr.process2.desc': 'Digital onboarding workflows with automatic document generation, task assignment and progress tracking.',
+    'service.hr.process3.title': 'Employee lifecycle',
+    'service.hr.process3.desc': 'Comprehensive automation from performance reviews to offboarding with integrated feedback systems.',
+    'service.hr.example.title': 'Case Study: Tech Startup',
+    'service.hr.example.scenario': 'A fast-growing tech startup spent 60% of HR time on administrative tasks and struggled with inconsistent onboarding.',
+    'service.hr.example.solution': 'Implementation of automated recruiting pipeline with AI pre-screening, digital onboarding platform and automated employee communication.',
+    'service.hr.example.result1': 'Time-to-hire reduced from 6 weeks to 2 weeks',
+    'service.hr.example.result2': 'Onboarding satisfaction increased to 4.8/5',
+    'service.hr.example.result3': 'HR team could focus 80% more on strategic tasks',
+    
+    // E-Commerce
+    'service.ecommerce.title': 'E-Commerce & Fulfillment',
+    'service.ecommerce.subtitle': 'Your silent e-commerce back office. Around the clock.',
+    'service.ecommerce.hero': 'Your e-commerce runs like clockwork - without your intervention',
+    'service.ecommerce.description': 'Sales run, inventory is correct, returns are under control – every movement in the shop automatically triggers actions that delight your customers and relieve your warehouse.',
+    'service.ecommerce.benefit1.title': '99% fewer out-of-stock situations',
+    'service.ecommerce.benefit1.desc': 'Through intelligent inventory forecasting',
+    'service.ecommerce.benefit2.title': '50% faster shipping',
+    'service.ecommerce.benefit2.desc': 'Automated processing and labeling',
+    'service.ecommerce.benefit3.title': '25% higher margins',
+    'service.ecommerce.benefit3.desc': 'Optimized marketplace performance',
+    'service.ecommerce.process1.title': 'Optimize inventory management',
+    'service.ecommerce.process1.desc': 'Real-time inventory reconciliation between all channels with automatic reordering and minimum stock alerts.',
+    'service.ecommerce.process2.title': 'Automate fulfillment',
+    'service.ecommerce.process2.desc': 'From order receipt to shipping confirmation - everything runs automatically with optimal carrier selection.',
+    'service.ecommerce.process3.title': 'Orchestrate multi-channel',
+    'service.ecommerce.process3.desc': 'Synchronization of all sales channels with automated price optimization and performance tracking.',
+    'service.ecommerce.example.title': 'Case Study: Fashion Retailer',
+    'service.ecommerce.example.scenario': 'An online fashion retailer lost daily revenue due to sold-out items and had 3 full-time employees just for inventory management.',
+    'service.ecommerce.example.solution': 'Implementation of an intelligent inventory system with predictive analytics, automated multi-channel sync and AI-controlled reordering.',
+    'service.ecommerce.example.result1': 'Out-of-stock rate dropped from 18% to under 2%',
+    'service.ecommerce.example.result2': 'Inventory costs reduced by 30%',
+    'service.ecommerce.example.result3': '3 employees could move to customer-oriented areas',
+    
+    // Business Intelligence
+    'service.bi.title': 'Business Intelligence & Reporting',
+    'service.bi.subtitle': 'All numbers. All answers. In real time.',
+    'service.bi.hero': 'Data-driven decisions - automatically prepared',
+    'service.bi.description': 'Your most important KPIs at a glance – prepared, visualized and equipped with warning systems before risks become problems.',
+    'service.bi.benefit1.title': 'Real-time insights',
+    'service.bi.benefit1.desc': 'All important metrics in real time',
+    'service.bi.benefit2.title': 'Automatic anomaly detection',
+    'service.bi.benefit2.desc': 'Identify problems before they arise',
+    'service.bi.benefit3.title': '80% less reporting effort',
+    'service.bi.benefit3.desc': 'Automated report generation',
+    'service.bi.process1.title': 'Identify data sources',
+    'service.bi.process1.desc': 'Analysis of all relevant data sources and development of a unified data warehouse strategy.',
+    'service.bi.process2.title': 'Dashboard development',
+    'service.bi.process2.desc': 'Creation of interactive, role-based dashboards with automatic updates and mobile-optimized display.',
+    'service.bi.process3.title': 'Implement alerting',
+    'service.bi.process3.desc': 'Intelligent warning systems with machine learning for proactive problem detection and automatic notifications.',
+    'service.bi.example.title': 'Case Study: SaaS Company',
+    'service.bi.example.scenario': 'A SaaS company had data scattered across 8 different tools and needed 2 days per week for manual reports.',
+    'service.bi.example.solution': 'Central business intelligence dashboard with real-time data integration from all tools, automatic churn predictions and proactive alerts.',
+    'service.bi.example.result1': 'Reporting time reduced from 2 days to 10 minutes',
+    'service.bi.example.result2': 'Churn rate decreased by 35% through early intervention',
+    'service.bi.example.result3': 'Data-driven decisions increased by 400%',
+    
+    // Workflows
+    'service.workflows.title': 'Workflows',
+    'service.workflows.subtitle': 'Efficiency starts internally.',
+    'service.workflows.hero': 'Internal processes that organize themselves',
+    'service.workflows.description': 'Standardized processes like approvals, document management or handovers run in the background – clean, traceable, scalable.',
+    'service.workflows.benefit1.title': '60% faster processes',
+    'service.workflows.benefit1.desc': 'Through automated workflows',
+    'service.workflows.benefit2.title': '100% traceability',
+    'service.workflows.benefit2.desc': 'Complete documentation of all steps',
+    'service.workflows.benefit3.title': '90% fewer inquiries',
+    'service.workflows.benefit3.desc': 'Clear, automated communication',
+    'service.workflows.process1.title': 'Process mapping & analysis',
+    'service.workflows.process1.desc': 'Detailed analysis of existing workflows and identification of optimization potential through process mining.',
+    'service.workflows.process2.title': 'Workflow design & implementation',
+    'service.workflows.process2.desc': 'Development of automated workflows with clear escalation paths and integrated approval processes.',
+    'service.workflows.process3.title': 'Monitoring & continuous improvement',
+    'service.workflows.process3.desc': 'Continuous performance monitoring with automatic optimization and regular process reviews.',
+    'service.workflows.example.title': 'Case Study: Consulting Company',
+    'service.workflows.example.scenario': 'A consulting company lost 3 hours per employee daily due to inefficient approval processes and unclear responsibilities.',
+    'service.workflows.example.solution': 'Digital workflow hub with automated approval processes, intelligent routing and real-time status tracking for all requests.',
+    'service.workflows.example.result1': 'Approval lead times from 5 days to 4 hours',
+    'service.workflows.example.result2': 'Employee satisfaction increased by 40%',
+    'service.workflows.example.result3': 'Productivity increased by 25% through fewer administrative tasks',
   },
   de: {
     // Navigation
@@ -814,6 +1109,160 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.architect.benefit1': 'Projekte am Puls der Zeit – mit echter Gestaltungsfreiheit',
     'jobs.architect.benefit2': 'Austausch mit einem Team, das Technologie menschlich denkt',
     'jobs.architect.benefit3': 'Maximale Flexibilität, offene Kommunikation, faire Zusammenarbeit',
+    
+    // Service Details
+    'service.back': 'Zurück zu Services',
+    'service.not.found': 'Service nicht gefunden',
+    'service.benefits.title': 'Was Sie bekommen',
+    'service.process.title': 'Wie wir arbeiten',
+    'service.example.title': 'Praxisbeispiel',
+    'service.example.scenario': 'Herausforderung',
+    'service.example.solution': 'Lösung',
+    'service.example.results': 'Ergebnisse',
+    
+    // Sales & Marketing
+    'service.sales.title': 'Vertriebs- & Marketingautomatisierung',
+    'service.sales.subtitle': 'Mehr Leads. Weniger Aufwand. Volle Skalierung.',
+    'service.sales.hero': 'Transformieren Sie Ihr Marketing von reaktiv zu proaktiv',
+    'service.sales.description': 'Automatisieren Sie Funnels, Follow-ups und Kampagnen, um aus Interessenten systematisch Kunden zu machen – 24/7, datenbasiert und persönlich.',
+    'service.sales.benefit1.title': '300% mehr qualifizierte Leads',
+    'service.sales.benefit1.desc': 'Durch intelligente Lead-Nurturing-Sequenzen',
+    'service.sales.benefit2.title': '80% Zeitersparnis',
+    'service.sales.benefit2.desc': 'Bei der Kundenkommunikation',
+    'service.sales.benefit3.title': '250% ROI-Steigerung',
+    'service.sales.benefit3.desc': 'Durch optimierte Conversion-Funnels',
+    'service.sales.process1.title': 'Lead-Capturing optimieren',
+    'service.sales.process1.desc': 'Wir analysieren Ihre bestehenden Touchpoints und implementieren intelligente Lead-Magnets mit automatisierten Follow-up-Sequenzen.',
+    'service.sales.process2.title': 'Nurturing-Funnels aufbauen',
+    'service.sales.process2.desc': 'Entwicklung personalisierter E-Mail-Sequenzen basierend auf Kundenverhalten und Interessen für maximale Conversion.',
+    'service.sales.process3.title': 'CRM-Integration realisieren',
+    'service.sales.process3.desc': 'Nahtlose Verbindung aller Systeme für automatische Lead-Qualifizierung und Sales-Pipeline-Management.',
+    'service.sales.example.title': 'Praxisbeispiel: Online-Shop für Sportbekleidung',
+    'service.sales.example.scenario': 'Ein mittelständischer Online-Shop kämpfte mit niedriger Conversion-Rate und hohem manuellen Aufwand im Kundenservice.',
+    'service.sales.example.solution': 'Wir implementierten einen vollautomatisierten Marketing-Funnel mit personalisierten E-Mail-Sequenzen, Warenkorbabbrecher-Kampagnen und WhatsApp-Bot für Kundenanfragen.',
+    'service.sales.example.result1': 'Conversion-Rate stieg von 2,3% auf 7,1%',
+    'service.sales.example.result2': 'Kundenservice-Anfragen reduzierten sich um 65%',
+    'service.sales.example.result3': 'Durchschnittlicher Warenkorbwert erhöhte sich um 180€',
+    
+    // Finance
+    'service.finance.title': 'Finanzen & Buchhaltung',
+    'service.finance.subtitle': 'Weniger Fehler. Mehr Übersicht. Automatisch compliant.',
+    'service.finance.hero': 'Ihre Finanzen im Autopilot - präzise und rechtskonform',
+    'service.finance.description': 'Belege, Zahlungen, Rechnungen und Reports fließen automatisiert durch Ihre Systeme – für ein aufgeräumtes Backoffice ohne Kopfzerbrechen.',
+    'service.finance.benefit1.title': '95% weniger manuelle Buchungen',
+    'service.finance.benefit1.desc': 'Durch KI-gestützte Belegerkennung',
+    'service.finance.benefit2.title': '100% Compliance-Sicherheit',
+    'service.finance.benefit2.desc': 'Automatische Prüfung aller Prozesse',
+    'service.finance.benefit3.title': 'Bis zu 40% Kosteneinsparung',
+    'service.finance.benefit3.desc': 'Reduzierung des Buchführungsaufwands',
+    'service.finance.process1.title': 'Systemanalyse & Integration',
+    'service.finance.process1.desc': 'Bewertung Ihrer bestehenden Finanzsysteme und Entwicklung einer nahtlosen Integrationsstrategie.',
+    'service.finance.process2.title': 'Automatisierung implementieren',
+    'service.finance.process2.desc': 'Einrichtung von OCR-Belegerkennung, automatischen Buchungsregeln und KI-gestützter Kategorisierung.',
+    'service.finance.process3.title': 'Monitoring & Optimierung',
+    'service.finance.process3.desc': 'Kontinuierliche Überwachung der Prozesse mit automatischen Fehlerprüfungen und Performance-Optimierung.',
+    'service.finance.example.title': 'Praxisbeispiel: Consulting-Unternehmen',
+    'service.finance.example.scenario': 'Ein 50-Mitarbeiter Beratungsunternehmen verlor wöchentlich 15 Stunden durch manuelle Rechnungsstellung und Belegverarbeitung.',
+    'service.finance.example.solution': 'Vollautomatisierte Rechnungsstellung basierend auf Zeiterfassung, OCR-Belegerkennung mit automatischer Verbuchung und digitales Mahnwesen.',
+    'service.finance.example.result1': 'Administrativer Aufwand reduzierte sich um 90%',
+    'service.finance.example.result2': 'Fehlerrate in der Buchhaltung sank auf unter 0,5%',
+    'service.finance.example.result3': 'Cashflow verbesserte sich um 40% durch schnellere Bearbeitung',
+    
+    // HR & Recruiting
+    'service.hr.title': 'HR & Recruiting',
+    'service.hr.subtitle': 'Die besten Talente. Die besten Prozesse.',
+    'service.hr.hero': 'Die richtigen Menschen finden und onboarden - systematisch und effizient',
+    'service.hr.description': 'Von der Bewerbung bis zum Onboarding: Automatisierung bringt Geschwindigkeit, Struktur und Wertschätzung in Ihre HR-Prozesse.',
+    'service.hr.benefit1.title': '70% schnellerer Einstellungsprozess',
+    'service.hr.benefit1.desc': 'Durch automatisierte Vorauswahl und Terminplanung',
+    'service.hr.benefit2.title': '50% höhere Kandidatenzufriedenheit',
+    'service.hr.benefit2.desc': 'Strukturierte und transparente Kommunikation',
+    'service.hr.benefit3.title': '90% Zeitersparnis beim Onboarding',
+    'service.hr.benefit3.desc': 'Automatisierte Dokumentenverarbeitung und Workflows',
+    'service.hr.process1.title': 'Recruiting optimieren',
+    'service.hr.process1.desc': 'Automatisiertes Kandidatenscreening, intelligentes Matching und Terminplanung für Interviews mit nahtloser ATS-Integration.',
+    'service.hr.process2.title': 'Onboarding automatisieren',
+    'service.hr.process2.desc': 'Digitale Onboarding-Workflows mit automatischer Dokumentenerstellung, Aufgabenzuweisung und Fortschrittsverfolgung.',
+    'service.hr.process3.title': 'Employee Lifecycle',
+    'service.hr.process3.desc': 'Umfassende Automatisierung von Leistungsbeurteilungen bis hin zum Offboarding mit integrierten Feedback-Systemen.',
+    'service.hr.example.title': 'Praxisbeispiel: Tech-Startup',
+    'service.hr.example.scenario': 'Ein schnell wachsendes Tech-Startup verbrachte 60% der HR-Zeit mit administrativen Aufgaben und kämpfte mit inkonsistentem Onboarding.',
+    'service.hr.example.solution': 'Implementierung einer automatisierten Recruiting-Pipeline mit KI-Vorscreening, digitaler Onboarding-Plattform und automatisierter Mitarbeiterkommunikation.',
+    'service.hr.example.result1': 'Time-to-hire reduzierte sich von 6 Wochen auf 2 Wochen',
+    'service.hr.example.result2': 'Onboarding-Zufriedenheit stieg auf 4,8/5',
+    'service.hr.example.result3': 'HR-Team konnte sich 80% mehr auf strategische Aufgaben konzentrieren',
+    
+    // E-Commerce
+    'service.ecommerce.title': 'E-Commerce & Fulfillment',
+    'service.ecommerce.subtitle': 'Dein stilles E-Commerce-Backoffice. Rund um die Uhr.',
+    'service.ecommerce.hero': 'Ihr E-Commerce läuft wie geschmiert - ohne Ihr Zutun',
+    'service.ecommerce.description': 'Verkauf läuft, Lager stimmt, Retouren sind im Griff – jede Bewegung im Shop löst automatisch Aktionen aus, die Ihre Kund:innen begeistern und Ihr Lager entlasten.',
+    'service.ecommerce.benefit1.title': '99% weniger Out-of-Stock',
+    'service.ecommerce.benefit1.desc': 'Durch intelligente Bestandsvorhersagen',
+    'service.ecommerce.benefit2.title': '50% schnellerer Versand',
+    'service.ecommerce.benefit2.desc': 'Automatisierte Abwicklung und Etikettierung',
+    'service.ecommerce.benefit3.title': '25% höhere Margen',
+    'service.ecommerce.benefit3.desc': 'Optimierte Marktplatz-Performance',
+    'service.ecommerce.process1.title': 'Inventory-Management optimieren',
+    'service.ecommerce.process1.desc': 'Echtzeit-Bestandsabgleich zwischen allen Kanälen mit automatischen Nachbestellungen und Mindestbestand-Alerts.',
+    'service.ecommerce.process2.title': 'Fulfillment automatisieren',
+    'service.ecommerce.process2.desc': 'Vom Bestelleingang bis zur Versandbestätigung - alles läuft automatisch mit optimaler Carrier-Auswahl.',
+    'service.ecommerce.process3.title': 'Multi-Channel orchestrieren',
+    'service.ecommerce.process3.desc': 'Synchronisierung aller Verkaufskanäle mit automatisierter Preisoptimierung und Performance-Tracking.',
+    'service.ecommerce.example.title': 'Praxisbeispiel: Fashion-Retailer',
+    'service.ecommerce.example.scenario': 'Ein Online-Fashion-Retailer verlor täglich Umsatz durch vergriffene Artikel und hatte 3 Vollzeitkräfte nur für Bestandsmanagement.',
+    'service.ecommerce.example.solution': 'Implementierung eines intelligenten Inventory-Systems mit Predictive Analytics, automatisiertem Multi-Channel-Sync und KI-gesteuerter Nachbestellung.',
+    'service.ecommerce.example.result1': 'Out-of-Stock-Rate sank von 18% auf unter 2%',
+    'service.ecommerce.example.result2': 'Lagerkosten reduzierten sich um 30%',
+    'service.ecommerce.example.result3': '3 Mitarbeiter konnten in kundenorientierte Bereiche wechseln',
+    
+    // Business Intelligence
+    'service.bi.title': 'Business Intelligence & Reporting',
+    'service.bi.subtitle': 'Alle Zahlen. Alle Antworten. In Echtzeit.',
+    'service.bi.hero': 'Datengetriebene Entscheidungen - automatisch aufbereitet',
+    'service.bi.description': 'Deine wichtigsten KPIs auf einem Blick – aufbereitet, visualisiert und mit Warnsystemen versehen, bevor Risiken zum Problem werden.',
+    'service.bi.benefit1.title': 'Real-time Einblicke',
+    'service.bi.benefit1.desc': 'Alle wichtigen Kennzahlen in Echtzeit',
+    'service.bi.benefit2.title': 'Automatische Anomalie-Erkennung',
+    'service.bi.benefit2.desc': 'Probleme erkennen, bevor sie entstehen',
+    'service.bi.benefit3.title': '80% weniger Reporting-Aufwand',
+    'service.bi.benefit3.desc': 'Automatisierte Report-Generierung',
+    'service.bi.process1.title': 'Datenquellen identifizieren',
+    'service.bi.process1.desc': 'Analyse aller relevanten Datenquellen und Entwicklung einer einheitlichen Data-Warehouse-Strategie.',
+    'service.bi.process2.title': 'Dashboard-Entwicklung',
+    'service.bi.process2.desc': 'Erstellung interaktiver, rollenbasierter Dashboards mit automatischen Updates und mobiloptimierter Darstellung.',
+    'service.bi.process3.title': 'Alerting implementieren',
+    'service.bi.process3.desc': 'Intelligente Warnsysteme mit Machine Learning für proaktive Problemerkennung und automatische Benachrichtigungen.',
+    'service.bi.example.title': 'Praxisbeispiel: SaaS-Unternehmen',
+    'service.bi.example.scenario': 'Ein SaaS-Unternehmen hatte Daten in 8 verschiedenen Tools verstreut und brauchte 2 Tage pro Woche für manuelle Reports.',
+    'service.bi.example.solution': 'Zentrales Business Intelligence Dashboard mit Echtzeit-Datenintegration aus allen Tools, automatischen Churn-Vorhersagen und proaktiven Alerts.',
+    'service.bi.example.result1': 'Reporting-Zeit reduzierte sich von 2 Tagen auf 10 Minuten',
+    'service.bi.example.result2': 'Churn-Rate sank um 35% durch frühzeitige Intervention',
+    'service.bi.example.result3': 'Datenbasierte Entscheidungen stiegen um 400%',
+    
+    // Workflows
+    'service.workflows.title': 'Workflows',
+    'service.workflows.subtitle': 'Effizienz beginnt intern.',
+    'service.workflows.hero': 'Interne Prozesse, die sich selbst organisieren',
+    'service.workflows.description': 'Standardisierte Abläufe wie Genehmigungen, Dokumentenmanagement oder Übergaben laufen im Hintergrund – sauber, nachvollziehbar, skalierbar.',
+    'service.workflows.benefit1.title': '60% schnellere Prozesse',
+    'service.workflows.benefit1.desc': 'Durch automatisierte Workflows',
+    'service.workflows.benefit2.title': '100% Nachvollziehbarkeit',
+    'service.workflows.benefit2.desc': 'Lückenlose Dokumentation aller Schritte',
+    'service.workflows.benefit3.title': '90% weniger Rückfragen',
+    'service.workflows.benefit3.desc': 'Klare, automatisierte Kommunikation',
+    'service.workflows.process1.title': 'Prozess-Mapping & Analyse',
+    'service.workflows.process1.desc': 'Detaillierte Analyse bestehender Workflows und Identifikation von Optimierungspotenzialen durch Process Mining.',
+    'service.workflows.process2.title': 'Workflow-Design & Implementierung',
+    'service.workflows.process2.desc': 'Entwicklung automatisierter Workflows mit klaren Eskalationspfaden und integrierten Freigabeprozessen.',
+    'service.workflows.process3.title': 'Monitoring & Continuous Improvement',
+    'service.workflows.process3.desc': 'Kontinuierliche Überwachung der Performance mit automatischer Optimierung und regelmäßigen Process Reviews.',
+    'service.workflows.example.title': 'Praxisbeispiel: Beratungsunternehmen',
+    'service.workflows.example.scenario': 'Ein Beratungsunternehmen verlor täglich 3 Stunden pro Mitarbeiter durch ineffiziente Genehmigungsprozesse und unklare Zuständigkeiten.',
+    'service.workflows.example.solution': 'Digitaler Workflow-Hub mit automatisierten Freigabeprozessen, intelligentem Routing und Echtzeit-Status-Tracking für alle Anfragen.',
+    'service.workflows.example.result1': 'Durchlaufzeiten für Genehmigungen von 5 Tagen auf 4 Stunden',
+    'service.workflows.example.result2': 'Mitarbeiterzufriedenheit stieg um 40%',
+    'service.workflows.example.result3': 'Produktivität erhöhte sich um 25% durch weniger administrative Aufgaben',
   }
 };
 
