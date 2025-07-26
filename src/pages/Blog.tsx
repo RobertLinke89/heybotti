@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useMemo } from 'react';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -61,8 +62,15 @@ const Blog = () => {
     }
   ];
 
-  const featuredArticles = articles.filter(article => article.featured);
-  const regularArticles = articles.filter(article => !article.featured);
+  const featuredArticles = useMemo(() => 
+    articles.filter(article => article.featured), 
+    [articles]
+  );
+  
+  const regularArticles = useMemo(() => 
+    articles.filter(article => !article.featured), 
+    [articles]
+  );
 
   return (
     <div className="min-h-screen bg-background">

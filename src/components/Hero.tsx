@@ -42,12 +42,15 @@ const Hero = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#contact"
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center animate-fade-in"
               >
                 {t('hero.cta')}
-              </a>
+              </button>
             </div>
           </div>
         </div>

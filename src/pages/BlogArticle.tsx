@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ReactMarkdown from 'react-markdown';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 
 const BlogArticle = () => {
@@ -21,7 +21,10 @@ const BlogArticle = () => {
     'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 18 }
   };
 
-  const article = articles[slug as keyof typeof articles];
+  const article = useMemo(() => 
+    articles[slug as keyof typeof articles], 
+    [slug]
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);

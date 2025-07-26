@@ -150,7 +150,15 @@ const Header = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="#prozess" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium">{t('nav.process')}</a>
+            <button 
+              onClick={() => {
+                const element = document.getElementById('prozess');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
+            >
+              {t('nav.process')}
+            </button>
             <button 
               onClick={() => {
                 navigate('/blog');
@@ -328,13 +336,16 @@ const Header = () => {
                 ))}
               </div>
             </div>
-            <a 
-              href="#prozess" 
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button 
+              onClick={() => {
+                const element = document.getElementById('prozess');
+                element?.scrollIntoView({ behavior: 'smooth' });
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left w-full"
             >
               {t('nav.process')}
-            </a>
+            </button>
             <button 
               onClick={() => {
                 navigate('/blog');
