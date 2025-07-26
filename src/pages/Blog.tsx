@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Clock, Calendar } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, BookOpen, TrendingUp } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -13,63 +15,142 @@ const Blog = () => {
       id: 1,
       slug: 'roi-automation-small-business',
       date: '2024-01-15',
-      readTime: 8
+      readTime: 8,
+      category: 'ROI & Strategy',
+      featured: true
     },
     {
       id: 2,
       slug: 'five-processes-automate-first',
       date: '2024-01-22',
-      readTime: 10
+      readTime: 10,
+      category: 'Implementation',
+      featured: false
     },
     {
       id: 3,
       slug: 'breaking-too-small-myth',
       date: '2024-01-29',
-      readTime: 12
+      readTime: 12,
+      category: 'Small Business',
+      featured: true
     },
     {
       id: 4,
       slug: 'hidden-costs-manual-processes',
       date: '2024-02-05',
-      readTime: 15
+      readTime: 15,
+      category: 'Cost Analysis',
+      featured: false
     },
     {
       id: 5,
       slug: 'automation-without-overwhelm',
       date: '2024-02-12',
-      readTime: 14
+      readTime: 14,
+      category: 'Getting Started',
+      featured: false
     },
     {
       id: 6,
       slug: 'future-proofing-automation-trends',
       date: '2024-02-19',
-      readTime: 18
+      readTime: 18,
+      category: 'Future Trends',
+      featured: true
     }
   ];
+
+  const featuredArticles = articles.filter(article => article.featured);
+  const regularArticles = articles.filter(article => !article.featured);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-24 pb-16">
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 via-background to-muted/20">
         <div className="container mx-auto px-4">
-          <button 
+          <Button 
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
+            variant="ghost"
+            className="mb-8 text-muted-foreground hover:text-foreground"
           >
-            <ArrowLeft className="h-4 w-4" />
-            {t('blog.back')}
-          </button>
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Home
+          </Button>
 
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-raleway">
-              {t('blog.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <BookOpen className="h-8 w-8 text-primary" />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-raleway">
+                {t('blog.title')}
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('blog.subtitle')}
             </p>
           </div>
+        </div>
+      </section>
 
+      {/* Featured Articles */}
+      {featuredArticles.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-12">
+              <TrendingUp className="h-6 w-6 text-primary" />
+              <h2 className="text-3xl font-bold text-foreground font-raleway">Featured Articles</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredArticles.map((article) => (
+                <article 
+                  key={article.id}
+                  className="group cursor-pointer"
+                  onClick={() => navigate(`/blog/${article.slug}`)}
+                >
+                  <div className="bg-card rounded-lg border border-border hover:shadow-xl transition-all duration-300 group-hover:border-primary/20 overflow-hidden h-full">
+                    <div className="p-6 h-full flex flex-col">
+                      <div className="flex items-center justify-between mb-4">
+                        <Badge variant="secondary" className="bg-primary/10 text-primary">
+                          {article.category}
+                        </Badge>
+                        <Badge variant="outline">Featured</Badge>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 font-raleway flex-grow">
+                        {t(`blog.article${article.id}.title`)}
+                      </h3>
+                      
+                      <p className="text-muted-foreground mb-6 line-clamp-3 flex-grow">
+                        {t(`blog.article${article.id}.excerpt`)}
+                      </p>
+                      
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {new Date(article.date).toLocaleDateString()}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {article.readTime} {t('blog.article.min.read')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Articles */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-foreground mb-12 font-raleway">All Articles</h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
               <article 
@@ -77,35 +158,61 @@ const Blog = () => {
                 className="group cursor-pointer"
                 onClick={() => navigate(`/blog/${article.slug}`)}
               >
-                <div className="bg-card rounded-lg p-6 h-full border border-border hover:shadow-lg transition-all duration-300 group-hover:border-primary/20">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {new Date(article.date).toLocaleDateString()}
+                <div className="bg-card rounded-lg border border-border hover:shadow-lg transition-all duration-300 group-hover:border-primary/20 overflow-hidden h-full">
+                  <div className="p-6 h-full flex flex-col">
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge variant="outline" className="text-xs">
+                        {article.category}
+                      </Badge>
+                      {article.featured && (
+                        <Badge variant="secondary" className="bg-primary/10 text-primary text-xs">
+                          Featured
+                        </Badge>
+                      )}
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {article.readTime} {t('blog.article.min.read')}
+                    
+                    <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 font-raleway flex-grow">
+                      {t(`blog.article${article.id}.title`)}
+                    </h3>
+                    
+                    <p className="text-muted-foreground mb-4 line-clamp-3 text-sm flex-grow">
+                      {t(`blog.article${article.id}.excerpt`)}
+                    </p>
+                    
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {new Date(article.date).toLocaleDateString()}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        {article.readTime} min
+                      </div>
                     </div>
-                  </div>
-                  
-                  <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 font-raleway">
-                    {t(`blog.article${article.id}.title`)}
-                  </h2>
-                  
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {t(`blog.article${article.id}.excerpt`)}
-                  </p>
-                  
-                  <div className="text-primary font-medium group-hover:underline">
-                    {t('blog.read.more')} →
                   </div>
                 </div>
               </article>
             ))}
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="bg-card rounded-lg border border-border p-8 text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
+              Ready to Implement Automation?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Get personalized automation strategies for your business. Our experts are here to help you every step of the way.
+            </p>
+            <Button onClick={() => navigate('/')} size="lg">
+              Start Your Automation Journey
+            </Button>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
