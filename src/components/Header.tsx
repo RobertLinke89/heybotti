@@ -42,7 +42,7 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleCallbackSubmit = (data: CallbackFormData) => {
+  const handleCallbackSubmit = async (data: CallbackFormData) => {
     if (!selectedDate || !selectedTime) {
       toast({
         title: t('callback.error.title'),
@@ -52,15 +52,41 @@ const Header = () => {
       return;
     }
 
-    toast({
-      title: t('callback.success.title'),
-      description: t('callback.success.description').replace('{date}', format(selectedDate, 'dd.MM.yyyy')).replace('{time}', selectedTime),
-    });
-    
-    reset();
-    setSelectedDate(undefined);
-    setSelectedTime(undefined);
-    setIsCallbackDialogOpen(false);
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      
+      const response = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          type: 'callback',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          date: format(selectedDate, 'dd.MM.yyyy'),
+          time: selectedTime
+        }
+      });
+
+      if (response.error) {
+        throw new Error(response.error.message);
+      }
+
+      toast({
+        title: t('callback.success.title'),
+        description: t('callback.success.description').replace('{date}', format(selectedDate, 'dd.MM.yyyy')).replace('{time}', selectedTime),
+      });
+      
+      reset();
+      setSelectedDate(undefined);
+      setSelectedTime(undefined);
+      setIsCallbackDialogOpen(false);
+    } catch (error) {
+      console.error('Error sending callback request:', error);
+      toast({
+        title: "Fehler",
+        description: "Die Rückruf-Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (

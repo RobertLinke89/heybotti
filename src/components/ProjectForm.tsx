@@ -24,15 +24,43 @@ const ProjectForm = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
 
-  const onSubmit = (data: FormData) => {
-    // Simulate form submission
-    toast({
-      title: t('form.success.title'),
-      description: t('form.success.description'),
-    });
-    reset();
-    setBudget([10000]);
-    setSavings([50000]);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      
+      const response = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          type: 'contact',
+          name: data.name,
+          email: data.email,
+          company: data.company,
+          phone: data.phone,
+          message: data.message,
+          budget: budget[0],
+          revenue: savings[0]
+        }
+      });
+
+      if (response.error) {
+        throw new Error(response.error.message);
+      }
+
+      toast({
+        title: t('form.success.title'),
+        description: t('form.success.description'),
+      });
+      
+      reset();
+      setBudget([10000]);
+      setSavings([50000]);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Fehler",
+        description: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        variant: "destructive"
+      });
+    }
   };
 
   const formatBudget = (value: number) => {
