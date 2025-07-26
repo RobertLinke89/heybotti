@@ -818,12 +818,21 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check domain to set initial language
+    const hostname = window.location.hostname;
+    return hostname === 'heybotti.com' ? 'en' : 'de';
+  });
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language;
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'de')) {
       setLanguage(savedLanguage);
+    } else {
+      // If no saved language, set based on domain
+      const hostname = window.location.hostname;
+      const domainLanguage = hostname === 'heybotti.com' ? 'en' : 'de';
+      setLanguage(domainLanguage);
     }
   }, []);
 
