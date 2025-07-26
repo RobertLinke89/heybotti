@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ReactMarkdown from 'react-markdown';
+import { useEffect } from 'react';
 
 const BlogArticle = () => {
   const { slug } = useParams();
@@ -20,6 +21,10 @@ const BlogArticle = () => {
   };
 
   const article = articles[slug as keyof typeof articles];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!article) {
     return (
