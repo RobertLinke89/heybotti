@@ -137,8 +137,8 @@ const ServicesDetail = () => {
           </button>
           
           <div className="flex items-center gap-6 mb-8 animate-fade-in">
-            <div className="w-20 h-20 bg-primary-foreground/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <IconComponent className="w-10 h-10 text-primary-foreground" />
+            <div className="w-20 h-20 bg-primary-foreground/20 rounded-2xl flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+              <IconComponent size={40} className="text-primary-foreground" strokeWidth={2} />
             </div>
             <div>
               <h1 className="text-5xl font-bold mb-4 font-raleway">{service.title}</h1>
@@ -168,7 +168,7 @@ const ServicesDetail = () => {
               <ul className="space-y-3">
                 {service.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3 group">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 group-hover:scale-110 transition-transform" />
+                    <CheckCircle size={20} className="text-primary mt-0.5 group-hover:scale-110 transition-transform flex-shrink-0" strokeWidth={2} />
                     <span className="text-foreground font-raleway">{feature}</span>
                   </li>
                 ))}
@@ -181,8 +181,8 @@ const ServicesDetail = () => {
             {service.benefits.map((benefit, index) => (
               <div key={index} className="bg-card p-6 rounded-xl border border-secondary hover:border-primary/30 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <benefit.icon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <benefit.icon size={24} className="text-primary" strokeWidth={2} />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-2 font-raleway">{benefit.title}</h4>
@@ -247,7 +247,7 @@ const ServicesDetail = () => {
               <ul className="space-y-3">
                 {service.example.results.map((result, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <CheckCircle size={20} className="text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-muted-foreground font-raleway">{result}</span>
                   </li>
                 ))}
