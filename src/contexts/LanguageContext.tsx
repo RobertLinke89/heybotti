@@ -430,12 +430,58 @@ type TranslationKey =
   | 'blog.article4.title'
   | 'blog.article4.excerpt'
   | 'blog.article4.content'
-  | 'blog.article5.title'
-  | 'blog.article5.excerpt'
-  | 'blog.article5.content'
-  | 'blog.article6.title'
-  | 'blog.article6.excerpt'
-  | 'blog.article6.content';
+   | 'blog.article5.title'
+   | 'blog.article5.excerpt'
+   | 'blog.article5.content'
+   | 'blog.article6.title'
+   | 'blog.article6.excerpt'
+   | 'blog.article6.content'
+   // Process Page
+   | 'process.hero.title'
+   | 'process.hero.highlight'
+   | 'process.hero.subtitle'
+   | 'process.hero.timeline'
+   | 'process.hero.teamSize'
+   | 'process.step1.title'
+   | 'process.step1.subtitle'
+   | 'process.step1.detailedDescription'
+   | 'process.step1.duration'
+   | 'process.step1.deliverable1'
+   | 'process.step1.deliverable2'
+   | 'process.step1.deliverable3'
+   | 'process.step2.title'
+   | 'process.step2.subtitle'
+   | 'process.step2.detailedDescription'
+   | 'process.step2.duration'
+   | 'process.step2.deliverable1'
+   | 'process.step2.deliverable2'
+   | 'process.step2.deliverable3'
+   | 'process.step3.title'
+   | 'process.step3.subtitle'
+   | 'process.step3.detailedDescription'
+   | 'process.step3.duration'
+   | 'process.step3.deliverable1'
+   | 'process.step3.deliverable2'
+   | 'process.step3.deliverable3'
+   | 'process.step4.title'
+   | 'process.step4.subtitle'
+   | 'process.step4.detailedDescription'
+   | 'process.step4.duration'
+   | 'process.step4.deliverable1'
+   | 'process.step4.deliverable2'
+   | 'process.step4.deliverable3'
+   | 'process.deliverables.title'
+   | 'process.benefits.title'
+   | 'process.benefits.subtitle'
+   | 'process.benefit1.title'
+   | 'process.benefit1.description'
+   | 'process.benefit2.title'
+   | 'process.benefit2.description'
+   | 'process.benefit3.title'
+   | 'process.benefit3.description'
+   | 'process.cta.title'
+   | 'process.cta.description'
+   | 'process.cta.button';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -1657,6 +1703,53 @@ Automation doesn't have to add to your overwhelm. By dedicating just 15 minutes 
 The key is consistency over intensity. Small, daily progress compounds into major operational improvements over time.
 
 *Feeling overwhelmed by where to start? Book a 15-minute consultation where we'll identify your single best automation opportunity and provide a simple implementation plan.*`,
+
+    // Process Page
+    'process.hero.title': 'Our proven process for your',
+    'process.hero.highlight': 'automation success',
+    'process.hero.subtitle': 'From initial analysis to implementation - this is how we systematically transform your business processes into efficient, automated workflows.',
+    'process.hero.timeline': '4-8 weeks typical duration',
+    'process.hero.teamSize': 'Dedicated expert team',
+    'process.step1.title': 'Analysis & Strategy',
+    'process.step1.subtitle': 'Understanding your business',
+    'process.step1.detailedDescription': 'We start with a comprehensive analysis of your current processes, identify bottlenecks, and develop a tailored automation strategy that aligns with your business goals and resources.',
+    'process.step1.duration': '1-2 weeks',
+    'process.step1.deliverable1': 'Detailed process analysis report',
+    'process.step1.deliverable2': 'Custom automation roadmap',
+    'process.step1.deliverable3': 'ROI projections and timeline',
+    'process.step2.title': 'Solution Design',
+    'process.step2.subtitle': 'Crafting the perfect solution',
+    'process.step2.detailedDescription': 'Based on our analysis, we design a comprehensive automation solution that integrates seamlessly with your existing systems while providing room for future growth and scalability.',
+    'process.step2.duration': '1-2 weeks',
+    'process.step2.deliverable1': 'Technical architecture blueprint',
+    'process.step2.deliverable2': 'System integration plan',
+    'process.step2.deliverable3': 'User interface mockups',
+    'process.step3.title': 'Implementation',
+    'process.step3.subtitle': 'Bringing automation to life',
+    'process.step3.detailedDescription': 'Our expert team implements the automation solution with minimal disruption to your operations. We ensure thorough testing and provide comprehensive training for your team.',
+    'process.step3.duration': '2-4 weeks',
+    'process.step3.deliverable1': 'Fully functional automation system',
+    'process.step3.deliverable2': 'Comprehensive team training',
+    'process.step3.deliverable3': 'Documentation and user guides',
+    'process.step4.title': 'Optimization & Support',
+    'process.step4.subtitle': 'Continuous improvement',
+    'process.step4.detailedDescription': 'We monitor system performance, gather feedback, and continuously optimize your automation for maximum efficiency. Our ongoing support ensures your systems evolve with your business.',
+    'process.step4.duration': 'Ongoing',
+    'process.step4.deliverable1': 'Performance monitoring dashboard',
+    'process.step4.deliverable2': 'Regular optimization reports',
+    'process.step4.deliverable3': '24/7 technical support',
+    'process.deliverables.title': 'Key Deliverables',
+    'process.benefits.title': 'Why Our Process Works',
+    'process.benefits.subtitle': 'Proven methodology that delivers results for businesses like yours',
+    'process.benefit1.title': 'Minimal Disruption',
+    'process.benefit1.description': 'Our phased approach ensures your business operations continue smoothly during implementation',
+    'process.benefit2.title': 'Measurable Results',
+    'process.benefit2.description': 'Clear KPIs and regular reporting keep you informed of the automation impact on your business',
+    'process.benefit3.title': 'Future-Ready',
+    'process.benefit3.description': 'Scalable solutions that grow with your business and adapt to changing requirements',
+    'process.cta.title': 'Ready to Transform Your Business?',
+    'process.cta.description': 'Let\'s discuss how our proven process can streamline your operations and boost your productivity.',
+    'process.cta.button': 'Start Your Automation Journey',
 
     'blog.article6.title': 'Future-Proofing Your Business: Automation Trends Every SME Should Know',
     'blog.article6.excerpt': 'Stay ahead of the curve with emerging automation technologies. Learn which trends will impact SMEs and how to prepare your business for the automation revolution.',
@@ -3181,6 +3274,53 @@ Automatisierung muss nicht zu Ihrer Überforderung beitragen. Indem Sie täglich
 Der Schlüssel ist Konsistenz über Intensität. Kleine, tägliche Fortschritte summieren sich zu großen operativen Verbesserungen über die Zeit.
 
 *Fühlen Sie sich überfordert, wo Sie anfangen sollen? Buchen Sie eine 15-minütige Beratung, wo wir Ihre einzelne beste Automatisierungsmöglichkeit identifizieren und einen einfachen Implementierungsplan bereitstellen.*`,
+
+    // Process Page
+    'process.hero.title': 'Unser bewährter Prozess für Ihren',
+    'process.hero.highlight': 'Automatisierungserfolg',
+    'process.hero.subtitle': 'Von der ersten Analyse bis zur Umsetzung - so verwandeln wir systematisch Ihre Geschäftsprozesse in effiziente, automatisierte Arbeitsabläufe.',
+    'process.hero.timeline': '4-8 Wochen typische Dauer',
+    'process.hero.teamSize': 'Dediziertes Expertenteam',
+    'process.step1.title': 'Analyse & Strategie',
+    'process.step1.subtitle': 'Ihr Unternehmen verstehen',
+    'process.step1.detailedDescription': 'Wir beginnen mit einer umfassenden Analyse Ihrer aktuellen Prozesse, identifizieren Engpässe und entwickeln eine maßgeschneiderte Automatisierungsstrategie, die mit Ihren Geschäftszielen und Ressourcen übereinstimmt.',
+    'process.step1.duration': '1-2 Wochen',
+    'process.step1.deliverable1': 'Detaillierter Prozessanalysebericht',
+    'process.step1.deliverable2': 'Individuelle Automatisierungs-Roadmap',
+    'process.step1.deliverable3': 'ROI-Prognosen und Zeitplan',
+    'process.step2.title': 'Lösungsdesign',
+    'process.step2.subtitle': 'Die perfekte Lösung entwickeln',
+    'process.step2.detailedDescription': 'Basierend auf unserer Analyse entwerfen wir eine umfassende Automatisierungslösung, die sich nahtlos in Ihre bestehenden Systeme integriert und gleichzeitig Raum für zukünftiges Wachstum und Skalierbarkeit bietet.',
+    'process.step2.duration': '1-2 Wochen',
+    'process.step2.deliverable1': 'Technische Architektur-Blaupause',
+    'process.step2.deliverable2': 'Systemintegrationsplan',
+    'process.step2.deliverable3': 'Benutzeroberflächen-Mockups',
+    'process.step3.title': 'Implementierung',
+    'process.step3.subtitle': 'Automatisierung zum Leben erwecken',
+    'process.step3.detailedDescription': 'Unser Expertenteam implementiert die Automatisierungslösung mit minimaler Störung Ihrer Abläufe. Wir sorgen für gründliche Tests und bieten umfassende Schulungen für Ihr Team.',
+    'process.step3.duration': '2-4 Wochen',
+    'process.step3.deliverable1': 'Voll funktionsfähiges Automatisierungssystem',
+    'process.step3.deliverable2': 'Umfassende Teamschulung',
+    'process.step3.deliverable3': 'Dokumentation und Benutzerhandbücher',
+    'process.step4.title': 'Optimierung & Support',
+    'process.step4.subtitle': 'Kontinuierliche Verbesserung',
+    'process.step4.detailedDescription': 'Wir überwachen die Systemleistung, sammeln Feedback und optimieren kontinuierlich Ihre Automatisierung für maximale Effizienz. Unser laufender Support stellt sicher, dass sich Ihre Systeme mit Ihrem Unternehmen weiterentwickeln.',
+    'process.step4.duration': 'Laufend',
+    'process.step4.deliverable1': 'Leistungsüberwachungs-Dashboard',
+    'process.step4.deliverable2': 'Regelmäßige Optimierungsberichte',
+    'process.step4.deliverable3': '24/7 technischer Support',
+    'process.deliverables.title': 'Wichtige Liefergegenstände',
+    'process.benefits.title': 'Warum unser Prozess funktioniert',
+    'process.benefits.subtitle': 'Bewährte Methodik, die Ergebnisse für Unternehmen wie Ihres liefert',
+    'process.benefit1.title': 'Minimale Störung',
+    'process.benefit1.description': 'Unser phasenweiser Ansatz stellt sicher, dass Ihre Geschäftsabläufe während der Implementierung reibungslos weiterlaufen',
+    'process.benefit2.title': 'Messbare Ergebnisse',
+    'process.benefit2.description': 'Klare KPIs und regelmäßige Berichte halten Sie über die Automatisierungsauswirkungen auf Ihr Unternehmen informiert',
+    'process.benefit3.title': 'Zukunftssicher',
+    'process.benefit3.description': 'Skalierbare Lösungen, die mit Ihrem Unternehmen wachsen und sich an verändernde Anforderungen anpassen',
+    'process.cta.title': 'Bereit, Ihr Unternehmen zu transformieren?',
+    'process.cta.description': 'Lassen Sie uns besprechen, wie unser bewährter Prozess Ihre Abläufe optimieren und Ihre Produktivität steigern kann.',
+    'process.cta.button': 'Starten Sie Ihre Automatisierungs-Reise',
 
     'blog.article6.title': 'Zukunftssicherung Ihres Unternehmens: Automatisierungstrends, die jedes KMU kennen sollte',
     'blog.article6.excerpt': 'Bleiben Sie der Kurve voraus mit aufkommenden Automatisierungstechnologien. Erfahren Sie, welche Trends KMUs beeinflussen werden und wie Sie Ihr Unternehmen auf die Automatisierungsrevolution vorbereiten.',
