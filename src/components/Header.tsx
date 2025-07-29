@@ -152,8 +152,8 @@ const Header = () => {
             </DropdownMenu>
             <button 
               onClick={() => {
-                const element = document.getElementById('prozess');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                navigate('/process');
+                window.scrollTo(0, 0);
               }}
               className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
             >
@@ -338,8 +338,8 @@ const Header = () => {
             </div>
             <button 
               onClick={() => {
-                const element = document.getElementById('prozess');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                navigate('/process');
+                window.scrollTo(0, 0);
                 setIsMobileMenuOpen(false);
               }}
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left w-full"
