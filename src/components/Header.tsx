@@ -315,7 +315,7 @@ const Header = () => {
             ? 'max-h-96 opacity-100 pb-4' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <nav className="flex flex-col space-y-4 pt-4 border-t border-secondary">
+          <nav className="flex flex-col space-y-4 pt-4 border-t border-border bg-background/95 backdrop-blur-sm">
             {/* Mobile Services Section */}
             <div className="space-y-2">
               <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
