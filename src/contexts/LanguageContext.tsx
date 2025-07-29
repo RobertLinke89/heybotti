@@ -149,6 +149,8 @@ type TranslationKey =
   | 'comparison.cta.title'
   | 'comparison.cta.description'
   | 'comparison.cta.button'
+  | 'comparison.process.title'
+  | 'comparison.process.subtitle'
   // About Page
   | 'about.page.title'
   | 'about.page.back'
@@ -634,6 +636,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'comparison.cta.title': 'Want to learn more about our process?',
     'comparison.cta.description': 'Discover in detail how we transform your business through customized automation.',
     'comparison.cta.button': 'Discover our process',
+    'comparison.process.title': 'How We Approach It',
+    'comparison.process.subtitle': 'Our structured approach for sustainable automation solutions',
     
     // About Page
     'about.page.title': 'About Us',
@@ -2208,6 +2212,8 @@ Focus on creating a solid foundation with current automation technologies while 
     'comparison.cta.title': 'Möchten Sie mehr über unseren Prozess erfahren?',
     'comparison.cta.description': 'Entdecken Sie im Detail, wie wir Ihr Unternehmen durch maßgeschneiderte Automatisierung transformieren.',
     'comparison.cta.button': 'Unseren Prozess entdecken',
+    'comparison.process.title': 'Wie wir es angehen',
+    'comparison.process.subtitle': 'Unser strukturierter Ansatz für nachhaltige Automatisierungslösungen',
     
     // About Page
     'about.page.title': 'Über uns',

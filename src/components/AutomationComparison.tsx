@@ -185,6 +185,96 @@ const AutomationComparison = () => {
           </div>
         </div>
 
+        {/* Process Steps Section */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">
+              {t('comparison.process.title')}
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {t('comparison.process.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Step 01 */}
+            <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                    <span className="text-primary font-semibold text-lg">01</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                    {t('process.step1.title')}
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {t('process.step1.subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 02 */}
+            <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                    <span className="text-primary font-semibold text-lg">02</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                    {t('process.step2.title')}
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {t('process.step2.subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 03 */}
+            <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                    <span className="text-primary font-semibold text-lg">03</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                    {t('process.step3.title')}
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {t('process.step3.subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 04 */}
+            <div className="group p-6 rounded-lg border border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                    <span className="text-primary font-semibold text-lg">04</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-2 font-raleway">
+                    {t('process.step4.title')}
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {t('process.step4.subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA to Process Page */}
         <div className="mt-16 text-center">
           <div className="bg-card rounded-2xl p-8 border border-border">
