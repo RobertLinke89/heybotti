@@ -1,10 +1,13 @@
-import { X, Check } from 'lucide-react';
+import { X, Check, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const AutomationComparison = () => {
   const [showAutomated, setShowAutomated] = useState(false);
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section className="py-20 bg-background">
@@ -179,6 +182,26 @@ const AutomationComparison = () => {
                 <span className="text-muted-foreground">{t('comparison.testimonial.company')}</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* CTA to Process Page */}
+        <div className="mt-16 text-center">
+          <div className="bg-card rounded-2xl p-8 border border-border">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              {t('comparison.cta.title')}
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              {t('comparison.cta.description')}
+            </p>
+            <Button 
+              onClick={() => navigate('/process')}
+              size="lg"
+              className="gap-2"
+            >
+              {t('comparison.cta.button')}
+              <ArrowRight className="w-4 h-4" />
+            </Button>
           </div>
         </div>
       </div>

@@ -146,6 +146,9 @@ type TranslationKey =
   | 'comparison.testimonial.quote'
   | 'comparison.testimonial.name'
   | 'comparison.testimonial.company'
+  | 'comparison.cta.title'
+  | 'comparison.cta.description'
+  | 'comparison.cta.button'
   // About Page
   | 'about.page.title'
   | 'about.page.back'
@@ -628,6 +631,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'comparison.testimonial.quote': 'I wonder today how we ever managed before. Since we automated our processes, many things just run in the background, without any follow-up or control chaos. The best part: My team is much more relaxed and finally has a clear head for the really important topics. I can only recommend it to anyone who wants less stress and more clarity in everyday life.',
     'comparison.testimonial.name': 'Vera',
     'comparison.testimonial.company': 'BLACK FLASH ARCHERY GmbH',
+    'comparison.cta.title': 'Want to learn more about our process?',
+    'comparison.cta.description': 'Discover in detail how we transform your business through customized automation.',
+    'comparison.cta.button': 'Discover our process',
     
     // About Page
     'about.page.title': 'About Us',
@@ -2199,6 +2205,9 @@ Focus on creating a solid foundation with current automation technologies while 
     'comparison.testimonial.quote': 'Ich frage mich heute, wie wir das früher je geschafft haben. Seit wir unsere Prozesse automatisiert haben, läuft vieles einfach im Hintergrund ab, ohne Nachfass- oder Kontrollchaos. Das Beste: Mein Team ist viel entspannter und hat endlich den Kopf frei für die wirklich wichtigen Themen. Kann ich nur jedem empfehlen, der weniger Stress und mehr Klarheit im Alltag haben möchte.',
     'comparison.testimonial.name': 'Vera',
     'comparison.testimonial.company': 'BLACK FLASH ARCHERY GmbH',
+    'comparison.cta.title': 'Möchten Sie mehr über unseren Prozess erfahren?',
+    'comparison.cta.description': 'Entdecken Sie im Detail, wie wir Ihr Unternehmen durch maßgeschneiderte Automatisierung transformieren.',
+    'comparison.cta.button': 'Unseren Prozess entdecken',
     
     // About Page
     'about.page.title': 'Über uns',
