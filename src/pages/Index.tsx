@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AutomationComparison from "@/components/AutomationComparison";
 import Services from "@/components/Services";
-import About from "@/components/About";
+
 import JobsCTA from "@/components/JobsCTA";
 import ProjectForm from "@/components/ProjectForm";
 import CTA from "@/components/CTA";
@@ -18,7 +18,7 @@ const Index = () => {
       <Hero />
       <AutomationComparison />
       <Services />
-      <About />
+      
       <JobsCTA />
       <ProjectForm />
       <CTA />
