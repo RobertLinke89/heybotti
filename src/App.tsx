@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Process from "./pages/Process";
@@ -18,8 +19,9 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <Toaster />
+    <ThemeProvider>
+      <LanguageProvider>
+        <Toaster />
       <Sonner />
       <BrowserRouter>
         <Routes>
@@ -36,7 +38,8 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </LanguageProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
