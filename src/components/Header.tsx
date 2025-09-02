@@ -184,119 +184,13 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-2">
             <ThemeToggle />
             <LanguageSwitch />
-            <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
-              <DialogTrigger asChild>
-                <button className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm">
-                  <Phone size={16} />
-                  {t('header.cta')}
-                </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>{t('callback.title')}</DialogTitle>
-                </DialogHeader>
-                <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.name')} *</label>
-                    <Input
-                      {...register("name", { required: t('callback.name.required') })}
-                      placeholder={t('callback.name.placeholder')}
-                    />
-                    {errors.name && (
-                      <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.email')} *</label>
-                    <Input
-                      {...register("email", { 
-                        required: t('callback.email.required'),
-                        pattern: {
-                          value: /^\S+@\S+$/i,
-                          message: t('callback.email.invalid')
-                        }
-                      })}
-                      type="email"
-                      placeholder={t('callback.email.placeholder')}
-                    />
-                    {errors.email && (
-                      <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.phone')} *</label>
-                    <Input
-                      {...register("phone", { required: t('callback.phone.required') })}
-                      type="tel"
-                      placeholder={t('callback.phone.placeholder')}
-                    />
-                    {errors.phone && (
-                      <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.date')} *</label>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className={cn(
-                            "w-full justify-start text-left font-normal",
-                            !selectedDate && "text-muted-foreground"
-                          )}
-                        >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>{t('callback.date.placeholder')}</span>}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={selectedDate}
-                          onSelect={setSelectedDate}
-                          disabled={(date) => date < new Date()}
-                          initialFocus
-                          className={cn("p-3 pointer-events-auto")}
-                        />
-                      </PopoverContent>
-                    </Popover>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.time')} *</label>
-                    <Select value={selectedTime} onValueChange={setSelectedTime}>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t('callback.time.placeholder')} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {timeSlots.map((time) => (
-                          <SelectItem key={time} value={time}>
-                            {time}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="flex gap-2 pt-4">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => setIsCallbackDialogOpen(false)}
-                    >
-                      {t('callback.cancel')}
-                    </Button>
-                    <Button type="submit" className="flex-1">
-                      {t('callback.schedule')}
-                    </Button>
-                  </div>
-                </form>
-              </DialogContent>
-            </Dialog>
+            <a 
+              href="tel:+4936724838961" 
+              className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm"
+            >
+              <Phone size={16} />
+              {t('header.cta')}
+            </a>
           </div>
 
           {/* Mobile Menu */}
@@ -372,122 +266,14 @@ const Header = () => {
               <ThemeToggle />
               <LanguageSwitch />
             </div>
-            <Dialog open={isCallbackDialogOpen} onOpenChange={setIsCallbackDialogOpen}>
-              <DialogTrigger asChild>
-                <button 
-                  className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Phone size={18} />
-                  {t('header.cta')}
-                </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>{t('callback.title')}</DialogTitle>
-                </DialogHeader>
-                <form onSubmit={handleSubmit(handleCallbackSubmit)} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.name')} *</label>
-                    <Input
-                      {...register("name", { required: t('callback.name.required') })}
-                      placeholder={t('callback.name.placeholder')}
-                    />
-                    {errors.name && (
-                      <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.email')} *</label>
-                    <Input
-                      {...register("email", { 
-                        required: t('callback.email.required'),
-                        pattern: {
-                          value: /^\S+@\S+$/i,
-                          message: t('callback.email.invalid')
-                        }
-                      })}
-                      type="email"
-                      placeholder={t('callback.email.placeholder')}
-                    />
-                    {errors.email && (
-                      <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.phone')} *</label>
-                    <Input
-                      {...register("phone", { required: t('callback.phone.required') })}
-                      type="tel"
-                      placeholder={t('callback.phone.placeholder')}
-                    />
-                    {errors.phone && (
-                      <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.date')} *</label>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className={cn(
-                            "w-full justify-start text-left font-normal",
-                            !selectedDate && "text-muted-foreground"
-                          )}
-                        >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
-                          {selectedDate ? format(selectedDate, 'dd.MM.yyyy') : <span>{t('callback.date.placeholder')}</span>}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={selectedDate}
-                          onSelect={setSelectedDate}
-                          disabled={(date) => date < new Date()}
-                          initialFocus
-                          className={cn("p-3 pointer-events-auto")}
-                        />
-                      </PopoverContent>
-                    </Popover>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t('callback.time')} *</label>
-                    <Select value={selectedTime} onValueChange={setSelectedTime}>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t('callback.time.placeholder')} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {timeSlots.map((time) => (
-                          <SelectItem key={time} value={time}>
-                            {time}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="flex gap-2 pt-4">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => setIsCallbackDialogOpen(false)}
-                    >
-                      {t('callback.cancel')}
-                    </Button>
-                    <Button type="submit" className="flex-1">
-                      {t('callback.schedule')}
-                    </Button>
-                  </div>
-                </form>
-              </DialogContent>
-            </Dialog>
+            <a 
+              href="tel:+4936724838961" 
+              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Phone size={18} />
+              {t('header.cta')}
+            </a>
           </nav>
         </div>
       </div>
