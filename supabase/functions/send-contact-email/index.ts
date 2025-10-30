@@ -135,14 +135,15 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     }
 
+    // Send email to both recipients
     const emailResponse = await resend.emails.send({
       from: "HeyBotti <noreply@heybotti.com>",
-      to: ["robert.linke@me.com"],
+      to: ["robert.linke@me.com", "robertlinke9+dnqysqf0rwspcmn5fzss@app.trello.com"],
       subject: subject,
       html: htmlContent,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email sent successfully to both recipients:", emailResponse);
 
     return new Response(JSON.stringify({ success: true, emailId: emailResponse.data?.id }), {
       status: 200,
