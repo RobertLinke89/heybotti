@@ -184,6 +184,25 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-2">
             <ThemeToggle />
             <LanguageSwitch />
+            <Button
+              variant="secondary"
+              size="default"
+              onClick={() => {
+                const projectForm = document.getElementById('project-form');
+                if (projectForm) {
+                  projectForm.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  navigate('/');
+                  setTimeout(() => {
+                    const form = document.getElementById('project-form');
+                    form?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
+              }}
+              className="px-4 py-2 text-sm font-medium"
+            >
+              Request Project
+            </Button>
             <a 
               href="tel:+4936724838961" 
               className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm"
@@ -266,6 +285,26 @@ const Header = () => {
               <ThemeToggle />
               <LanguageSwitch />
             </div>
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                const projectForm = document.getElementById('project-form');
+                if (projectForm) {
+                  projectForm.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  navigate('/');
+                  setTimeout(() => {
+                    const form = document.getElementById('project-form');
+                    form?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
+              }}
+              className="w-full"
+            >
+              Request Project
+            </Button>
             <a 
               href="tel:+4936724838961" 
               className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
