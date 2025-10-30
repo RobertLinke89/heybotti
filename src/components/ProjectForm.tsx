@@ -28,6 +28,24 @@ const ProjectForm = () => {
     try {
       const { supabase } = await import("@/integrations/supabase/client");
       
+      // Save to database
+      const { error: dbError } = await supabase
+        .from('project_requests')
+        .insert({
+          name: data.name,
+          email: data.email,
+          company: data.company || null,
+          phone: data.phone || null,
+          message: data.message,
+          budget: budget[0],
+          revenue: savings[0]
+        });
+
+      if (dbError) {
+        throw new Error(dbError.message);
+      }
+
+      // Send email notification
       const response = await supabase.functions.invoke('send-contact-email', {
         body: {
           type: 'contact',
@@ -42,7 +60,8 @@ const ProjectForm = () => {
       });
 
       if (response.error) {
-        throw new Error(response.error.message);
+        console.error('Email sending failed:', response.error);
+        // Don't throw error here - request is saved in DB
       }
 
       toast({
@@ -54,10 +73,10 @@ const ProjectForm = () => {
       setBudget([10000]);
       setSavings([50000]);
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error submitting form:', error);
       toast({
         title: "Fehler",
-        description: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        description: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
         variant: "destructive"
       });
     }
