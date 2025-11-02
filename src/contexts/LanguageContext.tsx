@@ -487,7 +487,28 @@ type TranslationKey =
    | 'process.benefit3.description'
    | 'process.cta.title'
    | 'process.cta.description'
-   | 'process.cta.button';
+   | 'process.cta.button'
+   // Automation Benefits
+   | 'benefits.title'
+   | 'benefits.subtitle'
+   | 'benefits.time.title'
+   | 'benefits.time.description'
+   | 'benefits.efficiency.title'
+   | 'benefits.efficiency.description'
+   | 'benefits.accuracy.title'
+   | 'benefits.accuracy.description'
+   | 'benefits.speed.title'
+   | 'benefits.speed.description'
+   | 'benefits.security.title'
+   | 'benefits.security.description'
+   | 'benefits.satisfaction.title'
+   | 'benefits.satisfaction.description'
+   | 'benefits.insights.title'
+   | 'benefits.insights.description'
+   | 'benefits.innovation.title'
+   | 'benefits.innovation.description'
+   | 'benefits.quality.title'
+   | 'benefits.quality.description';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -1762,6 +1783,28 @@ The key is consistency over intensity. Small, daily progress compounds into majo
     'process.cta.title': 'Ready to Transform Your Business?',
     'process.cta.description': 'Let\'s discuss how our proven process can streamline your operations and boost your productivity.',
     'process.cta.button': 'Start Your Automation Journey',
+
+    // Automation Benefits
+    'benefits.title': 'The Power of Automation',
+    'benefits.subtitle': 'Discover how automation transforms your business operations and drives sustainable growth',
+    'benefits.time.title': 'Time Savings',
+    'benefits.time.description': 'Free up valuable hours by automating repetitive tasks, allowing your team to focus on strategic initiatives',
+    'benefits.efficiency.title': 'Increased Efficiency',
+    'benefits.efficiency.description': 'Streamline workflows and eliminate bottlenecks to boost overall productivity across all departments',
+    'benefits.accuracy.title': 'Enhanced Accuracy',
+    'benefits.accuracy.description': 'Reduce human errors and ensure consistent quality with automated processes and validation',
+    'benefits.speed.title': 'Faster Execution',
+    'benefits.speed.description': 'Accelerate business processes and deliver results faster with automated workflows',
+    'benefits.security.title': 'Better Security',
+    'benefits.security.description': 'Implement standardized security protocols and reduce vulnerabilities through automated compliance',
+    'benefits.satisfaction.title': 'Team Satisfaction',
+    'benefits.satisfaction.description': 'Improve employee morale by eliminating tedious tasks and enabling meaningful work',
+    'benefits.insights.title': 'Data Insights',
+    'benefits.insights.description': 'Gain real-time visibility and actionable insights through automated reporting and analytics',
+    'benefits.innovation.title': 'Drive Innovation',
+    'benefits.innovation.description': 'Create capacity for innovation and growth by automating routine operations',
+    'benefits.quality.title': 'Consistent Quality',
+    'benefits.quality.description': 'Deliver reliable results every time with standardized automated processes',
 
     'blog.article6.title': 'Future-Proofing Your Business: Automation Trends Every SME Should Know',
     'blog.article6.excerpt': 'Stay ahead of the curve with emerging automation technologies. Learn which trends will impact SMEs and how to prepare your business for the automation revolution.',
@@ -3339,6 +3382,28 @@ Der Schlüssel ist Konsistenz über Intensität. Kleine, tägliche Fortschritte 
     'process.cta.title': 'Bereit, Ihr Unternehmen zu transformieren?',
     'process.cta.description': 'Lassen Sie uns besprechen, wie unser bewährter Prozess Ihre Abläufe optimieren und Ihre Produktivität steigern kann.',
     'process.cta.button': 'Starten Sie Ihre Automatisierungs-Reise',
+
+    // Automation Benefits
+    'benefits.title': 'Die Kraft der Automatisierung',
+    'benefits.subtitle': 'Entdecken Sie, wie Automatisierung Ihre Geschäftsabläufe transformiert und nachhaltiges Wachstum vorantreibt',
+    'benefits.time.title': 'Zeitersparnis',
+    'benefits.time.description': 'Gewinnen Sie wertvolle Stunden durch die Automatisierung sich wiederholender Aufgaben und ermöglichen Sie Ihrem Team, sich auf strategische Initiativen zu konzentrieren',
+    'benefits.efficiency.title': 'Gesteigerte Effizienz',
+    'benefits.efficiency.description': 'Optimieren Sie Arbeitsabläufe und beseitigen Sie Engpässe, um die Gesamtproduktivität in allen Abteilungen zu steigern',
+    'benefits.accuracy.title': 'Höhere Genauigkeit',
+    'benefits.accuracy.description': 'Reduzieren Sie menschliche Fehler und gewährleisten Sie konsistente Qualität mit automatisierten Prozessen und Validierung',
+    'benefits.speed.title': 'Schnellere Ausführung',
+    'benefits.speed.description': 'Beschleunigen Sie Geschäftsprozesse und liefern Sie schneller Ergebnisse mit automatisierten Workflows',
+    'benefits.security.title': 'Bessere Sicherheit',
+    'benefits.security.description': 'Implementieren Sie standardisierte Sicherheitsprotokolle und reduzieren Sie Schwachstellen durch automatisierte Compliance',
+    'benefits.satisfaction.title': 'Team-Zufriedenheit',
+    'benefits.satisfaction.description': 'Verbessern Sie die Mitarbeitermoral durch die Beseitigung langweiliger Aufgaben und die Ermöglichung sinnvoller Arbeit',
+    'benefits.insights.title': 'Daten-Einblicke',
+    'benefits.insights.description': 'Gewinnen Sie Echtzeit-Transparenz und umsetzbare Erkenntnisse durch automatisierte Berichterstattung und Analysen',
+    'benefits.innovation.title': 'Innovation fördern',
+    'benefits.innovation.description': 'Schaffen Sie Kapazität für Innovation und Wachstum durch die Automatisierung von Routineabläufen',
+    'benefits.quality.title': 'Konstante Qualität',
+    'benefits.quality.description': 'Liefern Sie jedes Mal zuverlässige Ergebnisse mit standardisierten automatisierten Prozessen',
 
     'blog.article6.title': 'Zukunftssicherung Ihres Unternehmens: Automatisierungstrends, die jedes KMU kennen sollte',
     'blog.article6.excerpt': 'Bleiben Sie der Kurve voraus mit aufkommenden Automatisierungstechnologien. Erfahren Sie, welche Trends KMUs beeinflussen werden und wie Sie Ihr Unternehmen auf die Automatisierungsrevolution vorbereiten.',
