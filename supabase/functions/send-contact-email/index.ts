@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -9,18 +10,30 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  type: 'contact' | 'callback';
-  name: string;
-  email: string;
-  phone?: string;
-  company?: string;
-  message?: string;
-  budget?: number;
-  revenue?: number;
-  date?: string;
-  time?: string;
-}
+// Comprehensive Zod validation schemas
+const contactSchema = z.object({
+  type: z.literal('contact'),
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  company: z.string().trim().max(200, "Company name must be less than 200 characters").optional(),
+  phone: z.string().trim().max(50, "Phone must be less than 50 characters").optional(),
+  message: z.string().trim().min(1, "Message is required").max(5000, "Message must be less than 5000 characters"),
+  budget: z.number().int().min(0).max(10000000).optional(),
+  revenue: z.number().int().min(0).max(10000000).optional(),
+});
+
+const callbackSchema = z.object({
+  type: z.literal('callback'),
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  phone: z.string().trim().min(1, "Phone is required").max(50, "Phone must be less than 50 characters"),
+  date: z.string().trim().min(1, "Date is required").max(50),
+  time: z.string().trim().min(1, "Time is required").max(50),
+});
+
+const requestSchema = z.discriminatedUnion('type', [contactSchema, callbackSchema]);
+
+type ContactEmailRequest = z.infer<typeof requestSchema>;
 
 // HTML escaping function to prevent XSS
 function escapeHtml(unsafe: string): string {
@@ -33,30 +46,18 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, '&#039;');
 }
 
-// Input validation
-function validateInput(data: ContactEmailRequest): { valid: boolean; error?: string } {
-  if (!data.name || data.name.length > 100) {
-    return { valid: false, error: 'Name must be between 1 and 100 characters' };
+// Zod-based validation function
+function validateInput(data: unknown): { valid: boolean; data?: ContactEmailRequest; errors?: string[] } {
+  try {
+    const validated = requestSchema.parse(data);
+    return { valid: true, data: validated };
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      const errors = error.errors.map(err => `${err.path.join('.')}: ${err.message}`);
+      return { valid: false, errors };
+    }
+    return { valid: false, errors: ['Invalid request data'] };
   }
-  if (!data.email || data.email.length > 255 || !/^\S+@\S+\.\S+$/.test(data.email)) {
-    return { valid: false, error: 'Valid email required (max 255 characters)' };
-  }
-  if (data.phone && data.phone.length > 20) {
-    return { valid: false, error: 'Phone number too long' };
-  }
-  if (data.company && data.company.length > 200) {
-    return { valid: false, error: 'Company name too long' };
-  }
-  if (data.message && data.message.length > 5000) {
-    return { valid: false, error: 'Message too long (max 5000 characters)' };
-  }
-  if (data.budget && (data.budget < 0 || data.budget > 1000000)) {
-    return { valid: false, error: 'Invalid budget value' };
-  }
-  if (data.revenue && (data.revenue < 0 || data.revenue > 10000000)) {
-    return { valid: false, error: 'Invalid revenue value' };
-  }
-  return { valid: true };
 }
 
 // Simple rate limiting using in-memory storage
@@ -119,20 +120,22 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const data: ContactEmailRequest = await req.json();
+    const requestData: unknown = await req.json();
     
-    // Validate input
-    const validation = validateInput(data);
+    // Validate input with Zod
+    const validation = validateInput(requestData);
     if (!validation.valid) {
-      console.log('Invalid input received', { error: validation.error });
+      console.log('Validation failed', { errors: validation.errors });
       return new Response(
-        JSON.stringify({ error: validation.error }),
+        JSON.stringify({ error: 'Validation failed', details: validation.errors }),
         {
           status: 400,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         }
       );
     }
+    
+    const data = validation.data!;
     
     // Log only non-sensitive data for debugging
     console.log('Contact request received', {
