@@ -199,7 +199,7 @@ const Header = () => {
               }}
               className="px-4 py-2 text-sm font-medium"
             >
-              Request Project
+              {t('nav.request.project')}
             </Button>
             <a 
               href="tel:+4936724838961" 
@@ -300,7 +300,7 @@ const Header = () => {
               }}
               className="w-full"
             >
-              Request Project
+              {t('nav.request.project')}
             </Button>
             <a 
               href="tel:+4936724838961" 

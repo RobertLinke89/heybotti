@@ -20,6 +20,7 @@ type TranslationKey =
   | 'nav.contact'
   | 'nav.blog'
   | 'nav.process'
+  | 'nav.request.project'
   | 'header.cta'
   // Hero
   | 'hero.title'
@@ -498,6 +499,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.contact': 'Contact',
     'nav.blog': 'Blog',
     'nav.process': 'Process',
+    'nav.request.project': 'Request Project',
     'header.cta': 'Consultation',
     
     // Hero
@@ -2074,6 +2076,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'nav.contact': 'Kontakt',
     'nav.blog': 'Blog',
     'nav.process': 'Prozess',
+    'nav.request.project': 'Projekt anfragen',
     'header.cta': 'Beratung',
     
     // Hero
