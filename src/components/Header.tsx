@@ -3,7 +3,6 @@ import { Phone, Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
-import ThemeToggle from '@/components/ThemeToggle';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -182,7 +181,6 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-2">
-            <ThemeToggle />
             <LanguageSwitch />
             <Button
               variant="secondary"
@@ -282,7 +280,6 @@ const Header = () => {
               {t('nav.about')}
             </button>
             <div className="py-2 px-2 flex items-center gap-2">
-              <ThemeToggle />
               <LanguageSwitch />
             </div>
             <Button
