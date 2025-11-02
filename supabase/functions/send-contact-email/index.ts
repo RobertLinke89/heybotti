@@ -24,6 +24,7 @@ interface ContactEmailRequest {
 
 // HTML escaping function to prevent XSS
 function escapeHtml(unsafe: string): string {
+  if (!unsafe) return '';
   return unsafe
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -79,6 +80,16 @@ function checkRateLimit(ip: string): { allowed: boolean; retryAfter?: number } {
   record.count++;
   return { allowed: true };
 }
+
+// Clean up old entries periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, record] of rateLimitMap.entries()) {
+    if (now > record.resetTime) {
+      rateLimitMap.delete(ip);
+    }
+  }
+}, 60000); // Clean up every minute
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
@@ -245,9 +256,12 @@ const handler = async (req: Request): Promise<Response> => {
       html: htmlContent,
     });
 
-    console.log("Email sent successfully to both recipients");
+    console.log("Email sent successfully", { 
+      emailId: emailResponse.data?.id,
+      timestamp: new Date().toISOString()
+    });
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, emailId: emailResponse.data?.id }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -255,9 +269,10 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
+    // Log errors without sensitive data
     console.error("Error in send-contact-email function", {
       errorType: error.name,
-      message: error.message,
+      errorMessage: error.message,
       timestamp: new Date().toISOString()
     });
     return new Response(
