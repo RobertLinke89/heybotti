@@ -97,11 +97,6 @@ const Process = () => {
           <div className="space-y-16">
             {processSteps.map((step, index) => (
               <div key={step.number} className="relative">
-                {/* Connection Line */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute left-8 top-24 w-0.5 h-32 bg-gradient-to-b from-primary/50 to-primary/20"></div>
-                )}
-                
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
                   {/* Step Info */}
                   <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
