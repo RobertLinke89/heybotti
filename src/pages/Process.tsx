@@ -214,7 +214,7 @@ const Process = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
             onClick={() => {
               const element = document.getElementById('project-form');
               element?.scrollIntoView({ behavior: 'smooth' });
