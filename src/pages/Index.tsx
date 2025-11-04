@@ -9,7 +9,7 @@ import JobsCTA from "@/components/JobsCTA";
 import ProjectForm from "@/components/ProjectForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
+// import Chatbot from "@/components/Chatbot";
 import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
@@ -25,7 +25,7 @@ const Index = () => {
       <ProjectForm />
       <CTA />
       <Footer />
-      <Chatbot />
+      {/* <Chatbot /> */}
       <CookieBanner />
     </div>
   );
