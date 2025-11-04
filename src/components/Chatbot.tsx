@@ -23,6 +23,12 @@ const Chatbot = () => {
       text: t('chatbot.welcome'),
       isBot: true,
       timestamp: new Date()
+    },
+    {
+      id: '2',
+      text: 'Your messages are being forwarded to our team via Matrix for real-time support.',
+      isBot: true,
+      timestamp: new Date()
     }
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -49,22 +55,56 @@ const Chatbot = () => {
     };
 
     setMessages(prev => [...prev, userMessage]);
+    const messageText = inputValue;
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI response delay
-    setTimeout(() => {
-      const botResponse = generateBotResponse(inputValue);
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: botResponse,
-        isBot: true,
-        timestamp: new Date()
-      };
+    try {
+      // Send message to Matrix
+      const { supabase } = await import("@/integrations/supabase/client");
       
-      setMessages(prev => [...prev, botMessage]);
-      setIsTyping(false);
-    }, 1500);
+      const { error } = await supabase.functions.invoke('matrix-chat', {
+        body: { 
+          message: messageText,
+          userName: 'Website Visitor'
+        }
+      });
+
+      if (error) {
+        console.error('Error sending to Matrix:', error);
+      }
+
+      // Generate bot response
+      setTimeout(() => {
+        const botResponse = generateBotResponse(messageText);
+        const botMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          text: botResponse,
+          isBot: true,
+          timestamp: new Date()
+        };
+        
+        setMessages(prev => [...prev, botMessage]);
+        setIsTyping(false);
+      }, 1500);
+
+    } catch (error) {
+      console.error('Error in chat:', error);
+      
+      // Still show bot response even if Matrix fails
+      setTimeout(() => {
+        const botResponse = generateBotResponse(messageText);
+        const botMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          text: botResponse,
+          isBot: true,
+          timestamp: new Date()
+        };
+        
+        setMessages(prev => [...prev, botMessage]);
+        setIsTyping(false);
+      }, 1500);
+    }
   };
 
   const generateBotResponse = (userInput: string): string => {
