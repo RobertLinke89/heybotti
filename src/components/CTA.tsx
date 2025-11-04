@@ -1,9 +1,23 @@
 
-
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const CTA = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClick = () => {
+    // If we're already on the homepage, just scroll to the form
+    if (location.pathname === '/') {
+      const formElement = document.getElementById('project-form');
+      formElement?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to homepage and scroll to form
+      navigate('/#project-form');
+    }
+  };
 
   return (
     <section className="bg-card py-20 border-t border-secondary">
@@ -14,9 +28,13 @@ const CTA = () => {
         <p className="text-xl text-muted-foreground mb-8 font-raleway font-light">
           {t('cta.subtitle')}
         </p>
-        <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors flex items-center justify-center mx-auto">
+        <Button 
+          onClick={handleClick}
+          size="lg"
+          className="px-10 py-4 text-xl"
+        >
           {t('cta.button')}
-        </button>
+        </Button>
         <p className="text-muted-foreground mt-4 font-raleway font-light">
           {t('cta.note')}
         </p>
