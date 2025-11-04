@@ -20,13 +20,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: t('chatbot.welcome'),
-      isBot: true,
-      timestamp: new Date()
-    },
-    {
-      id: '2',
-      text: 'Your messages are being forwarded to our team via Matrix for real-time support.',
+      text: 'Willkommen! Ich leite Ihre Nachricht direkt an unser Team weiter. Ein Teammitglied wird Ihnen in Kürze antworten.',
       isBot: true,
       timestamp: new Date()
     }
@@ -74,85 +68,37 @@ const Chatbot = () => {
         console.error('Error sending to Matrix:', error);
       }
 
-      // Generate bot response
+      // Confirmation message
       setTimeout(() => {
-        const botResponse = generateBotResponse(messageText);
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: botResponse,
+          text: 'Ihre Nachricht wurde an unser Team weitergeleitet. Wir melden uns in Kürze bei Ihnen.',
           isBot: true,
           timestamp: new Date()
         };
         
         setMessages(prev => [...prev, botMessage]);
         setIsTyping(false);
-      }, 1500);
+      }, 1000);
 
     } catch (error) {
       console.error('Error in chat:', error);
       
-      // Still show bot response even if Matrix fails
+      // Error message
       setTimeout(() => {
-        const botResponse = generateBotResponse(messageText);
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: botResponse,
+          text: 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.',
           isBot: true,
           timestamp: new Date()
         };
         
         setMessages(prev => [...prev, botMessage]);
         setIsTyping(false);
-      }, 1500);
+      }, 1000);
     }
   };
 
-  const generateBotResponse = (userInput: string): string => {
-    const input = userInput.toLowerCase();
-    
-    if (input.includes('automation') || input.includes('automate') || input.includes('automatisierung') || input.includes('automatisieren')) {
-      return t('chatbot.automation');
-    }
-    
-    if (input.includes('cost') || input.includes('price') || input.includes('budget') || input.includes('kosten') || input.includes('preis')) {
-      return t('chatbot.cost');
-    }
-    
-    if (input.includes('crm') || input.includes('sales') || input.includes('marketing') || input.includes('vertrieb')) {
-      return t('chatbot.sales');
-    }
-    
-    if (input.includes('finance') || input.includes('accounting') || input.includes('invoice') || input.includes('buchhaltung') || input.includes('rechnung')) {
-      return t('chatbot.finance');
-    }
-    
-    if (input.includes('hr') || input.includes('recruiting') || input.includes('personnel') || input.includes('personal')) {
-      return t('chatbot.hr');
-    }
-    
-    if (input.includes('ecommerce') || input.includes('shop') || input.includes('online') || input.includes('onlineshop')) {
-      return t('chatbot.ecommerce');
-    }
-    
-    if (input.includes('reporting') || input.includes('dashboard') || input.includes('kpi') || input.includes('bericht')) {
-      return t('chatbot.reporting');
-    }
-    
-    if (input.includes('workflow') || input.includes('process') || input.includes('approval') || input.includes('prozess') || input.includes('freigabe')) {
-      return t('chatbot.workflow');
-    }
-    
-    if (input.includes('hello') || input.includes('hi') || input.includes('good day') || input.includes('hallo') || input.includes('guten tag')) {
-      return t('chatbot.greeting');
-    }
-    
-    if (input.includes('thank') || input.includes('thanks') || input.includes('danke')) {
-      return t('chatbot.thanks');
-    }
-    
-    // Default response
-    return t('chatbot.default');
-  };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
