@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import avatarKarim from '@/assets/avatar-karim.png';
 
 const About = () => {
   const navigate = useNavigate();
@@ -35,6 +36,12 @@ const About = () => {
       role: t('team.sebastian.role'),
       avatar: "/lovable-uploads/6e48f8e7-ab5d-4dca-bac8-b9f74cf527e4.png",
       description: t('team.sebastian.description')
+    },
+    {
+      name: "Karim",
+      role: t('team.karim.role'),
+      avatar: avatarKarim,
+      description: t('team.karim.description')
     }
   ];
 
@@ -148,7 +155,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {teamMembers.map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="relative mb-4">
