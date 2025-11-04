@@ -37,6 +37,7 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState<string>();
+  const [isJoiningTeam, setIsJoiningTeam] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<CallbackFormData>();
   const { toast } = useToast();
 
@@ -51,6 +52,45 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleJoinTeam = async () => {
+    const email = prompt(t('process.cta.joinTeam.emailPrompt'));
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        title: t('process.cta.joinTeam.error'),
+        description: t('process.cta.joinTeam.invalidEmail'),
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsJoiningTeam(true);
+    
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      
+      const { error } = await supabase.functions.invoke('send-team-join-email', {
+        body: { email }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: t('process.cta.joinTeam.success'),
+        description: t('process.cta.joinTeam.checkEmail'),
+      });
+    } catch (error) {
+      console.error('Error sending team join email:', error);
+      toast({
+        title: t('process.cta.joinTeam.error'),
+        description: t('process.cta.joinTeam.tryAgain'),
+        variant: "destructive",
+      });
+    } finally {
+      setIsJoiningTeam(false);
+    }
   };
 
   const handleCallbackSubmit = async (data: CallbackFormData) => {
@@ -185,6 +225,15 @@ const Header = () => {
             <Button
               variant="secondary"
               size="default"
+              onClick={handleJoinTeam}
+              disabled={isJoiningTeam}
+              className="px-4 py-2 text-sm font-medium"
+            >
+              {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
+            </Button>
+            <Button
+              variant="default"
+              size="default"
               onClick={() => {
                 const projectForm = document.getElementById('project-form');
                 if (projectForm) {
@@ -284,6 +333,18 @@ const Header = () => {
             </div>
             <Button
               variant="secondary"
+              size="lg"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleJoinTeam();
+              }}
+              disabled={isJoiningTeam}
+              className="w-full"
+            >
+              {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
+            </Button>
+            <Button
+              variant="default"
               size="lg"
               onClick={() => {
                 setIsMobileMenuOpen(false);
