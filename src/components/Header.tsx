@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
+import { Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
@@ -250,13 +250,6 @@ const Header = () => {
             >
               {t('nav.request.project')}
             </Button>
-            <a 
-              href="tel:+4936724838961" 
-              className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm"
-            >
-              <Phone size={16} />
-              {t('header.cta')}
-            </a>
           </div>
 
           {/* Mobile Menu */}
@@ -363,14 +356,6 @@ const Header = () => {
             >
               {t('nav.request.project')}
             </Button>
-            <a 
-              href="tel:+4936724838961" 
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-raleway font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Phone size={18} />
-              {t('header.cta')}
-            </a>
           </nav>
         </div>
       </div>
