@@ -485,9 +485,17 @@ type TranslationKey =
    | 'process.benefit2.description'
    | 'process.benefit3.title'
    | 'process.benefit3.description'
-   | 'process.cta.title'
-   | 'process.cta.description'
-   | 'process.cta.button'
+    | 'process.cta.title'
+    | 'process.cta.description'
+    | 'process.cta.button'
+    | 'process.cta.joinTeam.button'
+    | 'process.cta.joinTeam.emailPrompt'
+    | 'process.cta.joinTeam.success'
+    | 'process.cta.joinTeam.checkEmail'
+    | 'process.cta.joinTeam.error'
+    | 'process.cta.joinTeam.invalidEmail'
+    | 'process.cta.joinTeam.tryAgain'
+    | 'process.cta.joinTeam.sending'
    // Automation Benefits
    | 'benefits.title'
    | 'benefits.subtitle'
@@ -1782,7 +1790,15 @@ The key is consistency over intensity. Small, daily progress compounds into majo
     'process.benefit3.description': 'Scalable solutions that grow with your business and adapt to changing requirements',
     'process.cta.title': 'Ready to Transform Your Business?',
     'process.cta.description': 'Let\'s discuss how our proven process can streamline your operations and boost your productivity.',
-    'process.cta.button': 'Start Your Automation Journey',
+    'process.cta.button': 'Start Your Project',
+    'process.cta.joinTeam.button': 'Join Team',
+    'process.cta.joinTeam.emailPrompt': 'Please enter your email address to receive the team invitation:',
+    'process.cta.joinTeam.success': 'Invitation sent!',
+    'process.cta.joinTeam.checkEmail': 'Please check your email for the Matrix invitation link.',
+    'process.cta.joinTeam.error': 'Error',
+    'process.cta.joinTeam.invalidEmail': 'Please enter a valid email address.',
+    'process.cta.joinTeam.tryAgain': 'Failed to send invitation. Please try again.',
+    'process.cta.joinTeam.sending': 'Sending...',
 
     // Automation Benefits
     'benefits.title': 'The Power of Automation',
@@ -3381,7 +3397,15 @@ Der Schlüssel ist Konsistenz über Intensität. Kleine, tägliche Fortschritte 
     'process.benefit3.description': 'Skalierbare Lösungen, die mit Ihrem Unternehmen wachsen und sich an verändernde Anforderungen anpassen',
     'process.cta.title': 'Bereit, Ihr Unternehmen zu transformieren?',
     'process.cta.description': 'Lassen Sie uns besprechen, wie unser bewährter Prozess Ihre Abläufe optimieren und Ihre Produktivität steigern kann.',
-    'process.cta.button': 'Starten Sie Ihre Automatisierungs-Reise',
+    'process.cta.button': 'Projekt starten',
+    'process.cta.joinTeam.button': 'Team beitreten',
+    'process.cta.joinTeam.emailPrompt': 'Bitte geben Sie Ihre E-Mail-Adresse ein, um die Team-Einladung zu erhalten:',
+    'process.cta.joinTeam.success': 'Einladung versendet!',
+    'process.cta.joinTeam.checkEmail': 'Bitte überprüfen Sie Ihre E-Mails für den Matrix-Einladungslink.',
+    'process.cta.joinTeam.error': 'Fehler',
+    'process.cta.joinTeam.invalidEmail': 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    'process.cta.joinTeam.tryAgain': 'Einladung konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
+    'process.cta.joinTeam.sending': 'Wird gesendet...',
 
     // Automation Benefits
     'benefits.title': 'Die Kraft der Automatisierung',

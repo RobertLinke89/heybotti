@@ -1,11 +1,53 @@
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, ArrowRight, Clock, Users, Target, BarChart } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const Process = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [isJoiningTeam, setIsJoiningTeam] = useState(false);
+
+  const handleJoinTeam = async () => {
+    const email = prompt(t('process.cta.joinTeam.emailPrompt'));
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        title: t('process.cta.joinTeam.error'),
+        description: t('process.cta.joinTeam.invalidEmail'),
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsJoiningTeam(true);
+    
+    try {
+      const { error } = await supabase.functions.invoke('send-team-join-email', {
+        body: { email }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: t('process.cta.joinTeam.success'),
+        description: t('process.cta.joinTeam.checkEmail'),
+      });
+    } catch (error) {
+      console.error('Error sending team join email:', error);
+      toast({
+        title: t('process.cta.joinTeam.error'),
+        description: t('process.cta.joinTeam.tryAgain'),
+        variant: "destructive",
+      });
+    } finally {
+      setIsJoiningTeam(false);
+    }
+  };
 
   const processSteps = [
     {
@@ -212,17 +254,26 @@ const Process = () => {
           <p className="text-muted-foreground mb-8">
             {t('process.cta.description')}
           </p>
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => {
-              const element = document.getElementById('project-form');
-              element?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            {t('process.cta.button')}
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              onClick={() => {
+                const element = document.getElementById('project-form');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {t('process.cta.button')}
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              onClick={handleJoinTeam}
+              disabled={isJoiningTeam}
+            >
+              {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
+            </Button>
+          </div>
         </div>
       </section>
 
