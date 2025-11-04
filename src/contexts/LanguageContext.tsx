@@ -616,7 +616,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'team.chris.description': 'Implements and maintains automated systems, ensuring robust performance and seamless integration across all technical platforms.',
     'team.sebastian.role': 'Business Analyst',
     'team.sebastian.description': 'Analyzes business workflows to identify automation opportunities and translates complex requirements into actionable technical specifications.',
-    'team.karim.role': 'Developer',
+    'team.karim.role': 'Automation Engineer',
     'team.karim.description': 'Builds and codes custom automation solutions, developing the technical infrastructure that powers our innovative business process improvements.',
     
     // CTA
@@ -2223,7 +2223,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'team.chris.description': 'Implementiert und wartet automatisierte Systeme und gewährleistet robuste Leistung und nahtlose Integration auf allen technischen Plattformen.',
     'team.sebastian.role': 'Business Analyst',
     'team.sebastian.description': 'Analysiert Geschäftsabläufe zur Identifizierung von Automatisierungsmöglichkeiten und übersetzt komplexe Anforderungen in umsetzbare technische Spezifikationen.',
-    'team.karim.role': 'Entwickler',
+    'team.karim.role': 'Automatisierungsingenieur',
     'team.karim.description': 'Erstellt und programmiert maßgeschneiderte Automatisierungslösungen und entwickelt die technische Infrastruktur für innovative Geschäftsprozessverbesserungen.',
     
     // CTA
