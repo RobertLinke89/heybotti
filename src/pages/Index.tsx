@@ -6,7 +6,6 @@ import AutomationBenefits from "@/components/AutomationBenefits";
 import Services from "@/components/Services";
 import JobsCTA from "@/components/JobsCTA";
 import ProjectForm from "@/components/ProjectForm";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
@@ -18,7 +17,6 @@ const MemoizedAutomationBenefits = memo(AutomationBenefits);
 const MemoizedServices = memo(Services);
 const MemoizedJobsCTA = memo(JobsCTA);
 const MemoizedProjectForm = memo(ProjectForm);
-const MemoizedCTA = memo(CTA);
 const MemoizedFooter = memo(Footer);
 const MemoizedCookieBanner = memo(CookieBanner);
 
@@ -32,7 +30,6 @@ const Index = () => {
       <MemoizedServices />
       <MemoizedJobsCTA />
       <MemoizedProjectForm />
-      <MemoizedCTA />
       <MemoizedFooter />
       <MemoizedCookieBanner />
     </div>
