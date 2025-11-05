@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => {
-                  const element = document.getElementById('contact');
+                  const element = document.getElementById('callback-form');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center animate-fade-in"

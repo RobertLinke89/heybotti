@@ -537,7 +537,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'hero.title': 'With us, everything runs',
     'hero.title.highlight': 'automatically',
     'hero.subtitle': 'We automate the processes in your company so you can focus on what really matters. No more manual work – more time for real value creation.',
-    'hero.cta': 'Request Project',
+    'hero.cta': 'Call me back',
     
     // Services
     'services.title': 'Top areas for maximum',
@@ -2146,7 +2146,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'hero.title': 'Mit uns läuft\'s',
     'hero.title.highlight': 'automatisch',
     'hero.subtitle': 'Wir automatisieren die Prozesse in Ihrem Unternehmen, damit Sie sich auf das konzentrieren können, was wirklich wichtig ist. Keine manuelle Arbeit mehr – mehr Zeit für echte Wertschöpfung.',
-    'hero.cta': 'Projekt anfragen',
+    'hero.cta': 'Ruf mich an',
     
     // Services
     'services.title': 'Top-Bereiche für maximalen',
