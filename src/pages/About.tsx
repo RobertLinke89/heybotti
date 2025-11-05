@@ -169,6 +169,7 @@ const About = () => {
                     <img
                       src={member.avatar}
                       alt={member.name}
+                      loading="lazy"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
                   </div>
