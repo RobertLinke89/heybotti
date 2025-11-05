@@ -271,7 +271,7 @@ const Header = () => {
             ? 'max-h-96 opacity-100 pb-4' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <nav className="flex flex-col space-y-4 pt-4 border-t border-border bg-background/95 backdrop-blur-sm">
+          <nav className="flex flex-col space-y-4 pt-4 border-t border-border bg-background/95 backdrop-blur-sm -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             {/* Mobile Services Section */}
             <div className="space-y-2">
               <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
@@ -322,18 +322,6 @@ const Header = () => {
             >
               {t('nav.about')}
             </button>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                handleJoinTeam();
-              }}
-              disabled={isJoiningTeam}
-              className="w-full border-2 border-primary"
-            >
-              {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
-            </Button>
           </nav>
         </div>
       </div>
