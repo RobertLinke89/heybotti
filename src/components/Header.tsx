@@ -227,7 +227,7 @@ const Header = () => {
               size="default"
               onClick={handleJoinTeam}
               disabled={isJoiningTeam}
-              className="px-4 py-2 text-sm font-medium"
+              className="px-4 py-2 text-sm font-medium border-2 border-primary"
             >
               {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
             </Button>
@@ -330,29 +330,9 @@ const Header = () => {
                 handleJoinTeam();
               }}
               disabled={isJoiningTeam}
-              className="w-full"
+              className="w-full border-2 border-primary"
             >
               {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
-            </Button>
-            <Button
-              variant="default"
-              size="lg"
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                const projectForm = document.getElementById('project-form');
-                if (projectForm) {
-                  projectForm.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  navigate('/');
-                  setTimeout(() => {
-                    const form = document.getElementById('project-form');
-                    form?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }
-              }}
-              className="w-full"
-            >
-              {t('nav.request.project')}
             </Button>
           </nav>
         </div>
