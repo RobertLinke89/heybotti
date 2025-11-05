@@ -144,26 +144,26 @@ const Process = () => {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 mb-6 animate-fade-in">
-              <Zap className="w-6 h-6 text-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">Automated Excellence</span>
-              <Zap className="w-6 h-6 text-primary animate-pulse" />
+            <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 animate-fade-in">
+              <Zap className="w-4 h-4 sm:w-6 sm:h-6 text-primary animate-pulse" />
+              <span className="text-xs sm:text-sm font-medium text-primary uppercase tracking-wider">Automated Excellence</span>
+              <Zap className="w-4 h-4 sm:w-6 sm:h-6 text-primary animate-pulse" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-raleway animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 font-raleway animate-fade-in leading-tight px-2" style={{ animationDelay: '0.1s' }}>
               {t('process.hero.title')} <span className="text-primary bg-clip-text">{t('process.hero.highlight')}</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-in leading-relaxed px-2" style={{ animationDelay: '0.2s' }}>
               {t('process.hero.subtitle')}
             </p>
-            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-center gap-2 bg-background/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>{t('process.hero.timeline')}</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: '0.3s' }}>
+              <div className="flex items-center gap-2 bg-background/50 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-border/50 w-full sm:w-auto justify-center">
+                <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="whitespace-nowrap">{t('process.hero.timeline')}</span>
               </div>
-              <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
-              <div className="flex items-center gap-2 bg-background/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50">
-                <Users className="w-4 h-4 text-primary" />
-                <span>{t('process.hero.teamSize')}</span>
+              <div className="hidden sm:block w-1 h-1 bg-muted-foreground rounded-full"></div>
+              <div className="flex items-center gap-2 bg-background/50 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-border/50 w-full sm:w-auto justify-center">
+                <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="whitespace-nowrap">{t('process.hero.teamSize')}</span>
               </div>
             </div>
           </div>
