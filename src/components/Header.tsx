@@ -253,7 +253,8 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitch />
             <button
               onClick={toggleMobileMenu}
               className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
@@ -321,9 +322,6 @@ const Header = () => {
             >
               {t('nav.about')}
             </button>
-            <div className="py-2 px-2 flex items-center gap-2">
-              <LanguageSwitch />
-            </div>
             <Button
               variant="secondary"
               size="lg"

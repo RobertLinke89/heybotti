@@ -34,20 +34,6 @@ const CallbackForm = () => {
 
       const validatedData = schema.parse(data);
 
-      // Save to database
-      const { error: dbError } = await supabase
-        .from('callback_requests')
-        .insert({
-          name: validatedData.name,
-          phone: validatedData.phone,
-          email: validatedData.email || null,
-          message: validatedData.message || null
-        });
-
-      if (dbError) {
-        throw new Error(dbError.message);
-      }
-
       // Send email notification
       const response = await supabase.functions.invoke('send-contact-email', {
         body: {
