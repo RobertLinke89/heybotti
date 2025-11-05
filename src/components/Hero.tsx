@@ -47,7 +47,7 @@ const Hero = () => {
                   const element = document.getElementById('callback-form');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 flex items-center justify-center animate-fade-in"
+                className="hidden sm:flex bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 items-center justify-center animate-fade-in"
               >
                 {t('hero.cta')}
               </button>
@@ -55,6 +55,17 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      {/* Mobile Sticky CTA Button */}
+      <button 
+        onClick={() => {
+          const element = document.getElementById('callback-form');
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="sm:hidden fixed bottom-4 left-4 right-4 z-40 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center shadow-lg"
+      >
+        {t('hero.cta')}
+      </button>
     </section>
   );
 };
