@@ -1,9 +1,11 @@
 
 
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section className="relative bg-background py-20 lg:py-32 overflow-hidden">
@@ -43,10 +45,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                onClick={() => {
-                  const element = document.getElementById('callback-form');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => navigate('/booking')}
                 className="hidden sm:flex bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 items-center justify-center animate-fade-in"
               >
                 {t('hero.cta')}
@@ -59,10 +58,7 @@ const Hero = () => {
       {/* Mobile Sticky CTA Buttons */}
       <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40 flex flex-col gap-2">
         <button 
-          onClick={() => {
-            const element = document.getElementById('callback-form');
-            element?.scrollIntoView({ behavior: 'smooth' });
-          }}
+          onClick={() => navigate('/booking')}
           className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center shadow-lg w-full"
         >
           {t('hero.cta')}
