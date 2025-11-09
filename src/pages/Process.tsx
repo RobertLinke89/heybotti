@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,6 +9,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
 const Process = () => {
+  const navigate = useNavigate();
   const { t } = useLanguage();
   const { toast } = useToast();
   const [isJoiningTeam, setIsJoiningTeam] = useState(false);
@@ -339,14 +341,11 @@ const Process = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Button 
               size="lg" 
-              onClick={() => {
-                const element = document.getElementById('project-form');
-                element?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => navigate('/booking')}
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">
-                {t('process.cta.button')}
+                Projekt anfragen
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary-foreground/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
