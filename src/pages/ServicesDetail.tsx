@@ -266,14 +266,17 @@ const ServicesDetail = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <button className="bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-lg font-raleway font-semibold text-base md:text-lg hover:bg-primary/90 transition-all duration-300 md:hover:scale-105 w-full sm:w-auto">
-              Kostenlose Beratung anfragen
+            <button 
+              onClick={() => navigate('/booking')}
+              className="bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-lg font-raleway font-semibold text-base md:text-lg hover:bg-primary/90 transition-all duration-300 md:hover:scale-105 w-full sm:w-auto"
+            >
+              Projekt anfragen
             </button>
             <button 
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/process')}
               className="bg-secondary text-foreground px-6 md:px-8 py-3 md:py-4 rounded-lg font-raleway font-semibold text-base md:text-lg border border-secondary hover:border-primary/30 transition-all duration-300 w-full sm:w-auto"
             >
-              Weitere Services entdecken
+              Wie wir es angehen
             </button>
           </div>
         </div>
