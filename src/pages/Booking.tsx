@@ -84,10 +84,12 @@ const Booking = () => {
     }
   };
 
-  const isPastDate = (dateToCheck: Date) => {
+  const isDateDisabled = (dateToCheck: Date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    return dateToCheck < today;
+    const isPast = dateToCheck < today;
+    const isSunday = dateToCheck.getDay() === 0;
+    return isPast || isSunday;
   };
 
   return (
@@ -117,7 +119,7 @@ const Booking = () => {
                     mode="single"
                     selected={date}
                     onSelect={setDate}
-                    disabled={isPastDate}
+                    disabled={isDateDisabled}
                     className="rounded-md border mx-auto"
                   />
                 </div>
