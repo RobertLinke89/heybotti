@@ -128,15 +128,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-        
-        <div className="text-center mt-16">
-          <button className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-raleway font-semibold text-xl hover:bg-primary/90 transition-colors">
-            {t('services.consultation.button')}
-          </button>
-          <p className="text-muted-foreground mt-4 font-raleway font-light">
-            {t('services.consultation.subtitle')}
-          </p>
-        </div>
       </div>
     </section>
   );
