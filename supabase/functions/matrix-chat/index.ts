@@ -6,6 +6,28 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Rate limiting: Track requests per IP
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 5; // requests
+const RATE_WINDOW = 15 * 60 * 1000; // 15 minutes in milliseconds
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+    return true;
+  }
+
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 // Validation schema
 const messageSchema = z.object({
   message: z.string().trim().min(1).max(2000),
@@ -20,6 +42,22 @@ serve(async (req) => {
 
   try {
     console.log('Matrix chat request received');
+    
+    // Check rate limit
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    if (!checkRateLimit(ip)) {
+      console.log('Rate limit exceeded for IP:', ip);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: 'Too many requests. Please try again later.' 
+        }),
+        {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
     
     const body = await req.json();
     const validatedData = messageSchema.parse(body);

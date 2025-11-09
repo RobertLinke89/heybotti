@@ -46,12 +46,12 @@ const Booking = () => {
 
     try {
       const bookingData = {
+        type: 'callback',
         name,
         email,
         phone,
-        date: date.toISOString(),
+        date: date.toLocaleDateString("de-DE"),
         time: selectedTime,
-        message,
       };
 
       const { error } = await supabase.functions.invoke("send-contact-email", {

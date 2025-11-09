@@ -10,6 +10,28 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+// Rate limiting: Track requests per IP
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 5; // requests
+const RATE_WINDOW = 15 * 60 * 1000; // 15 minutes in milliseconds
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+    return true;
+  }
+
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 const teamJoinSchema = z.object({
   email: z.string().trim().email("Invalid email address").max(255),
 });
@@ -30,6 +52,19 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    // Check rate limit
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    if (!checkRateLimit(ip)) {
+      console.log('Rate limit exceeded for IP:', ip);
+      return new Response(
+        JSON.stringify({ error: 'Too many requests. Please try again later.' }),
+        {
+          status: 429,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
+        }
+      );
+    }
+
     const requestData: unknown = await req.json();
     
     const validation = teamJoinSchema.safeParse(requestData);
