@@ -2311,9 +2311,9 @@ Focus on creating a solid foundation with current automation technologies while 
     'cookies.decline': 'Ablehnen',
 
     // Project Form
-    'form.title': 'Projekt',
-    'form.title.highlight': 'anfragen',
-    'form.subtitle': 'Erzählen Sie uns von Ihrem Projekt und wir finden gemeinsam die richtige Lösung.',
+    'form.title': 'Automation',
+    'form.title.highlight': 'Check',
+    'form.subtitle': 'Erhalten Sie eine professionelle Einschätzung Ihres Automatisierungspotenzials. Konkret. Messbar. Ohne Umwege.',
     'form.name': 'Name',
     'form.name.required': 'Name ist erforderlich',
     'form.name.placeholder': 'Ihr Name',
