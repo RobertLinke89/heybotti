@@ -2240,7 +2240,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an Ihrer Situation.',
 
     // Footer
-    'footer.description': 'Intelligente Automatisierung mit menschlicher Perspektive für kleine und mittlere Unternehmen.',
+    'footer.description': 'Automatisierung die läuft.',
     'footer.copyright': '© 2024 HeyBotti, eine Marke der PLUSPULS uGmbH. Alle Rechte vorbehalten.',
 
     // Jobs CTA
