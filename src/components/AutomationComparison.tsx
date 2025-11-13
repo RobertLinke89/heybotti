@@ -67,6 +67,9 @@ const AutomationComparison = () => {
                   <img 
                     src="/lovable-uploads/b7db09fb-6bc3-4de7-9976-ea9b53855bf5.png" 
                     alt="Automation OFF - Chaotic processes"
+                    width="1381"
+                    height="545"
+                    loading="lazy"
                     className="w-full h-auto rounded-lg"
                   />
                   <div className="mt-6 space-y-3">
@@ -106,6 +109,9 @@ const AutomationComparison = () => {
                   <img 
                     src="/lovable-uploads/6adf596e-2d5c-4bf8-b8a3-472cbdb6b045.png" 
                     alt="Automation ON - Streamlined processes"
+                    width="1381"
+                    height="545"
+                    loading="lazy"
                     className="w-full h-auto rounded-lg"
                   />
                   <div className="mt-6 space-y-3">

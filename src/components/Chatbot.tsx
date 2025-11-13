@@ -120,6 +120,8 @@ const Chatbot = () => {
             <img 
               src="/lovable-uploads/789c8c26-f14d-4294-91cc-1ecc2d6fe5fb.png" 
               alt="Chatbot" 
+              width="512"
+              height="512"
               className="h-8 w-8 object-contain"
             />
           </Button>
@@ -137,6 +139,8 @@ const Chatbot = () => {
                     <img 
                       src="/lovable-uploads/789c8c26-f14d-4294-91cc-1ecc2d6fe5fb.png" 
                       alt="Bot Avatar" 
+                      width="512"
+                      height="512"
                       className="h-6 w-6 object-contain"
                     />
                   </div>
