@@ -55,36 +55,14 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Mobile Sticky CTA Buttons */}
-      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40 flex flex-col gap-2">
-        <button 
-          onClick={() => navigate('/booking')}
+      {/* Mobile Sticky CTA Button */}
+      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40">
+        <a 
+          href="tel:+4936724838961"
           className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center shadow-lg w-full"
         >
-          {t('hero.cta')}
-        </button>
-        <button 
-          onClick={async () => {
-            const email = prompt(t('process.cta.joinTeam.emailPrompt'));
-            
-            if (!email || !email.includes('@')) {
-              return;
-            }
-
-            try {
-              const { supabase } = await import("@/integrations/supabase/client");
-              
-              await supabase.functions.invoke('send-team-join-email', {
-                body: { email }
-              });
-            } catch (error) {
-              console.error('Error sending team join email:', error);
-            }
-          }}
-          className="bg-background text-foreground px-8 py-3 rounded-lg font-raleway font-medium text-base hover:bg-muted transition-all duration-300 flex items-center justify-center shadow-lg w-full border-2 border-primary"
-        >
-          {t('process.cta.joinTeam.button')}
-        </button>
+          {t('hero.cta.mobile')}
+        </a>
       </div>
     </section>
   );
