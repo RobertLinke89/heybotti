@@ -27,6 +27,7 @@ type TranslationKey =
   | 'hero.title.highlight'
   | 'hero.subtitle'
   | 'hero.cta'
+  | 'hero.cta.mobile'
   // Services
   | 'services.title'
   | 'services.title.highlight'
@@ -538,6 +539,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'hero.title.highlight': 'automatically',
     'hero.subtitle': 'We automate the processes in your company so you can focus on what really matters. No more manual work – more time for real value creation.',
     'hero.cta': 'Call me back',
+    'hero.cta.mobile': 'Call Team Botti',
     
     // Services
     'services.title': 'Top areas for maximum',
@@ -2147,6 +2149,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'hero.title.highlight': 'automatisch',
     'hero.subtitle': 'Wir automatisieren die Prozesse in Ihrem Unternehmen, damit Sie sich auf das konzentrieren können, was wirklich wichtig ist. Keine manuelle Arbeit mehr – mehr Zeit für echte Wertschöpfung.',
     'hero.cta': 'Ruf mich an',
+    'hero.cta.mobile': 'Call Team Botti',
     
     // Services
     'services.title': 'Top-Bereiche für maximalen',
