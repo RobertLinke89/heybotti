@@ -153,8 +153,6 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/40d9d7e1-0d48-4516-ac69-df85651529fa.png" 
                 alt="Botti" 
-                width="967"
-                height="220"
                 className="h-6 sm:h-7" 
               />
             </button>
