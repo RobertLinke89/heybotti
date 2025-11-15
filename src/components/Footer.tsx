@@ -13,8 +13,6 @@ const Footer = () => {
           <img 
             src="/lovable-uploads/934215ae-3a62-4f6c-b9f9-76cd450405f2.png" 
             alt="hey" 
-            width="967"
-            height="220"
             loading="lazy"
             className="h-6 mx-auto mb-3" 
           />
