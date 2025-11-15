@@ -2149,7 +2149,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'hero.title.highlight': 'automatisch',
     'hero.subtitle': 'Wir automatisieren die Prozesse in Ihrem Unternehmen, damit Sie sich auf das konzentrieren können, was wirklich wichtig ist. Keine manuelle Arbeit mehr – mehr Zeit für echte Wertschöpfung.',
     'hero.cta': 'Ruf mich an',
-    'hero.cta.mobile': 'Call Team Botti',
+    'hero.cta.mobile': 'Anrufen',
     
     // Services
     'services.title': 'Top-Bereiche für maximalen',
