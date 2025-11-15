@@ -539,7 +539,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'hero.title.highlight': 'automatically',
     'hero.subtitle': 'We automate the processes in your company so you can focus on what really matters. No more manual work – more time for real value creation.',
     'hero.cta': 'Call me back',
-    'hero.cta.mobile': 'Call Team Botti',
+    'hero.cta.mobile': 'Anrufen',
     
     // Services
     'services.title': 'Top areas for maximum',
