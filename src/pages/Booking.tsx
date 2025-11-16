@@ -12,6 +12,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { Phone, Clock, Calendar as CalendarIcon } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { z } from "zod";
+
+const bookingSchema = z.object({
+  name: z.string().trim().min(1, "Name ist erforderlich").max(100, "Name darf maximal 100 Zeichen lang sein"),
+  email: z.string().trim().email("Ungültige E-Mail-Adresse").max(255, "E-Mail darf maximal 255 Zeichen lang sein"),
+  phone: z.string().trim().min(1, "Telefonnummer ist erforderlich").max(50, "Telefonnummer darf maximal 50 Zeichen lang sein"),
+  message: z.string().max(5000, "Nachricht darf maximal 5000 Zeichen lang sein").optional(),
+});
 
 const Booking = () => {
   const { t } = useLanguage();
@@ -38,12 +46,26 @@ const Booking = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!date || !selectedTime || !name || !email || !phone) {
+    if (!date || !selectedTime) {
       toast({
         title: "Fehler",
-        description: "Bitte füllen Sie alle Pflichtfelder aus.",
+        description: "Bitte wählen Sie Datum und Uhrzeit aus.",
         variant: "destructive",
       });
+      return;
+    }
+
+    // Validate form data with Zod
+    try {
+      bookingSchema.parse({ name, email, phone, message });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validierungsfehler",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      }
       return;
     }
 
@@ -51,15 +73,15 @@ const Booking = () => {
 
     try {
       const bookingData = {
-        type: 'callback',
         name,
         email,
         phone,
         date: date.toLocaleDateString("de-DE"),
         time: selectedTime,
+        message,
       };
 
-      const { error } = await supabase.functions.invoke("send-contact-email", {
+      const { data, error } = await supabase.functions.invoke("create-calendly-booking", {
         body: bookingData,
       });
 
@@ -73,7 +95,9 @@ const Booking = () => {
         } 
       });
     } catch (error) {
-      console.error("Booking error:", error);
+      if (import.meta.env.DEV) {
+        console.error("Booking error:", error);
+      }
       toast({
         title: "Fehler",
         description: "Die Buchung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",

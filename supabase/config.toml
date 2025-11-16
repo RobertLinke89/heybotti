@@ -1,1 +1,4 @@
 project_id = "emubzqneessxuunnwvpj"
+
+[functions.create-calendly-booking]
+verify_jwt = false
