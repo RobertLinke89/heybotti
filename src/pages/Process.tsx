@@ -341,11 +341,17 @@ const Process = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Button 
               size="lg" 
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const bookingSection = document.getElementById('booking-section');
+                  bookingSection?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">
-                Projekt anfragen
+                Meeting buchen
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary-foreground/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>

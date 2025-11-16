@@ -1,10 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowRight, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const JobsCTA = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t } = useLanguage();
 
   return (
@@ -20,14 +21,36 @@ const JobsCTA = () => {
           </p>
         </div>
 
-        <Button 
-          onClick={() => navigate('/jobs')}
-          size="lg"
-          className="group"
-        >
-          {t('jobs.cta.button')}
-          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button 
+            onClick={() => navigate('/jobs')}
+            size="lg"
+            className="group"
+          >
+            {t('jobs.cta.button')}
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+          <Button 
+            onClick={() => {
+              if (location.pathname === '/') {
+                const bookingSection = document.getElementById('booking-section');
+                bookingSection?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                navigate('/');
+                setTimeout(() => {
+                  const bookingSection = document.getElementById('booking-section');
+                  bookingSection?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }
+            }}
+            size="lg"
+            variant="outline"
+            className="group"
+          >
+            Meeting buchen
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -109,14 +109,14 @@ const BookingSection = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section id="booking-section" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 font-raleway">
-            {t('booking.title')}
+            Dein Automation Check
           </h2>
           <p className="text-lg text-muted-foreground font-raleway">
-            {t('booking.subtitle')}
+            Sprich mit uns über dein Vorhaben in einem 30 Min Meeting.
           </p>
         </div>
 
