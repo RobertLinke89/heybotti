@@ -58,7 +58,7 @@ const Hero = () => {
       {/* Mobile Sticky CTA Button */}
       <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40">
         <a 
-          href="tel:+4936724838961"
+          href="tel:+4916099232779"
           className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center shadow-lg w-full"
         >
           {t('hero.cta.mobile')}
