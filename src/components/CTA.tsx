@@ -9,13 +9,17 @@ const CTA = () => {
   const location = useLocation();
 
   const handleClick = () => {
-    // If we're already on the homepage, just scroll to the form
+    // If we're already on the homepage, just scroll to booking section
     if (location.pathname === '/') {
-      const formElement = document.getElementById('project-form');
-      formElement?.scrollIntoView({ behavior: 'smooth' });
+      const bookingSection = document.getElementById('booking-section');
+      bookingSection?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Navigate to homepage and scroll to form
-      navigate('/#project-form');
+      // Navigate to homepage and scroll to booking section
+      navigate('/');
+      setTimeout(() => {
+        const bookingSection = document.getElementById('booking-section');
+        bookingSection?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   };
 

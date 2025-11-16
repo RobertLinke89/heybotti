@@ -267,10 +267,16 @@ const ServicesDetail = () => {
           
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <button 
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const bookingSection = document.getElementById('booking-section');
+                  bookingSection?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
               className="bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-lg font-raleway font-semibold text-base md:text-lg hover:bg-primary/90 transition-all duration-300 md:hover:scale-105 w-full sm:w-auto"
             >
-              Projekt anfragen
+              Meeting buchen
             </button>
             <button 
               onClick={() => navigate('/process')}
