@@ -14,56 +14,30 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Angaben gemäß § 5 TMG</h2>
         <div className="bg-muted p-6 rounded-lg">
-          <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
-          <p className="text-muted-foreground mb-1">Software & IT Lösungen</p>
-          <p className="text-muted-foreground mb-1">Geschäftsführer: Herr Alexander Herre</p>
-          <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
-          <p className="text-muted-foreground mb-1">07407 Rudolstadt, Deutschland</p>
-          <p className="text-muted-foreground mb-1">Marke: HeyBotti</p>
+          <p className="text-foreground font-medium mb-2">HeyBotti GbR</p>
+          <p className="text-muted-foreground mb-1">Intelligente Automatisierungslösungen</p>
+          <p className="text-muted-foreground mb-1">Erkensstraße 5</p>
+          <p className="text-muted-foreground mb-1">52134 Herzogenrath, Deutschland</p>
           <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Kontakt</h3>
-          <p className="text-muted-foreground mb-1">Telefon: 03672 4838961</p>
-          <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
+          <p className="text-muted-foreground mb-1">E-Mail: info@heybotti.de</p>
           <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Vertreten durch</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Vertreten durch die Gesellschafter</h2>
         <p className="text-muted-foreground mb-4">
-          PLUSPULS uGmbH wird vertreten durch ihren Geschäftsführer Alexander Herre.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Registereintrag</h2>
-        <p className="text-muted-foreground mb-2">
-          <strong>Eintragung im Handelsregister:</strong> PLUSPULS uGmbH
-        </p>
-        <p className="text-muted-foreground mb-2">
-          <strong>Registergericht:</strong> Amtsgericht Jena
-        </p>
-        <p className="text-muted-foreground mb-2">
-          <strong>Handelsregisternummer:</strong> HRB 520181
-        </p>
-        <p className="text-muted-foreground mb-4">
-          <strong>Rechtsform:</strong> Unternehmergesellschaft (haftungsbeschränkt)
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Umsatzsteuer-ID</h2>
-        <p className="text-muted-foreground mb-4">
-          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE356587580
+          Die HeyBotti GbR ist eine Gesellschaft bürgerlichen Rechts nach §§ 705 ff. BGB.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-        <p className="text-muted-foreground mb-1">Herr Alexander Herre</p>
-        <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
-        <p className="text-muted-foreground mb-4">07407 Rudolstadt, Deutschland</p>
+        <p className="text-muted-foreground mb-1">HeyBotti GbR</p>
+        <p className="text-muted-foreground mb-1">Erkensstraße 5</p>
+        <p className="text-muted-foreground mb-4">52134 Herzogenrath, Deutschland</p>
       </section>
 
       <section>
@@ -158,56 +132,30 @@ const Legal = () => {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Legal Information</h2>
         <div className="bg-muted p-6 rounded-lg">
-          <p className="text-foreground font-medium mb-2">PLUSPULS uGmbH</p>
-          <p className="text-muted-foreground mb-1">Software & IT Solutions</p>
-          <p className="text-muted-foreground mb-1">Managing Director: Mr. Alexander Herre</p>
-          <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
-          <p className="text-muted-foreground mb-1">07407 Rudolstadt, Germany</p>
-          <p className="text-muted-foreground mb-1">Brand: HeyBotti</p>
+          <p className="text-foreground font-medium mb-2">HeyBotti GbR</p>
+          <p className="text-muted-foreground mb-1">Intelligent Automation Solutions</p>
+          <p className="text-muted-foreground mb-1">Erkensstraße 5</p>
+          <p className="text-muted-foreground mb-1">52134 Herzogenrath, Germany</p>
           <p className="text-muted-foreground mb-4">Website: heybotti.de</p>
           
           <h3 className="text-lg font-semibold text-foreground mb-2">Contact</h3>
-          <p className="text-muted-foreground mb-1">Phone: 03672 4838961</p>
-          <p className="text-muted-foreground mb-1">E-Mail: info@pluspuls.de</p>
+          <p className="text-muted-foreground mb-1">E-Mail: info@heybotti.de</p>
           <p className="text-muted-foreground mb-1">Internet: heybotti.de</p>
         </div>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Represented by</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Represented by Partners</h2>
         <p className="text-muted-foreground mb-4">
-          PLUSPULS uGmbH is represented by its managing director Alexander Herre.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Company Registration</h2>
-        <p className="text-muted-foreground mb-2">
-          <strong>Registration:</strong> PLUSPULS uGmbH
-        </p>
-        <p className="text-muted-foreground mb-2">
-          <strong>Registry Court:</strong> District Court Jena
-        </p>
-        <p className="text-muted-foreground mb-2">
-          <strong>Commercial Register Number:</strong> HRB 520181
-        </p>
-        <p className="text-muted-foreground mb-4">
-          <strong>Legal Form:</strong> Unternehmergesellschaft (haftungsbeschränkt)
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">VAT Information</h2>
-        <p className="text-muted-foreground mb-4">
-          VAT identification number according to Section 27a of the VAT Act: DE356587580
+          HeyBotti GbR is a partnership under civil law according to §§ 705 ff. German Civil Code (BGB).
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">Editorial Responsibility</h2>
-        <p className="text-muted-foreground mb-1">Mr. Alexander Herre</p>
-        <p className="text-muted-foreground mb-1">Schwarzburger Chaussee 78</p>
-        <p className="text-muted-foreground mb-4">07407 Rudolstadt, Germany</p>
+        <p className="text-muted-foreground mb-1">HeyBotti GbR</p>
+        <p className="text-muted-foreground mb-1">Erkensstraße 5</p>
+        <p className="text-muted-foreground mb-4">52134 Herzogenrath, Germany</p>
       </section>
 
       <section>

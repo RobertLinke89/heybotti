@@ -42,14 +42,17 @@ const Privacy = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">2. Hosting</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">2. Hosting und GDPR-Konformität</h2>
         <p className="text-muted-foreground mb-4">
           Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
         </p>
 
-        <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Externes Hosting</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">GDPR-konformes Hosting in Europa</h3>
         <p className="text-muted-foreground mb-4">
-          Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+          Diese Website wird auf Servern innerhalb der Europäischen Union (EU) gehostet. Alle personenbezogenen Daten, die auf dieser Website erfasst werden, werden ausschließlich auf europäischen Servern gespeichert und verarbeitet. Dies gewährleistet die vollständige Einhaltung der EU-Datenschutz-Grundverordnung (GDPR/DSGVO).
+        </p>
+        <p className="text-muted-foreground mb-4">
+          Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
         </p>
         <p className="text-muted-foreground mb-4">
           Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
@@ -69,10 +72,10 @@ const Privacy = () => {
           Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
         </p>
         <div className="bg-muted p-4 rounded-lg mb-4">
-          <p className="text-foreground font-medium">PLUSPULS uGmbH</p>
-          <p className="text-muted-foreground">Schwarzburger Chaussee 78</p>
-          <p className="text-muted-foreground">07407 Rudolstadt, Deutschland</p>
-          <p className="text-muted-foreground">E-Mail: info@pluspuls.de</p>
+          <p className="text-foreground font-medium">HeyBotti GbR</p>
+          <p className="text-muted-foreground">Erkensstraße 5</p>
+          <p className="text-muted-foreground">52134 Herzogenrath, Deutschland</p>
+          <p className="text-muted-foreground">E-Mail: info@heybotti.de</p>
         </div>
 
         <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Speicherdauer</h3>
@@ -188,14 +191,17 @@ const Privacy = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">2. Hosting</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-4 font-raleway">2. Hosting and GDPR Compliance</h2>
         <p className="text-muted-foreground mb-4">
           We host the content of our website with the following provider:
         </p>
 
-        <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">External Hosting</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">GDPR-Compliant Hosting in Europe</h3>
         <p className="text-muted-foreground mb-4">
-          This website is hosted externally. The personal data collected on this website is stored on the servers of the host/hosts. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website access and other data generated via a website.
+          This website is hosted on servers within the European Union (EU). All personal data collected on this website is stored and processed exclusively on European servers. This ensures full compliance with the EU General Data Protection Regulation (GDPR/DSGVO).
+        </p>
+        <p className="text-muted-foreground mb-4">
+          The personal data collected on this website is stored on the servers of the host. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website access and other data generated via a website.
         </p>
         <p className="text-muted-foreground mb-4">
           External hosting is carried out for the purpose of contract fulfillment towards our potential and existing customers (Art. 6 Para. 1 lit. b GDPR) and in the interest of secure, fast and efficient provision of our online offering by a professional provider (Art. 6 Para. 1 lit. f GDPR). If appropriate consent has been requested, processing is carried out exclusively on the basis of Art. 6 Para. 1 lit. a GDPR and § 25 Para. 1 TTDSG.
@@ -215,10 +221,10 @@ const Privacy = () => {
           The responsible party for data processing on this website is:
         </p>
         <div className="bg-muted p-4 rounded-lg mb-4">
-          <p className="text-foreground font-medium">PLUSPULS uGmbH</p>
-          <p className="text-muted-foreground">Schwarzburger Chaussee 78</p>
-          <p className="text-muted-foreground">07407 Rudolstadt, Germany</p>
-          <p className="text-muted-foreground">E-Mail: info@pluspuls.de</p>
+          <p className="text-foreground font-medium">HeyBotti GbR</p>
+          <p className="text-muted-foreground">Erkensstraße 5</p>
+          <p className="text-muted-foreground">52134 Herzogenrath, Germany</p>
+          <p className="text-muted-foreground">E-Mail: info@heybotti.de</p>
         </div>
 
         <h3 className="text-xl font-semibold text-foreground mb-3 font-raleway">Storage Duration</h3>
