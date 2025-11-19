@@ -634,7 +634,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
 
     // Footer
     'footer.description': 'Smart automation with a human perspective for small and medium-sized businesses.',
-    'footer.copyright': '© 2024 HeyBotti, a brand of PLUSPULS uGmbH. All rights reserved.',
+    'footer.copyright': '© 2024 HeyBotti. All rights reserved.',
 
     // Jobs CTA
     'jobs.cta.title': 'Become part of our',
@@ -2244,7 +2244,7 @@ Focus on creating a solid foundation with current automation technologies while 
 
     // Footer
     'footer.description': 'Automatisierung die läuft.',
-    'footer.copyright': '© 2024 HeyBotti, eine Marke der PLUSPULS uGmbH. Alle Rechte vorbehalten.',
+    'footer.copyright': '© 2024 HeyBotti. Alle Rechte vorbehalten.',
 
     // Jobs CTA
     'jobs.cta.title': 'Komm ins',
