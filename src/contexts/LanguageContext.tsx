@@ -532,13 +532,13 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.blog': 'Blog',
     'nav.process': 'Process',
     'nav.request.project': 'Request Project',
-    'header.cta': 'Consultation',
+    'header.cta': 'Call',
     
     // Hero
     'hero.title': 'With us, everything runs',
     'hero.title.highlight': 'automatically',
     'hero.subtitle': 'We automate the processes in your company so you can focus on what really matters. No more manual work – more time for real value creation.',
-    'hero.cta': 'Call me back',
+    'hero.cta': 'Call',
     'hero.cta.mobile': 'Call Now',
     
     // Services
@@ -629,7 +629,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cta.title': 'Ready for more',
     'cta.title.highlight': 'Efficiency',
     'cta.subtitle': 'Let us find out in a non-binding conversation how botti can relieve your company.',
-    'cta.button': 'Request Project',
+    'cta.button': 'Call',
     'cta.note': 'No sales pitch – just genuine interest in your situation.',
 
     // Footer
@@ -2142,13 +2142,13 @@ Focus on creating a solid foundation with current automation technologies while 
     'nav.blog': 'Blog',
     'nav.process': 'Prozess',
     'nav.request.project': 'Projekt anfragen',
-    'header.cta': 'Beratung',
+    'header.cta': 'Anrufen',
     
     // Hero
     'hero.title': 'Mit uns läuft\'s',
     'hero.title.highlight': 'automatisch',
     'hero.subtitle': 'Wir automatisieren die Prozesse in Ihrem Unternehmen, damit Sie sich auf das konzentrieren können, was wirklich wichtig ist. Keine manuelle Arbeit mehr – mehr Zeit für echte Wertschöpfung.',
-    'hero.cta': 'Ruf mich an',
+    'hero.cta': 'Anrufen',
     'hero.cta.mobile': 'Anrufen',
     
     // Services
@@ -2239,7 +2239,7 @@ Focus on creating a solid foundation with current automation technologies while 
     'cta.title': 'Bereit für mehr',
     'cta.title.highlight': 'Effizienz',
     'cta.subtitle': 'Lassen Sie uns in einem unverbindlichen Gespräch herausfinden, wie botti Ihr Unternehmen entlasten kann.',
-    'cta.button': 'Projekt anfragen',
+    'cta.button': 'Anrufen',
     'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an Ihrer Situation.',
 
     // Footer
