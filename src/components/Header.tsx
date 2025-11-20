@@ -270,17 +270,14 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen 
-            ? 'max-h-96 opacity-100 pb-4' 
-            : 'max-h-0 opacity-0 overflow-hidden'
-        }`}>
-          <nav className="flex flex-col space-y-4 pt-4 border-t border-border bg-background/95 backdrop-blur-sm -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-            {/* Mobile Services Section */}
-            <div className="space-y-2">
-              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
-                {t('nav.services')}
-              </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 top-14 bg-background z-40 overflow-y-auto">
+            <nav className="flex flex-col space-y-4 pt-4 px-4 sm:px-6 lg:px-8">
+              {/* Mobile Services Section */}
+              <div className="space-y-2">
+                <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
+                  {t('nav.services')}
+                </div>
               <div className="pl-4 space-y-1">
                 {services.map((service) => (
                   <button
@@ -328,6 +325,7 @@ const Header = () => {
             </button>
           </nav>
         </div>
+        )}
       </div>
     </header>
   );
