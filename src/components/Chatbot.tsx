@@ -6,6 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Send, MessageCircle, X, Bot } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { z } from 'zod';
 
 interface Message {
   id: string;
@@ -41,31 +42,40 @@ const Chatbot = () => {
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      text: inputValue,
-      isBot: false,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, userMessage]);
-    const messageText = inputValue;
-    setInputValue('');
-    setIsTyping(true);
+    // Validate message with Zod
+    const messageSchema = z.object({
+      message: z.string().trim().min(1).max(5000),
+      userName: z.string().trim().max(100).optional()
+    });
 
     try {
+      const validatedData = messageSchema.parse({
+        message: inputValue,
+        userName: 'Website Visitor'
+      });
+
+      const userMessage: Message = {
+        id: Date.now().toString(),
+        text: validatedData.message,
+        isBot: false,
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, userMessage]);
+      setInputValue('');
+      setIsTyping(true);
+
       // Send message to Matrix
       const { supabase } = await import("@/integrations/supabase/client");
       
       const { error } = await supabase.functions.invoke('matrix-chat', {
-        body: { 
-          message: messageText,
-          userName: 'Website Visitor'
-        }
+        body: validatedData
       });
 
       if (error) {
-        console.error('Error sending to Matrix:', error);
+        if (import.meta.env.DEV) {
+          console.error('Error sending to Matrix:', error);
+        }
       }
 
       // Confirmation message
@@ -82,7 +92,9 @@ const Chatbot = () => {
       }, 1000);
 
     } catch (error) {
-      console.error('Error in chat:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error in chat:', error);
+      }
       
       // Error message
       setTimeout(() => {

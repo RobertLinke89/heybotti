@@ -1,8 +1,8 @@
-
 import { Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
+import { z } from 'zod';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -57,7 +57,13 @@ const Header = () => {
   const handleJoinTeam = async () => {
     const email = prompt(t('process.cta.joinTeam.emailPrompt'));
     
-    if (!email || !email.includes('@')) {
+    if (!email) return;
+    
+    // Validate email with Zod
+    const emailSchema = z.string().trim().email();
+    try {
+      emailSchema.parse(email);
+    } catch {
       toast({
         title: t('process.cta.joinTeam.error'),
         description: t('process.cta.joinTeam.invalidEmail'),
@@ -82,7 +88,9 @@ const Header = () => {
         description: t('process.cta.joinTeam.checkEmail'),
       });
     } catch (error) {
-      console.error('Error sending team join email:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error sending team join email:', error);
+      }
       toast({
         title: t('process.cta.joinTeam.error'),
         description: t('process.cta.joinTeam.tryAgain'),
@@ -131,7 +139,9 @@ const Header = () => {
       setSelectedTime(undefined);
       setIsCallbackDialogOpen(false);
     } catch (error) {
-      console.error('Error sending callback request:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error sending callback request:', error);
+      }
       toast({
         title: "Fehler",
         description: "Die Rückruf-Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
