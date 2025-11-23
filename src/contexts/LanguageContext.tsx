@@ -157,6 +157,7 @@ type TranslationKey =
   | 'comparison.process.subtitle'
   // About Page
   | 'about.page.title'
+  | 'about.page.badge'
   | 'about.page.back'
   | 'about.page.content1'
   | 'about.page.content2'
@@ -678,6 +679,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     
     // About Page
     'about.page.title': 'About Us',
+    'about.page.badge': '100% Remote Company',
     'about.page.back': 'Back to Homepage',
     'about.page.content1': 'We are Team botti – a community of automation experts who rethink efficiency. With intelligent automation solutions, we create sustainable relief instead of just acceleration. Our focus: real added value in everyday life – individually adapted, holistically conceived and always with a view to processes, people and potentials.\n\nHeyBotti Automation eG is the cooperative for smart process automation. We combine modern technologies such as artificial intelligence, API integrations and workflow automation into scalable solutions that save time, minimize errors and stabilize workflows.',
     'about.page.content2': 'We rely on transparency, clear language and partnership-based cooperation. From the first workshop to implementation, we deliver quickly tangible results and build future-proof structures that grow with our clients.\n\nOur strength lies in synergy: We combine technical precision, human-centered design and the highest data protection standards so that you can focus on your core business again. As a member, you benefit from the combined know-how of our cooperative and a shared development platform that seamlessly integrates automation into existing systems – from CRM and accounting to individual interface solutions.',
@@ -2288,6 +2290,7 @@ Focus on creating a solid foundation with current automation technologies while 
     
     // About Page
     'about.page.title': 'Über uns',
+    'about.page.badge': '100% Remote Unternehmen',
     'about.page.back': 'Zurück zur Startseite',
     'about.page.content1': 'Wir sind Team botti – eine Gemeinschaft von Automatisierungs­expert:innen, die Effizienz neu denkt. Mit intelligenten Automatisierungslösungen schaffen wir nachhaltige Entlastung statt nur Beschleunigung. Unser Fokus liegt auf echtem Mehrwert im Alltag – individuell angepasst, ganzheitlich gedacht und immer mit Blick auf Prozesse, Menschen und Potenziale.\n\nDie HeyBotti Automation eG ist die Genossenschaft für smarte Prozessautomatisierung. Wir verbinden moderne Technologien wie Künstliche Intelligenz, API-Integrationen und Workflow-Automation zu skalierbaren Lösungen, die Zeit sparen, Fehler minimieren und Abläufe stabilisieren.',
     'about.page.content2': 'Dabei setzen wir auf Transparenz, klare Sprache und partnerschaftliche Zusammenarbeit. Vom ersten Workshop bis zur Umsetzung liefern wir schnell greifbare Ergebnisse und bauen zukunftssichere Strukturen, die mit unseren Kund:innen wachsen.\n\nUnsere Stärke liegt im Zusammenspiel: Wir kombinieren technische Präzision, menschzentriertes Design und höchste Datenschutzstandards, damit Sie sich wieder auf Ihr Kerngeschäft konzentrieren können. Als Mitglied profitieren Sie vom gebündelten Know-how unserer Genossenschaft und einer gemeinsamen Entwicklungsplattform, die Automatisierungen nahtlos in bestehende Systeme integriert – von CRM und Buchhaltung bis hin zu individuellen Schnittstellenlösungen.',
