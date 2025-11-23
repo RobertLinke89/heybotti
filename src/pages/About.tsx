@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Calendar, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import avatarKarim from '@/assets/avatar-karim.png';
 import avatarSascha from '@/assets/avatar-sascha.png';
@@ -128,6 +129,11 @@ const About = () => {
             </Button>
             
             <div className="text-center mb-16">
+              <div className="flex justify-center mb-4">
+                <Badge variant="secondary" className="text-sm font-medium">
+                  {t('about.page.badge')}
+                </Badge>
+              </div>
               <h1 className="text-4xl font-bold text-foreground mb-6 font-raleway">
                 {t('about.page.title')}
               </h1>
