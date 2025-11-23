@@ -46,7 +46,9 @@ const CallbackForm = () => {
       });
 
       if (response.error) {
-        console.error('Email sending failed:', response.error);
+        if (import.meta.env.DEV) {
+          console.error('Email sending failed:', response.error);
+        }
       }
 
       toast({
@@ -56,7 +58,9 @@ const CallbackForm = () => {
       
       reset();
     } catch (error) {
-      console.error('Error submitting form:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error submitting form:', error);
+      }
       toast({
         title: t('callback.error.title'),
         description: t('callback.error.description'),

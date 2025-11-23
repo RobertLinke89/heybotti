@@ -65,7 +65,9 @@ const Admin = () => {
       });
 
       if (error) {
-        console.error("Error checking admin role:", error);
+        if (import.meta.env.DEV) {
+          console.error("Error checking admin role:", error);
+        }
         toast({
           title: "Access Denied",
           description: "You don't have admin privileges. Please contact an administrator.",
@@ -87,7 +89,9 @@ const Admin = () => {
         navigate("/");
       }
     } catch (error: any) {
-      console.error("Error in admin check:", error);
+      if (import.meta.env.DEV) {
+        console.error("Error in admin check:", error);
+      }
       toast({
         title: "Error",
         description: "Failed to verify admin status.",

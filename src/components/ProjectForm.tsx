@@ -8,6 +8,7 @@ import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { z } from 'zod';
 
 interface FormData {
   name: string;
@@ -26,17 +27,28 @@ const ProjectForm = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
+      // Validate with Zod
+      const schema = z.object({
+        name: z.string().trim().min(1, t('form.name.required')).max(100),
+        email: z.string().trim().email(t('form.email.invalid')).max(255),
+        company: z.string().trim().max(100).optional(),
+        phone: z.string().trim().max(50).optional(),
+        message: z.string().trim().min(1, t('form.details.required')).max(5000)
+      });
+
+      const validatedData = schema.parse(data);
+
       const { supabase } = await import("@/integrations/supabase/client");
       
       // Save to database
       const { error: dbError } = await supabase
         .from('project_requests')
         .insert({
-          name: data.name,
-          email: data.email,
-          company: data.company || null,
-          phone: data.phone || null,
-          message: data.message,
+          name: validatedData.name,
+          email: validatedData.email,
+          company: validatedData.company || null,
+          phone: validatedData.phone || null,
+          message: validatedData.message,
           budget: budget[0],
           revenue: savings[0]
         });
@@ -49,18 +61,20 @@ const ProjectForm = () => {
       const response = await supabase.functions.invoke('send-contact-email', {
         body: {
           type: 'contact',
-          name: data.name,
-          email: data.email,
-          company: data.company,
-          phone: data.phone,
-          message: data.message,
+          name: validatedData.name,
+          email: validatedData.email,
+          company: validatedData.company,
+          phone: validatedData.phone,
+          message: validatedData.message,
           budget: budget[0],
           revenue: savings[0]
         }
       });
 
       if (response.error) {
-        console.error('Email sending failed:', response.error);
+        if (import.meta.env.DEV) {
+          console.error('Email sending failed:', response.error);
+        }
         // Don't throw error here - request is saved in DB
       }
 
@@ -73,7 +87,9 @@ const ProjectForm = () => {
       setBudget([10000]);
       setSavings([50000]);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error submitting form:', error);
+      }
       toast({
         title: "Fehler",
         description: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
