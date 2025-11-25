@@ -719,7 +719,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cta.note': 'No sales pitch – just genuine interest in your situation.',
 
     // Footer
-    'footer.description': 'Smart automation with a human perspective for small and medium-sized businesses.',
+    'footer.description': 'Runs automatically',
     'footer.copyright': '© 2024 HeyBotti. All rights reserved.',
 
     // Jobs CTA
@@ -1338,7 +1338,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cta.button': 'Anrufen',
     'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an Ihrer Situation.',
 
-    'footer.description': 'Intelligente Automatisierung mit menschlicher Perspektive für kleine und mittelständische Unternehmen.',
+    'footer.description': 'Läuft automatisch',
     'footer.copyright': '© 2024 HeyBotti. Alle Rechte vorbehalten.',
 
     'jobs.cta.title': 'Werde Teil unseres',
