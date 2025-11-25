@@ -583,7 +583,26 @@ type TranslationKey =
   | 'blog.article.back'
   | 'blog.article.published'
   | 'blog.article.reading.time'
-  | 'blog.article.min.read';
+  | 'blog.article.min.read'
+  // Blog Articles
+  | 'blog.article1.title'
+  | 'blog.article1.excerpt'
+  | 'blog.article1.content'
+  | 'blog.article2.title'
+  | 'blog.article2.excerpt'
+  | 'blog.article2.content'
+  | 'blog.article3.title'
+  | 'blog.article3.excerpt'
+  | 'blog.article3.content'
+  | 'blog.article4.title'
+  | 'blog.article4.excerpt'
+  | 'blog.article4.content'
+  | 'blog.article5.title'
+  | 'blog.article5.excerpt'
+  | 'blog.article5.content'
+  | 'blog.article6.title'
+  | 'blog.article6.excerpt'
+  | 'blog.article6.content';
 
 const translations: Record<Language, Record<TranslationKey, string>> = {
   en: {
@@ -1186,6 +1205,31 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.article.published': 'Published',
     'blog.article.reading.time': 'Reading time',
     'blog.article.min.read': 'min read',
+
+    // Blog Articles
+    'blog.article1.title': 'The ROI of Automation: Real Numbers for Small Businesses',
+    'blog.article1.excerpt': 'Discover how small businesses achieve measurable returns through strategic automation investments, with real case studies and financial projections.',
+    'blog.article1.content': 'Automation is not just for enterprise companies with unlimited budgets. Small businesses are seeing remarkable returns on automation investments—often within the first few months. Learn about real case studies showing 300-800% annual ROI, and discover which processes deliver the quickest wins for small businesses.',
+
+    'blog.article2.title': 'Five Processes Every Small Business Should Automate First',
+    'blog.article2.excerpt': 'Start your automation journey right. Learn which five processes deliver the quickest wins and highest impact for small business operations.',
+    'blog.article2.content': 'Not all automation projects are created equal. Some deliver quick wins, while others require significant investment for modest returns. This guide reveals the five critical processes every small business should automate first: lead management, invoice processing, customer onboarding, data entry, and reporting. Each delivers immediate ROI and builds momentum for further automation.',
+
+    'blog.article3.title': 'Breaking the "Too Small to Automate" Myth',
+    'blog.article3.excerpt': 'Think your business is too small for automation? Think again. Learn why small businesses actually benefit more from automation than large enterprises.',
+    'blog.article3.content': 'The belief that "we are too small for automation" is one of the most damaging misconceptions in business today. The reality? Small businesses benefit MORE from automation than large enterprises. Learn why modern no-code tools, faster implementation times, and higher per-person impact make automation perfect for small businesses.',
+
+    'blog.article4.title': 'The Hidden Costs of Manual Processes in Small Businesses',
+    'blog.article4.excerpt': 'Manual processes cost more than just time. Discover the hidden financial impacts draining your profits and how to stop the bleeding.',
+    'blog.article4.content': 'Manual processes cost far more than you think. Beyond direct labor costs, there are hidden expenses: error correction (€8,000-€25,000 annually), opportunity cost (€30,000-€100,000+ in lost revenue), employee turnover (€15,000-€50,000 per person), and customer experience degradation. For a typical 10-person business, manual processes cost over €215,000 annually in direct and hidden costs.',
+
+    'blog.article5.title': 'How to Start Automating Without Overwhelming Your Team',
+    'blog.article5.excerpt': 'Automation does not have to be disruptive. Learn our proven step-by-step approach to introduce automation smoothly while keeping your team engaged.',
+    'blog.article5.content': 'Successful automation is not about technology—it is about people. Learn our proven 5-phase approach: Listen First (understand team pain points), Quick Win (start small for immediate impact), Involve the Team (implement WITH them, not TO them), Train Thoroughly (ensure confidence), and Iterate & Expand (continuously improve). When done right, your team becomes your biggest automation advocates.',
+
+    'blog.article6.title': 'Future-Proofing Your Business: 2025 Automation Trends',
+    'blog.article6.excerpt': 'Stay ahead of the curve. Explore the emerging automation technologies and strategies that will define successful businesses in 2025 and beyond.',
+    'blog.article6.content': 'The automation landscape is evolving rapidly. Six key trends are defining 2025: AI-enhanced automation (intelligent workflows), hyper-integration (everything connects), no-code as standard (business users build automations), autonomous agents (self-managing systems), vertical-specific packages (industry-ready solutions), and proactive automation (anticipates needs). Small businesses that embrace automation now will operate with the efficiency of companies 10x their size.',
   },
   de: {
     // German translations (full set)
@@ -1771,6 +1815,31 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.article.published': 'Veröffentlicht',
     'blog.article.reading.time': 'Lesezeit',
     'blog.article.min.read': 'Min. Lesezeit',
+
+    // Blog Artikel
+    'blog.article1.title': 'Der ROI der Automatisierung: Echte Zahlen für kleine Unternehmen',
+    'blog.article1.excerpt': 'Entdecken Sie, wie kleine Unternehmen messbare Renditen durch strategische Automatisierungsinvestitionen erzielen, mit echten Fallstudien und Finanzprognosen.',
+    'blog.article1.content': 'Automatisierung ist nicht nur für Großunternehmen mit unbegrenzten Budgets. Kleine Unternehmen erzielen bemerkenswerte Renditen bei Automatisierungsinvestitionen – oft innerhalb der ersten Monate. Erfahren Sie mehr über echte Fallstudien mit 300-800% jährlichem ROI.',
+
+    'blog.article2.title': 'Fünf Prozesse, die jedes kleine Unternehmen zuerst automatisieren sollte',
+    'blog.article2.excerpt': 'Starten Sie Ihre Automatisierungsreise richtig. Erfahren Sie, welche fünf Prozesse die schnellsten Erfolge und größte Wirkung liefern.',
+    'blog.article2.content': 'Nicht alle Automatisierungsprojekte sind gleich. Dieser Leitfaden zeigt die fünf kritischen Prozesse: Lead-Management, Rechnungsverarbeitung, Kunden-Onboarding, Dateneingabe und Reporting.',
+
+    'blog.article3.title': 'Den "Zu klein für Automatisierung" Mythos brechen',
+    'blog.article3.excerpt': 'Denken Sie, Ihr Unternehmen ist zu klein für Automatisierung? Denken Sie noch einmal nach. Kleine Unternehmen profitieren sogar mehr.',
+    'blog.article3.content': 'Der Glaube "wir sind zu klein für Automatisierung" ist einer der schädlichsten Irrtümer. Die Realität? Kleine Unternehmen profitieren MEHR von Automatisierung als Großunternehmen.',
+
+    'blog.article4.title': 'Die versteckten Kosten manueller Prozesse in kleinen Unternehmen',
+    'blog.article4.excerpt': 'Manuelle Prozesse kosten mehr als nur Zeit. Entdecken Sie die versteckten finanziellen Auswirkungen.',
+    'blog.article4.content': 'Manuelle Prozesse kosten weit mehr als Sie denken. Neben direkten Arbeitskosten gibt es versteckte Ausgaben: Fehlerkorrektur, Opportunitätskosten, Mitarbeiterfluktuation. Für ein typisches 10-Personen-Unternehmen kosten manuelle Prozesse über 215.000€ jährlich.',
+
+    'blog.article5.title': 'Wie man mit Automatisierung beginnt, ohne das Team zu überfordern',
+    'blog.article5.excerpt': 'Automatisierung muss nicht störend sein. Lernen Sie unseren bewährten schrittweisen Ansatz kennen.',
+    'blog.article5.content': 'Erfolgreiche Automatisierung dreht sich nicht um Technologie – sondern um Menschen. Lernen Sie unseren bewährten 5-Phasen-Ansatz: Erst zuhören, schnelle Erfolge, Team einbeziehen, gründlich schulen und kontinuierlich verbessern.',
+
+    'blog.article6.title': 'Zukunftssicherheit Ihres Unternehmens: Automatisierungstrends 2025',
+    'blog.article6.excerpt': 'Bleiben Sie voraus. Erkunden Sie neue Automatisierungstechnologien und Strategien für 2025.',
+    'blog.article6.content': 'Die Automatisierungslandschaft entwickelt sich rasant. Sechs Schlüsseltrends definieren 2025: KI-erweiterte Automatisierung, Hyper-Integration, No-Code als Standard, autonome Agenten, branchenspezifische Pakete und proaktive Automatisierung.',
   }
 };
 
