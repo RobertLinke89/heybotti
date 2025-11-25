@@ -151,9 +151,15 @@ const About = () => {
                 {t('about.page.content2')}
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed font-raleway">
+              <p className="text-lg text-foreground leading-relaxed font-raleway mb-6">
                 {t('about.page.content3')}
               </p>
+              
+              <div className="mt-8 pt-6 border-t border-border/30">
+                <p className="text-lg text-foreground leading-relaxed font-raleway italic">
+                  {t('about.page.cooperative')}
+                </p>
+              </div>
             </div>
           </div>
 
