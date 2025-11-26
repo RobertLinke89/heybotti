@@ -648,8 +648,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'header.cta': 'Call',
 
     // Hero
-    'hero.title': 'Everything in your business runs',
-    'hero.title.highlight': 'automatically',
+    'hero.title': 'More time for ideas, less for',
+    'hero.title.highlight': 'paperwork',
     'hero.subtitle': 'We automate the processes that slow teams down — so you can operate with clarity, speed, and a calm, predictable workflow.',
     'hero.cta': 'Book a Call',
     'hero.cta.secondary': 'See How It Works',
