@@ -14,7 +14,7 @@ const AutomationComparison = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            {t('comparison.title')}
+            {t('comparison.title')} <span className="text-primary">{t('comparison.title.highlight')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('comparison.subtitle')}

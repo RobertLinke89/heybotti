@@ -729,8 +729,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.cta.button': 'View Open Positions',
 
     // AutomationComparison
-    'comparison.title': 'From manual chaos to',
-    'comparison.title.highlight': 'effortless flow',
+    'comparison.title': 'From Manual Chaos to',
+    'comparison.title.highlight': 'Effortless Flow.',
     'comparison.subtitle': 'See for yourself how automation transforms your processes',
     'comparison.off.title': 'botti OFF',
     'comparison.on.title': 'botti ON',
@@ -1346,8 +1346,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.cta.subtitle': 'Wir suchen Ingenieure, Automatisierungsspezialisten und Designer, die Wert auf Klarheit, Effizienz und sinnvolle Arbeit legen.',
     'jobs.cta.button': 'Offene Stellen ansehen',
 
-    'comparison.title': 'Vom manuellen Chaos zum',
-    'comparison.title.highlight': 'mühelosen Fluss',
+    'comparison.title': 'Vom Manuellen Chaos zum',
+    'comparison.title.highlight': 'Mühelosen Fluss.',
     'comparison.subtitle': 'Sehen Sie selbst, wie Automatisierung Ihre Prozesse transformiert',
     'comparison.off.title': 'botti AUS',
     'comparison.on.title': 'botti AN',
