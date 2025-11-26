@@ -222,7 +222,7 @@ const AutomationComparison = () => {
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/5 rounded-full translate-y-12 -translate-x-12"></div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="mb-8">
-              <p className="text-primary font-semibold text-lg">Vera von Black Flash Archery</p>
+              <p className="text-primary font-semibold text-lg">Kundenstimme</p>
             </div>
             <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
               "{t('comparison.testimonial.quote')}"
