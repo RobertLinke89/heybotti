@@ -1932,7 +1932,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     const stored = localStorage.getItem('language');
-    return (stored === 'de' || stored === 'en') ? stored : 'en';
+    return (stored === 'de' || stored === 'en') ? stored : 'de';
   });
 
   useEffect(() => {
