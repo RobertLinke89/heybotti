@@ -2,7 +2,6 @@ import { memo } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AutomationComparison from "@/components/AutomationComparison";
-import AutomationBenefits from "@/components/AutomationBenefits";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import JobsCTA from "@/components/JobsCTA";
@@ -14,7 +13,6 @@ import CookieBanner from "@/components/CookieBanner";
 const MemoizedHeader = memo(Header);
 const MemoizedHero = memo(Hero);
 const MemoizedAutomationComparison = memo(AutomationComparison);
-const MemoizedAutomationBenefits = memo(AutomationBenefits);
 const MemoizedServices = memo(Services);
 const MemoizedPricing = memo(Pricing);
 const MemoizedJobsCTA = memo(JobsCTA);
@@ -28,7 +26,6 @@ const Index = () => {
       <MemoizedHeader />
       <MemoizedHero />
       <MemoizedAutomationComparison />
-      <MemoizedAutomationBenefits />
       <MemoizedServices />
       <MemoizedPricing />
       <MemoizedJobsCTA />
