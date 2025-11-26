@@ -41,8 +41,8 @@ const BookingSection = () => {
     
     if (!date || !selectedTime) {
       toast({
-        title: "Fehler",
-        description: "Bitte wählen Sie Datum und Uhrzeit aus.",
+        title: t('booking.error.title'),
+        description: t('booking.error.datetime'),
         variant: "destructive",
       });
       return;
@@ -53,7 +53,7 @@ const BookingSection = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
-          title: "Validierungsfehler",
+          title: t('booking.validation.error'),
           description: error.errors[0].message,
           variant: "destructive",
         });
@@ -91,8 +91,8 @@ const BookingSection = () => {
         console.error("Booking error:", error);
       }
       toast({
-        title: "Fehler",
-        description: "Die Buchung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+        title: t('booking.error.title'),
+        description: t('booking.error.submit'),
         variant: "destructive",
       });
     } finally {
@@ -113,10 +113,10 @@ const BookingSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 font-raleway">
-            Dein Automation Check
+            {t('booking.title')}
           </h2>
           <p className="text-lg text-muted-foreground font-raleway">
-            Sprich mit uns über dein Vorhaben in einem 30 Min Meeting.
+            {t('booking.subtitle')}
           </p>
         </div>
 
@@ -129,7 +129,7 @@ const BookingSection = () => {
                 <div className="flex items-center gap-2 mb-4">
                   <CalendarIcon className="h-5 w-5 text-primary" />
                   <h3 className="text-xl font-semibold text-foreground">
-                    Datum wählen
+                    {t('booking.date.title')}
                   </h3>
                 </div>
                 <Calendar
@@ -146,7 +146,7 @@ const BookingSection = () => {
                 <div className="flex items-center gap-2 mb-4">
                   <Clock className="h-5 w-5 text-primary" />
                   <h3 className="text-xl font-semibold text-foreground">
-                    Uhrzeit wählen
+                    {t('booking.time.title')}
                   </h3>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
@@ -168,53 +168,53 @@ const BookingSection = () => {
             {/* Contact Information */}
             <div className="space-y-4 pt-8 border-t">
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Ihre Kontaktdaten
+                {t('booking.contact.title')}
               </h3>
               
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="name">{t('booking.name.label')}</Label>
                   <Input
                     id="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    placeholder="Ihr Name"
+                    placeholder={t('booking.name.placeholder')}
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="email">E-Mail *</Label>
+                  <Label htmlFor="email">{t('booking.email.label')}</Label>
                   <Input
                     id="email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    placeholder="ihre@email.de"
+                    placeholder={t('booking.email.placeholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="phone">Telefon *</Label>
+                <Label htmlFor="phone">{t('booking.phone.label')}</Label>
                 <Input
                   id="phone"
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
-                  placeholder="+49 123 456789"
+                  placeholder={t('booking.phone.placeholder')}
                 />
               </div>
 
               <div>
-                <Label htmlFor="message">Nachricht (optional)</Label>
+                <Label htmlFor="message">{t('booking.message.label')}</Label>
                 <Textarea
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Haben Sie besondere Wünsche oder Fragen?"
+                  placeholder={t('booking.message.placeholder')}
                   rows={4}
                 />
               </div>
@@ -226,7 +226,7 @@ const BookingSection = () => {
               className="w-full"
               disabled={!date || !selectedTime || isSubmitting}
             >
-              {isSubmitting ? "Wird gebucht..." : "Termin buchen"}
+              {isSubmitting ? t('booking.button.submitting') : t('booking.button.submit')}
             </Button>
           </form>
         </Card>
