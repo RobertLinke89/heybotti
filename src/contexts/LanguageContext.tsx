@@ -124,6 +124,27 @@ type TranslationKey =
   | 'jobs.cta.title.highlight'
   | 'jobs.cta.subtitle'
   | 'jobs.cta.button'
+  | 'jobs.cta.button.secondary'
+  // Booking Section
+  | 'booking.title'
+  | 'booking.subtitle'
+  | 'booking.date.title'
+  | 'booking.time.title'
+  | 'booking.contact.title'
+  | 'booking.name.label'
+  | 'booking.name.placeholder'
+  | 'booking.email.label'
+  | 'booking.email.placeholder'
+  | 'booking.phone.label'
+  | 'booking.phone.placeholder'
+  | 'booking.message.label'
+  | 'booking.message.placeholder'
+  | 'booking.button.submit'
+  | 'booking.button.submitting'
+  | 'booking.error.datetime'
+  | 'booking.error.title'
+  | 'booking.error.submit'
+  | 'booking.validation.error'
   // AutomationComparison
   | 'comparison.title'
   | 'comparison.title.highlight'
@@ -734,6 +755,28 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.cta.title.highlight': 'Team',
     'jobs.cta.subtitle': "We're looking for engineers, automation specialists, and designers who care about clarity, efficiency, and meaningful work.",
     'jobs.cta.button': 'View Open Positions',
+    'jobs.cta.button.secondary': 'Book a Meeting',
+
+    // Booking Section
+    'booking.title': 'Your Automation Check',
+    'booking.subtitle': 'Discuss your project with us in a 30-minute meeting.',
+    'booking.date.title': 'Select Date',
+    'booking.time.title': 'Select Time',
+    'booking.contact.title': 'Your Contact Details',
+    'booking.name.label': 'Name *',
+    'booking.name.placeholder': 'Your name',
+    'booking.email.label': 'Email *',
+    'booking.email.placeholder': 'your@email.com',
+    'booking.phone.label': 'Phone *',
+    'booking.phone.placeholder': '+49 123 456789',
+    'booking.message.label': 'Message (optional)',
+    'booking.message.placeholder': 'Do you have any special requests or questions?',
+    'booking.button.submit': 'Book Appointment',
+    'booking.button.submitting': 'Booking...',
+    'booking.error.datetime': 'Please select date and time.',
+    'booking.error.title': 'Error',
+    'booking.error.submit': 'Booking could not be completed. Please try again.',
+    'booking.validation.error': 'Validation Error',
 
     // AutomationComparison
     'comparison.title': 'From Manual Chaos to',
@@ -1359,6 +1402,28 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.cta.title.highlight': 'Teams',
     'jobs.cta.subtitle': 'Wir suchen Ingenieure, Automatisierungsspezialisten und Designer, die Wert auf Klarheit, Effizienz und sinnvolle Arbeit legen.',
     'jobs.cta.button': 'Offene Stellen ansehen',
+    'jobs.cta.button.secondary': 'Meeting buchen',
+
+    // Booking Section (DE)
+    'booking.title': 'Dein Automation Check',
+    'booking.subtitle': 'Sprich mit uns über dein Vorhaben in einem 30 Min Meeting.',
+    'booking.date.title': 'Datum wählen',
+    'booking.time.title': 'Uhrzeit wählen',
+    'booking.contact.title': 'Ihre Kontaktdaten',
+    'booking.name.label': 'Name *',
+    'booking.name.placeholder': 'Ihr Name',
+    'booking.email.label': 'E-Mail *',
+    'booking.email.placeholder': 'ihre@email.de',
+    'booking.phone.label': 'Telefon *',
+    'booking.phone.placeholder': '+49 123 456789',
+    'booking.message.label': 'Nachricht (optional)',
+    'booking.message.placeholder': 'Haben Sie besondere Wünsche oder Fragen?',
+    'booking.button.submit': 'Termin buchen',
+    'booking.button.submitting': 'Wird gebucht...',
+    'booking.error.datetime': 'Bitte wählen Sie Datum und Uhrzeit aus.',
+    'booking.error.title': 'Fehler',
+    'booking.error.submit': 'Die Buchung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.',
+    'booking.validation.error': 'Validierungsfehler',
 
     'comparison.title': 'Vom Manuellen Chaos zum',
     'comparison.title.highlight': 'Mühelosen Fluss.',
