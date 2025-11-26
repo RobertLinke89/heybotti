@@ -552,13 +552,16 @@ type TranslationKey =
   | 'pricing.title'
   | 'pricing.title.highlight'
   | 'pricing.subtitle'
+  | 'pricing.popular'
+  | 'pricing.button'
   | 'pricing.starter.title'
   | 'pricing.starter.price'
   | 'pricing.starter.description'
   | 'pricing.starter.feature1'
   | 'pricing.starter.feature2'
   | 'pricing.starter.feature3'
-  | 'pricing.starter.button'
+  | 'pricing.starter.feature4'
+  | 'pricing.starter.feature5'
   | 'pricing.professional.title'
   | 'pricing.professional.price'
   | 'pricing.professional.description'
@@ -566,15 +569,19 @@ type TranslationKey =
   | 'pricing.professional.feature2'
   | 'pricing.professional.feature3'
   | 'pricing.professional.feature4'
-  | 'pricing.professional.button'
-  | 'pricing.enterprise.title'
-  | 'pricing.enterprise.price'
-  | 'pricing.enterprise.description'
-  | 'pricing.enterprise.feature1'
-  | 'pricing.enterprise.feature2'
-  | 'pricing.enterprise.feature3'
-  | 'pricing.enterprise.feature4'
-  | 'pricing.enterprise.button'
+  | 'pricing.professional.feature5'
+  | 'pricing.professional.feature6'
+  | 'pricing.professional.feature7'
+  | 'pricing.custom.title'
+  | 'pricing.custom.price'
+  | 'pricing.custom.description'
+  | 'pricing.custom.feature1'
+  | 'pricing.custom.feature2'
+  | 'pricing.custom.feature3'
+  | 'pricing.custom.feature4'
+  | 'pricing.custom.feature5'
+  | 'pricing.custom.feature6'
+  | 'pricing.custom.feature7'
   // Blog
   | 'blog.title'
   | 'blog.subtitle'
@@ -1169,32 +1176,39 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'benefits.quality.description': 'Deliver reliable results every time with standardized automated processes',
 
     // Pricing
-    'pricing.title': 'Simple',
-    'pricing.title.highlight': 'Pricing',
-    'pricing.subtitle': 'Choose the perfect plan for your automation needs',
+    'pricing.title': 'Our',
+    'pricing.title.highlight': 'Packages',
+    'pricing.subtitle': 'Choose the right package for your automation needs',
+    'pricing.popular': 'Popular',
+    'pricing.button': 'Book Now',
     'pricing.starter.title': 'Starter',
-    'pricing.starter.price': '$999/month',
-    'pricing.starter.description': 'Perfect for small teams getting started with automation',
-    'pricing.starter.feature1': 'Up to 5 automated workflows',
-    'pricing.starter.feature2': 'Basic integrations',
-    'pricing.starter.feature3': 'Email support',
-    'pricing.starter.button': 'Get Started',
+    'pricing.starter.price': '€500',
+    'pricing.starter.description': 'Perfect for getting started with automation',
+    'pricing.starter.feature1': 'Simple automation',
+    'pricing.starter.feature2': 'Up to 3 tools',
+    'pricing.starter.feature3': 'Basic integration',
+    'pricing.starter.feature4': 'Email support',
+    'pricing.starter.feature5': '1 month support',
     'pricing.professional.title': 'Professional',
-    'pricing.professional.price': '$2,499/month',
-    'pricing.professional.description': 'Ideal for growing businesses scaling their automation',
-    'pricing.professional.feature1': 'Unlimited workflows',
-    'pricing.professional.feature2': 'Advanced integrations',
-    'pricing.professional.feature3': 'Priority support',
-    'pricing.professional.feature4': 'Dedicated account manager',
-    'pricing.professional.button': 'Get Started',
-    'pricing.enterprise.title': 'Enterprise',
-    'pricing.enterprise.price': 'Custom',
-    'pricing.enterprise.description': 'Tailored solutions for large organizations',
-    'pricing.enterprise.feature1': 'Custom workflows & integrations',
-    'pricing.enterprise.feature2': 'White-glove implementation',
-    'pricing.enterprise.feature3': '24/7 support',
-    'pricing.enterprise.feature4': 'Dedicated team',
-    'pricing.enterprise.button': 'Contact Sales',
+    'pricing.professional.price': '€5,000',
+    'pricing.professional.description': 'For comprehensive automation projects',
+    'pricing.professional.feature1': 'Complex automations',
+    'pricing.professional.feature2': 'Up to 10 tools',
+    'pricing.professional.feature3': 'Advanced integrations',
+    'pricing.professional.feature4': 'Priority support',
+    'pricing.professional.feature5': '3 months support',
+    'pricing.professional.feature6': 'Custom workflows',
+    'pricing.professional.feature7': 'API integrations',
+    'pricing.custom.title': 'Custom',
+    'pricing.custom.price': 'On Request',
+    'pricing.custom.description': 'Individually tailored to your needs',
+    'pricing.custom.feature1': 'Unlimited tools',
+    'pricing.custom.feature2': 'Custom solution',
+    'pricing.custom.feature3': 'Dedicated support',
+    'pricing.custom.feature4': 'Long-term care',
+    'pricing.custom.feature5': 'Enterprise features',
+    'pricing.custom.feature6': 'Individual SLAs',
+    'pricing.custom.feature7': 'Consulting included',
 
     // Blog
     'blog.title': 'Blog',
@@ -1779,32 +1793,39 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'benefits.quality.description': 'Liefern Sie jedes Mal zuverlässige Ergebnisse mit standardisierten automatisierten Prozessen',
 
     // Pricing (DE placeholders)
-    'pricing.title': 'Einfache',
-    'pricing.title.highlight': 'Preise',
-    'pricing.subtitle': 'Wählen Sie den perfekten Plan für Ihre Automatisierungsbedürfnisse',
+    'pricing.title': 'Unsere',
+    'pricing.title.highlight': 'Pakete',
+    'pricing.subtitle': 'Wähle das passende Paket für deine Automation-Bedürfnisse',
+    'pricing.popular': 'Beliebt',
+    'pricing.button': 'Jetzt buchen',
     'pricing.starter.title': 'Starter',
-    'pricing.starter.price': '999€/Monat',
-    'pricing.starter.description': 'Perfekt für kleine Teams, die mit Automatisierung beginnen',
-    'pricing.starter.feature1': 'Bis zu 5 automatisierte Workflows',
-    'pricing.starter.feature2': 'Basis-Integrationen',
-    'pricing.starter.feature3': 'E-Mail-Support',
-    'pricing.starter.button': 'Loslegen',
+    'pricing.starter.price': '500€',
+    'pricing.starter.description': 'Perfekt für den Einstieg in die Automation',
+    'pricing.starter.feature1': 'Einfache Automation',
+    'pricing.starter.feature2': 'Bis zu 3 Tools',
+    'pricing.starter.feature3': 'Basis-Integration',
+    'pricing.starter.feature4': 'Email Support',
+    'pricing.starter.feature5': '1 Monat Support',
     'pricing.professional.title': 'Professional',
-    'pricing.professional.price': '2.499€/Monat',
-    'pricing.professional.description': 'Ideal für wachsende Unternehmen, die ihre Automatisierung skalieren',
-    'pricing.professional.feature1': 'Unbegrenzte Workflows',
-    'pricing.professional.feature2': 'Erweiterte Integrationen',
-    'pricing.professional.feature3': 'Priority-Support',
-    'pricing.professional.feature4': 'Dedizierter Account Manager',
-    'pricing.professional.button': 'Loslegen',
-    'pricing.enterprise.title': 'Enterprise',
-    'pricing.enterprise.price': 'Individuell',
-    'pricing.enterprise.description': 'Maßgeschneiderte Lösungen für große Organisationen',
-    'pricing.enterprise.feature1': 'Individuelle Workflows & Integrationen',
-    'pricing.enterprise.feature2': 'White-Glove-Implementierung',
-    'pricing.enterprise.feature3': '24/7 Support',
-    'pricing.enterprise.feature4': 'Dediziertes Team',
-    'pricing.enterprise.button': 'Vertrieb kontaktieren',
+    'pricing.professional.price': '5.000€',
+    'pricing.professional.description': 'Für umfangreiche Automatisierungsprojekte',
+    'pricing.professional.feature1': 'Komplexe Automations',
+    'pricing.professional.feature2': 'Bis zu 10 Tools',
+    'pricing.professional.feature3': 'Erweiterte Integrationen',
+    'pricing.professional.feature4': 'Priority Support',
+    'pricing.professional.feature5': '3 Monate Support',
+    'pricing.professional.feature6': 'Custom Workflows',
+    'pricing.professional.feature7': 'API Integrationen',
+    'pricing.custom.title': 'Custom',
+    'pricing.custom.price': 'Auf Anfrage',
+    'pricing.custom.description': 'Individuell auf deine Bedürfnisse zugeschnitten',
+    'pricing.custom.feature1': 'Unbegrenzte Tools',
+    'pricing.custom.feature2': 'Maßgeschneiderte Lösung',
+    'pricing.custom.feature3': 'Dedizierter Support',
+    'pricing.custom.feature4': 'Langzeit-Betreuung',
+    'pricing.custom.feature5': 'Enterprise Features',
+    'pricing.custom.feature6': 'Individuelle SLAs',
+    'pricing.custom.feature7': 'Consulting inklusive',
 
     // Blog (DE placeholders)
     'blog.title': 'Blog',

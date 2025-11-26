@@ -22,44 +22,44 @@ const Pricing = () => {
 
   const packages = [
     {
-      name: "Starter",
-      price: "500€",
-      description: "Perfekt für den Einstieg in die Automation",
+      name: t('pricing.starter.title'),
+      price: t('pricing.starter.price'),
+      description: t('pricing.starter.description'),
       features: [
-        "Einfache Automation",
-        "Bis zu 3 Tools",
-        "Basis-Integration",
-        "Email Support",
-        "1 Monat Support"
+        t('pricing.starter.feature1'),
+        t('pricing.starter.feature2'),
+        t('pricing.starter.feature3'),
+        t('pricing.starter.feature4'),
+        t('pricing.starter.feature5')
       ]
     },
     {
-      name: "Professional",
-      price: "5.000€",
-      description: "Für umfangreiche Automatisierungsprojekte",
+      name: t('pricing.professional.title'),
+      price: t('pricing.professional.price'),
+      description: t('pricing.professional.description'),
       features: [
-        "Komplexe Automations",
-        "Bis zu 10 Tools",
-        "Erweiterte Integrationen",
-        "Priority Support",
-        "3 Monate Support",
-        "Custom Workflows",
-        "API Integrationen"
+        t('pricing.professional.feature1'),
+        t('pricing.professional.feature2'),
+        t('pricing.professional.feature3'),
+        t('pricing.professional.feature4'),
+        t('pricing.professional.feature5'),
+        t('pricing.professional.feature6'),
+        t('pricing.professional.feature7')
       ],
       popular: true
     },
     {
-      name: "Custom",
-      price: "Auf Anfrage",
-      description: "Individuell auf deine Bedürfnisse zugeschnitten",
+      name: t('pricing.custom.title'),
+      price: t('pricing.custom.price'),
+      description: t('pricing.custom.description'),
       features: [
-        "Unbegrenzte Tools",
-        "Maßgeschneiderte Lösung",
-        "Dedizierter Support",
-        "Langzeit-Betreuung",
-        "Enterprise Features",
-        "Individuelle SLAs",
-        "Consulting inklusive"
+        t('pricing.custom.feature1'),
+        t('pricing.custom.feature2'),
+        t('pricing.custom.feature3'),
+        t('pricing.custom.feature4'),
+        t('pricing.custom.feature5'),
+        t('pricing.custom.feature6'),
+        t('pricing.custom.feature7')
       ]
     }
   ];
@@ -69,10 +69,10 @@ const Pricing = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Unsere Pakete
+            {t('pricing.title')} <span className="text-primary">{t('pricing.title.highlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Wähle das passende Paket für deine Automation-Bedürfnisse
+            {t('pricing.subtitle')}
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const Pricing = () => {
             >
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                  Beliebt
+                  {t('pricing.popular')}
                 </div>
               )}
               <CardHeader>
@@ -110,7 +110,7 @@ const Pricing = () => {
                   className="w-full"
                   variant={pkg.popular ? "default" : "outline"}
                 >
-                  Jetzt buchen
+                  {t('pricing.button')}
                 </Button>
               </CardFooter>
             </Card>
