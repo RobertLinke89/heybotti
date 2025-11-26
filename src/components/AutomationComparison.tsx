@@ -89,6 +89,14 @@ const AutomationComparison = () => {
                        <X className="w-5 h-5 text-destructive" />
                        <span className="text-foreground">{t('comparison.without.feature4')}</span>
                      </div>
+                     <div className="flex items-center gap-3">
+                       <X className="w-5 h-5 text-destructive" />
+                       <span className="text-foreground">{t('comparison.without.feature5')}</span>
+                     </div>
+                     <div className="flex items-center gap-3">
+                       <X className="w-5 h-5 text-destructive" />
+                       <span className="text-foreground">{t('comparison.without.feature6')}</span>
+                     </div>
                   </div>
                 </div>
               </div>
@@ -138,22 +146,6 @@ const AutomationComparison = () => {
                      <div className="flex items-center gap-3">
                        <Check className="w-5 h-5 text-primary" />
                        <span className="text-foreground">{t('comparison.with.feature6')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature7')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature8')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature9')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature10')}</span>
                      </div>
                   </div>
                 </div>
