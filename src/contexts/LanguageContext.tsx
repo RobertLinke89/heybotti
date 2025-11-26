@@ -1146,7 +1146,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'process.cta.joinTeam.sending': 'Sending...',
 
     // Automation Benefits
-    'benefits.title': 'Smarter systems.',
+    'benefits.title': 'Smarter Systems.',
     'benefits.title.highlight': 'Better workdays.',
     'benefits.subtitle': 'Discover how automation transforms your business operations and drives sustainable growth',
     'benefits.time.title': 'Automated workflows',
