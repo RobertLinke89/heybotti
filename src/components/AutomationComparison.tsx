@@ -219,6 +219,20 @@ const AutomationComparison = () => {
             <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
               "{t('comparison.testimonial.quote')}"
             </blockquote>
+            
+            {/* Metrics Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+              <div className="px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+                <span className="text-foreground font-semibold">70% fewer manual tasks</span>
+              </div>
+              <div className="px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+                <span className="text-foreground font-semibold">40% faster response times</span>
+              </div>
+              <div className="px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+                <span className="text-foreground font-semibold">90% reduction in repetitive work</span>
+              </div>
+            </div>
+            
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">V</span>
