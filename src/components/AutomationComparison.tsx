@@ -1,5 +1,5 @@
 import { X, Check, ArrowRight, Clock, TrendingUp, Target, Zap, Shield, Users, BarChart, Sparkles, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -49,108 +49,120 @@ const AutomationComparison = () => {
           </div>
 
           {/* Content Display */}
-          <div className="max-w-3xl mx-auto">
-            {!showAutomated ? (
-              // Automation OFF
-              <div className="space-y-6">
-                <div className="flex items-center gap-3 mb-6 justify-center">
-                  <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center">
-                    <X className="w-6 h-6 text-destructive" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-xl font-semibold text-foreground">{t('comparison.without.title')}</h3>
-                    <p className="text-muted-foreground">{t('comparison.without.subtitle')}</p>
-                  </div>
+          <div className="max-w-3xl mx-auto relative">
+            {/* Automation OFF */}
+            <div 
+              className="space-y-6 transition-all duration-300 absolute inset-0"
+              style={{
+                opacity: !showAutomated ? 1 : 0,
+                pointerEvents: !showAutomated ? 'auto' : 'none',
+                transform: !showAutomated ? 'translateX(0)' : 'translateX(-20px)'
+              }}
+            >
+              <div className="flex items-center gap-3 mb-6 justify-center">
+                <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center">
+                  <X className="w-6 h-6 text-destructive" />
                 </div>
-                
-                <div className="bg-card rounded-xl p-6 border border-border">
-                  <img 
-                    src="/lovable-uploads/b7db09fb-6bc3-4de7-9976-ea9b53855bf5.png" 
-                    alt="Automation OFF - Chaotic processes"
-                    width="1381"
-                    height="545"
-                    loading="lazy"
-                    className="w-full h-auto rounded-lg"
-                  />
-                  <div className="mt-6 space-y-3">
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature1')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature2')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature3')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature4')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature5')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <X className="w-5 h-5 text-destructive" />
-                       <span className="text-foreground">{t('comparison.without.feature6')}</span>
-                     </div>
-                  </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-foreground">{t('comparison.without.title')}</h3>
+                  <p className="text-muted-foreground">{t('comparison.without.subtitle')}</p>
                 </div>
               </div>
-            ) : (
-              // Automation ON
-              <div className="space-y-6">
-                <div className="flex items-center gap-3 mb-6 justify-center">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Check className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-xl font-semibold text-foreground">{t('comparison.with.title')}</h3>
-                    <p className="text-muted-foreground">{t('comparison.with.subtitle')}</p>
-                  </div>
-                </div>
-                
-                <div className="bg-card rounded-xl p-6 border border-border shadow-lg">
-                  <img 
-                    src="/lovable-uploads/6adf596e-2d5c-4bf8-b8a3-472cbdb6b045.png" 
-                    alt="Automation ON - Streamlined processes"
-                    width="1381"
-                    height="545"
-                    loading="lazy"
-                    className="w-full h-auto rounded-lg"
-                  />
-                  <div className="mt-6 space-y-3">
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature1')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature2')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature3')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature4')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature5')}</span>
-                     </div>
-                     <div className="flex items-center gap-3">
-                       <Check className="w-5 h-5 text-primary" />
-                       <span className="text-foreground">{t('comparison.with.feature6')}</span>
-                     </div>
-                  </div>
+              
+              <div className="bg-card rounded-xl p-6 border border-border">
+                <img 
+                  src="/lovable-uploads/b7db09fb-6bc3-4de7-9976-ea9b53855bf5.png" 
+                  alt="Automation OFF - Chaotic processes"
+                  width="1381"
+                  height="545"
+                  loading="eager"
+                  className="w-full h-auto rounded-lg"
+                />
+                <div className="mt-6 space-y-3">
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature1')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature2')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature3')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature4')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature5')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <X className="w-5 h-5 text-destructive" />
+                     <span className="text-foreground">{t('comparison.without.feature6')}</span>
+                   </div>
                 </div>
               </div>
-            )}
+            </div>
+
+            {/* Automation ON */}
+            <div 
+              className="space-y-6 transition-all duration-300"
+              style={{
+                opacity: showAutomated ? 1 : 0,
+                pointerEvents: showAutomated ? 'auto' : 'none',
+                transform: showAutomated ? 'translateX(0)' : 'translateX(20px)'
+              }}
+            >
+              <div className="flex items-center gap-3 mb-6 justify-center">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Check className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-foreground">{t('comparison.with.title')}</h3>
+                  <p className="text-muted-foreground">{t('comparison.with.subtitle')}</p>
+                </div>
+              </div>
+              
+              <div className="bg-card rounded-xl p-6 border border-border shadow-lg">
+                <img 
+                  src="/lovable-uploads/6adf596e-2d5c-4bf8-b8a3-472cbdb6b045.png" 
+                  alt="Automation ON - Streamlined processes"
+                  width="1381"
+                  height="545"
+                  loading="eager"
+                  className="w-full h-auto rounded-lg"
+                />
+                <div className="mt-6 space-y-3">
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature1')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature2')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature3')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature4')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature5')}</span>
+                   </div>
+                   <div className="flex items-center gap-3">
+                     <Check className="w-5 h-5 text-primary" />
+                     <span className="text-foreground">{t('comparison.with.feature6')}</span>
+                   </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -166,7 +178,7 @@ const AutomationComparison = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
+            {useMemo(() => [
               { icon: Clock, key: 'time' },
               { icon: TrendingUp, key: 'efficiency' },
               { icon: Target, key: 'accuracy' },
@@ -200,7 +212,7 @@ const AutomationComparison = () => {
                   </div>
                 </div>
               );
-            })}
+            }), [t])}
           </div>
         </div>
 
