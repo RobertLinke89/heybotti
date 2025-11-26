@@ -1,45 +1,17 @@
-import { Menu, X, CalendarIcon, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
-import { z } from 'zod';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { format } from 'date-fns';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Calendar } from '@/components/ui/calendar';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
-
-interface CallbackFormData {
-  name: string;
-  email: string;
-  phone: string;
-}
-
-const timeSlots = [
-  '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-  '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-  '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'
-];
 
 const Header = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCallbackDialogOpen, setIsCallbackDialogOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState<Date>();
-  const [selectedTime, setSelectedTime] = useState<string>();
-  const [isJoiningTeam, setIsJoiningTeam] = useState(false);
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<CallbackFormData>();
-  const { toast } = useToast();
 
   const services = [
     { id: 'sales-marketing', key: 'sales' },
@@ -52,102 +24,6 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleJoinTeam = async () => {
-    const email = prompt(t('process.cta.joinTeam.emailPrompt'));
-    
-    if (!email) return;
-    
-    // Validate email with Zod
-    const emailSchema = z.string().trim().email();
-    try {
-      emailSchema.parse(email);
-    } catch {
-      toast({
-        title: t('process.cta.joinTeam.error'),
-        description: t('process.cta.joinTeam.invalidEmail'),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsJoiningTeam(true);
-    
-    try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      
-      const { error } = await supabase.functions.invoke('send-team-join-email', {
-        body: { email }
-      });
-
-      if (error) throw error;
-
-      toast({
-        title: t('process.cta.joinTeam.success'),
-        description: t('process.cta.joinTeam.checkEmail'),
-      });
-    } catch (error) {
-      if (import.meta.env.DEV) {
-        console.error('Error sending team join email:', error);
-      }
-      toast({
-        title: t('process.cta.joinTeam.error'),
-        description: t('process.cta.joinTeam.tryAgain'),
-        variant: "destructive",
-      });
-    } finally {
-      setIsJoiningTeam(false);
-    }
-  };
-
-  const handleCallbackSubmit = async (data: CallbackFormData) => {
-    if (!selectedDate || !selectedTime) {
-      toast({
-        title: t('callback.error.title'),
-        description: t('callback.error.description'),
-        variant: "destructive"
-      });
-      return;
-    }
-
-    try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      
-      const response = await supabase.functions.invoke('send-contact-email', {
-        body: {
-          type: 'callback',
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          date: format(selectedDate, 'dd.MM.yyyy'),
-          time: selectedTime
-        }
-      });
-
-      if (response.error) {
-        throw new Error(response.error.message);
-      }
-
-      toast({
-        title: t('callback.success.title'),
-        description: t('callback.success.description').replace('{date}', format(selectedDate, 'dd.MM.yyyy')).replace('{time}', selectedTime),
-      });
-      
-      reset();
-      setSelectedDate(undefined);
-      setSelectedTime(undefined);
-      setIsCallbackDialogOpen(false);
-    } catch (error) {
-      if (import.meta.env.DEV) {
-        console.error('Error sending callback request:', error);
-      }
-      toast({
-        title: "Fehler",
-        description: "Die Rückruf-Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
-        variant: "destructive"
-      });
-    }
   };
 
   return (
@@ -252,32 +128,12 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-2">
             <LanguageSwitch />
             <Button
-              variant="secondary"
-              size="default"
-              onClick={handleJoinTeam}
-              disabled={isJoiningTeam}
-              className="px-4 py-2 text-sm font-medium border-2 border-primary"
-            >
-              {isJoiningTeam ? t('process.cta.joinTeam.sending') : t('process.cta.joinTeam.button')}
-            </Button>
-            <Button
               variant="default"
               size="default"
-              onClick={() => {
-                const projectForm = document.getElementById('project-form');
-                if (projectForm) {
-                  projectForm.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  navigate('/');
-                  setTimeout(() => {
-                    const form = document.getElementById('project-form');
-                    form?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }
-              }}
-              className="px-4 py-2 text-sm font-medium"
+              onClick={() => navigate('/auth')}
+              className="px-6 py-2 text-sm font-medium"
             >
-              {t('nav.request.project')}
+              Login
             </Button>
           </div>
 
@@ -367,6 +223,21 @@ const Header = () => {
             >
               {t('nav.about')}
             </button>
+            
+            {/* Mobile Login Button */}
+            <div className="pt-4 border-t border-border mt-4">
+              <Button
+                variant="default"
+                size="default"
+                onClick={() => {
+                  navigate('/auth');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="w-full"
+              >
+                Login
+              </Button>
+            </div>
           </nav>
         </div>
       </div>
