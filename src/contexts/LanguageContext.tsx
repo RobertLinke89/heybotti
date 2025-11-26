@@ -1302,8 +1302,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.request.project': 'Projekt anfragen',
     'header.cta': 'Anrufen',
 
-    'hero.title': 'Alles in Ihrem Unternehmen läuft',
-    'hero.title.highlight': 'automatisch',
+    'hero.title': 'Mehr Zeit für Ideen, weniger für',
+    'hero.title.highlight': 'Papierkram',
     'hero.subtitle': 'Wir automatisieren die Prozesse, die Teams verlangsamen – damit Sie mit Klarheit, Geschwindigkeit und einem ruhigen, vorhersehbaren Workflow arbeiten können.',
     'hero.cta': 'Termin buchen',
     'hero.cta.secondary': 'So funktioniert es',
