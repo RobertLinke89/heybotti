@@ -204,6 +204,35 @@ const AutomationComparison = () => {
           </div>
         </div>
 
+        {/* Customer Testimonial */}
+        <div className="mt-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl p-8 lg:p-12 border border-primary/20 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/5 rounded-full translate-y-12 -translate-x-12"></div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <div className="mb-8">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{t('comparison.testimonial.title')}</h3>
+              <p className="text-primary font-medium">{t('comparison.testimonial.subtitle')}</p>
+            </div>
+            <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
+              "{t('comparison.testimonial.quote')}"
+            </blockquote>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">V</span>
+              </div>
+              <div className="text-left">
+                <cite className="text-foreground font-bold text-lg block">
+                  {t('comparison.testimonial.name')}
+                </cite>
+                <span className="text-muted-foreground">{t('comparison.testimonial.company')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Process Steps Section */}
         <div className="mt-16 max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -289,35 +318,6 @@ const AutomationComparison = () => {
                     {t('process.step4.subtitle')}
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Customer Testimonial */}
-        <div className="mt-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl p-8 lg:p-12 border border-primary/20 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/5 rounded-full translate-y-12 -translate-x-12"></div>
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <div className="mb-8">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Check className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{t('comparison.testimonial.title')}</h3>
-              <p className="text-primary font-medium">{t('comparison.testimonial.subtitle')}</p>
-            </div>
-            <blockquote className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
-              "{t('comparison.testimonial.quote')}"
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">V</span>
-              </div>
-              <div className="text-left">
-                <cite className="text-foreground font-bold text-lg block">
-                  {t('comparison.testimonial.name')}
-                </cite>
-                <span className="text-muted-foreground">{t('comparison.testimonial.company')}</span>
               </div>
             </div>
           </div>
