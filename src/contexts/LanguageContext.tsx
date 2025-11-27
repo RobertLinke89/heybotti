@@ -1395,7 +1395,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'cta.button': 'Anrufen',
     'cta.note': 'Kein Verkaufsgespräch – nur echtes Interesse an deiner Situation.',
 
-    'footer.description': 'Läuft automatisch',
+    'footer.description': 'Mit uns läufts automatisch.',
     'footer.copyright': '© 2024 HeyBotti. Alle Rechte vorbehalten.',
 
     'jobs.cta.title': 'Werde Teil unseres',
