@@ -1302,8 +1302,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'nav.request.project': 'Projekt anfragen',
     'header.cta': 'Anrufen',
 
-    'hero.title': 'Mehr Zeit für Ideen, weniger für',
-    'hero.title.highlight': 'Papierkram',
+    'hero.title': 'Mehr Zeit für deine Ideen – und weniger für',
+    'hero.title.highlight': 'den Papierkram.',
     'hero.subtitle': 'Wir automatisieren die Prozesse, die Teams verlangsamen – damit du mit Klarheit, Geschwindigkeit und einem ruhigen, vorhersehbaren Workflow arbeiten kannst.',
     'hero.cta': 'Termin buchen',
     'hero.cta.secondary': 'So funktioniert es',
@@ -1426,7 +1426,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'booking.validation.error': 'Validierungsfehler',
 
     'comparison.title': 'Vom Manuellen Chaos zum',
-    'comparison.title.highlight': 'Mühelosen Fluss.',
+    'comparison.title.highlight': 'Mühelosen Flow.',
     'comparison.subtitle': 'Sieh selbst, wie Automatisierung deine Prozesse transformiert',
     'comparison.off.title': 'botti AUS',
     'comparison.on.title': 'botti AN',
