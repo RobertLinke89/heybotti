@@ -1307,7 +1307,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'hero.subtitle': 'Wir automatisieren die Prozesse, die Teams verlangsamen – damit du mit Klarheit, Geschwindigkeit und einem ruhigen, vorhersehbaren Workflow arbeiten kannst.',
     'hero.cta': 'Termin buchen',
     'hero.cta.secondary': 'So funktioniert es',
-    'hero.cta.mobile': 'Termin buchen',
+    'hero.cta.mobile': 'Anrufen',
 
     'services.title': 'Top-Bereiche für maximale',
     'services.title.highlight': 'Hebelwirkung',
