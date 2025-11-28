@@ -188,10 +188,23 @@ type TranslationKey =
   | 'about.page.title'
   | 'about.page.badge'
   | 'about.page.back'
-  | 'about.page.content1'
-  | 'about.page.content2'
-  | 'about.page.content3'
-  | 'about.page.cooperative'
+  | 'about.page.intro1'
+  | 'about.page.intro2'
+  | 'about.page.intro3'
+  | 'about.page.challenges.title'
+  | 'about.page.challenge1'
+  | 'about.page.challenge2'
+  | 'about.page.challenge3'
+  | 'about.page.challenge4'
+  | 'about.page.challenge5'
+  | 'about.page.belief'
+  | 'about.page.vision1'
+  | 'about.page.vision2'
+  | 'about.page.freedom1'
+  | 'about.page.freedom2'
+  | 'about.page.freedom3'
+  | 'about.page.closing'
+  | 'about.page.mission'
   | 'about.page.cta.title'
   | 'about.page.cta.subtitle'
   | 'about.page.cta.button'
@@ -819,16 +832,29 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'comparison.process.subtitle': 'Our structured approach for sustainable automation solutions',
 
     // About Page
-    'about.page.title': 'About Us',
-    'about.page.badge': '100% Remote Company',
+    'about.page.title': 'Why Automation Is Critical Now',
+    'about.page.badge': 'Our Vision',
     'about.page.back': 'Back to Homepage',
-    'about.page.content1': "We are Team botti – a community of automation experts who rethink efficiency. With intelligent automation solutions, we create sustainable relief instead of just acceleration. Our focus: real added value in everyday life – individually adapted, holistically conceived and always with a view to processes, people and potentials.\n\nHeyBotti Automation eG is the cooperative for smart process automation. We combine modern technologies such as artificial intelligence, API integrations and workflow automation into scalable solutions that save time, minimize errors and stabilize workflows.",
-    'about.page.content2': "We rely on transparency, clear language and partnership-based cooperation. From the first workshop to implementation, we deliver quickly tangible results and build future-proof structures that grow with our clients.\n\nOur strength lies in synergy: We combine technical precision, human-centered design and the highest data protection standards so that you can focus on your core business again. As a member, you benefit from the combined know-how of our cooperative and a shared development platform that seamlessly integrates automation into existing systems – from CRM and accounting to individual interface solutions.",
-    'about.page.content3': "With an agile mindset, smart tools and a focus on what matters, we create digital solutions that really work – for more creative freedom, productive teams and real joy at work.\n\nOur goal: Processes that move themselves, and people who can focus on what really matters.\n\nHeyBotti eG – Automation by principle. Community by conviction.",
-    'about.page.cooperative': "The cooperative principle, or the principle of a cooperative, basically refers to the idea that a cooperative organization is owned and run by its members, who actively participate in its decision-making. The main principles include voluntary and open membership, democratic member control, member economic participation, autonomy and independence, education and training, cooperation among cooperatives, and concern for community.",
-    'about.page.cta.title': 'Ready to Transform Your Business?',
-    'about.page.cta.subtitle': "Let's discuss how we can automate your processes and boost your efficiency.",
-    'about.page.cta.button': 'Get Started',
+    'about.page.intro1': 'In an era where innovation cycles are getting shorter and business complexity is constantly rising, many German companies face the same challenge: too much manual work, too little time for what truly matters. Skills shortages, inefficient processes, rising cost pressures, and noticeable overwhelm from administrative tasks hold back small and medium-sized businesses especially – the very companies that form the backbone of our economy.',
+    'about.page.intro2': 'But at HeyBotti, we believe that every business – regardless of size or industry – deserves the opportunity to focus on what really counts: people, ideas, and value creation.',
+    'about.page.intro3': 'Automation is not a cold technology promise. It is a tool of liberation. It gives teams their energy back, reduces errors, creates transparency, and opens up new creative spaces. When routine processes no longer drain energy, space emerges for innovation, quality, and growth.',
+    'about.page.challenges.title': 'Many companies still struggle with:',
+    'about.page.challenge1': 'Overworked employees spending too much time on repetitive tasks',
+    'about.page.challenge2': 'Fragmented systems and lack of overview',
+    'about.page.challenge3': 'Rising personnel costs amid skilled labor shortages',
+    'about.page.challenge4': 'Slow, paper-heavy processes',
+    'about.page.challenge5': 'The fear that digitalization is expensive, complicated, or "not for us"',
+    'about.page.belief': 'But this is exactly where our idealism begins.',
+    'about.page.vision1': 'We believe in an economy where technology is human, intuitive, accessible – and helps every business get the best out of itself. An economy where people are not bound by processes, but empowered by automation. An economy where time becomes valuable again.',
+    'about.page.vision2': 'HeyBotti stands for a future where automation creates not just efficiency, but freedom.',
+    'about.page.freedom1': 'Freedom to focus on visions.',
+    'about.page.freedom2': 'Freedom to relieve employees and unlock potential.',
+    'about.page.freedom3': 'Freedom to stay one step ahead as a company.',
+    'about.page.closing': 'We see automation not as a trend, but as a breakthrough – toward a new form of working that is more human, sustainable, and future-proof.',
+    'about.page.mission': 'And that is exactly what we work for every day.',
+    'about.page.cta.title': 'Ready for the Breakthrough?',
+    'about.page.cta.subtitle': "Let's create space together for what truly matters.",
+    'about.page.cta.button': 'Schedule a Conversation',
 
     // Jobs Page
     'jobs.page.title': 'Open Positions',
@@ -1464,16 +1490,29 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'comparison.process.title': 'Wie wir vorgehen',
     'comparison.process.subtitle': 'Unser strukturierter Ansatz für nachhaltige Automatisierungslösungen',
 
-    'about.page.title': 'Über uns',
-    'about.page.badge': '100 % Remote Unternehmen',
+    'about.page.title': 'Warum Automatisierung jetzt entscheidend ist',
+    'about.page.badge': 'Unsere Vision',
     'about.page.back': 'Zurück zur Startseite',
-    'about.page.content1': "Wir sind Team botti – eine Gemeinschaft von Automatisierungsexperten, die Effizienz neu denken. Mit intelligenten Automatisierungslösungen schaffen wir nachhaltige Entlastung statt nur Beschleunigung. Unser Fokus: echter Mehrwert im Alltag – individuell angepasst, ganzheitlich gedacht und immer mit Blick auf Prozesse, Menschen und Potenziale.\n\nHeyBotti Automation eG ist die Genossenschaft für smarte Prozessautomatisierung. Wir verbinden moderne Technologien wie künstliche Intelligenz, API-Integrationen und Workflow-Automatisierung zu skalierbaren Lösungen, die Zeit sparen, Fehler minimieren und Abläufe stabilisieren.",
-    'about.page.content2': "Wir setzen auf Transparenz, klare Sprache und partnerschaftliche Zusammenarbeit. Vom ersten Workshop bis zur Umsetzung liefern wir schnell greifbare Ergebnisse und bauen zukunftssichere Strukturen, die mit unseren Kunden wachsen.\n\nUnsere Stärke liegt in der Synergie: Wir verbinden technische Präzision, nutzerzentriertes Design und höchste Datenschutzstandards, damit du dich wieder auf dein Kerngeschäft konzentrieren kannst. Als Mitglied profitierst du vom gebündelten Know-how unserer Genossenschaft und einer gemeinsamen Entwicklungsplattform, die Automatisierung nahtlos in bestehende Systeme integriert – von CRM und Buchhaltung bis zu individuellen Schnittstellenlösungen.",
-    'about.page.content3': "Mit agilem Mindset, smarten Tools und Fokus auf das Wesentliche schaffen wir digitale Lösungen, die wirklich funktionieren – für mehr kreative Freiheit, produktive Teams und echte Freude an der Arbeit.\n\nUnser Ziel: Prozesse, die sich selbst bewegen, und Menschen, die sich auf das Wesentliche konzentrieren können.\n\nHeyBotti eG – Automatisierung aus Prinzip. Gemeinschaft aus Überzeugung.",
-    'about.page.cooperative': 'Das Genossenschaftsprinzip bezieht sich grundsätzlich auf die Idee, dass eine genossenschaftliche Organisation ihren Mitgliedern gehört und von diesen geführt wird, die aktiv an der Entscheidungsfindung teilnehmen. Die Hauptprinzipien umfassen freiwillige und offene Mitgliedschaft, demokratische Mitgliederkontrolle, wirtschaftliche Beteiligung der Mitglieder, Autonomie und Unabhängigkeit, Bildung und Training, Zusammenarbeit zwischen Genossenschaften und Sorge für die Gemeinschaft.',
-    'about.page.cta.title': 'Bereit, dein Unternehmen zu transformieren?',
-    'about.page.cta.subtitle': 'Lass uns besprechen, wie wir deine Prozesse automatisieren und deine Effizienz steigern können.',
-    'about.page.cta.button': 'Loslegen',
+    'about.page.intro1': 'In einer Zeit, in der Innovationszyklen immer kürzer werden und die Komplexität im Geschäftsalltag stetig steigt, stehen viele deutsche Unternehmen vor derselben Herausforderung: zu viel manuelle Arbeit, zu wenig Zeit für das Wesentliche. Fachkräftemangel, ineffiziente Prozesse, steigender Kostendruck und eine spürbare Überforderung durch administrative Aufgaben bremsen insbesondere kleine und mittelständische Unternehmen aus – genau jene Betriebe, die das Rückgrat unserer Wirtschaft bilden.',
+    'about.page.intro2': 'Doch wir bei HeyBotti glauben daran, dass jeder Betrieb – unabhängig von Größe oder Branche – die Chance verdient, sich auf das zu konzentrieren, was wirklich zählt: Menschen, Ideen und Wertschöpfung.',
+    'about.page.intro3': 'Automatisierung ist dabei kein kaltes Technologieversprechen. Sie ist ein Werkzeug der Befreiung. Sie gibt Teams ihre Energie zurück, reduziert Fehler, schafft Transparenz und eröffnet neue kreative Räume. Wenn Routineprozesse nicht mehr Kraft kosten, entsteht Platz für Innovation, Qualität und Wachstum.',
+    'about.page.challenges.title': 'Viele Unternehmen kämpfen noch immer mit:',
+    'about.page.challenge1': 'Überlasteten Mitarbeitenden, die zu viel Zeit mit repetitiven Aufgaben verbringen',
+    'about.page.challenge2': 'Fragmentierten Systemen und fehlender Übersicht',
+    'about.page.challenge3': 'Steigenden Personalkosten bei gleichzeitigem Fachkräftemangel',
+    'about.page.challenge4': 'Langsamen, papierlastigen Abläufen',
+    'about.page.challenge5': 'Der Angst, dass Digitalisierung teuer, kompliziert oder „nichts für uns" sei',
+    'about.page.belief': 'Doch genau hier beginnt unser Idealismus.',
+    'about.page.vision1': 'Wir glauben an eine Wirtschaft, in der Technologie menschlich ist, intuitiv, zugänglich – und jedem Unternehmen hilft, das Beste aus sich herauszuholen. Eine Wirtschaft, in der Menschen nicht durch Prozesse gebunden sind, sondern durch Automatisierung gestärkt werden. Eine Wirtschaft, in der Zeit wieder wertvoll wird.',
+    'about.page.vision2': 'HeyBotti steht für eine Zukunft, in der Automatisierung nicht nur Effizienz schafft, sondern Freiheit.',
+    'about.page.freedom1': 'Freiheit, sich auf Visionen zu konzentrieren.',
+    'about.page.freedom2': 'Freiheit, Mitarbeiter zu entlasten und Potenziale zu entfalten.',
+    'about.page.freedom3': 'Freiheit, als Unternehmen wieder einen Schritt voraus zu sein.',
+    'about.page.closing': 'Wir sehen Automation nicht als Trend, sondern als Aufbruch – hin zu einer neuen Form des Arbeitens, die menschlicher, nachhaltiger und zukunftsfähiger ist.',
+    'about.page.mission': 'Und genau dafür gehen wir jeden Tag los.',
+    'about.page.cta.title': 'Bereit für den Aufbruch?',
+    'about.page.cta.subtitle': 'Lass uns gemeinsam Freiräume für das Wesentliche schaffen.',
+    'about.page.cta.button': 'Gespräch vereinbaren',
 
     'jobs.page.title': 'Offene Stellen',
     'jobs.page.back': 'Zurück zur Startseite',
