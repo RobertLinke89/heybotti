@@ -4,7 +4,7 @@ import { Phone, Mail, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Slider } from "@/components/ui/slider";
+
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -19,8 +19,6 @@ interface FormData {
 }
 
 const ProjectForm = () => {
-  const [budget, setBudget] = useState([10000]);
-  const [savings, setSavings] = useState([50000]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const { toast } = useToast();
   const { t } = useLanguage();
@@ -49,8 +47,8 @@ const ProjectForm = () => {
           company: validatedData.company || null,
           phone: validatedData.phone || null,
           message: validatedData.message,
-          budget: budget[0],
-          revenue: savings[0]
+          budget: 0,
+          revenue: 0
         });
 
       if (dbError) {
@@ -65,9 +63,7 @@ const ProjectForm = () => {
           email: validatedData.email,
           company: validatedData.company,
           phone: validatedData.phone,
-          message: validatedData.message,
-          budget: budget[0],
-          revenue: savings[0]
+          message: validatedData.message
         }
       });
 
@@ -84,8 +80,6 @@ const ProjectForm = () => {
       });
       
       reset();
-      setBudget([10000]);
-      setSavings([50000]);
     } catch (error) {
       if (import.meta.env.DEV) {
         console.error('Error submitting form:', error);
@@ -96,11 +90,6 @@ const ProjectForm = () => {
         variant: "destructive"
       });
     }
-  };
-
-  const formatBudget = (value: number) => {
-    if (value < 1000) return `${value}€`;
-    return `${Math.round(value / 1000)}k€`;
   };
 
   return (
@@ -174,53 +163,6 @@ const ProjectForm = () => {
                   placeholder={t('form.phone.placeholder')}
                   type="tel"
                 />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                <span className="text-primary">💰</span> {t('form.revenue')}: <span className="text-primary font-bold">{formatBudget(savings[0])}</span>
-              </label>
-              <div className="px-4 py-6 bg-primary/5 rounded-lg border border-primary/10">
-                <Slider
-                  value={savings}
-                  onValueChange={setSavings}
-                  max={500000}
-                  min={10000}
-                  step={10000}
-                  className="w-full"
-                />
-                <div className="flex justify-between text-sm text-muted-foreground mt-2 font-raleway">
-                  <span>10k€</span>
-                  <span>100k€</span>
-                  <span>250k€</span>
-                  <span>500k€+</span>
-                </div>
-                <p className="text-xs text-primary mt-3 font-raleway text-center">
-                  {t('form.revenue.note')}
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2 font-raleway">
-                {t('form.budget')}: {formatBudget(budget[0])}
-              </label>
-              <div className="px-4 py-6">
-                <Slider
-                  value={budget}
-                  onValueChange={setBudget}
-                  max={50000}
-                  min={1000}
-                  step={1000}
-                  className="w-full"
-                />
-                <div className="flex justify-between text-sm text-muted-foreground mt-2 font-raleway">
-                  <span>1k€</span>
-                  <span>15k€</span>
-                  <span>30k€</span>
-                  <span>50k€</span>
-                </div>
               </div>
             </div>
 
