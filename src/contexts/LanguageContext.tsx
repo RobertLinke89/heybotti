@@ -1872,7 +1872,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'pricing.title': 'Transparente',
     'pricing.title.highlight': 'Preisgestaltung',
     'pricing.subtitle': 'Wählen Sie die Anzahl der zu automatisierenden Tools – je mehr, desto günstiger',
-    'pricing.button': 'Beratungsgespräch buchen',
+    'pricing.button': 'Projekt anfragen',
     'pricing.tool.title': 'Wir automatisieren Ihre Plattformen und Systeme',
     'pricing.tool.description': 'Professionelle Prozessautomatisierung für Ihr Unternehmen',
     'pricing.tool.selectLabel': 'Anzahl der zu automatisierenden Systeme',
