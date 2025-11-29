@@ -1884,7 +1884,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'pricing.tool.feature1': 'Umfassende Prozessanalyse und Bedarfsermittlung',
     'pricing.tool.feature2': 'Maßgeschneiderte Automatisierungslösungen für Ihre Tools',
     'pricing.tool.feature3': 'Professionelle Integration in bestehende Systeme',
-    'pricing.tool.feature4': 'Complete Übergabe der entwickelten Infrastruktur',
+    'pricing.tool.feature4': 'Komplette Übergabe der entwickelten Infrastruktur',
     'pricing.tool.feature5': 'KI-gestützte Workflows und intelligente Optimierung',
     'pricing.tool.feature6': '12 Wochen Premium Support und Wartung',
     'pricing.tool.feature7': 'Schulung Ihres Teams und vollständige Dokumentation',
