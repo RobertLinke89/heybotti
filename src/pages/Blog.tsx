@@ -59,86 +59,6 @@ const Blog = () => {
       readTime: 20,
       category: 'Future Trends',
       featured: true
-    },
-    {
-      id: 7,
-      slug: 'automation-vision-value-creation',
-      date: '2024-03-05',
-      readTime: 18,
-      category: 'Strategy',
-      featured: true
-    },
-    {
-      id: 8,
-      slug: 'small-business-automation-advantages',
-      date: '2024-03-12',
-      readTime: 14,
-      category: 'Small Business',
-      featured: false
-    },
-    {
-      id: 9,
-      slug: 'repetitive-tasks-killing-growth',
-      date: '2024-03-19',
-      readTime: 16,
-      category: 'Productivity',
-      featured: false
-    },
-    {
-      id: 10,
-      slug: 'predictable-workflows-business-success',
-      date: '2024-03-26',
-      readTime: 15,
-      category: 'Operations',
-      featured: false
-    },
-    {
-      id: 11,
-      slug: 'automation-implementation-roadmap',
-      date: '2024-04-02',
-      readTime: 22,
-      category: 'Implementation',
-      featured: true
-    },
-    {
-      id: 12,
-      slug: 'manual-processes-opportunity-cost',
-      date: '2024-04-09',
-      readTime: 17,
-      category: 'Cost Analysis',
-      featured: false
-    },
-    {
-      id: 13,
-      slug: 'team-acceptance-automation-change',
-      date: '2024-04-16',
-      readTime: 19,
-      category: 'Change Management',
-      featured: false
-    },
-    {
-      id: 14,
-      slug: 'scaling-business-without-scaling-chaos',
-      date: '2024-04-23',
-      readTime: 16,
-      category: 'Growth',
-      featured: true
-    },
-    {
-      id: 15,
-      slug: 'automation-clarity-decision-making',
-      date: '2024-04-30',
-      readTime: 14,
-      category: 'Strategy',
-      featured: false
-    },
-    {
-      id: 16,
-      slug: 'essential-freedom-business-automation',
-      date: '2024-05-07',
-      readTime: 20,
-      category: 'Philosophy',
-      featured: true
     }
   ];
 
@@ -295,7 +215,16 @@ const Blog = () => {
             <p className="text-muted-foreground mb-6">
               {t('blog.cta.subtitle')}
             </p>
-            <Button onClick={() => navigate('/')} size="lg">
+            <Button 
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const bookingSection = document.getElementById('booking-section');
+                  bookingSection?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }} 
+              size="lg"
+            >
               {t('blog.cta.button')}
             </Button>
           </div>

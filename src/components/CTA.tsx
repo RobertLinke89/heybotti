@@ -9,12 +9,10 @@ const CTA = () => {
   const location = useLocation();
 
   const handleClick = () => {
-    // If we're already on the homepage, just scroll to booking section
     if (location.pathname === '/') {
       const bookingSection = document.getElementById('booking-section');
       bookingSection?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Navigate to homepage and scroll to booking section
       navigate('/');
       setTimeout(() => {
         const bookingSection = document.getElementById('booking-section');
