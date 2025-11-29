@@ -18,17 +18,27 @@ const BlogArticle = () => {
     'breaking-too-small-myth': { id: 3, date: '2024-01-29', readTime: 14 },
     'hidden-costs-manual-processes': { id: 4, date: '2024-02-05', readTime: 18 },
     'automation-without-overwhelm': { id: 5, date: '2024-02-12', readTime: 16 },
-    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 20 },
-    'automation-vision-value-creation': { id: 7, date: '2024-03-05', readTime: 18 },
-    'small-business-automation-advantages': { id: 8, date: '2024-03-12', readTime: 14 },
-    'repetitive-tasks-killing-growth': { id: 9, date: '2024-03-19', readTime: 16 },
-    'predictable-workflows-business-success': { id: 10, date: '2024-03-26', readTime: 15 },
-    'automation-implementation-roadmap': { id: 11, date: '2024-04-02', readTime: 22 },
-    'manual-processes-opportunity-cost': { id: 12, date: '2024-04-09', readTime: 17 },
-    'team-acceptance-automation-change': { id: 13, date: '2024-04-16', readTime: 19 },
-    'scaling-business-without-scaling-chaos': { id: 14, date: '2024-04-23', readTime: 16 },
-    'automation-clarity-decision-making': { id: 15, date: '2024-04-30', readTime: 14 },
-    'essential-freedom-business-automation': { id: 16, date: '2024-05-07', readTime: 20 }
+    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 20 }
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: t(`blog.article${article.id}.title`),
+      text: t(`blog.article${article.id}.excerpt`),
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        // You could add a toast notification here
+        alert('Link copied to clipboard!');
+      }
+    } catch (err) {
+      console.error('Error sharing:', err);
+    }
   };
 
   const article = useMemo(() => 
@@ -102,7 +112,7 @@ const BlogArticle = () => {
             </p>
 
             <div className="flex items-center gap-4 pt-4">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
                 Share Article
               </Button>
@@ -138,30 +148,6 @@ const BlogArticle = () => {
           </div>
         </div>
       </article>
-
-      {/* Article Footer */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-card rounded-lg border border-border p-8 text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Discover how automation can streamline your operations and boost productivity. 
-              Get expert guidance tailored to your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => navigate('/')} size="lg">
-                Request Free Consultation
-              </Button>
-              <Button onClick={() => navigate('/blog')} variant="outline" size="lg">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                More Articles
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
