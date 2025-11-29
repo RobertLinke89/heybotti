@@ -1303,7 +1303,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'hero.title': 'Mehr Zeit für Ideen,',
     'hero.title.highlight': 'weniger für Papierkram.',
     'hero.subtitle': 'Wir automatisieren die Prozesse, die Teams verlangsamen – damit du mit Klarheit, Geschwindigkeit und einem ruhigen, vorhersehbaren Workflow arbeiten kannst.',
-    'hero.cta': 'Termin buchen',
+    'hero.cta': 'Projekt anfragen',
     'hero.cta.secondary': 'So funktioniert es',
     'hero.cta.mobile': 'Anrufen',
 
@@ -1400,7 +1400,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'jobs.cta.title.highlight': 'Teams',
     'jobs.cta.subtitle': 'Wir suchen Ingenieure, Automatisierungsspezialisten und Designer, die Wert auf Klarheit, Effizienz und sinnvolle Arbeit legen.',
     'jobs.cta.button': 'Offene Stellen ansehen',
-    'jobs.cta.button.secondary': 'Meeting buchen',
+    'jobs.cta.button.secondary': 'Projekt anfragen',
 
     // Booking Section (DE)
     'booking.title': 'Dein Automation Check',
