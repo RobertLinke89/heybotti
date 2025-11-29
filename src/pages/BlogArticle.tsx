@@ -13,12 +13,22 @@ const BlogArticle = () => {
   const { t } = useLanguage();
 
   const articles = {
-    'roi-automation-small-business': { id: 1, date: '2024-01-15', readTime: 8 },
-    'five-processes-automate-first': { id: 2, date: '2024-01-22', readTime: 10 },
-    'breaking-too-small-myth': { id: 3, date: '2024-01-29', readTime: 12 },
-    'hidden-costs-manual-processes': { id: 4, date: '2024-02-05', readTime: 15 },
-    'automation-without-overwhelm': { id: 5, date: '2024-02-12', readTime: 14 },
-    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 18 }
+    'roi-automation-small-business': { id: 1, date: '2024-01-15', readTime: 12 },
+    'five-processes-automate-first': { id: 2, date: '2024-01-22', readTime: 15 },
+    'breaking-too-small-myth': { id: 3, date: '2024-01-29', readTime: 14 },
+    'hidden-costs-manual-processes': { id: 4, date: '2024-02-05', readTime: 18 },
+    'automation-without-overwhelm': { id: 5, date: '2024-02-12', readTime: 16 },
+    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 20 },
+    'automation-vision-value-creation': { id: 7, date: '2024-03-05', readTime: 18 },
+    'small-business-automation-advantages': { id: 8, date: '2024-03-12', readTime: 14 },
+    'repetitive-tasks-killing-growth': { id: 9, date: '2024-03-19', readTime: 16 },
+    'predictable-workflows-business-success': { id: 10, date: '2024-03-26', readTime: 15 },
+    'automation-implementation-roadmap': { id: 11, date: '2024-04-02', readTime: 22 },
+    'manual-processes-opportunity-cost': { id: 12, date: '2024-04-09', readTime: 17 },
+    'team-acceptance-automation-change': { id: 13, date: '2024-04-16', readTime: 19 },
+    'scaling-business-without-scaling-chaos': { id: 14, date: '2024-04-23', readTime: 16 },
+    'automation-clarity-decision-making': { id: 15, date: '2024-04-30', readTime: 14 },
+    'essential-freedom-business-automation': { id: 16, date: '2024-05-07', readTime: 20 }
   };
 
   const article = useMemo(() => 

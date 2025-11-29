@@ -16,7 +16,7 @@ const Blog = () => {
       id: 1,
       slug: 'roi-automation-small-business',
       date: '2024-01-15',
-      readTime: 8,
+      readTime: 12,
       category: 'ROI & Strategy',
       featured: true
     },
@@ -24,7 +24,7 @@ const Blog = () => {
       id: 2,
       slug: 'five-processes-automate-first',
       date: '2024-01-22',
-      readTime: 10,
+      readTime: 15,
       category: 'Implementation',
       featured: false
     },
@@ -32,7 +32,7 @@ const Blog = () => {
       id: 3,
       slug: 'breaking-too-small-myth',
       date: '2024-01-29',
-      readTime: 12,
+      readTime: 14,
       category: 'Small Business',
       featured: true
     },
@@ -40,7 +40,7 @@ const Blog = () => {
       id: 4,
       slug: 'hidden-costs-manual-processes',
       date: '2024-02-05',
-      readTime: 15,
+      readTime: 18,
       category: 'Cost Analysis',
       featured: false
     },
@@ -48,7 +48,7 @@ const Blog = () => {
       id: 5,
       slug: 'automation-without-overwhelm',
       date: '2024-02-12',
-      readTime: 14,
+      readTime: 16,
       category: 'Getting Started',
       featured: false
     },
@@ -56,8 +56,88 @@ const Blog = () => {
       id: 6,
       slug: 'future-proofing-automation-trends',
       date: '2024-02-19',
-      readTime: 18,
+      readTime: 20,
       category: 'Future Trends',
+      featured: true
+    },
+    {
+      id: 7,
+      slug: 'automation-vision-value-creation',
+      date: '2024-03-05',
+      readTime: 18,
+      category: 'Strategy',
+      featured: true
+    },
+    {
+      id: 8,
+      slug: 'small-business-automation-advantages',
+      date: '2024-03-12',
+      readTime: 14,
+      category: 'Small Business',
+      featured: false
+    },
+    {
+      id: 9,
+      slug: 'repetitive-tasks-killing-growth',
+      date: '2024-03-19',
+      readTime: 16,
+      category: 'Productivity',
+      featured: false
+    },
+    {
+      id: 10,
+      slug: 'predictable-workflows-business-success',
+      date: '2024-03-26',
+      readTime: 15,
+      category: 'Operations',
+      featured: false
+    },
+    {
+      id: 11,
+      slug: 'automation-implementation-roadmap',
+      date: '2024-04-02',
+      readTime: 22,
+      category: 'Implementation',
+      featured: true
+    },
+    {
+      id: 12,
+      slug: 'manual-processes-opportunity-cost',
+      date: '2024-04-09',
+      readTime: 17,
+      category: 'Cost Analysis',
+      featured: false
+    },
+    {
+      id: 13,
+      slug: 'team-acceptance-automation-change',
+      date: '2024-04-16',
+      readTime: 19,
+      category: 'Change Management',
+      featured: false
+    },
+    {
+      id: 14,
+      slug: 'scaling-business-without-scaling-chaos',
+      date: '2024-04-23',
+      readTime: 16,
+      category: 'Growth',
+      featured: true
+    },
+    {
+      id: 15,
+      slug: 'automation-clarity-decision-making',
+      date: '2024-04-30',
+      readTime: 14,
+      category: 'Strategy',
+      featured: false
+    },
+    {
+      id: 16,
+      slug: 'essential-freedom-business-automation',
+      date: '2024-05-07',
+      readTime: 20,
+      category: 'Philosophy',
       featured: true
     }
   ];
