@@ -601,6 +601,7 @@ type TranslationKey =
   | 'pricing.tool.feature4'
   | 'pricing.tool.feature5'
   | 'pricing.tool.feature6'
+  | 'pricing.tool.feature7'
   // Blog
   | 'blog.title'
   | 'blog.subtitle'
@@ -1245,9 +1246,10 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'pricing.tool.feature1': 'Comprehensive process analysis and requirements assessment',
     'pricing.tool.feature2': 'Customized automation solutions for your tools',
     'pricing.tool.feature3': 'Professional integration into existing systems',
-    'pricing.tool.feature4': 'AI-powered workflows and intelligent optimization',
-    'pricing.tool.feature5': '12 weeks premium support and maintenance',
-    'pricing.tool.feature6': 'Team training and complete documentation',
+    'pricing.tool.feature4': 'Complete handover of developed infrastructure',
+    'pricing.tool.feature5': 'AI-powered workflows and intelligent optimization',
+    'pricing.tool.feature6': '12 weeks premium support and maintenance',
+    'pricing.tool.feature7': 'Team training and complete documentation',
 
     // Blog
     'blog.title': 'Blog',
@@ -1871,20 +1873,21 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'pricing.title.highlight': 'Preisgestaltung',
     'pricing.subtitle': 'Wählen Sie die Anzahl der zu automatisierenden Tools – je mehr, desto günstiger',
     'pricing.button': 'Beratungsgespräch buchen',
-    'pricing.tool.title': 'Tool-basierte Automatisierung',
+    'pricing.tool.title': 'Wir automatisieren Ihre Plattformen und Systeme',
     'pricing.tool.description': 'Professionelle Prozessautomatisierung für Ihr Unternehmen',
-    'pricing.tool.selectLabel': 'Anzahl der zu automatisierenden Tools',
-    'pricing.tool.tools': 'Tools',
+    'pricing.tool.selectLabel': 'Anzahl der zu automatisierenden Systeme',
+    'pricing.tool.tools': 'Systeme',
     'pricing.tool.discount': 'Rabatt',
-    'pricing.tool.perTool': 'pro Tool',
+    'pricing.tool.perTool': 'pro System',
     'pricing.tool.included': 'Im Preis enthalten',
-    'pricing.tool.note': 'Preise verstehen sich zzgl. MwSt. Individuelle Anpassungen auf Anfrage.',
+    'pricing.tool.note': 'Preise verstehen sich zzgl. MwSt.',
     'pricing.tool.feature1': 'Umfassende Prozessanalyse und Bedarfsermittlung',
     'pricing.tool.feature2': 'Maßgeschneiderte Automatisierungslösungen für Ihre Tools',
     'pricing.tool.feature3': 'Professionelle Integration in bestehende Systeme',
-    'pricing.tool.feature4': 'KI-gestützte Workflows und intelligente Optimierung',
-    'pricing.tool.feature5': '12 Wochen Premium Support und Wartung',
-    'pricing.tool.feature6': 'Schulung Ihres Teams und vollständige Dokumentation',
+    'pricing.tool.feature4': 'Complete Übergabe der entwickelten Infrastruktur',
+    'pricing.tool.feature5': 'KI-gestützte Workflows und intelligente Optimierung',
+    'pricing.tool.feature6': '12 Wochen Premium Support und Wartung',
+    'pricing.tool.feature7': 'Schulung Ihres Teams und vollständige Dokumentation',
 
     // Blog (DE placeholders)
     'blog.title': 'Blog',
