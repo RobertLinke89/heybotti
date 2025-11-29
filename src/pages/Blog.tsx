@@ -210,13 +210,13 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           <div className="bg-card rounded-lg border border-border p-8 text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4 font-raleway">
-              Ready to Implement Automation?
+              {t('blog.cta.title')}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Get personalized automation strategies for your business. Our experts are here to help you every step of the way.
+              {t('blog.cta.subtitle')}
             </p>
             <Button onClick={() => navigate('/')} size="lg">
-              Start Your Automation Journey
+              {t('blog.cta.button')}
             </Button>
           </div>
         </div>
