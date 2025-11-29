@@ -48,7 +48,8 @@ const Pricing = () => {
     return 0;
   };
 
-  const currentToolCount = parseInt(toolCount);
+  const isCustomPrice = toolCount === "10+";
+  const currentToolCount = isCustomPrice ? 10 : parseInt(toolCount);
   const totalPrice = calculatePrice(currentToolCount);
   const discount = getDiscount(currentToolCount);
   const pricePerTool = Math.round(totalPrice / currentToolCount);
@@ -96,23 +97,32 @@ const Pricing = () => {
                       {num} {t('pricing.tool.tools')}
                     </SelectItem>
                   ))}
+                  <SelectItem value="10+">10+ {t('pricing.tool.tools')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="text-center py-4 md:py-6 border-y border-border/50">
               <div className="space-y-1 md:space-y-2">
-                {discount > 0 && (
+                {!isCustomPrice && discount > 0 && (
                   <div className="inline-block bg-primary/10 text-primary px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-semibold mb-1 md:mb-2">
                     {discount}% {t('pricing.tool.discount')}
                   </div>
                 )}
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                  {totalPrice.toLocaleString('de-DE')}€
-                </div>
-                <div className="text-sm md:text-base text-muted-foreground">
-                  {pricePerTool}€ {t('pricing.tool.perTool')}
-                </div>
+                {isCustomPrice ? (
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground px-4">
+                    Preis auf Anfrage. Kontaktieren Sie uns.
+                  </div>
+                ) : (
+                  <>
+                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                      {totalPrice.toLocaleString('de-DE')}€
+                    </div>
+                    <div className="text-sm md:text-base text-muted-foreground">
+                      {pricePerTool}€ {t('pricing.tool.perTool')}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
 
