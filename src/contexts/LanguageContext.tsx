@@ -1484,7 +1484,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'about.page.mission': 'Und genau dafür gehen wir jeden Tag los.',
     'about.page.cta.title': 'Bereit für den Aufbruch?',
     'about.page.cta.subtitle': 'Lass uns gemeinsam Freiräume für das Wesentliche schaffen.',
-    'about.page.cta.button': 'Gespräch vereinbaren',
+    'about.page.cta.button': 'Projekt anfragen',
 
     'jobs.page.title': 'Offene Stellen',
     'jobs.page.back': 'Zurück zur Startseite',
