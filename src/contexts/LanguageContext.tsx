@@ -611,6 +611,9 @@ type TranslationKey =
   | 'blog.article.published'
   | 'blog.article.reading.time'
   | 'blog.article.min.read'
+  | 'blog.cta.title'
+  | 'blog.cta.subtitle'
+  | 'blog.cta.button'
   // Blog Articles
   | 'blog.article1.title'
   | 'blog.article1.excerpt'
@@ -1260,6 +1263,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.article.published': 'Published',
     'blog.article.reading.time': 'Reading time',
     'blog.article.min.read': 'min read',
+    'blog.cta.title': 'Ready to Implement Automation?',
+    'blog.cta.subtitle': 'Get personalized automation strategies for your business. Our experts are here to help you every step of the way.',
+    'blog.cta.button': 'Start Your Automation Journey',
 
     // Blog Articles
     'blog.article1.title': 'The ROI of Automation: Real Numbers for Small Businesses',
@@ -1898,6 +1904,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.article.published': 'Veröffentlicht',
     'blog.article.reading.time': 'Lesezeit',
     'blog.article.min.read': 'Min. Lesezeit',
+    'blog.cta.title': 'Bereit für Ihre Automatisierung?',
+    'blog.cta.subtitle': 'Erhalten Sie maßgeschneiderte Automatisierungsstrategien für Ihr Unternehmen. Unsere Experten stehen Ihnen bei jedem Schritt zur Seite.',
+    'blog.cta.button': 'Projekt anfragen',
 
     // Blog Artikel
     'blog.article1.title': 'Der ROI der Automatisierung: Echte Zahlen für kleine Unternehmen',
