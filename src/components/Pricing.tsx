@@ -63,30 +63,30 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing-section" className="py-20 px-6 bg-muted/30">
+    <section id="pricing-section" className="py-12 md:py-20 px-4 md:px-6 bg-muted/30">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-foreground">
             {t('pricing.title')} <span className="text-primary">{t('pricing.title.highlight')}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             {t('pricing.subtitle')}
           </p>
         </div>
 
         <Card className="border-primary/20 shadow-xl">
-          <CardHeader className="text-center pb-8">
-            <CardTitle className="text-3xl mb-2">{t('pricing.tool.title')}</CardTitle>
-            <CardDescription className="text-lg">{t('pricing.tool.description')}</CardDescription>
+          <CardHeader className="text-center pb-4 md:pb-8 px-4 md:px-6">
+            <CardTitle className="text-xl md:text-2xl lg:text-3xl mb-2">{t('pricing.tool.title')}</CardTitle>
+            <CardDescription className="text-sm md:text-base lg:text-lg">{t('pricing.tool.description')}</CardDescription>
           </CardHeader>
           
-          <CardContent className="space-y-8">
-            <div className="bg-muted/50 p-6 rounded-lg border border-border/50">
-              <label className="block text-sm font-semibold text-foreground mb-3">
+          <CardContent className="space-y-6 md:space-y-8 px-4 md:px-6">
+            <div className="bg-muted/50 p-4 md:p-6 rounded-lg border border-border/50">
+              <label className="block text-xs md:text-sm font-semibold text-foreground mb-2 md:mb-3">
                 {t('pricing.tool.selectLabel')}
               </label>
               <Select value={toolCount} onValueChange={setToolCount}>
-                <SelectTrigger className="w-full text-lg h-12 bg-background">
+                <SelectTrigger className="w-full text-base md:text-lg h-10 md:h-12 bg-background">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -100,31 +100,31 @@ const Pricing = () => {
               </Select>
             </div>
 
-            <div className="text-center py-6 border-y border-border/50">
-              <div className="space-y-2">
+            <div className="text-center py-4 md:py-6 border-y border-border/50">
+              <div className="space-y-1 md:space-y-2">
                 {discount > 0 && (
-                  <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-2">
+                  <div className="inline-block bg-primary/10 text-primary px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-semibold mb-1 md:mb-2">
                     {discount}% {t('pricing.tool.discount')}
                   </div>
                 )}
-                <div className="text-5xl font-bold text-foreground">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                   {totalPrice.toLocaleString('de-DE')}€
                 </div>
-                <div className="text-muted-foreground">
+                <div className="text-sm md:text-base text-muted-foreground">
                   {pricePerTool}€ {t('pricing.tool.perTool')}
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">
                 {t('pricing.tool.included')}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{feature}</span>
+                  <li key={index} className="flex items-start gap-2 md:gap-3">
+                    <Check className="w-4 h-4 md:w-5 md:h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -132,7 +132,7 @@ const Pricing = () => {
 
             <Button 
               onClick={handleBooking}
-              className="w-full h-12 text-lg"
+              className="w-full h-11 md:h-12 text-base md:text-lg"
               size="lg"
             >
               {t('pricing.button')}
@@ -140,7 +140,7 @@ const Pricing = () => {
           </CardContent>
         </Card>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-xs md:text-sm text-muted-foreground mt-6 md:mt-8 px-4">
           {t('pricing.tool.note')}
         </p>
       </div>
