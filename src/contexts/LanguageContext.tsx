@@ -586,36 +586,21 @@ type TranslationKey =
   | 'pricing.title'
   | 'pricing.title.highlight'
   | 'pricing.subtitle'
-  | 'pricing.popular'
   | 'pricing.button'
-  | 'pricing.starter.title'
-  | 'pricing.starter.price'
-  | 'pricing.starter.description'
-  | 'pricing.starter.feature1'
-  | 'pricing.starter.feature2'
-  | 'pricing.starter.feature3'
-  | 'pricing.starter.feature4'
-  | 'pricing.starter.feature5'
-  | 'pricing.professional.title'
-  | 'pricing.professional.price'
-  | 'pricing.professional.description'
-  | 'pricing.professional.feature1'
-  | 'pricing.professional.feature2'
-  | 'pricing.professional.feature3'
-  | 'pricing.professional.feature4'
-  | 'pricing.professional.feature5'
-  | 'pricing.professional.feature6'
-  | 'pricing.professional.feature7'
-  | 'pricing.custom.title'
-  | 'pricing.custom.price'
-  | 'pricing.custom.description'
-  | 'pricing.custom.feature1'
-  | 'pricing.custom.feature2'
-  | 'pricing.custom.feature3'
-  | 'pricing.custom.feature4'
-  | 'pricing.custom.feature5'
-  | 'pricing.custom.feature6'
-  | 'pricing.custom.feature7'
+  | 'pricing.tool.title'
+  | 'pricing.tool.description'
+  | 'pricing.tool.selectLabel'
+  | 'pricing.tool.tools'
+  | 'pricing.tool.discount'
+  | 'pricing.tool.perTool'
+  | 'pricing.tool.included'
+  | 'pricing.tool.note'
+  | 'pricing.tool.feature1'
+  | 'pricing.tool.feature2'
+  | 'pricing.tool.feature3'
+  | 'pricing.tool.feature4'
+  | 'pricing.tool.feature5'
+  | 'pricing.tool.feature6'
   // Blog
   | 'blog.title'
   | 'blog.subtitle'
@@ -1245,39 +1230,24 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'benefits.quality.description': 'Deliver reliable results every time with standardized automated processes',
 
     // Pricing
-    'pricing.title': 'Our',
-    'pricing.title.highlight': 'Packages',
-    'pricing.subtitle': 'Choose the right package for your automation needs',
-    'pricing.popular': 'Popular',
-    'pricing.button': 'Book Now',
-    'pricing.starter.title': 'Starter',
-    'pricing.starter.price': '€500',
-    'pricing.starter.description': 'Perfect for getting started with automation',
-    'pricing.starter.feature1': 'Simple automation',
-    'pricing.starter.feature2': 'Up to 3 tools',
-    'pricing.starter.feature3': 'Basic integration',
-    'pricing.starter.feature4': 'Email support',
-    'pricing.starter.feature5': '1 month support',
-    'pricing.professional.title': 'Professional',
-    'pricing.professional.price': '€5,000',
-    'pricing.professional.description': 'For comprehensive automation projects',
-    'pricing.professional.feature1': 'Complex automations',
-    'pricing.professional.feature2': 'Up to 10 tools',
-    'pricing.professional.feature3': 'Advanced integrations',
-    'pricing.professional.feature4': 'Priority support',
-    'pricing.professional.feature5': '3 months support',
-    'pricing.professional.feature6': 'Custom workflows',
-    'pricing.professional.feature7': 'API integrations',
-    'pricing.custom.title': 'Custom',
-    'pricing.custom.price': 'On Request',
-    'pricing.custom.description': 'Individually tailored to your needs',
-    'pricing.custom.feature1': 'Unlimited tools',
-    'pricing.custom.feature2': 'Custom solution',
-    'pricing.custom.feature3': 'Dedicated support',
-    'pricing.custom.feature4': 'Long-term care',
-    'pricing.custom.feature5': 'Enterprise features',
-    'pricing.custom.feature6': 'Individual SLAs',
-    'pricing.custom.feature7': 'Consulting included',
+    'pricing.title': 'Transparent',
+    'pricing.title.highlight': 'Pricing',
+    'pricing.subtitle': 'Select the number of tools to automate – the more, the better the discount',
+    'pricing.button': 'Book Consultation',
+    'pricing.tool.title': 'Tool-Based Automation',
+    'pricing.tool.description': 'Professional process automation for your business',
+    'pricing.tool.selectLabel': 'Number of tools to automate',
+    'pricing.tool.tools': 'Tools',
+    'pricing.tool.discount': 'Discount',
+    'pricing.tool.perTool': 'per tool',
+    'pricing.tool.included': 'Included in price',
+    'pricing.tool.note': 'Prices exclude VAT. Custom solutions available upon request.',
+    'pricing.tool.feature1': 'Comprehensive process analysis and requirements assessment',
+    'pricing.tool.feature2': 'Customized automation solutions for your tools',
+    'pricing.tool.feature3': 'Professional integration into existing systems',
+    'pricing.tool.feature4': 'AI-powered workflows and intelligent optimization',
+    'pricing.tool.feature5': '12 weeks premium support and maintenance',
+    'pricing.tool.feature6': 'Team training and complete documentation',
 
     // Blog
     'blog.title': 'Blog',
@@ -1896,40 +1866,25 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'benefits.quality.title': 'Vorhersehbarere Ergebnisse',
     'benefits.quality.description': 'Liefern Sie jedes Mal zuverlässige Ergebnisse mit standardisierten automatisierten Prozessen',
 
-    // Pricing (DE placeholders)
-    'pricing.title': 'Unsere',
-    'pricing.title.highlight': 'Pakete',
-    'pricing.subtitle': 'Wähle das passende Paket für deine Automation-Bedürfnisse',
-    'pricing.popular': 'Beliebt',
-    'pricing.button': 'Jetzt buchen',
-    'pricing.starter.title': 'Starter',
-    'pricing.starter.price': '500€',
-    'pricing.starter.description': 'Perfekt für den Einstieg in die Automation',
-    'pricing.starter.feature1': 'Einfache Automation',
-    'pricing.starter.feature2': 'Bis zu 3 Tools',
-    'pricing.starter.feature3': 'Basis-Integration',
-    'pricing.starter.feature4': 'Email Support',
-    'pricing.starter.feature5': '1 Monat Support',
-    'pricing.professional.title': 'Professional',
-    'pricing.professional.price': '5.000€',
-    'pricing.professional.description': 'Für umfangreiche Automatisierungsprojekte',
-    'pricing.professional.feature1': 'Komplexe Automations',
-    'pricing.professional.feature2': 'Bis zu 10 Tools',
-    'pricing.professional.feature3': 'Erweiterte Integrationen',
-    'pricing.professional.feature4': 'Priority Support',
-    'pricing.professional.feature5': '3 Monate Support',
-    'pricing.professional.feature6': 'Custom Workflows',
-    'pricing.professional.feature7': 'API Integrationen',
-    'pricing.custom.title': 'Custom',
-    'pricing.custom.price': 'Auf Anfrage',
-    'pricing.custom.description': 'Individuell auf deine Bedürfnisse zugeschnitten',
-    'pricing.custom.feature1': 'Unbegrenzte Tools',
-    'pricing.custom.feature2': 'Maßgeschneiderte Lösung',
-    'pricing.custom.feature3': 'Dedizierter Support',
-    'pricing.custom.feature4': 'Langzeit-Betreuung',
-    'pricing.custom.feature5': 'Enterprise Features',
-    'pricing.custom.feature6': 'Individuelle SLAs',
-    'pricing.custom.feature7': 'Consulting inklusive',
+    // Pricing
+    'pricing.title': 'Transparente',
+    'pricing.title.highlight': 'Preisgestaltung',
+    'pricing.subtitle': 'Wählen Sie die Anzahl der zu automatisierenden Tools – je mehr, desto günstiger',
+    'pricing.button': 'Beratungsgespräch buchen',
+    'pricing.tool.title': 'Tool-basierte Automatisierung',
+    'pricing.tool.description': 'Professionelle Prozessautomatisierung für Ihr Unternehmen',
+    'pricing.tool.selectLabel': 'Anzahl der zu automatisierenden Tools',
+    'pricing.tool.tools': 'Tools',
+    'pricing.tool.discount': 'Rabatt',
+    'pricing.tool.perTool': 'pro Tool',
+    'pricing.tool.included': 'Im Preis enthalten',
+    'pricing.tool.note': 'Preise verstehen sich zzgl. MwSt. Individuelle Anpassungen auf Anfrage.',
+    'pricing.tool.feature1': 'Umfassende Prozessanalyse und Bedarfsermittlung',
+    'pricing.tool.feature2': 'Maßgeschneiderte Automatisierungslösungen für Ihre Tools',
+    'pricing.tool.feature3': 'Professionelle Integration in bestehende Systeme',
+    'pricing.tool.feature4': 'KI-gestützte Workflows und intelligente Optimierung',
+    'pricing.tool.feature5': '12 Wochen Premium Support und Wartung',
+    'pricing.tool.feature6': 'Schulung Ihres Teams und vollständige Dokumentation',
 
     // Blog (DE placeholders)
     'blog.title': 'Blog',

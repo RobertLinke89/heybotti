@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -8,6 +10,7 @@ const Pricing = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useLanguage();
+  const [toolCount, setToolCount] = useState("2");
 
   const handleBooking = () => {
     if (location.pathname === '/') {
@@ -20,53 +23,48 @@ const Pricing = () => {
     }
   };
 
-  const packages = [
-    {
-      name: t('pricing.starter.title'),
-      price: t('pricing.starter.price'),
-      description: t('pricing.starter.description'),
-      features: [
-        t('pricing.starter.feature1'),
-        t('pricing.starter.feature2'),
-        t('pricing.starter.feature3'),
-        t('pricing.starter.feature4'),
-        t('pricing.starter.feature5')
-      ]
-    },
-    {
-      name: t('pricing.professional.title'),
-      price: t('pricing.professional.price'),
-      description: t('pricing.professional.description'),
-      features: [
-        t('pricing.professional.feature1'),
-        t('pricing.professional.feature2'),
-        t('pricing.professional.feature3'),
-        t('pricing.professional.feature4'),
-        t('pricing.professional.feature5'),
-        t('pricing.professional.feature6'),
-        t('pricing.professional.feature7')
-      ],
-      popular: true
-    },
-    {
-      name: t('pricing.custom.title'),
-      price: t('pricing.custom.price'),
-      description: t('pricing.custom.description'),
-      features: [
-        t('pricing.custom.feature1'),
-        t('pricing.custom.feature2'),
-        t('pricing.custom.feature3'),
-        t('pricing.custom.feature4'),
-        t('pricing.custom.feature5'),
-        t('pricing.custom.feature6'),
-        t('pricing.custom.feature7')
-      ]
+  const calculatePrice = (count: number) => {
+    const basePrice = 749;
+    let discount = 1;
+    
+    if (count >= 10) {
+      discount = 0.80; // 20% Rabatt
+    } else if (count >= 7) {
+      discount = 0.85; // 15% Rabatt
+    } else if (count >= 5) {
+      discount = 0.90; // 10% Rabatt
+    } else if (count >= 3) {
+      discount = 0.95; // 5% Rabatt
     }
+    
+    return Math.round(basePrice * count * discount);
+  };
+
+  const getDiscount = (count: number) => {
+    if (count >= 10) return 20;
+    if (count >= 7) return 15;
+    if (count >= 5) return 10;
+    if (count >= 3) return 5;
+    return 0;
+  };
+
+  const currentToolCount = parseInt(toolCount);
+  const totalPrice = calculatePrice(currentToolCount);
+  const discount = getDiscount(currentToolCount);
+  const pricePerTool = Math.round(totalPrice / currentToolCount);
+
+  const features = [
+    t('pricing.tool.feature1'),
+    t('pricing.tool.feature2'),
+    t('pricing.tool.feature3'),
+    t('pricing.tool.feature4'),
+    t('pricing.tool.feature5'),
+    t('pricing.tool.feature6')
   ];
 
   return (
     <section id="pricing-section" className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             {t('pricing.title')} <span className="text-primary">{t('pricing.title.highlight')}</span>
@@ -76,46 +74,75 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <Card 
-              key={index} 
-              className={`relative ${pkg.popular ? 'border-primary shadow-lg scale-105' : ''}`}
-            >
-              {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                  {t('pricing.popular')}
-                </div>
-              )}
-              <CardHeader>
-                <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                <CardDescription>{pkg.description}</CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-foreground">{pkg.price}</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
+        <Card className="border-primary/20 shadow-xl">
+          <CardHeader className="text-center pb-8">
+            <CardTitle className="text-3xl mb-2">{t('pricing.tool.title')}</CardTitle>
+            <CardDescription className="text-lg">{t('pricing.tool.description')}</CardDescription>
+          </CardHeader>
+          
+          <CardContent className="space-y-8">
+            <div className="bg-muted/50 p-6 rounded-lg border border-border/50">
+              <label className="block text-sm font-semibold text-foreground mb-3">
+                {t('pricing.tool.selectLabel')}
+              </label>
+              <Select value={toolCount} onValueChange={setToolCount}>
+                <SelectTrigger className="w-full text-lg h-12 bg-background">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 19 }, (_, i) => i + 2).map((num) => (
+                    <SelectItem key={num} value={num.toString()}>
+                      {num} {t('pricing.tool.tools')}
+                    </SelectItem>
                   ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button 
-                  onClick={handleBooking}
-                  className="w-full"
-                  variant={pkg.popular ? "default" : "outline"}
-                >
-                  {t('pricing.button')}
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+                  <SelectItem value="20">20+ {t('pricing.tool.tools')}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="text-center py-6 border-y border-border/50">
+              <div className="space-y-2">
+                {discount > 0 && (
+                  <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-2">
+                    {discount}% {t('pricing.tool.discount')}
+                  </div>
+                )}
+                <div className="text-5xl font-bold text-foreground">
+                  {totalPrice.toLocaleString('de-DE')}€
+                </div>
+                <div className="text-muted-foreground">
+                  {pricePerTool}€ {t('pricing.tool.perTool')}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">
+                {t('pricing.tool.included')}
+              </h3>
+              <ul className="space-y-3">
+                {features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Button 
+              onClick={handleBooking}
+              className="w-full h-12 text-lg"
+              size="lg"
+            >
+              {t('pricing.button')}
+            </Button>
+          </CardContent>
+        </Card>
+
+        <p className="text-center text-sm text-muted-foreground mt-8">
+          {t('pricing.tool.note')}
+        </p>
       </div>
     </section>
   );
