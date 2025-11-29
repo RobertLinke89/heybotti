@@ -1841,7 +1841,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'process.benefit3.description': 'Skalierbare Lösungen, die mit deinem Unternehmen wachsen und sich an sich ändernde Anforderungen anpassen',
     'process.cta.title': 'Bereit, dein Unternehmen zu transformieren?',
     'process.cta.description': 'Lass uns besprechen, wie unser bewährter Prozess deine Abläufe optimieren und deine Produktivität steigern kann.',
-    'process.cta.button': 'Projekt starten',
+    'process.cta.button': 'Projekt anfragen',
     'process.cta.joinTeam.button': 'Team beitreten',
     'process.cta.joinTeam.emailPrompt': 'Bitte gib deine E-Mail-Adresse ein, um die Team-Einladung zu erhalten:',
     'process.cta.joinTeam.success': 'Einladung gesendet!',
