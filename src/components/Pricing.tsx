@@ -59,7 +59,8 @@ const Pricing = () => {
     t('pricing.tool.feature3'),
     t('pricing.tool.feature4'),
     t('pricing.tool.feature5'),
-    t('pricing.tool.feature6')
+    t('pricing.tool.feature6'),
+    t('pricing.tool.feature7')
   ];
 
   return (
@@ -90,12 +91,11 @@ const Pricing = () => {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  {Array.from({ length: 19 }, (_, i) => i + 2).map((num) => (
+                  {Array.from({ length: 9 }, (_, i) => i + 2).map((num) => (
                     <SelectItem key={num} value={num.toString()}>
                       {num} {t('pricing.tool.tools')}
                     </SelectItem>
                   ))}
-                  <SelectItem value="20">20+ {t('pricing.tool.tools')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
