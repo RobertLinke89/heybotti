@@ -1477,7 +1477,7 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'about.page.belief': 'Doch genau hier beginnt unser Idealismus.',
     'about.page.vision1': 'Wir glauben an eine Wirtschaft, in der Technologie menschlich ist, intuitiv, zugänglich – und jedem Unternehmen hilft, das Beste aus sich herauszuholen. Eine Wirtschaft, in der Menschen nicht durch Prozesse gebunden sind, sondern durch Automatisierung gestärkt werden. Eine Wirtschaft, in der Zeit wieder wertvoll wird.',
     'about.page.vision2': 'HeyBotti steht für eine Zukunft, in der Automatisierung nicht nur Effizienz schafft, sondern Freiheit.',
-    'about.page.freedom1': 'Freiheit, sich auf Visionen zu konzentrieren.',
+    'about.page.freedom1': 'Freiheit, sich auf Visionen und Wertschöpfung zu konzentrieren.',
     'about.page.freedom2': 'Freiheit, Mitarbeiter zu entlasten und Potenziale zu entfalten.',
     'about.page.freedom3': 'Freiheit, als Unternehmen wieder einen Schritt voraus zu sein.',
     'about.page.closing': 'Wir sehen Automation nicht als Trend, sondern als Aufbruch – hin zu einer neuen Form des Arbeitens, die menschlicher, nachhaltiger und zukunftsfähiger ist.',
