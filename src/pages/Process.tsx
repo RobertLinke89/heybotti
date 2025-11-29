@@ -351,7 +351,7 @@ const Process = () => {
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">
-                Meeting buchen
+                {t('process.cta.button')}
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary-foreground/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
