@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Clock, Calendar, Share2, BookOpen } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Share2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -76,12 +76,12 @@ const BlogArticle = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-8 bg-gradient-to-br from-primary/5 via-background to-muted/20">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="pt-24 pb-12 bg-background">
+        <div className="container mx-auto px-4 max-w-3xl">
           <Button 
             onClick={() => navigate('/blog')}
             variant="ghost"
-            className="mb-8 text-muted-foreground hover:text-foreground"
+            className="mb-8 -ml-2 text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             {t('blog.article.back')}
@@ -91,59 +91,64 @@ const BlogArticle = () => {
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>{t('blog.article.published')}: {new Date(article.date).toLocaleDateString()}</span>
+                <span>{new Date(article.date).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                <span>{article.readTime} {t('blog.article.min.read')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="h-4 w-4" />
-                <span>{t('blog.article.reading.time')}</span>
+                <span>{article.readTime} Min. Lesezeit</span>
               </div>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight font-raleway">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight font-raleway">
               {t(`blog.article${article.id}.title`)}
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+            <p className="text-lg text-foreground/70 leading-relaxed text-justify">
               {t(`blog.article${article.id}.excerpt`)}
             </p>
-
-            <div className="flex items-center gap-4 pt-4">
-              <Button variant="outline" size="sm" onClick={handleShare}>
-                <Share2 className="h-4 w-4 mr-2" />
-                Share Article
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Article Content */}
-      <article className="py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-card rounded-lg border border-border shadow-sm p-8 md:p-12">
-            <div className="prose prose-lg max-w-none 
+      <article className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="prose prose-lg max-w-none
                           prose-headings:font-raleway prose-headings:text-foreground prose-headings:font-bold
-                          prose-h1:text-3xl prose-h1:mb-6 prose-h1:mt-8 prose-h1:border-b prose-h1:border-border prose-h1:pb-4
-                          prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-primary
-                          prose-h3:text-xl prose-h3:mb-3 prose-h3:mt-6 prose-h3:text-foreground
-                          prose-h4:text-lg prose-h4:mb-2 prose-h4:mt-4 prose-h4:font-semibold
-                          prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
+                          prose-h1:text-2xl prose-h1:mb-8 prose-h1:mt-12 prose-h1:pt-8 prose-h1:border-t prose-h1:border-border/30
+                          prose-h2:text-xl prose-h2:mb-6 prose-h2:mt-10 prose-h2:text-foreground prose-h2:font-semibold
+                          prose-h3:text-lg prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-foreground/90 prose-h3:font-medium
+                          prose-h4:text-base prose-h4:mb-3 prose-h4:mt-6 prose-h4:font-semibold prose-h4:text-foreground/80
+                          prose-p:text-foreground/75 prose-p:leading-[1.9] prose-p:mb-6 prose-p:text-justify prose-p:hyphens-auto
                           prose-strong:text-foreground prose-strong:font-semibold
-                          prose-li:text-muted-foreground prose-li:mb-2
-                          prose-ul:space-y-2 prose-ol:space-y-2
-                          prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-muted/50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-blockquote:my-6
-                          prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-foreground
-                          prose-pre:bg-card prose-pre:border prose-pre:border-border prose-pre:rounded-lg prose-pre:p-4 prose-pre:overflow-x-auto
+                          prose-li:text-foreground/75 prose-li:mb-3 prose-li:leading-relaxed
+                          prose-ul:space-y-2 prose-ul:my-6 prose-ol:space-y-2 prose-ol:my-6
+                          prose-blockquote:border-l-2 prose-blockquote:border-primary/50 prose-blockquote:bg-muted/20 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:text-foreground/70
+                          prose-code:bg-muted/50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:text-foreground/80
+                          prose-pre:bg-muted/30 prose-pre:border prose-pre:border-border/30 prose-pre:rounded prose-pre:p-4 prose-pre:overflow-x-auto
                           prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-                          prose-img:rounded-lg prose-img:shadow-md prose-img:my-8
-                          prose-hr:border-border prose-hr:my-8">
-              <ReactMarkdown>
-                {t(`blog.article${article.id}.content`)}
-              </ReactMarkdown>
+                          prose-img:rounded prose-img:shadow-sm prose-img:my-10
+                          prose-hr:border-border/30 prose-hr:my-12">
+            <ReactMarkdown>
+              {t(`blog.article${article.id}.content`)}
+            </ReactMarkdown>
+          </div>
+          
+          {/* Article Footer */}
+          <div className="mt-16 pt-8 border-t border-border/30">
+            <div className="flex items-center justify-between">
+              <Button 
+                onClick={() => navigate('/blog')}
+                variant="ghost"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                {t('blog.article.back')}
+              </Button>
+              <Button variant="outline" size="sm" onClick={handleShare}>
+                <Share2 className="h-4 w-4 mr-2" />
+                {t('blog.article.share') || 'Teilen'}
+              </Button>
             </div>
           </div>
         </div>
