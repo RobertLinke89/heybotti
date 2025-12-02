@@ -6,6 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
+import './BlogArticle.css';
 
 const BlogArticle = () => {
   const { slug } = useParams();
@@ -113,22 +114,7 @@ const BlogArticle = () => {
       {/* Article Content */}
       <article className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
-          <div className="prose prose-lg max-w-none
-                          prose-headings:font-raleway prose-headings:text-foreground prose-headings:font-bold
-                          prose-h1:text-2xl prose-h1:mb-8 prose-h1:mt-12 prose-h1:pt-8 prose-h1:border-t prose-h1:border-border/30
-                          prose-h2:text-xl prose-h2:mb-6 prose-h2:mt-10 prose-h2:text-foreground prose-h2:font-semibold
-                          prose-h3:text-lg prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-foreground/90 prose-h3:font-medium
-                          prose-h4:text-base prose-h4:mb-3 prose-h4:mt-6 prose-h4:font-semibold prose-h4:text-foreground/80
-                          prose-p:text-foreground/75 prose-p:leading-[1.9] prose-p:mb-6 prose-p:text-justify prose-p:hyphens-auto
-                          prose-strong:text-foreground prose-strong:font-semibold
-                          prose-li:text-foreground/75 prose-li:mb-3 prose-li:leading-relaxed
-                          prose-ul:space-y-2 prose-ul:my-6 prose-ol:space-y-2 prose-ol:my-6
-                          prose-blockquote:border-l-2 prose-blockquote:border-primary/50 prose-blockquote:bg-muted/20 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:text-foreground/70
-                          prose-code:bg-muted/50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:text-foreground/80
-                          prose-pre:bg-muted/30 prose-pre:border prose-pre:border-border/30 prose-pre:rounded prose-pre:p-4 prose-pre:overflow-x-auto
-                          prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-                          prose-img:rounded prose-img:shadow-sm prose-img:my-10
-                          prose-hr:border-border/30 prose-hr:my-12">
+          <div className="blog-article-content">
             <ReactMarkdown>
               {t(`blog.article${article.id}.content`)}
             </ReactMarkdown>
