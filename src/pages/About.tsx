@@ -55,15 +55,15 @@ const About = () => {
           <div className="space-y-16">
             {/* Introduction */}
             <section className="space-y-8">
-              <p className="text-lg text-foreground/80 leading-relaxed font-light">
+              <p className="text-lg text-foreground/80 leading-relaxed font-light text-justify">
                 {t('about.page.intro1')}
               </p>
               
-              <p className="text-lg text-foreground/80 leading-relaxed font-light">
+              <p className="text-lg text-foreground/80 leading-relaxed font-light text-justify">
                 {t('about.page.intro2')}
               </p>
               
-              <p className="text-lg text-foreground/80 leading-relaxed font-light">
+              <p className="text-lg text-foreground/80 leading-relaxed font-light text-justify">
                 {t('about.page.intro3')}
               </p>
             </section>
@@ -78,7 +78,7 @@ const About = () => {
                 {challenges.map((challenge, index) => (
                   <li key={index} className="flex items-start gap-4">
                     <span className="w-1 h-1 bg-foreground/40 rounded-full mt-3 flex-shrink-0"></span>
-                    <span className="text-lg text-foreground/70 leading-relaxed font-light">
+                    <span className="text-lg text-foreground/70 leading-relaxed font-light text-justify">
                       {challenge}
                     </span>
                   </li>
@@ -88,15 +88,15 @@ const About = () => {
 
             {/* Belief & Vision */}
             <section className="space-y-8">
-              <p className="text-xl font-medium text-foreground">
+              <p className="text-xl font-medium text-foreground text-justify">
                 {t('about.page.belief')}
               </p>
               
-              <p className="text-lg text-foreground/80 leading-relaxed font-light">
+              <p className="text-lg text-foreground/80 leading-relaxed font-light text-justify">
                 {t('about.page.vision1')}
               </p>
               
-              <p className="text-xl font-semibold text-foreground mt-12">
+              <p className="text-xl font-semibold text-foreground mt-12 text-justify">
                 {t('about.page.vision2')}
               </p>
             </section>
@@ -105,7 +105,7 @@ const About = () => {
             <section className="bg-muted/30 rounded-lg p-8 sm:p-12">
               <ul className="space-y-6">
                 {freedoms.map((freedom, index) => (
-                  <li key={index} className="text-lg text-foreground/90 leading-relaxed font-light">
+                  <li key={index} className="text-lg text-foreground/90 leading-relaxed font-light text-justify">
                     {freedom}
                   </li>
                 ))}
@@ -114,11 +114,11 @@ const About = () => {
 
             {/* Closing */}
             <section className="space-y-8">
-              <p className="text-lg text-foreground/80 leading-relaxed font-light">
+              <p className="text-lg text-foreground/80 leading-relaxed font-light text-justify">
                 {t('about.page.closing')}
               </p>
               
-              <p className="text-xl font-semibold text-foreground pt-4">
+              <p className="text-xl font-semibold text-foreground pt-4 text-justify">
                 {t('about.page.mission')}
               </p>
             </section>
