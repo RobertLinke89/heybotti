@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Phone, Mail, Send } from 'lucide-react';
+import { Send, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from 'zod';
 
 interface FormData {
@@ -22,8 +22,10 @@ const ProjectForm = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const { toast } = useToast();
   const { t } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
     try {
       // Validate with Zod
       const schema = z.object({
@@ -35,8 +37,6 @@ const ProjectForm = () => {
       });
 
       const validatedData = schema.parse(data);
-
-      const { supabase } = await import("@/integrations/supabase/client");
       
       // Save to database
       const { error: dbError } = await supabase
@@ -89,6 +89,8 @@ const ProjectForm = () => {
         description: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -183,10 +185,15 @@ const ProjectForm = () => {
             <div className="flex justify-center pt-4">
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                <Send className="w-4 h-4 mr-2" />
-                {t('form.submit')}
+                {isSubmitting ? (
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4 mr-2" />
+                )}
+                {isSubmitting ? 'Wird gesendet...' : t('form.submit')}
               </Button>
             </div>
           </form>
