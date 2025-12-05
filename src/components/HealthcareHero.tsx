@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
-
 const HealthcareHero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-form');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative bg-background py-28 lg:py-40 overflow-hidden">
+  return <section className="relative bg-background py-28 lg:py-40 overflow-hidden">
       {/* Gradient background with brand color */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
       
@@ -25,21 +24,13 @@ const HealthcareHero = () => {
           <p className="text-xl lg:text-2xl text-muted-foreground mb-3 font-raleway font-light leading-relaxed max-w-3xl mx-auto">
             KI-Automatisierungen für Gesundheitszentren, Physio-Praxen und Bewegungsstudios.
           </p>
-          <p className="text-lg text-muted-foreground/80 mb-12 font-raleway">
-            Mit den Tools, die Sie bereits nutzen.
-          </p>
-          <Button 
-            onClick={scrollToContact}
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-lg font-semibold rounded-lg shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
-          >
+          <p className="text-lg text-muted-foreground/80 mb-12 font-raleway">Mit den Systemen, die Sie bereits nutzen.</p>
+          <Button onClick={scrollToContact} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-lg font-semibold rounded-lg shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5">
             <Calendar className="w-5 h-5 mr-2" />
             Gesprächstermin vereinbaren
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HealthcareHero;
