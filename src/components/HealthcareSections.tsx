@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { X, Check, ArrowRight, MessageCircle, FileText, Phone, Calendar, Users, Clock } from "lucide-react";
+import { X, Check, ArrowRight, MessageCircle, FileText, Phone, Calendar, Users, Clock, HeartPulse, Timer } from "lucide-react";
 
 const HealthcareSections = () => {
   return (
@@ -158,12 +158,14 @@ const HealthcareSections = () => {
               
               <div className="grid sm:grid-cols-3 gap-6">
                 {[
-                  { text: "Weniger Hetze", icon: "🧘" },
-                  { text: "Weniger Nachfragen", icon: "💬" },
-                  { text: 'Weniger „Kannst du kurz?"', icon: "⏰" },
+                  { text: "Weniger Hetze", Icon: HeartPulse },
+                  { text: "Weniger Nachfragen", Icon: MessageCircle },
+                  { text: 'Weniger „Kannst du kurz?"', Icon: Timer },
                 ].map((item, index) => (
                   <div key={index} className="text-center p-6 rounded-lg bg-muted/50">
-                    <span className="text-3xl mb-3 block">{item.icon}</span>
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                      <item.Icon className="w-6 h-6 text-primary" />
+                    </div>
                     <span className="font-medium text-foreground">{item.text}</span>
                   </div>
                 ))}
