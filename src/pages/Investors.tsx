@@ -31,6 +31,7 @@ import {
   Legend
 } from 'recharts';
 import heroInvestors from '@/assets/hero-investors.jpg';
+import InvestorROICalculator from '@/components/InvestorROICalculator';
 
 const marketGrowthData = [
   { year: '2021', value: 42 },
@@ -421,6 +422,9 @@ const Investors = () => {
           </div>
         </div>
       </section>
+
+      {/* ROI Calculator */}
+      <InvestorROICalculator />
 
       {/* Competitive Advantages */}
       <section className="py-20 px-4">
