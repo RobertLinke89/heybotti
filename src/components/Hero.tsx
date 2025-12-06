@@ -1,7 +1,6 @@
-
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useNavigate } from 'react-router-dom';
+import heroAutomation from '@/assets/hero-automation.jpg';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -9,6 +8,16 @@ const Hero = () => {
 
   return (
     <section className="relative bg-background py-20 lg:py-32 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img 
+          src={heroAutomation} 
+          alt="Automation network visualization" 
+          className="w-full h-full object-cover opacity-30 dark:opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </div>
+
       {/* Animated Wave Background */}
       <div className="absolute inset-0 pointer-events-none">
         <svg 

@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const About = () => {
   const navigate = useNavigate();
@@ -28,6 +29,18 @@ const About = () => {
       <Header />
       
       <main className="pt-24 pb-24">
+        {/* Hero Image */}
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 mb-12">
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
+            <img 
+              src={teamCollaboration} 
+              alt="Team collaboration" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+          </div>
+        </div>
+        
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
           {/* Back Button */}
           <Button

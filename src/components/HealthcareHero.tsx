@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import heroHealthcare from '@/assets/hero-healthcare.jpg';
+
 const HealthcareHero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-form');
@@ -8,6 +10,16 @@ const HealthcareHero = () => {
     });
   };
   return <section className="relative bg-background py-28 lg:py-40 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img 
+          src={heroHealthcare} 
+          alt="Healthcare professionals collaborating" 
+          className="w-full h-full object-cover opacity-20 dark:opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+      </div>
+      
       {/* Gradient background with brand color */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
       
