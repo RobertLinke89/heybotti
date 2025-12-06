@@ -30,6 +30,7 @@ import {
   Cell,
   Legend
 } from 'recharts';
+import heroInvestors from '@/assets/hero-investors.jpg';
 
 const marketGrowthData = [
   { year: '2021', value: 42 },
@@ -71,6 +72,16 @@ const Investors = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 pointer-events-none">
+          <img 
+            src={heroInvestors} 
+            alt="Business growth visualization" 
+            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </div>
+        
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
         
