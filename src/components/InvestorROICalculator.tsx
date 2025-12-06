@@ -82,34 +82,34 @@ const InvestorROICalculator = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 md:py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            <Calculator className="w-4 h-4" />
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium mb-4">
+            <Calculator className="w-3 h-3 md:w-4 md:h-4" />
             Investitions-Rechner
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
             Berechnen Sie Ihren <span className="text-primary">potenziellen ROI</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto px-2">
             Simulieren Sie verschiedene Investitionsszenarien basierend auf unseren Wachstumsprognosen
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
           {/* Calculator Controls */}
-          <div className="bg-card border border-border rounded-2xl p-8">
-            <h3 className="text-xl font-bold text-foreground mb-8">Investitionsparameter</h3>
+          <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8">
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-6 md:mb-8">Investitionsparameter</h3>
             
             {/* Investment Amount Slider */}
-            <div className="mb-10">
-              <div className="flex justify-between items-center mb-4">
+            <div className="mb-8 md:mb-10">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4">
                 <label className="text-sm font-medium text-foreground flex items-center gap-2">
                   <Euro className="w-4 h-4 text-primary" />
                   Investitionsbetrag
                 </label>
-                <span className="text-2xl font-bold text-primary">
+                <span className="text-xl md:text-2xl font-bold text-primary">
                   {formatCurrency(investmentAmount)}
                 </span>
               </div>
@@ -128,13 +128,13 @@ const InvestorROICalculator = () => {
             </div>
 
             {/* Holding Period Slider */}
-            <div className="mb-10">
-              <div className="flex justify-between items-center mb-4">
+            <div className="mb-8 md:mb-10">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4">
                 <label className="text-sm font-medium text-foreground flex items-center gap-2">
                   <Clock className="w-4 h-4 text-primary" />
                   Haltedauer
                 </label>
-                <span className="text-2xl font-bold text-primary">
+                <span className="text-xl md:text-2xl font-bold text-primary">
                   {holdingPeriod} Jahre
                 </span>
               </div>
@@ -153,7 +153,7 @@ const InvestorROICalculator = () => {
             </div>
 
             {/* Assumptions */}
-            <div className="bg-muted/50 rounded-xl p-6 space-y-3">
+            <div className="bg-muted/50 rounded-lg md:rounded-xl p-4 md:p-6 space-y-3">
               <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
                 Annahmen
                 <TooltipProvider>
@@ -167,7 +167,7 @@ const InvestorROICalculator = () => {
                   </UITooltip>
                 </TooltipProvider>
               </h4>
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-2 gap-3 md:gap-4 text-xs md:text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Jährl. Wachstum</span>
                   <span className="font-medium text-foreground">35%</span>
@@ -189,49 +189,49 @@ const InvestorROICalculator = () => {
           </div>
 
           {/* Results */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-card border border-border rounded-xl p-6">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
-                  <TrendingUp className="w-4 h-4" />
-                  Potentieller Exit-Wert
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+                <div className="flex items-center gap-1.5 md:gap-2 text-muted-foreground text-xs md:text-sm mb-1 md:mb-2">
+                  <TrendingUp className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="truncate">Exit-Wert</span>
                 </div>
-                <div className="text-3xl font-bold text-primary">
+                <div className="text-xl md:text-3xl font-bold text-primary">
                   {formatCurrency(calculations.investorExitValue)}
                 </div>
               </div>
-              <div className="bg-card border border-border rounded-xl p-6">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
-                  <Percent className="w-4 h-4" />
+              <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+                <div className="flex items-center gap-1.5 md:gap-2 text-muted-foreground text-xs md:text-sm mb-1 md:mb-2">
+                  <Percent className="w-3 h-3 md:w-4 md:h-4" />
                   ROI
                 </div>
-                <div className="text-3xl font-bold text-primary">
+                <div className="text-xl md:text-3xl font-bold text-primary">
                   {calculations.roi.toFixed(0)}%
                 </div>
               </div>
-              <div className="bg-card border border-border rounded-xl p-6">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+              <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+                <div className="text-muted-foreground text-xs md:text-sm mb-1 md:mb-2">
                   Multiple
                 </div>
-                <div className="text-3xl font-bold text-foreground">
+                <div className="text-xl md:text-3xl font-bold text-foreground">
                   {calculations.multiple.toFixed(1)}x
                 </div>
               </div>
-              <div className="bg-card border border-border rounded-xl p-6">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+              <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+                <div className="text-muted-foreground text-xs md:text-sm mb-1 md:mb-2">
                   IRR
                 </div>
-                <div className="text-3xl font-bold text-foreground">
+                <div className="text-xl md:text-3xl font-bold text-foreground">
                   {calculations.irr.toFixed(1)}%
                 </div>
               </div>
             </div>
 
             {/* Ownership Details */}
-            <div className="bg-card border border-border rounded-xl p-6">
-              <h4 className="text-sm font-semibold text-foreground mb-4">Beteiligungsübersicht</h4>
-              <div className="space-y-3">
+            <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+              <h4 className="text-xs md:text-sm font-semibold text-foreground mb-3 md:mb-4">Beteiligungsübersicht</h4>
+              <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Initiale Beteiligung</span>
                   <span className="font-semibold text-foreground">{calculations.ownershipPercentage.toFixed(2)}%</span>
@@ -241,16 +241,16 @@ const InvestorROICalculator = () => {
                   <span className="font-semibold text-foreground">{calculations.finalOwnership.toFixed(2)}%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Exit-Bewertung (Unternehmen)</span>
+                  <span className="text-muted-foreground">Exit-Bewertung</span>
                   <span className="font-semibold text-foreground">{formatCurrency(calculations.exitValuation)}</span>
                 </div>
               </div>
             </div>
 
             {/* Value Projection Chart */}
-            <div className="bg-card border border-border rounded-xl p-6">
-              <h4 className="text-sm font-semibold text-foreground mb-4">Projizierte Unternehmensentwicklung</h4>
-              <ResponsiveContainer width="100%" height={200}>
+            <div className="bg-card border border-border rounded-lg md:rounded-xl p-4 md:p-6">
+              <h4 className="text-xs md:text-sm font-semibold text-foreground mb-3 md:mb-4">Projizierte Unternehmensentwicklung</h4>
+              <ResponsiveContainer width="100%" height={160}>
                 <AreaChart data={calculations.projectedValues}>
                   <defs>
                     <linearGradient id="colorValueCalc" x1="0" y1="0" x2="0" y2="1">
@@ -262,18 +262,22 @@ const InvestorROICalculator = () => {
                   <XAxis 
                     dataKey="year" 
                     stroke="hsl(var(--muted-foreground))"
-                    fontSize={11}
+                    fontSize={10}
+                    tick={{ fontSize: 10 }}
                   />
                   <YAxis 
                     stroke="hsl(var(--muted-foreground))"
-                    fontSize={11}
+                    fontSize={10}
+                    tick={{ fontSize: 10 }}
                     tickFormatter={(value) => `€${value}k`}
+                    width={50}
                   />
                   <Tooltip 
                     contentStyle={{ 
                       backgroundColor: 'hsl(var(--card))', 
                       border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px'
+                      borderRadius: '8px',
+                      fontSize: '12px'
                     }}
                     formatter={(value: number) => [`€${value}k`, 'Unternehmenswert']}
                   />
