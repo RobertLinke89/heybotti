@@ -33,7 +33,7 @@ const Handwerker = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 pointer-events-none">
           <img 
@@ -44,22 +44,22 @@ const Handwerker = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-48 md:w-72 h-48 md:h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-64 md:w-96 h-64 md:h-96 bg-primary/3 rounded-full blur-3xl" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            <Wrench className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium mb-4 md:mb-6">
+            <Wrench className="w-3 h-3 md:w-4 md:h-4" />
             Für Handwerksbetriebe
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
             Weniger Büro.
             <br />
             <span className="text-primary">Mehr Baustelle.</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
             Angebote, Rechnungen, Terminplanung – alles, was dich von der eigentlichen Arbeit abhält, 
             läuft ab jetzt automatisch.
           </p>
@@ -67,27 +67,27 @@ const Handwerker = () => {
           <Button 
             size="lg" 
             onClick={scrollToContact}
-            className="text-lg px-8 py-6 rounded-full"
+            className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
           >
             Jetzt Beratung anfragen
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
           </Button>
         </div>
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
               Kommt dir das <span className="text-primary">bekannt vor</span>?
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto px-2">
               Diese Probleme kennen wir aus Gesprächen mit Handwerksbetrieben
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 icon: Phone,
@@ -122,13 +122,13 @@ const Handwerker = () => {
             ].map((pain, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-colors"
+                className="bg-card border border-border rounded-xl md:rounded-2xl p-4 md:p-6 hover:border-primary/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
-                  <pain.icon className="w-6 h-6 text-destructive" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-destructive/10 flex items-center justify-center mb-3 md:mb-4">
+                  <pain.icon className="w-5 h-5 md:w-6 md:h-6 text-destructive" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{pain.title}</h3>
-                <p className="text-muted-foreground">{pain.description}</p>
+                <h3 className="text-base md:text-lg font-semibold text-foreground mb-1.5 md:mb-2">{pain.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground">{pain.description}</p>
               </div>
             ))}
           </div>
@@ -136,18 +136,18 @@ const Handwerker = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
               Was wir für dich <span className="text-primary">automatisieren</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto px-2">
               Praktische Lösungen, die sofort Zeit sparen
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {[
               {
                 icon: MessageSquare,
@@ -176,17 +176,17 @@ const Handwerker = () => {
             ].map((solution, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow"
+                className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                  <solution.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
+                  <solution.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{solution.title}</h3>
-                <p className="text-muted-foreground mb-6">{solution.description}</p>
-                <ul className="space-y-2">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">{solution.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">{solution.description}</p>
+                <ul className="space-y-1.5 md:space-y-2">
                   {solution.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                      <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                    <li key={i} className="flex items-center gap-2 text-xs md:text-sm text-foreground">
+                      <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -198,24 +198,24 @@ const Handwerker = () => {
       </section>
 
       {/* Before/After Comparison */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
               Dein Alltag – <span className="text-primary">vorher und nachher</span>
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {/* Before */}
-            <div className="bg-card border border-destructive/20 rounded-2xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
-                  <XCircle className="w-5 h-5 text-destructive" />
+            <div className="bg-card border border-destructive/20 rounded-xl md:rounded-2xl p-5 md:p-8">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-destructive/10 flex items-center justify-center">
+                  <XCircle className="w-4 h-4 md:w-5 md:h-5 text-destructive" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Ohne Automatisierung</h3>
+                <h3 className="text-lg md:text-xl font-bold text-foreground">Ohne Automatisierung</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-2.5 md:space-y-4">
                 {[
                   "Abends noch 2 Stunden Büroarbeit",
                   "Kunden beschweren sich über späte Antworten",
@@ -224,8 +224,8 @@ const Handwerker = () => {
                   "Termine werden vergessen oder doppelt vergeben",
                   "Ständiges Suchen nach Infos zu Aufträgen"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                    <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-2 md:gap-3 text-sm md:text-base text-muted-foreground">
+                    <XCircle className="w-4 h-4 md:w-5 md:h-5 text-destructive flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -233,14 +233,14 @@ const Handwerker = () => {
             </div>
             
             {/* After */}
-            <div className="bg-card border border-primary/20 rounded-2xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+            <div className="bg-card border border-primary/20 rounded-xl md:rounded-2xl p-5 md:p-8">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Mit heybotti</h3>
+                <h3 className="text-lg md:text-xl font-bold text-foreground">Mit heybotti</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-2.5 md:space-y-4">
                 {[
                   "Feierabend ist wirklich Feierabend",
                   "Kunden bekommen sofort Rückmeldung",
@@ -249,8 +249,8 @@ const Handwerker = () => {
                   "Kalender synchronisiert sich selbst",
                   "Alle Projektinfos an einem Ort"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-2 md:gap-3 text-sm md:text-base text-foreground">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -261,32 +261,32 @@ const Handwerker = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8 md:mb-12 px-2">
             Das berichten Handwerksbetriebe <span className="text-primary">nach der Einführung</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-3 gap-3 md:gap-8 mb-8 md:mb-12">
             {[
               { value: "5+", label: "Stunden pro Woche gespart", icon: Clock },
               { value: "2x", label: "Schnellere Angebotserstellung", icon: TrendingUp },
               { value: "30%", label: "Weniger offene Rechnungen", icon: Receipt }
             ].map((stat, index) => (
-              <div key={index} className="bg-card border border-border rounded-2xl p-8">
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-4" />
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+              <div key={index} className="bg-card border border-border rounded-xl md:rounded-2xl p-4 md:p-8">
+                <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-primary mx-auto mb-2 md:mb-4" />
+                <div className="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">{stat.value}</div>
+                <div className="text-xs md:text-base text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
           
-          <div className="bg-muted/50 rounded-2xl p-8 border border-border">
-            <blockquote className="text-xl text-foreground italic mb-4">
+          <div className="bg-muted/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-border">
+            <blockquote className="text-base md:text-xl text-foreground italic mb-3 md:mb-4">
               „Ich hätte nie gedacht, dass ich mal weniger arbeite und trotzdem mehr schaffe. 
               Die Automatisierung hat meinen Betrieb komplett verändert."
             </blockquote>
-            <p className="text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground">
               — Elektriker-Meisterbetrieb, 4 Mitarbeiter
             </p>
           </div>
@@ -294,18 +294,18 @@ const Handwerker = () => {
       </section>
 
       {/* Industries */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
               Für alle <span className="text-primary">Gewerke</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm md:text-lg">
               Unsere Lösungen passen sich deinem Betrieb an
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {[
               "Elektriker",
               "Sanitär & Heizung",
@@ -320,7 +320,7 @@ const Handwerker = () => {
             ].map((trade, index) => (
               <div 
                 key={index}
-                className="px-5 py-3 bg-card border border-border rounded-full text-foreground font-medium hover:border-primary/50 transition-colors"
+                className="px-3 py-2 md:px-5 md:py-3 bg-card border border-border rounded-full text-sm md:text-base text-foreground font-medium hover:border-primary/50 transition-colors"
               >
                 {trade}
               </div>
@@ -330,31 +330,31 @@ const Handwerker = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact-form" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
+      <section id="contact-form" className="py-12 md:py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
         <div className="max-w-3xl mx-auto text-center">
-          <Truck className="w-16 h-16 text-primary mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <Truck className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 md:mb-6 px-2">
             Bereit, deinen Betrieb zu <span className="text-primary">entlasten</span>?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 px-2">
             In einem kostenlosen Gespräch analysieren wir gemeinsam, wo Automatisierung 
             bei dir am meisten bringt.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 rounded-full"
+              className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
               asChild
             >
               <a href="tel:+4916099232779">
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className="mr-2 w-4 h-4 md:w-5 md:h-5" />
                 Jetzt anrufen
               </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="text-lg px-8 py-6 rounded-full"
+              className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
               asChild
             >
               <a href="mailto:info@heybotti.de">
@@ -362,7 +362,7 @@ const Handwerker = () => {
               </a>
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground mt-6">
+          <p className="text-xs md:text-sm text-muted-foreground mt-4 md:mt-6">
             Kostenlos & unverbindlich · Keine versteckten Kosten
           </p>
         </div>
