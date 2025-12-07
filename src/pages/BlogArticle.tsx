@@ -8,18 +8,26 @@ import { useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import './BlogArticle.css';
 
+// Blog article images
+import blogRoiAutomation from '@/assets/blog-roi-automation.jpg';
+import blogFiveProcesses from '@/assets/blog-five-processes.jpg';
+import blogTooSmallMyth from '@/assets/blog-too-small-myth.jpg';
+import blogHiddenCosts from '@/assets/blog-hidden-costs.jpg';
+import blogWithoutOverwhelm from '@/assets/blog-without-overwhelm.jpg';
+import blogFutureTrends from '@/assets/blog-future-trends.jpg';
+
 const BlogArticle = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { t } = useLanguage();
 
   const articles = {
-    'roi-automation-small-business': { id: 1, date: '2024-01-15', readTime: 12 },
-    'five-processes-automate-first': { id: 2, date: '2024-01-22', readTime: 15 },
-    'breaking-too-small-myth': { id: 3, date: '2024-01-29', readTime: 14 },
-    'hidden-costs-manual-processes': { id: 4, date: '2024-02-05', readTime: 18 },
-    'automation-without-overwhelm': { id: 5, date: '2024-02-12', readTime: 16 },
-    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 20 }
+    'roi-automation-small-business': { id: 1, date: '2024-01-15', readTime: 12, image: blogRoiAutomation },
+    'five-processes-automate-first': { id: 2, date: '2024-01-22', readTime: 15, image: blogFiveProcesses },
+    'breaking-too-small-myth': { id: 3, date: '2024-01-29', readTime: 14, image: blogTooSmallMyth },
+    'hidden-costs-manual-processes': { id: 4, date: '2024-02-05', readTime: 18, image: blogHiddenCosts },
+    'automation-without-overwhelm': { id: 5, date: '2024-02-12', readTime: 16, image: blogWithoutOverwhelm },
+    'future-proofing-automation-trends': { id: 6, date: '2024-02-19', readTime: 20, image: blogFutureTrends }
   };
 
   const handleShare = async () => {
@@ -107,6 +115,15 @@ const BlogArticle = () => {
             <p className="text-lg text-foreground/70 leading-relaxed text-justify">
               {t(`blog.article${article.id}.excerpt`)}
             </p>
+          </div>
+
+          {/* Hero Image */}
+          <div className="mt-8 rounded-xl overflow-hidden">
+            <img 
+              src={article.image} 
+              alt={t(`blog.article${article.id}.title`)}
+              className="w-full h-auto object-cover aspect-video"
+            />
           </div>
         </div>
       </section>
