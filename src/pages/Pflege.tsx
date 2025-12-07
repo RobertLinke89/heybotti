@@ -42,9 +42,9 @@ const Pflege = () => {
           <img 
             src={heroPflege} 
             alt="Moderne Pflegeeinrichtung" 
-            className="w-full h-full object-cover opacity-20 dark:opacity-10"
+            className="w-full h-full object-cover opacity-40 dark:opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         </div>
         
         <div className="absolute top-20 left-10 w-48 md:w-72 h-48 md:h-72 bg-primary/5 rounded-full blur-3xl" />
