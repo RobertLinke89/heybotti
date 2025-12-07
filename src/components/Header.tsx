@@ -41,6 +41,7 @@ const Header = () => {
   const aboutItems = [
     { path: '/about', labelDe: 'Warum Automatisierung', labelEn: 'Why Automation' },
     { path: '/process', labelDe: 'Prozess', labelEn: 'Process' },
+    { path: '/investors', labelDe: 'Investoren', labelEn: 'Investors' },
     { path: '/jobs', labelDe: 'Offene Stellen', labelEn: 'Careers' },
     { path: '/blog', labelDe: 'Blog', labelEn: 'Blog' }
   ];
