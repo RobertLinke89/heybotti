@@ -91,14 +91,8 @@ const Header = () => {
             </button>
             <button 
               onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  navigate('/');
-                  setTimeout(() => {
-                    document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }
+                navigate('/pricing');
+                window.scrollTo(0, 0);
               }}
               className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
             >
@@ -189,14 +183,8 @@ const Header = () => {
             </button>
             <button 
               onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  navigate('/');
-                  setTimeout(() => {
-                    document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }
+                navigate('/pricing');
+                window.scrollTo(0, 0);
                 setIsMobileMenuOpen(false);
               }}
               className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
