@@ -1,4 +1,4 @@
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
@@ -14,6 +14,11 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isBranchenDropdownOpen, setIsBranchenDropdownOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  
+  // Mobile accordion states
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileBranchenOpen, setMobileBranchenOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
   const services = [
     { id: 'sales-marketing', key: 'sales' },
@@ -42,6 +47,12 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Reset accordion states when closing
+    if (isMobileMenuOpen) {
+      setMobileServicesOpen(false);
+      setMobileBranchenOpen(false);
+      setMobileAboutOpen(false);
+    }
   };
 
   return (
@@ -187,7 +198,7 @@ const Header = () => {
             <LanguageSwitch />
             <button
               onClick={toggleMobileMenu}
-              className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
+              className="p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -201,85 +212,105 @@ const Header = () => {
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <nav className="flex flex-col space-y-4 pt-4 px-4 sm:px-6 lg:px-8">
-            {/* Mobile Services Section */}
-            <div className="space-y-2">
-              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
-                Services
-              </div>
-              <div className="pl-4 space-y-1">
-                {services.map((service) => (
-                  <button
-                    key={service.id}
-                    onClick={() => {
-                      navigate(`/services/${service.id}`);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
-                  >
-                    {t(`services.${service.key}.title`)}
-                  </button>
-                ))}
+          <nav className="flex flex-col py-2">
+            {/* Mobile Services Accordion */}
+            <div className="border-b border-border/50">
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full flex items-center justify-between px-6 py-4 text-foreground font-medium text-base"
+              >
+                <span>Services</span>
+                <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${mobileServicesOpen ? 'rotate-90' : ''}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-200 ${mobileServicesOpen ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="bg-muted/30 py-2">
+                  {services.map((service) => (
+                    <button
+                      key={service.id}
+                      onClick={() => {
+                        navigate(`/services/${service.id}`);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-8 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-sm"
+                    >
+                      {t(`services.${service.key}.title`)}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Mobile Branchen Section */}
-            <div className="space-y-2">
-              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
-                {language === 'de' ? 'Branchen' : 'Industries'}
-              </div>
-              <div className="pl-4 space-y-1">
-                {branchen.map((branche) => (
-                  <button
-                    key={branche.path}
-                    onClick={() => {
-                      navigate(branche.path);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
-                  >
-                    {language === 'de' ? branche.labelDe : branche.labelEn}
-                  </button>
-                ))}
+            {/* Mobile Branchen Accordion */}
+            <div className="border-b border-border/50">
+              <button
+                onClick={() => setMobileBranchenOpen(!mobileBranchenOpen)}
+                className="w-full flex items-center justify-between px-6 py-4 text-foreground font-medium text-base"
+              >
+                <span>{language === 'de' ? 'Branchen' : 'Industries'}</span>
+                <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${mobileBranchenOpen ? 'rotate-90' : ''}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-200 ${mobileBranchenOpen ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="bg-muted/30 py-2">
+                  {branchen.map((branche) => (
+                    <button
+                      key={branche.path}
+                      onClick={() => {
+                        navigate(branche.path);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-8 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-sm"
+                    >
+                      {language === 'de' ? branche.labelDe : branche.labelEn}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
+
+            {/* Pricing Link */}
             <button 
               onClick={() => {
                 navigate('/pricing');
                 window.scrollTo(0, 0);
                 setIsMobileMenuOpen(false);
               }}
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
+              className="w-full text-left px-6 py-4 text-foreground font-medium text-base border-b border-border/50 hover:bg-muted/50 transition-colors"
             >
               {t('nav.pricing')}
             </button>
 
-            {/* Mobile About Section */}
-            <div className="space-y-2">
-              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
-                About
-              </div>
-              <div className="pl-4 space-y-1">
-                {aboutItems.map((item) => (
-                  <button
-                    key={item.path}
-                    onClick={() => {
-                      navigate(item.path);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
-                  >
-                    {language === 'de' ? item.labelDe : item.labelEn}
-                  </button>
-                ))}
+            {/* Mobile About Accordion */}
+            <div className="border-b border-border/50">
+              <button
+                onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                className="w-full flex items-center justify-between px-6 py-4 text-foreground font-medium text-base"
+              >
+                <span>About</span>
+                <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${mobileAboutOpen ? 'rotate-90' : ''}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-200 ${mobileAboutOpen ? 'max-h-64' : 'max-h-0'}`}>
+                <div className="bg-muted/30 py-2">
+                  {aboutItems.map((item) => (
+                    <button
+                      key={item.path}
+                      onClick={() => {
+                        navigate(item.path);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-8 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-sm"
+                    >
+                      {language === 'de' ? item.labelDe : item.labelEn}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
             
             {/* Mobile Login Button */}
-            <div className="pt-4 border-t border-border mt-4">
+            <div className="px-6 py-6">
               <Button
                 variant="default"
-                size="default"
+                size="lg"
                 onClick={() => {
                   navigate('/auth');
                   setIsMobileMenuOpen(false);
