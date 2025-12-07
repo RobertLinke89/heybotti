@@ -606,6 +606,9 @@ type TranslationKey =
   | 'blog.title'
   | 'blog.subtitle'
   | 'blog.back'
+  | 'blog.back.home'
+  | 'blog.featured'
+  | 'blog.allArticles'
   | 'blog.read.more'
   | 'blog.article.back'
   | 'blog.article.published'
@@ -614,6 +617,9 @@ type TranslationKey =
   | 'blog.cta.title'
   | 'blog.cta.subtitle'
   | 'blog.cta.button'
+  // Navigation labels
+  | 'nav.services.label'
+  | 'nav.about.label'
   // Blog Articles
   | 'blog.article1.title'
   | 'blog.article1.excerpt'
@@ -1258,6 +1264,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.title': 'Blog',
     'blog.subtitle': 'Insights and expertise on automation for small and medium-sized businesses',
     'blog.back': 'Back to Blog',
+    'blog.back.home': 'Back to Home',
+    'blog.featured': 'Featured',
+    'blog.allArticles': 'All Articles',
     'blog.read.more': 'Read More',
     'blog.article.back': 'Back to Blog',
     'blog.article.published': 'Published',
@@ -1266,6 +1275,10 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'blog.cta.title': 'Ready to Implement Automation?',
     'blog.cta.subtitle': 'Get personalized automation strategies for your business. Our experts are here to help you every step of the way.',
     'blog.cta.button': 'Start Your Automation Journey',
+
+    // Navigation labels
+    'nav.services.label': 'Services',
+    'nav.about.label': 'About',
 
     // Blog Articles
     'blog.article1.title': 'The ROI of Automation: Real Numbers for Small Businesses',
@@ -2978,6 +2991,9 @@ The tools are available. The costs are accessible. The benefits are proven.
     'blog.title': 'Blog',
     'blog.subtitle': 'Einblicke und Expertise zur Automatisierung für kleine und mittelständische Unternehmen',
     'blog.back': 'Zurück zum Blog',
+    'blog.back.home': 'Zurück zur Startseite',
+    'blog.featured': 'Empfohlen',
+    'blog.allArticles': 'Alle Artikel',
     'blog.read.more': 'Weiterlesen',
     'blog.article.back': 'Zurück zum Blog',
     'blog.article.published': 'Veröffentlicht',
@@ -2986,6 +3002,10 @@ The tools are available. The costs are accessible. The benefits are proven.
     'blog.cta.title': 'Bereit für Ihre Automatisierung?',
     'blog.cta.subtitle': 'Erhalten Sie maßgeschneiderte Automatisierungsstrategien für Ihr Unternehmen. Unsere Experten stehen Ihnen bei jedem Schritt zur Seite.',
     'blog.cta.button': 'Projekt anfragen',
+
+    // Navigation labels
+    'nav.services.label': 'Services',
+    'nav.about.label': 'Über Uns',
 
     // Blog Artikel
     'blog.article1.title': 'Der ROI der Automatisierung: Echte Zahlen für kleine Unternehmen',

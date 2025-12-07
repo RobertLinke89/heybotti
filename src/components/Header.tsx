@@ -80,7 +80,7 @@ const Header = () => {
             <DropdownMenu open={isServicesDropdownOpen} onOpenChange={setIsServicesDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
-                  Services
+                  {t('nav.services.label')}
                   <ChevronDown className="h-3 w-3" />
                 </button>
               </DropdownMenuTrigger>
@@ -154,7 +154,7 @@ const Header = () => {
             <DropdownMenu open={isAboutDropdownOpen} onOpenChange={setIsAboutDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
-                  About
+                  {t('nav.about.label')}
                   <ChevronDown className="h-3 w-3" />
                 </button>
               </DropdownMenuTrigger>
@@ -220,7 +220,7 @@ const Header = () => {
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 className="w-full flex items-center justify-between px-6 py-4 text-foreground font-medium text-base"
               >
-                <span>Services</span>
+                <span>{t('nav.services.label')}</span>
                 <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${mobileServicesOpen ? 'rotate-90' : ''}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-200 ${mobileServicesOpen ? 'max-h-96' : 'max-h-0'}`}>
@@ -286,7 +286,7 @@ const Header = () => {
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
                 className="w-full flex items-center justify-between px-6 py-4 text-foreground font-medium text-base"
               >
-                <span>About</span>
+                <span>{t('nav.about.label')}</span>
                 <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${mobileAboutOpen ? 'rotate-90' : ''}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-200 ${mobileAboutOpen ? 'max-h-64' : 'max-h-0'}`}>
