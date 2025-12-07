@@ -85,7 +85,7 @@ const Blog = () => {
             className="mb-8 text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
+            {t('blog.back.home')}
           </Button>
 
           <div className="text-center max-w-4xl mx-auto">
@@ -108,7 +108,7 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-3 mb-12">
               <TrendingUp className="h-6 w-6 text-primary" />
-              <h2 className="text-3xl font-bold text-foreground font-raleway">Featured Articles</h2>
+              <h2 className="text-3xl font-bold text-foreground font-raleway">{t('blog.featured')}</h2>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ const Blog = () => {
                         <Badge variant="secondary" className="bg-primary/10 text-primary">
                           {article.category}
                         </Badge>
-                        <Badge variant="outline">Featured</Badge>
+                        <Badge variant="outline">{t('blog.featured')}</Badge>
                       </div>
                       
                       <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 font-raleway flex-grow">
@@ -157,7 +157,7 @@ const Blog = () => {
       {/* All Articles */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground mb-12 font-raleway">All Articles</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-12 font-raleway">{t('blog.allArticles')}</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
@@ -174,7 +174,7 @@ const Blog = () => {
                       </Badge>
                       {article.featured && (
                         <Badge variant="secondary" className="bg-primary/10 text-primary text-xs">
-                          Featured
+                          {t('blog.featured')}
                         </Badge>
                       )}
                     </div>
@@ -192,10 +192,10 @@ const Blog = () => {
                         <Calendar className="h-3 w-3" />
                         {new Date(article.date).toLocaleDateString()}
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {article.readTime} min
-                      </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {article.readTime} {t('blog.article.min.read')}
+                        </div>
                     </div>
                   </div>
                 </div>
