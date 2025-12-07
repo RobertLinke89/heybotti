@@ -24,6 +24,7 @@ const BookingConfirmed = lazy(() => import("./pages/BookingConfirmed"));
 const PraxisVernetzen = lazy(() => import("./pages/PraxisVernetzen"));
 const Handwerker = lazy(() => import("./pages/Handwerker"));
 const Investors = lazy(() => import("./pages/Investors"));
+const Einzelhandel = lazy(() => import("./pages/Einzelhandel"));
 
 const queryClient = new QueryClient();
 
@@ -77,6 +78,7 @@ const App = () => (
               <Route path="/praxis-vernetzen" element={<PraxisVernetzen />} />
               <Route path="/handwerker" element={<Handwerker />} />
               <Route path="/investors" element={<Investors />} />
+              <Route path="/einzelhandel" element={<Einzelhandel />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
