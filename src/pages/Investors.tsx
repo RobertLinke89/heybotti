@@ -92,10 +92,11 @@ const Investors = () => {
             Investor Relations
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
-            Investieren in die Zukunft der
-            <br className="hidden sm:block" />
-            <span className="text-primary">Geschäftsautomatisierung</span>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight text-center md:text-left">
+            <span className="block sm:inline">Investieren in die</span>{' '}
+            <span className="block sm:inline">Zukunft der</span>
+            <br className="hidden md:block" />
+            <span className="text-primary block sm:inline">Geschäftsautomatisierung</span>
           </h1>
           
           <p className="text-base md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-3xl leading-relaxed">
