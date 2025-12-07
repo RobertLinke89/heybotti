@@ -13,6 +13,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isBranchenDropdownOpen, setIsBranchenDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   const services = [
     { id: 'sales-marketing', key: 'sales' },
@@ -30,6 +31,13 @@ const Header = () => {
     { path: '/pflege', labelDe: 'Pflege', labelEn: 'Care Services' },
     { path: '/gastronomie', labelDe: 'Gastronomie', labelEn: 'Gastronomy' },
     { path: '/logistik', labelDe: 'Logistik', labelEn: 'Logistics' }
+  ];
+
+  const aboutItems = [
+    { path: '/about', labelDe: 'Warum Automatisierung', labelEn: 'Why Automation' },
+    { path: '/process', labelDe: 'Prozess', labelEn: 'Process' },
+    { path: '/jobs', labelDe: 'Offene Stellen', labelEn: 'Careers' },
+    { path: '/blog', labelDe: 'Blog', labelEn: 'Blog' }
   ];
 
   const toggleMobileMenu = () => {
@@ -122,15 +130,6 @@ const Header = () => {
             </DropdownMenu>
             <button 
               onClick={() => {
-                navigate('/process');
-                window.scrollTo(0, 0);
-              }}
-              className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
-            >
-              {t('nav.process')}
-            </button>
-            <button 
-              onClick={() => {
                 navigate('/pricing');
                 window.scrollTo(0, 0);
               }}
@@ -138,24 +137,36 @@ const Header = () => {
             >
               {t('nav.pricing')}
             </button>
-            <button 
-              onClick={() => {
-                navigate('/blog');
-                window.scrollTo(0, 0);
-              }} 
-              className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
-            >
-              {t('nav.blog')}
-            </button>
-            <button 
-              onClick={() => {
-                navigate('/about');
-                window.scrollTo(0, 0);
-              }} 
-              className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium"
-            >
-              {t('nav.about')}
-            </button>
+
+            {/* About Dropdown */}
+            <DropdownMenu open={isAboutDropdownOpen} onOpenChange={setIsAboutDropdownOpen}>
+              <DropdownMenuTrigger asChild>
+                <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
+                  About
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="start" 
+                className="w-56 bg-background border border-border shadow-lg z-50"
+                sideOffset={4}
+              >
+                {aboutItems.map((item) => (
+                  <DropdownMenuItem 
+                    key={item.path}
+                    onClick={() => {
+                      navigate(item.path);
+                      setIsAboutDropdownOpen(false);
+                    }}
+                    className="cursor-pointer hover:bg-muted focus:bg-muted px-4 py-3"
+                  >
+                    <span className="font-medium text-foreground text-sm">
+                      {language === 'de' ? item.labelDe : item.labelEn}
+                    </span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Desktop CTA */}
@@ -234,16 +245,6 @@ const Header = () => {
             </div>
             <button 
               onClick={() => {
-                navigate('/process');
-                window.scrollTo(0, 0);
-                setIsMobileMenuOpen(false);
-              }}
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left w-full"
-            >
-              {t('nav.process')}
-            </button>
-            <button 
-              onClick={() => {
                 navigate('/pricing');
                 window.scrollTo(0, 0);
                 setIsMobileMenuOpen(false);
@@ -252,26 +253,27 @@ const Header = () => {
             >
               {t('nav.pricing')}
             </button>
-            <button 
-              onClick={() => {
-                navigate('/blog');
-                window.scrollTo(0, 0);
-                setIsMobileMenuOpen(false);
-              }}
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
-            >
-              {t('nav.blog')}
-            </button>
-            <button 
-              onClick={() => {
-                navigate('/about');
-                window.scrollTo(0, 0);
-                setIsMobileMenuOpen(false);
-              }}
-              className="text-foreground hover:text-primary transition-colors font-raleway font-medium py-2 px-2 text-left"
-            >
-              {t('nav.about')}
-            </button>
+
+            {/* Mobile About Section */}
+            <div className="space-y-2">
+              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
+                About
+              </div>
+              <div className="pl-4 space-y-1">
+                {aboutItems.map((item) => (
+                  <button
+                    key={item.path}
+                    onClick={() => {
+                      navigate(item.path);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
+                  >
+                    {language === 'de' ? item.labelDe : item.labelEn}
+                  </button>
+                ))}
+              </div>
+            </div>
             
             {/* Mobile Login Button */}
             <div className="pt-4 border-t border-border mt-4">
