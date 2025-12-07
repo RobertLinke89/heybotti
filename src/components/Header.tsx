@@ -9,9 +9,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 const Header = () => {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isBranchenDropdownOpen, setIsBranchenDropdownOpen] = useState(false);
 
   const services = [
     { id: 'sales-marketing', key: 'sales' },
@@ -20,6 +21,15 @@ const Header = () => {
     { id: 'ecommerce', key: 'ecommerce' },
     { id: 'business-intelligence', key: 'bi' },
     { id: 'workflows', key: 'workflows' }
+  ];
+
+  const branchen = [
+    { path: '/praxis-vernetzen', labelDe: 'Praxen & Gesundheit', labelEn: 'Healthcare Practices' },
+    { path: '/einzelhandel', labelDe: 'Einzelhandel', labelEn: 'Retail' },
+    { path: '/handwerker', labelDe: 'Handwerk', labelEn: 'Trades & Crafts' },
+    { path: '/pflege', labelDe: 'Pflege', labelEn: 'Care Services' },
+    { path: '/gastronomie', labelDe: 'Gastronomie', labelEn: 'Gastronomy' },
+    { path: '/logistik', labelDe: 'Logistik', labelEn: 'Logistics' }
   ];
 
   const toggleMobileMenu = () => {
@@ -50,7 +60,7 @@ const Header = () => {
             <DropdownMenu open={isServicesDropdownOpen} onOpenChange={setIsServicesDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
-                  {t('nav.services')}
+                  Services
                   <ChevronDown className="h-3 w-3" />
                 </button>
               </DropdownMenuTrigger>
@@ -76,6 +86,36 @@ const Header = () => {
                         {t(`services.${service.key}.subtitle`)}
                       </div>
                     </div>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Branchen Dropdown */}
+            <DropdownMenu open={isBranchenDropdownOpen} onOpenChange={setIsBranchenDropdownOpen}>
+              <DropdownMenuTrigger asChild>
+                <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50 font-medium flex items-center gap-1">
+                  {language === 'de' ? 'Branchen' : 'Industries'}
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="start" 
+                className="w-56 bg-background border border-border shadow-lg z-50"
+                sideOffset={4}
+              >
+                {branchen.map((branche) => (
+                  <DropdownMenuItem 
+                    key={branche.path}
+                    onClick={() => {
+                      navigate(branche.path);
+                      setIsBranchenDropdownOpen(false);
+                    }}
+                    className="cursor-pointer hover:bg-muted focus:bg-muted px-4 py-3"
+                  >
+                    <span className="font-medium text-foreground text-sm">
+                      {language === 'de' ? branche.labelDe : branche.labelEn}
+                    </span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -154,7 +194,7 @@ const Header = () => {
             {/* Mobile Services Section */}
             <div className="space-y-2">
               <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
-                {t('nav.services')}
+                Services
               </div>
               <div className="pl-4 space-y-1">
                 {services.map((service) => (
@@ -167,6 +207,27 @@ const Header = () => {
                     className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
                   >
                     {t(`services.${service.key}.title`)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Branchen Section */}
+            <div className="space-y-2">
+              <div className="text-foreground font-raleway font-medium py-2 px-2 text-sm text-muted-foreground">
+                {language === 'de' ? 'Branchen' : 'Industries'}
+              </div>
+              <div className="pl-4 space-y-1">
+                {branchen.map((branche) => (
+                  <button
+                    key={branche.path}
+                    onClick={() => {
+                      navigate(branche.path);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-raleway py-2 text-sm"
+                  >
+                    {language === 'de' ? branche.labelDe : branche.labelEn}
                   </button>
                 ))}
               </div>
