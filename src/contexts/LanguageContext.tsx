@@ -656,8 +656,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     'header.cta': 'Call',
 
     // Hero
-    'hero.title': 'More time for ideas, less for',
-    'hero.title.highlight': 'paperwork',
+    'hero.title': 'More time for growth, less for',
+    'hero.title.highlight': 'processes.',
     'hero.subtitle': 'We automate the processes that slow teams down — so you can operate with clarity, speed, and a calm, predictable workflow.',
     'hero.cta': 'Book a Call',
     'hero.cta.secondary': 'See How It Works',
@@ -2398,8 +2398,8 @@ The tools are available. The costs are accessible. The benefits are proven.
     'nav.request.project': 'Projekt anfragen',
     'header.cta': 'Anrufen',
 
-    'hero.title': 'Mehr Zeit für Ideen,',
-    'hero.title.highlight': 'weniger für Papierkram.',
+    'hero.title': 'Mehr Zeit für Wachstum,',
+    'hero.title.highlight': 'weniger für Prozesse.',
     'hero.subtitle': 'Wir automatisieren die Prozesse, die Teams verlangsamen – damit du mit Klarheit, Geschwindigkeit und einem ruhigen, vorhersehbaren Workflow arbeiten kannst.',
     'hero.cta': 'Projekt anfragen',
     'hero.cta.secondary': 'So funktioniert es',
