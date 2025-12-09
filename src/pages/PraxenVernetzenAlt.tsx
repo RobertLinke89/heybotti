@@ -139,45 +139,45 @@ const PraxenVernetzenAlt = () => {
       {/* Section 2: Das Problem ist nicht das Team */}
       <section className="py-14 md:py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 mb-4 md:mb-6">
-                <Puzzle className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-              </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                Das Problem ist nicht das Team – <span className="text-primary">sondern die Struktur</span>
-              </h2>
-              
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                In den meisten Betrieben gibt es bereits Software für fast alles: Buchhaltung, Kalender, CRM, 
-                Kursbuchung, Tools für Kommunikation.
-              </p>
-              <p className="text-base md:text-lg text-foreground font-medium">
-                Aber nichts davon ist miteinander verbunden.
-              </p>
+          {/* Header Section */}
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/10 mb-4 md:mb-6">
+              <Puzzle className="w-7 h-7 md:w-8 md:h-8 text-primary" />
             </div>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
+              Das Problem ist nicht das Team – <span className="text-primary">sondern die Struktur</span>
+            </h2>
             
-            <div className="space-y-4">
-              {[
-                { icon: RefreshCw, text: "Doppelte Eingaben in verschiedenen Systemen", color: "text-destructive" },
-                { icon: Users, text: "Ständige Abstimmungen zwischen Teammitgliedern", color: "text-destructive" },
-                { icon: Brain, text: "Alltag hängt vom Wissen einzelner Personen ab", color: "text-destructive" }
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 md:p-5 rounded-xl bg-card border border-border">
-                  <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon className={`w-5 h-5 ${item.color}`} />
-                  </div>
-                  <p className="text-sm md:text-base text-muted-foreground pt-2">{item.text}</p>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-3">
+              In den meisten Betrieben gibt es bereits Software für fast alles: Buchhaltung, Kalender, CRM, 
+              Kursbuchung, Tools für Kommunikation.
+            </p>
+            <p className="text-base md:text-lg text-foreground font-medium">
+              Aber nichts davon ist miteinander verbunden.
+            </p>
+          </div>
+          
+          {/* Problems Grid */}
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-6">
+            {[
+              { icon: RefreshCw, text: "Doppelte Eingaben in verschiedenen Systemen", color: "text-destructive" },
+              { icon: Users, text: "Ständige Abstimmungen zwischen Teammitgliedern", color: "text-destructive" },
+              { icon: Brain, text: "Alltag hängt vom Wissen einzelner Personen ab", color: "text-destructive" }
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center gap-4 p-5 md:p-6 rounded-xl bg-card border border-border">
+                <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                  <item.icon className={`w-6 h-6 ${item.color}`} />
                 </div>
-              ))}
-              
-              <div className="p-4 md:p-5 rounded-xl bg-muted/50 border border-border">
-                <p className="text-sm md:text-base text-muted-foreground italic">
-                  „Wenn jemand ausfällt, steht plötzlich alles still. Nicht, weil die Praxis unfähig wäre – 
-                  <span className="text-foreground font-medium"> sondern weil niemand Zeit hat, das Puzzle zusammenzuhalten.</span>"
-                </p>
+                <p className="text-sm md:text-base text-muted-foreground">{item.text}</p>
               </div>
-            </div>
+            ))}
+          </div>
+          
+          <div className="p-5 md:p-6 rounded-xl bg-muted/50 border border-border text-center max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground italic">
+              „Wenn jemand ausfällt, steht plötzlich alles still. Nicht, weil die Praxis unfähig wäre – 
+              <span className="text-foreground font-medium"> sondern weil niemand Zeit hat, das Puzzle zusammenzuhalten.</span>"
+            </p>
           </div>
         </div>
       </section>
