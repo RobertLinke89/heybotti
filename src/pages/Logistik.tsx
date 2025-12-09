@@ -70,11 +70,13 @@ const Logistik = () => {
           
           <Button 
             size="lg" 
-            onClick={scrollToContact}
+            asChild
             className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
           >
-            Automatisierung starten
-            <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+            <a href="https://cal.katalysat.com/team/heybotti" target="_blank" rel="noopener noreferrer">
+              Automatisierung starten
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+            </a>
           </Button>
         </div>
       </section>
@@ -445,11 +447,13 @@ const Logistik = () => {
           <div className="flex justify-center">
             <Button 
               size="lg" 
-              onClick={scrollToContact}
+              asChild
               className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
             >
-              Automatisierung starten
-              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+              <a href="https://cal.katalysat.com/team/heybotti" target="_blank" rel="noopener noreferrer">
+                Automatisierung starten
+                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+              </a>
             </Button>
           </div>
         </div>

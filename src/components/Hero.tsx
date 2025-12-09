@@ -43,15 +43,14 @@ const Hero = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => {
-                  const bookingSection = document.getElementById('booking-section');
-                  bookingSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <a 
+                href="https://cal.katalysat.com/team/heybotti"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:flex bg-primary text-primary-foreground px-16 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 hover-scale transition-all duration-300 items-center justify-center animate-fade-in"
               >
                 {t('hero.cta')}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -60,7 +59,9 @@ const Hero = () => {
       {/* Mobile Sticky CTA Button */}
       <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40">
         <a 
-          href="tel:+4916099232779"
+          href="https://cal.katalysat.com/team/heybotti"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-raleway font-semibold text-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center shadow-lg w-full"
         >
           {t('hero.cta.mobile')}

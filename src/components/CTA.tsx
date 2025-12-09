@@ -5,21 +5,6 @@ import { Button } from '@/components/ui/button';
 
 const CTA = () => {
   const { t } = useLanguage();
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleClick = () => {
-    if (location.pathname === '/') {
-      const bookingSection = document.getElementById('booking-section');
-      bookingSection?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        const bookingSection = document.getElementById('booking-section');
-        bookingSection?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
 
   return (
     <section className="bg-card py-20 border-t border-secondary">
@@ -31,11 +16,17 @@ const CTA = () => {
           {t('cta.subtitle')}
         </p>
         <Button 
-          onClick={handleClick}
+          asChild
           size="lg"
           className="px-10 py-4 text-xl"
         >
-          {t('cta.button')}
+          <a 
+            href="https://cal.katalysat.com/team/heybotti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('cta.button')}
+          </a>
         </Button>
         <p className="text-muted-foreground mt-4 font-raleway font-light">
           {t('cta.note')}
