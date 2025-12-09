@@ -340,26 +340,14 @@ const Handwerker = () => {
             In einem kostenlosen Gespräch analysieren wir gemeinsam, wo Automatisierung 
             bei dir am meisten bringt.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
+          <div className="flex justify-center px-4">
             <Button 
               size="lg" 
               className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
-              asChild
+              onClick={scrollToContact}
             >
-              <a href="tel:+4916099232779">
-                <Phone className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                Jetzt anrufen
-              </a>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
-              asChild
-            >
-              <a href="mailto:info@heybotti.de">
-                Nachricht schreiben
-              </a>
+              Automatisierung starten
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
             </Button>
           </div>
           <p className="text-xs md:text-sm text-muted-foreground mt-4 md:mt-6">

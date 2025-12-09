@@ -442,32 +442,16 @@ const Logistik = () => {
             Unverbindlich und kostenlos.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
-              onClick={() => window.location.href = '/booking'}
+              onClick={scrollToContact}
               className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
             >
-              Termin vereinbaren
+              Automatisierung starten
               <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => window.location.href = 'tel:+4916099232779'}
-              className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
-            >
-              <Phone className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-              Direkt anrufen
-            </Button>
           </div>
-          
-          <p className="text-xs md:text-sm text-muted-foreground mt-6 md:mt-8">
-            Oder schreib uns eine E-Mail an{' '}
-            <a href="mailto:info@heybotti.de" className="text-primary hover:underline">
-              info@heybotti.de
-            </a>
-          </p>
         </div>
       </section>
 
