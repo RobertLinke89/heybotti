@@ -330,15 +330,9 @@ const PraxenVernetzenAlt = () => {
       <section id="contact-form" className="py-14 md:py-24 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/10 mb-4 md:mb-6">
-              <HeartPulse className="w-7 h-7 md:w-8 md:h-8 text-primary" />
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 px-2">
-              Wenn Sie neugierig sind, wie <span className="text-primary">Entlastung</span> in Ihrem Betrieb aussehen könnte
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground px-2">
+              Wenn Sie neugierig sind, wie <span className="text-primary">Entlastung</span> in Ihrem Betrieb aussehen könnte – lassen Sie uns sprechen.
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              – lassen Sie uns sprechen.
-            </p>
           </div>
           
           <ProjectForm />
