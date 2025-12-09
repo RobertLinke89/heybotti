@@ -29,6 +29,7 @@ const Pflege = lazy(() => import("./pages/Pflege"));
 const Logistik = lazy(() => import("./pages/Logistik"));
 const Gastronomie = lazy(() => import("./pages/Gastronomie"));
 const PricingPage = lazy(() => import("./pages/PricingPage"));
+const PraxenVernetzenAlt = lazy(() => import("./pages/PraxenVernetzenAlt"));
 
 const queryClient = new QueryClient();
 
@@ -87,6 +88,7 @@ const App = () => (
               <Route path="/logistik" element={<Logistik />} />
               <Route path="/gastronomie" element={<Gastronomie />} />
               <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/praxen-vernetzen-alt" element={<PraxenVernetzenAlt />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
