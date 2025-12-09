@@ -14,7 +14,7 @@ const Footer = () => {
             src="/lovable-uploads/934215ae-3a62-4f6c-b9f9-76cd450405f2.png" 
             alt="hey" 
             loading="lazy"
-            className="h-6 mx-auto mb-3" 
+            className="h-6 mx-auto mb-3 transition-all duration-300 ease-out hover:scale-110 hover:opacity-80 cursor-pointer" 
           />
           <p className="text-sm text-muted-foreground font-raleway font-light mb-4 max-w-2xl mx-auto">
             {t('footer.description')}
