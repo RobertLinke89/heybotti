@@ -335,7 +335,7 @@ const PraxenVernetzenAlt = () => {
             </h2>
           </div>
           
-          <ProjectForm />
+          <ProjectForm hideHeader />
         </div>
       </section>
 

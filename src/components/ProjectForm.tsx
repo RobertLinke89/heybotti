@@ -18,7 +18,11 @@ interface FormData {
   message: string;
 }
 
-const ProjectForm = () => {
+interface ProjectFormProps {
+  hideHeader?: boolean;
+}
+
+const ProjectForm = ({ hideHeader = false }: ProjectFormProps) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const { toast } = useToast();
   const { t } = useLanguage();
@@ -97,14 +101,16 @@ const ProjectForm = () => {
   return (
     <section id="project-form" className="bg-secondary py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
-            {t('form.title')} <span className="text-primary">{t('form.title.highlight')}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground font-raleway font-light">
-            {t('form.subtitle')}
-          </p>
-        </div>
+        {!hideHeader && (
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-6 font-raleway">
+              {t('form.title')} <span className="text-primary">{t('form.title.highlight')}</span>
+            </h2>
+            <p className="text-xl text-muted-foreground font-raleway font-light">
+              {t('form.subtitle')}
+            </p>
+          </div>
+        )}
 
         <Card className="bg-card border-secondary p-8">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
