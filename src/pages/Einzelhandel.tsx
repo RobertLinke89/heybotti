@@ -72,7 +72,7 @@ const Einzelhandel = () => {
             onClick={scrollToContact}
             className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
           >
-            Jetzt Beratung anfragen
+            Automatisierung starten
             <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
           </Button>
         </div>
