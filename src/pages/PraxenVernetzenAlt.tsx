@@ -71,7 +71,7 @@ const PraxenVernetzenAlt = () => {
           </p>
           <p className="text-base md:text-lg text-muted-foreground/80 mb-8 md:mb-10 max-w-2xl mx-auto px-2 flex items-center justify-center gap-2">
             <Zap className="w-4 h-4 text-primary" />
-            Mit den Tools, die Sie bereits nutzen.
+            Mit den Software Systemen, die Sie bereits nutzen.
           </p>
           
           <Button 
